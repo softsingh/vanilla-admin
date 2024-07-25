@@ -123,18 +123,27 @@
 }
 
 :root {
-  --white-color: hsl(0, 0%, 100%);
-  --black-color: hsl(0, 0%, 0%);
-  --primary-color: #696cff;
-  --primary-shadow-color: #696cff66;
-  --secondary-color: #8592a3;
+  --white-color: #ffffff;
+  --black-color: #000000;
+
+  --primary-color: hsl(240, 100%, 70%);
+  --primary-hover-color: #5252ff;
+  --primary-shadow-color: #6666ff66;
+
+  --secondary-color: hsl(214, 14%, 52%);
+  --secondary-hover-color: #657386;
+  --secondary-shadow-color: #73829666;
+
+  --success-color: hsl(100, 70%, 56%);
+  --success-hover-color: hsl(100, 70%, 50%);
+  --success-shadow-color: hsla(100, 70%, 56%, 0.4);
 }
 
 /* Color variables for dark theme */
 
 .dark-mode {
-  --white-color: hsl(0, 0%, 9%);
-  --black-color: hsl(0, 0%, 83%);
+  --white-color: #171717;
+  --black-color: #d4d4d4;
 }
 
 /*-------------------------------------*/
@@ -152,6 +161,10 @@
   /* user-select: none; */
 }
 
+.btn:hover {
+  transform: translateY(-1px);
+}
+
 .btn-primary {
   color: var(--white-color);
   background-color: var(--primary-color);
@@ -159,15 +172,92 @@
   box-shadow: 0 0.125rem 0.25rem 0 var(--primary-shadow-color);
 }
 
+.btn-primary:hover {
+  color: var(--white-color);
+  background-color: var(--primary-hover-color);
+  border-color: var(--primary-hover-color);
+}
+
 .btn-secondary {
   color: var(--white-color);
   background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  box-shadow: 0 0.125rem 0.25rem 0 var(--secondary-shadow-color);
+}
+
+.btn-secondary:hover {
+  color: var(--white-color);
+  background-color: var(--secondary-hover-color);
+  border-color: var(--secondary-hover-color);
+}
+
+.btn-success {
+  color: var(--white-color);
+  background-color: var(--success-color);
+  border-color: var(--success-color);
+  box-shadow: 0 0.125rem 0.25rem 0 var(--success-shadow-color);
+}
+
+.btn-success:hover {
+  color: var(--white-color);
+  background-color: var(--success-hover-color);
+  border-color: var(--success-hover-color);
 }
 
 /*-------------------------------------*/
 /*             Container               */
 /*-------------------------------------*/
 
-.container {
-  display: flex;
+.container,
+.container-fluid {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  /* border: 2px solid rgb(106, 255, 0); */
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/*-------------------------------------*/
+/*          Utility Classes            */
+/*-------------------------------------*/
+
+.ms-0 {
+  margin-left: 0;
+}
+
+.ms-1 {
+  margin-left: 0.25rem;
+}
+
+.ms-2 {
+  margin-left: 0.5rem;
 }

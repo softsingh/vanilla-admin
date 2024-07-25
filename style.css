@@ -11,3 +11,29 @@
 :root {
   font-size: nornal;
 }
+
+body {
+  background: #e1e1e1;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: end;
+  padding: 0.6rem;
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border: 2px solid rgb(255, 255, 255);
+  background: rgb(247, 247, 247);
+  border-radius: 0.375rem;
+}
+
+@media (min-width: 1200px) {
+  .navbar {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1140px;
+  }
+}

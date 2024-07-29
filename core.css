@@ -4,7 +4,7 @@
   --light-white-color: #f7f7f7;
   --light-gray-color: #e5e5e5;
 
-  --primary-color: hsl(240, 100%, 70%);
+  --primary-color: #6666ff;
   --primary-hover-color: #5252ff;
   --primary-shadow-color: #6666ff66;
 
@@ -31,6 +31,12 @@
   --dark-color: hsl(240, 20%, 20%);
   --dark-hover-color: hsl(240, 20%, 30%);
   --dark-shadow-color: hsla(240, 20%, 20%, 0.4);
+
+  --body-color: hsl(209, 10%, 45%);
+  --body-bg: #f5f5f9;
+
+  --link-color: #6666ff;
+  --link-hover-color: #5252ff;
 }
 
 /* Color variables for dark theme */
@@ -40,6 +46,27 @@
   --black-color: #d4d4d4;
   --light-white-color: #333;
   --light-gray-color: #404040;
+}
+
+/*-------------------------------------*/
+/*               Anchor                */
+/*-------------------------------------*/
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+/*-------------------------------------*/
+/*                Body                 */
+/*-------------------------------------*/
+body {
+  color: var(--body-color);
+  background: var(--body-bg);
 }
 
 /*-------------------------------------*/
@@ -153,6 +180,22 @@
 }
 
 /*-------------------------------------*/
+/*                Card                 */
+/*-------------------------------------*/
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 0.6rem;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid hsla(0, 0%, 100%, 0.9);
+  background: hsla(0, 0%, 100%, 0.5);
+  border-radius: 0.375rem;
+}
+
+/*-------------------------------------*/
 /*             Container               */
 /*-------------------------------------*/
 
@@ -192,6 +235,18 @@
   .container {
     max-width: 1320px;
   }
+}
+
+/*-------------------------------------*/
+/*           Form Elements             */
+/*-------------------------------------*/
+
+.form-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  display: block;
 }
 
 /*-------------------------------------*/

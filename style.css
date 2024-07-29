@@ -12,8 +12,19 @@
   font-size: normal;
 }
 
-body {
-  background: var(--light-gray-color);
+.landing-body,
+.login-body {
+  color: var(--body-color);
+  background: hsl(250, 100%, 95%);
+}
+
+.login-container,
+.register-container {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .navbar {
@@ -25,8 +36,8 @@ body {
   margin-top: 1rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-  border: 2px solid rgb(255, 255, 255);
-  background: var(--light-white-color);
+  border: 2px solid hsla(0, 0%, 100%, 0.9);
+  background: hsla(0, 0%, 100%, 0.5);
   border-radius: 0.375rem;
 }
 
@@ -48,4 +59,8 @@ body {
 .navbar .nav-logo .logo-image {
   height: 32px;
   cursor: pointer;
+}
+
+.navbar .nav-logo .logo-text {
+  color: black;
 }

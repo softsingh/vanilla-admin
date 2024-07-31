@@ -9,13 +9,44 @@
    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="login-body">
+<body class="">
    <div class="login-container">
       <div class="card">
-         <form action="#" class="login-form">
-            <label class="form-label" for="login-id">Login ID</label>
-            <input type="text" placeholder="Login ID" name="login-id">
-         </form>
+         <div class="card-body">
+            <div class="nav-left">
+               <a href="#" class="nav-logo">
+                  <img src="img/flask-logo.png" alt="Logo" class="logo-image">
+                  <h5 class="logo-text">Flask</h5>
+               </a>
+            </div>
+            <form action="dashboard.html" class="login-form mb-4">
+               <div class="mb-4">
+                  <label class="form-label mb-2" for="login-id">Login ID</label>
+                  <input id="login-id" type="text" class="form-control" placeholder="Enter your Login ID"
+                     name="login-id">
+               </div>
+               <div class="mb-4">
+                  <div class="d-flex align-items-center justify-content-between mb-2">
+                     <label class="form-label" for="password">Password</label>
+                     <a href="#"><small>Forget Password?</small></a>
+                  </div>
+                  <input id="password" type="password" class="form-control" placeholder="············" name="password">
+               </div>
+               <div class="form-check mb-4">
+                  <input id="remember-me" type="checkbox" class="form-check-input" name="remember-me">
+                  <label class="form-check-label" for="remember-me">Remember Me</label>
+               </div>
+               <div class="">
+                  <button class="btn btn-primary w-100">Login</button>
+               </div>
+            </form>
+            <p class="text-center">
+               <span>New user?</span>
+               <a href="register.html">
+                  <span>Create an account</span>
+               </a>
+            </p>
+         </div>
       </div>
    </div>
    <script src="script.js"></script>

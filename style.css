@@ -12,10 +12,13 @@
   font-size: normal;
 }
 
-.landing-body,
-.login-body {
+.card-body {
+  padding: 1rem;
+}
+
+.landing-body {
   color: var(--body-color);
-  background: hsl(250, 100%, 95%);
+  background: hsl(256, 86%, 92%);
 }
 
 .login-container,

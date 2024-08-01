@@ -13,11 +13,15 @@
    <div class="login-container">
       <div class="card">
          <div class="card-body">
-            <div class="nav-left">
-               <a href="#" class="nav-logo">
+            <div class="app-brand">
+               <a href="#" class="app-brand-link">
                   <img src="img/flask-logo.png" alt="Logo" class="logo-image">
                   <h5 class="logo-text">Flask</h5>
                </a>
+            </div>
+            <div>
+               <h5 class="mb-1">Welcome to Flask Boilerplate</h5>
+               <p class="mb-5">Please login to your account</p>
             </div>
             <form action="dashboard.html" class="login-form mb-4">
                <div class="mb-4">
@@ -26,10 +30,7 @@
                      name="login-id">
                </div>
                <div class="mb-4">
-                  <div class="d-flex align-items-center justify-content-between mb-2">
-                     <label class="form-label" for="password">Password</label>
-                     <a href="#"><small>Forget Password?</small></a>
-                  </div>
+                  <label class="form-label mb-2" for="password">Password</label>
                   <input id="password" type="password" class="form-control" placeholder="············" name="password">
                </div>
                <div class="form-check mb-4">
@@ -40,12 +41,11 @@
                   <button class="btn btn-primary w-100">Login</button>
                </div>
             </form>
-            <p class="text-center">
-               <span>New user?</span>
-               <a href="register.html">
-                  <span>Create an account</span>
-               </a>
-            </p>
+
+            <div class="d-flex align-items-center justify-content-between mb-2">
+               <a href="#">Register</a>
+               <a href="#">Forgot Password?</a>
+            </div>
          </div>
       </div>
    </div>

@@ -4,9 +4,12 @@
   --light-white-color: #f7f7f7;
   --light-gray-color: #e5e5e5;
 
-  --primary-color: #6666ff;
+  --primary-color: hsl(240, 100%, 70%);
   --primary-hover-color: #5252ff;
   --primary-shadow-color: #6666ff66;
+
+  --primary-medium-color: hsl(240, 100%, 80%);
+  --primary-subtle-color: hsl(240, 100%, 95%);
 
   --secondary-color: hsl(214, 14%, 52%);
   --secondary-hover-color: #657386;
@@ -75,6 +78,35 @@ a:hover {
 a:focus-visible {
   outline: 2px solid var(--primary-color);
   border-radius: 2px;
+}
+
+/*-------------------------------------*/
+/*               Avatar                */
+/*-------------------------------------*/
+
+.avatar {
+  position: relative;
+  width: 2.375rem;
+  height: 2.375rem;
+  cursor: pointer;
+}
+
+.avatar.avatar-online::after,
+.avatar.avatar-offline::after,
+.avatar.avatar-away::after,
+.avatar.avatar-busy::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  box-shadow: 0 0 0 2px #fff;
+}
+
+.avatar.avatar-online::after {
+  background-color: #71dd37;
 }
 
 /*-------------------------------------*/
@@ -378,16 +410,49 @@ h3 {
 
 h4 {
   font-size: calc(1.275rem + 0.3vw);
-  line-height: 2.375rem;
 }
 
 h5 {
   font-size: 1.3rem;
 }
 
+h6 {
+  font-size: calc(1.275rem - 0.3vw);
+}
+
+/*---------------------------- Utility Classes -----------------------------*/
+
 /*-------------------------------------*/
-/*          Utility Classes            */
+/*             Background              */
 /*-------------------------------------*/
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-primary-medium {
+  background-color: var(--primary-medium-color);
+}
+
+.bg-primary-subtle {
+  background-color: var(--primary-subtle-color);
+}
+
+/*-------------------------------------*/
+/*               Border                */
+/*-------------------------------------*/
+
+.rounded-circle {
+  border-radius: 50%;
+}
+
+/*-------------------------------------*/
+/*               Border                */
+/*-------------------------------------*/
+
+.cursor-pointer {
+  cursor: pointer;
+}
 
 /*-------------------------------------*/
 /*              Display                */
@@ -401,6 +466,14 @@ h5 {
   display: flex;
 }
 
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
 .align-items-center {
   align-items: center;
 }
@@ -412,6 +485,38 @@ h5 {
 /*-------------------------------------*/
 /*               Font                  */
 /*-------------------------------------*/
+
+.fs-1 {
+  font-size: 0.25rem;
+}
+
+.fs-2 {
+  font-size: 0.5rem;
+}
+
+.fs-3 {
+  font-size: 0.75rem;
+}
+
+.fs-4 {
+  font-size: 1rem;
+}
+
+.fs-5 {
+  font-size: 1.25rem;
+}
+
+.fs-6 {
+  font-size: 1.5rem;
+}
+
+.fs-7 {
+  font-size: 1.75rem;
+}
+
+.fs-8 {
+  font-size: 2rem;
+}
 
 .fw-bold {
   font-weight: 700;
@@ -493,6 +598,61 @@ h5 {
   margin-top: 1.25rem;
 }
 
+.mx-0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.mx-1 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+/*-------------------------------------*/
+/*              Padding                */
+/*-------------------------------------*/
+
+.p-0 {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.p-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.p-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 /*-------------------------------------*/
 /*                Text                 */
 /*-------------------------------------*/
@@ -505,6 +665,18 @@ h5 {
 /*               Width                 */
 /*-------------------------------------*/
 
+.w-auto {
+  width: auto;
+}
+
 .w-100 {
   width: 100%;
+}
+
+/*-------------------------------------*/
+/*             Overflow                */
+/*-------------------------------------*/
+
+.overflow-auto {
+  overflow: auto;
 }

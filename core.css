@@ -42,7 +42,7 @@
 
   --form-control-focus-border-color: hsla(240, 100%, 58%, 0.7);
 
-  --heading-color: #384551;
+  --heading-color: hsl(210, 18%, 28%);
 
   --link-color: #6666ff;
   --link-hover-color: #5252ff;
@@ -418,6 +418,24 @@ h5 {
 
 h6 {
   font-size: calc(1.275rem - 0.3vw);
+}
+
+/*-------------------------------------*/
+/*                Menu                 */
+/*-------------------------------------*/
+
+.menu-toggle::after {
+  position: absolute;
+  content: '';
+  right: 5%;
+  display: block;
+  font-family: 'boxicons';
+  font-size: 1.375rem;
+  transform: translateY(5%);
+}
+
+.menu-item.open > .menu-toggle::after {
+  transform: rotate(90deg);
 }
 
 /*---------------------------- Utility Classes -----------------------------*/

@@ -91,6 +91,7 @@
 
 .main-layout {
   height: 100vh;
+  width: 100%;
   overflow-y: auto;
   scrollbar-color: #a6a6a6 transparent;
 }
@@ -138,6 +139,25 @@
   z-index: 2;
 }
 
+.navbar .navbar-toggle {
+  display: none;
+  transition: 0.2s ease;
+}
+
+body.sidebar-hidden .navbar .navbar-toggle {
+  display: block;
+}
+
+.navbar .navbar-toggle i {
+  width: 1.375rem;
+  height: 1.375rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--heading-color);
+}
+
 /* @media (min-width: 1200px) {
   .navbar {
     margin-left: auto;
@@ -155,6 +175,10 @@
 }
 
 .navbar .nav-logo {
+  display: none;
+}
+
+body.sidebar-hidden .navbar .nav-logo {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -180,6 +204,7 @@
   height: 100vh;
   background: var(--white-color);
   box-shadow: 0.2rem 0 0.5rem 0 hsla(210, 30%, 20%, 0.1);
+  transition: 0.2s ease-in;
 }
 
 .sidebar .app-brand {
@@ -231,4 +256,9 @@
   height: 1.375rem;
   border-radius: 50%;
   box-shadow: 1px 1px 1px 7px var(--body-bg);
+}
+
+body.sidebar-hidden .sidebar {
+  width: 0;
+  padding: 0;
 }

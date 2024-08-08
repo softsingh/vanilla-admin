@@ -10,7 +10,7 @@
    <link rel="stylesheet" href="assets/vendor/boxicons-2.1.4/css/boxicons.min.css">
 </head>
 
-<body>
+<body class="">
    <div class="d-flex">
       <aside class="sidebar">
          <div class="app-brand">
@@ -23,13 +23,13 @@
             </a>
          </div>
          <div class="menu">
-            <div class="menu-item active">
+            <div class="menu-item">
                <a href="#" class="menu-link">
                   <i class="bx bx-home fs-6"></i>
                   <span>Dashboard</span>
                </a>
             </div>
-            <div class="menu-item open">
+            <div class="menu-item open active">
                <a href="#" class="menu-link menu-toggle">
                   <i class="bx bx-layout fs-6"></i>
                   <span>Pages</span>
@@ -51,6 +51,12 @@
                      </a>
                   </div>
                </div>
+            </div>
+            <div class="menu-item">
+               <a href="#" class="menu-link">
+                  <i class="bx bx-home fs-6"></i>
+                  <span>Third</span>
+               </a>
             </div>
             <div class="p-6">
                <section class="py-4 py-xl-5">
@@ -179,7 +185,10 @@
       <main class="main-layout">
          <nav class="navbar mx-6 mt-3">
             <div class="nav-left">
-               <i class="bx bx-menu bx-sm cursor-pointer"></i>
+               <div class="navbar-toggle">
+                  <a href="#">
+                     <i class="bx bx-menu bx-sm cursor-pointer"></i></a>
+               </div>
                <a href="#" class="nav-logo">
                   <img src="assets/img/flask-logo.png" alt="Logo" class="logo-image">
                   <h6 class="logo-text">Flask</h6>
@@ -321,6 +330,7 @@
          </div>
       </main>
    </div>
+   <script src="core.js"></script>
 </body>
 
 </html>

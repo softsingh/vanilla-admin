@@ -11,7 +11,8 @@
 </head>
 
 <body class="">
-   <div class="d-flex">
+   <div class="dash-container">
+      <div class="screen-overlay"></div>
       <aside class="sidebar">
          <div class="app-brand">
             <a href="#" class="app-logo">
@@ -23,13 +24,13 @@
             </a>
          </div>
          <div class="menu">
-            <div class="menu-item">
+            <div class="menu-item active">
                <a href="#" class="menu-link">
                   <i class="bx bx-home fs-6"></i>
                   <span>Dashboard</span>
                </a>
             </div>
-            <div class="menu-item open active">
+            <div class="menu-item">
                <a href="#" class="menu-link menu-toggle">
                   <i class="bx bx-layout fs-6"></i>
                   <span>Pages</span>
@@ -184,22 +185,31 @@
       </aside>
       <main class="main-layout">
          <nav class="navbar mx-6 mt-3">
-            <div class="nav-left">
+            <div class="navbar-nav nav-left">
                <div class="navbar-toggle">
                   <a href="#">
-                     <i class="bx bx-menu bx-sm cursor-pointer"></i></a>
+                     <i class="bx bx-menu bx-sm cursor-pointer"></i>
+                  </a>
                </div>
                <a href="#" class="nav-logo">
                   <img src="assets/img/flask-logo.png" alt="Logo" class="logo-image">
                   <h6 class="logo-text">Flask</h6>
                </a>
-            </div>
-            <div class="nav-center">
-               <i class="bx bx-search bx-sm mt-1"></i>
-            </div>
-            <div class="nav-right">
                <div>
-                  <i class="bx bx-bell fs-7 mt-1"></i>
+                  <a href="#" class="nav-link">
+                     <i class="bx bx-search bx-sm mt-1"></i>
+                     <span class="ml-2">Search (Ctrl +/)</span>
+                  </a>
+               </div>
+            </div>
+            <div class="navbar-nav nav-center">
+               <a href="#" class="nav-link">
+                  <i class="bx bx-search bx-sm"></i>
+               </a>
+            </div>
+            <div class="navbar-nav nav-right">
+               <div>
+                  <i class="bx bx-bell fs-7"></i>
                </div>
                <div class="avatar avatar-online">
                   <img class="rounded-circle bg-primary-medium" src="assets/img/Avatars/Manpreet Singh.png" alt="Avatar"

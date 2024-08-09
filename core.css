@@ -46,6 +46,8 @@
 
   --link-color: #6666ff;
   --link-hover-color: #5252ff;
+
+  --overlay-dark-color: rgba(0, 0, 0, 0.6);
 }
 
 :root {
@@ -674,6 +676,14 @@ h6 {
 
 .mt-5 {
   margin-top: 1.25rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
 }
 
 .mx-0 {

@@ -1,5 +1,8 @@
-const menuItems = document.querySelectorAll('.menu-item');
-const menuLinks = document.querySelectorAll('.menu-link');
+
+// Hide Sidebar by default on small screens
+if (window.innerWidth <= 768) {
+   document.body.classList.add('sidebar-hidden');
+}
 
 function clearMenuItemOpenActive(currentMenuItem) {
    menuItems.forEach(menuItem => {
@@ -9,6 +12,8 @@ function clearMenuItemOpenActive(currentMenuItem) {
       }
    })
 }
+
+const menuItems = document.querySelectorAll('.menu-item');
 
 menuItems.forEach(menuItem => menuItem.addEventListener('click', ()=>{
    clearMenuItemOpenActive(menuItem);
@@ -27,3 +32,10 @@ sidebarToggle.addEventListener('click', ()=>{
 navbarToggle.addEventListener('click', ()=>{
    body.classList.toggle('sidebar-hidden')
 })
+
+// Toggle Sidebar visibility when Screen Overlay is clicked
+const screenOverlay = document.querySelector('.screen-overlay');
+
+screenOverlay.addEventListener('click', ()=>{
+   document.body.classList.toggle('sidebar-hidden');
+});

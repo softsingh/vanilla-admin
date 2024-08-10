@@ -522,12 +522,16 @@ h6 {
 /*               Border                */
 /*-------------------------------------*/
 
+.border-0 {
+  border: 0;
+}
+
 .rounded-circle {
   border-radius: 50%;
 }
 
 /*-------------------------------------*/
-/*               Border                */
+/*               Cursor                */
 /*-------------------------------------*/
 
 .cursor-pointer {
@@ -560,6 +564,10 @@ h6 {
 
 .justify-content-between {
   justify-content: space-between;
+}
+
+.d-none {
+  display: none;
 }
 
 /*-------------------------------------*/
@@ -678,14 +686,6 @@ h6 {
   margin-top: 1.25rem;
 }
 
-.ml-2 {
-  margin-left: 0.5rem;
-}
-
-.ml-3 {
-  margin-left: 0.75rem;
-}
-
 .mx-0 {
   margin-left: 0;
   margin-right: 0;
@@ -749,6 +749,27 @@ h6 {
   padding-bottom: 0.25rem;
 }
 
+.p-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.p-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.p-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .p-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -761,6 +782,22 @@ h6 {
   padding-right: 1.5rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.ps-4 {
+  padding-left: 1rem;
+}
+
+.ps-5 {
+  padding-left: 1.25rem;
+}
+
+.ps-6 {
+  padding-left: 1.5rem;
+}
+
+.ps-7 {
+  padding-left: 1.75rem;
 }
 
 /*-------------------------------------*/

@@ -293,6 +293,54 @@ body {
 }
 
 /*-------------------------------------*/
+/*           Dropdown             */
+/*-------------------------------------*/
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  transform: none !important;
+  height: 100%;
+}
+
+.dropdown-menu {
+  position: absolute;
+  display: none;
+  overflow: hidden;
+  transform: translateY(2px);
+  padding: 0.5rem 0;
+  color: var(--body-color);
+  background-color: white;
+  box-shadow: 0 0.2rem 0.5rem 0 hsla(210, 30%, 20%, 0.1);
+  border-radius: var(--border-radius);
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-menu-end {
+  right: 0;
+  left: auto;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 0.5rem;
+  padding: 0.5rem 3rem 0.5rem 1.5rem;
+  color: var(--heading-color);
+}
+
+.dropdown-item:hover {
+  color: var(--heading-color);
+  background-color: hsla(210, 29%, 19%, 0.06);
+}
+
+/*-------------------------------------*/
 /*           Form Elements             */
 /*-------------------------------------*/
 
@@ -424,6 +472,8 @@ h6 {
 
 /*-------------------------------------*/
 /*                Menu                 */
+/*-------------------------------------*/
+/*             Sidebar Menu            */
 /*-------------------------------------*/
 
 .menu {

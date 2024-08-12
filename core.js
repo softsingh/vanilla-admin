@@ -66,3 +66,11 @@ document.addEventListener('keydown', (event) => {
     searchInput.value='';
   }
 });
+
+// Dropdown Menu
+const dropdownMenu = document.querySelector('.dropdown-menu');
+const dropdownToggle = document.querySelector('.dropdown-toggle');
+
+dropdownToggle.addEventListener('click',() => {
+   dropdownMenu.classList.toggle('show');
+})

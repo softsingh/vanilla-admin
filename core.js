@@ -44,33 +44,62 @@ searchInputWrapper = document.querySelector('.navbar .search-input-wrapper');
 searchInput = document.querySelector('.navbar .search-input-wrapper .search-input');
 
 searchButton = document.querySelector('.search-button');
-searchButton.addEventListener('click', ()=> {
-   searchInputWrapper.classList.remove('d-none');
+searchButton.addEventListener('click', (event)=> {
+   searchInputWrapper.classList.add('show');
    searchInput.focus();
    searchInput.value='';
+   event.stopPropagation();
 })
 
 searchCloser = document.querySelector('.search-closer');
 searchCloser.addEventListener('click', ()=> {
-   searchInputWrapper.classList.add('d-none');
+   searchInputWrapper.classList.remove('show');
 })
 
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' || event.ctrlKey && event.key === '/') {
-    searchInputWrapper.classList.add('d-none');
+    searchInputWrapper.classList.remove('show');
   }
 
   if (event.ctrlKey && event.key === '/') {
-    searchInputWrapper.classList.remove('d-none');
+    searchInputWrapper.classList.add('show');
     searchInput.focus();
     searchInput.value='';
   }
 });
 
 // Dropdown Menu
-const dropdownMenu = document.querySelector('.dropdown-menu');
-const dropdownToggle = document.querySelector('.dropdown-toggle');
+const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
 
-dropdownToggle.addEventListener('click',() => {
-   dropdownMenu.classList.toggle('show');
+dropdownToggles.forEach((dropdownToggle) => {
+   dropdownToggle.addEventListener('click',(event) => {
+      const parent = event.currentTarget.parentElement;
+      const dropdownMenu = parent.querySelector('.dropdown-menu');
+      dropdownMenu.classList.toggle('show');
+      event.stopPropagation();
+   })
+})
+
+//Click on empty area
+document.addEventListener('click', (event) => {
+
+   // Close any of the open dropdown-menu
+   const dropdownMenus = document.querySelectorAll('.dropdown-menu');
+
+   dropdownMenus.forEach((dropdownMenu) => {
+      if(dropdownMenu.classList.contains('show')) {
+         if(event.currentTarget !== dropdownMenu) {
+            //alert(event.currentTarget.classList)
+            dropdownMenu.classList.remove('show');
+         }
+      }
+   })
+
+   // Close Navbar search-input
+   if(searchInputWrapper.classList.contains('show')) {
+      //alert(event.target.ClassList)
+      if(event.target !== searchInput) {
+         searchInputWrapper.classList.remove('show');
+      }
+   }
 })

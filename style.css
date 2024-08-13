@@ -200,6 +200,14 @@ body.sidebar-hidden .navbar .nav-logo {
   color: var(--heading-color);
 }
 
+.navbar .search-input-wrapper {
+  display: none;
+}
+
+.navbar .search-input-wrapper.show {
+  display: block;
+}
+
 .navbar .search-input-wrapper .search-input-typeahead {
   position: absolute;
   left: 0;

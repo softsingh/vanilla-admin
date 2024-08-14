@@ -115,6 +115,24 @@ a:focus-visible {
   background-color: #71dd37;
 }
 
+.badge {
+  display: inline-block;
+  padding: 0.75em;
+  font-size: 0.8em;
+  font-weight: 500;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: var(--border-radius);
+}
+
+.bg-label-primary {
+  color: var(--primary-color);
+  background-color: var(--primary-subtle-color);
+}
+
 /*-------------------------------------*/
 /*                Body                 */
 /*-------------------------------------*/
@@ -328,6 +346,10 @@ body {
 .dropdown-menu-end {
   right: 0;
   left: auto;
+}
+
+.dropdown-header {
+  padding: 1rem 1.5rem 1rem 1.5rem;
 }
 
 .dropdown-item {
@@ -586,6 +608,10 @@ h6 {
 
 .border-0 {
   border: 0;
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--border-color);
 }
 
 .rounded-circle {
@@ -884,6 +910,11 @@ h6 {
 
 .text-center {
   text-align: center;
+}
+
+.text-body {
+  opacity: 1;
+  color: var(--body-color);
 }
 
 .text-muted {

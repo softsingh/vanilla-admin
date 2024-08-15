@@ -15,17 +15,29 @@
   --secondary-hover-color: hsl(215, 14%, 46%);
   --secondary-shadow-color: hsla(214, 14%, 52%, 0.4);
 
+  --secondary-medium-color: hsl(214, 14%, 62%);
+  --secondary-subtle-color: hsl(214, 14%, 75%);
+
   --success-color: hsl(100, 65%, 56%);
   --success-hover-color: hsl(100, 65%, 48%);
   --success-shadow-color: hsla(100, 65%, 56%, 0.4);
+
+  --success-medium-color: hsl(100, 65%, 66%);
+  --success-subtle-color: hsl(100, 100%, 90%);
 
   --danger-color: hsl(8, 100%, 56%);
   --danger-hover-color: hsl(8, 100%, 48%);
   --danger-shadow-color: hsla(8, 100%, 56%, 0.4);
 
+  --danger-medium-color: hsl(8, 100%, 66%);
+  --danger-subtle-color: hsl(8, 100%, 90%);
+
   --warning-color: hsl(40, 100%, 50%);
   --warning-hover-color: hsl(40, 100%, 46%);
   --warning-shadow-color: hsla(40, 100%, 50%, 0.4);
+
+  --warning-medium-color: hsl(40, 100%, 60%);
+  --warning-subtle-color: hsl(40, 100%, 90%);
 
   --info-color: hsl(190, 100%, 50%);
   --info-hover-color: hsl(190, 100%, 44%);
@@ -115,10 +127,25 @@ a:focus-visible {
   background-color: #71dd37;
 }
 
+.avatar .avatar-initial {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #eeedf0;
+  font-size: .9rem;
+}
+
 .badge {
   display: inline-block;
-  padding: 0.75em;
-  font-size: 0.8em;
+  padding: 0.7em;
+  font-size: 0.7em;
   font-weight: 500;
   line-height: 1;
   color: #fff;
@@ -129,9 +156,35 @@ a:focus-visible {
 }
 
 .bg-label-primary {
-  color: var(--primary-color);
-  background-color: var(--primary-subtle-color);
+  color: var(--primary-color) !important;
+  background-color: var(--primary-subtle-color) !important;
 }
+
+.bg-label-secondary {
+  color: var(--secondary-color) !important;
+  background-color: var(--secondary-subtle-color) !important;
+}
+
+.bg-label-success {
+  color: var(--success-color) !important;
+  background-color: var(--success-subtle-color) !important;
+}
+
+.bg-label-danger {
+  color: var(--danger-color) !important;
+  background-color: var(--danger-subtle-color) !important;
+}
+
+.bg-label-warning {
+  color: var(--warning-color) !important;
+  background-color: var(--warning-subtle-color) !important;
+}
+
+.bg-label-info {
+  color: var(--primary-color) !important;
+  background-color: var(--primary-subtle-color) !important;
+}
+
 
 /*-------------------------------------*/
 /*                Body                 */
@@ -349,7 +402,7 @@ body {
 }
 
 .dropdown-header {
-  padding: 1rem 1.5rem 1rem 1.5rem;
+  padding: 1rem 1rem 1rem 1.5rem;
 }
 
 .dropdown-item {
@@ -536,7 +589,7 @@ h6 {
   background-color: hsla(210, 29%, 19%, 0.06);
 }
 
-.menu > .menu-item.active > .menu-link {
+.menu>.menu-item.active>.menu-link {
   color: var(--primary-color);
   background-color: var(--primary-subtle-color);
 }
@@ -552,7 +605,7 @@ h6 {
   transition: transform 0.2s ease-out;
 }
 
-.menu-item.open > .menu-toggle::after {
+.menu-item.open>.menu-toggle::after {
   transform: rotate(90deg);
 }
 
@@ -570,7 +623,7 @@ h6 {
   padding-left: 2.5rem;
 }
 
-.menu-sub > .menu-item > .menu-link:before {
+.menu-sub>.menu-item>.menu-link:before {
   content: '';
   position: absolute;
   left: 2rem;
@@ -580,7 +633,7 @@ h6 {
   background-color: #a7acb2;
 }
 
-.menu-item.open > .menu-sub {
+.menu-item.open>.menu-sub {
   display: block;
 }
 
@@ -694,8 +747,41 @@ h6 {
   font-size: 2rem;
 }
 
+.fw-lighter {
+  font-weight: lighter;
+}
+
+.fw-light {
+  font-weight: 300;
+}
+
+.fw-normal {
+  font-weight: 400;
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+
+.fw-semibold {
+  font-weight: 600;
+}
+
 .fw-bold {
   font-weight: 700;
+}
+
+.fw-extrabold {
+  font-weight: 800;
+}
+
+.fw-bolder {
+  font-weight: bolder;
+}
+
+small,
+.small {
+  font-size: 0.8rem;
 }
 
 /*-------------------------------------*/

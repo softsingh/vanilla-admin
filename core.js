@@ -77,6 +77,25 @@ dropdownToggles.forEach((dropdownToggle) => {
    })
 })
 
+// Dropdown Notifications Menu
+const notificationReads = document.querySelectorAll('.dropdown-notifications-read');
+
+notificationReads.forEach((notificationRead) => {
+   notificationRead.addEventListener('click', (event) => {
+      const notificationsItem = event.currentTarget.closest(".dropdown-notifications-item");
+      notificationsItem.classList.toggle('mark-as-read')
+   })
+})
+
+const notificationArchives = document.querySelectorAll('.dropdown-notifications-archive');
+
+notificationArchives.forEach((notificationArchive) => {
+   notificationArchive.addEventListener('click', (event) => {
+      const notificationsItem = event.currentTarget.closest(".dropdown-notifications-item");
+      notificationsItem.style.display = 'none';
+   })
+})
+
 //Click on empty area
 document.documentElement.addEventListener('click', (event) => {
 
@@ -91,8 +110,8 @@ document.documentElement.addEventListener('click', (event) => {
    }
 })
 
+// Show Navbar Search Box
 function showNavbarSearchInput() {
-   // Hide all shown Dropdown Menus
    hideAllDropdowns();
 
    searchInputWrapper.classList.add('show');
@@ -102,7 +121,6 @@ function showNavbarSearchInput() {
 
 // Hide all shown Dropdown Menus
 function hideAllDropdowns() {
-
    const dropdownMenus = document.querySelectorAll('.dropdown-menu');
 
    dropdownMenus.forEach((dropdownMenu) => {

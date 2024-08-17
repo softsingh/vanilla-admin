@@ -145,17 +145,31 @@ a:focus-visible {
   font-size: 0.9rem;
 }
 
+/*-------------------------------------*/
+/*               Badge                 */
+/*-------------------------------------*/
+
 .badge {
   display: inline-block;
   padding: 0.7em;
   font-size: 0.7em;
   font-weight: 500;
   line-height: 1;
-  color: #fff;
+  color: var(--white-color);
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: var(--border-radius);
+}
+
+.badge.badge-dot {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  vertical-align: middle;
 }
 
 .bg-label-primary {
@@ -191,6 +205,7 @@ a:focus-visible {
 /*-------------------------------------*/
 /*                Body                 */
 /*-------------------------------------*/
+
 body {
   color: var(--body-color);
   background: var(--body-bg);
@@ -412,17 +427,52 @@ body {
 }
 
 .dropdown-item {
-  display: flex;
-  align-items: center;
+  display: block;
+  width: 100%;
   white-space: nowrap;
-  gap: 0.5rem;
   padding: 0.5rem 3rem 0.5rem 1.5rem;
+  cursor: pointer;
   color: var(--heading-color);
 }
 
 .dropdown-item:hover {
   color: var(--heading-color);
   background-color: hsla(210, 29%, 19%, 0.06);
+}
+
+.dropdown-notifications-item {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  padding: 0.75rem 0.5rem 0.75rem 1.5rem;
+  cursor: pointer;
+  color: var(--heading-color);
+}
+
+.dropdown-notifications-item:hover {
+  color: var(--heading-color);
+  background-color: hsla(210, 29%, 19%, 0.06);
+}
+
+.dropdown-notifications-item:not(.mark-as-read) .dropdown-notifications-read span {
+  background-color: var(--primary-color);
+}
+
+.dropdown-notifications-item.mark-as-read .dropdown-notifications-read span:hover {
+  background-color: var(--body-color);
+}
+
+.dropdown-notifications-archive {
+  color: var(--body-color);
+  visibility: hidden;
+}
+
+.dropdown-notifications-archive:hover {
+  color: var(--black-color);
+}
+
+.dropdown-notifications-item:hover .dropdown-notifications-archive {
+  visibility: visible;
 }
 
 .dropdown-divider {
@@ -434,14 +484,12 @@ body {
 }
 
 .dropdown-scroll-container {
+  height: calc(100vh - 18rem);
   overflow-x: hidden;
   overflow-y: auto;
-  /* overflow-x: clip; */
-  /* overflow-clip-margin: border-box; */
   white-space: nowrap;
   text-overflow: ellipsis;
   scrollbar-width: thin;
-  height: calc(100vh - 18rem);
   scrollbar-color: transparent transparent;
 }
 
@@ -611,7 +659,7 @@ h6 {
   background-color: hsla(210, 29%, 19%, 0.06);
 }
 
-.menu > .menu-item.active > .menu-link {
+.menu>.menu-item.active>.menu-link {
   color: var(--primary-color);
   background-color: var(--primary-subtle-color);
 }
@@ -627,7 +675,7 @@ h6 {
   transition: transform 0.2s ease-out;
 }
 
-.menu-item.open > .menu-toggle::after {
+.menu-item.open>.menu-toggle::after {
   transform: rotate(90deg);
 }
 
@@ -645,7 +693,7 @@ h6 {
   padding-left: 2.5rem;
 }
 
-.menu-sub > .menu-item > .menu-link:before {
+.menu-sub>.menu-item>.menu-link:before {
   content: '';
   position: absolute;
   left: 2rem;
@@ -655,7 +703,7 @@ h6 {
   background-color: #a7acb2;
 }
 
-.menu-item.open > .menu-sub {
+.menu-item.open>.menu-sub {
   display: block;
 }
 
@@ -725,12 +773,40 @@ h6 {
   flex-direction: row;
 }
 
+.flex-grow-0 {
+  flex-grow: 0;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.flex-shrink-1 {
+  flex-shrink: 1;
+}
+
+.align-items-start {
+  align-items: start;
+}
+
 .align-items-center {
   align-items: center;
 }
 
+.align-items-end {
+  align-items: end;
+}
+
 .justify-content-between {
   justify-content: space-between;
+}
+
+.justify-content-center {
+  justify-content: center;
 }
 
 .d-none {
@@ -759,6 +835,18 @@ h6 {
 
 .gap-5 {
   gap: 0.625rem;
+}
+
+.gap-6 {
+  gap: 0.75rem;
+}
+
+.gap-7 {
+  gap: 0.875rem;
+}
+
+.gap-8 {
+  gap: 1rem;
 }
 
 /*-------------------------------------*/
@@ -868,6 +956,14 @@ small,
 
 .me-3 {
   margin-right: 0.75rem;
+}
+
+.me-4 {
+  margin-right: 1rem;
+}
+
+.me-5 {
+  margin-right: 1.25rem;
 }
 
 .mb-0 {
@@ -1040,9 +1136,17 @@ small,
   padding-left: 1.75rem;
 }
 
+.pe-2 {
+  padding-right: 0.25rem;
+}
+
 /*-------------------------------------*/
 /*                Text                 */
 /*-------------------------------------*/
+
+.overflow-auto {
+  overflow: hidden;
+}
 
 .text-center {
   text-align: center;
@@ -1082,4 +1186,8 @@ small,
 
 .overflow-auto {
   overflow: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }

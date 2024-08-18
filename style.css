@@ -37,6 +37,18 @@
   font-weight: 600;
 }
 
+/*-------------------------------------*/
+/*               Badge                 */
+/*-------------------------------------*/
+
+.badge-notifications {
+  position: absolute;
+  transform: translate(0.8rem, -1.4rem);
+  font-size: .5rem;
+  line-height: .3rem;
+  border-radius: 50%;
+}
+
 .card-body {
   padding: 2rem;
 }
@@ -174,6 +186,10 @@ body.sidebar-hidden .navbar .navbar-toggle {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--heading-color);
+}
+
+.nav-link:hover {
   color: var(--heading-color);
 }
 

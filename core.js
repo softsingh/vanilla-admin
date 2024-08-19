@@ -4,21 +4,21 @@ if (window.innerWidth <= 768) {
    document.body.classList.add('sidebar-hidden');
 }
 
-function clearMenuItemOpenActive(currentMenuItem) {
-   menuItems.forEach(menuItem => {
-      if (menuItem !== currentMenuItem) {
-         menuItem.classList.remove('active');
-         menuItem.classList.remove('open')
-      }
-   })
-}
+const menuItems = document.querySelectorAll('.menu>.menu-item');
 
-const menuItems = document.querySelectorAll('.menu-item');
-
-menuItems.forEach(menuItem => menuItem.addEventListener('click', () => {
+menuItems.forEach(menuItem => menuItem.addEventListener('click', (event) => {
    clearMenuItemOpenActive(menuItem);
    menuItem.classList.add('active');
    menuItem.classList.toggle('open')
+   event.stopPropagation();
+}))
+
+const menuSubItems = document.querySelectorAll('.menu-sub>.menu-item');
+
+menuSubItems.forEach(menuSubItem => menuSubItem.addEventListener('click', (event) => {
+   clearMenuSubItemActive(menuSubItem);
+   menuSubItem.classList.add('active');
+   event.stopPropagation();
 }))
 
 const body = document.querySelector('body');
@@ -83,7 +83,8 @@ const notificationReads = document.querySelectorAll('.dropdown-notifications-rea
 notificationReads.forEach((notificationRead) => {
    notificationRead.addEventListener('click', (event) => {
       const notificationsItem = event.currentTarget.closest(".dropdown-notifications-item");
-      notificationsItem.classList.toggle('mark-as-read')
+      notificationsItem.classList.toggle('mark-as-read');
+      event.stopPropagation();
    })
 })
 
@@ -93,6 +94,7 @@ notificationArchives.forEach((notificationArchive) => {
    notificationArchive.addEventListener('click', (event) => {
       const notificationsItem = event.currentTarget.closest(".dropdown-notifications-item");
       notificationsItem.style.display = 'none';
+      event.stopPropagation();
    })
 })
 
@@ -128,6 +130,23 @@ function hideAllDropdowns() {
          if (event.currentTarget !== dropdownMenu) {
             dropdownMenu.classList.remove('show');
          }
+      }
+   })
+}
+
+function clearMenuItemOpenActive(currentMenuItem) {
+   menuItems.forEach(menuItem => {
+      if (menuItem !== currentMenuItem) {
+         menuItem.classList.remove('active');
+         menuItem.classList.remove('open')
+      }
+   })
+}
+
+function clearMenuSubItemActive(currentMenuSubItem) {
+   menuSubItems.forEach(menuSubItem => {
+      if (menuSubItem !== currentMenuSubItem) {
+         menuSubItem.classList.remove('active');
       }
    })
 }

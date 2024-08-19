@@ -646,6 +646,19 @@ h6 {
   scrollbar-color: var(--scrollbar-color);
 }
 
+.menu-header {
+  margin: 0;
+  padding: 1rem 1.5rem;
+}
+
+.menu-header .menu-header-text {
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--secondary-medium-color);
+}
+
 .menu-link {
   display: flex;
   align-items: center;

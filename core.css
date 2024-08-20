@@ -166,8 +166,8 @@ a:focus-visible {
   display: inline-block;
   margin: 0;
   padding: 0;
-  width: .5rem;
-  height: .5rem;
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius: 50%;
   vertical-align: middle;
 }
@@ -454,11 +454,15 @@ body {
   background-color: hsla(210, 29%, 19%, 0.06);
 }
 
-.dropdown-notifications-item:not(.mark-as-read) .dropdown-notifications-read span {
+.dropdown-notifications-item:not(.mark-as-read)
+  .dropdown-notifications-read
+  span {
   background-color: var(--primary-color);
 }
 
-.dropdown-notifications-item.mark-as-read:hover .dropdown-notifications-read span {
+.dropdown-notifications-item.mark-as-read:hover
+  .dropdown-notifications-read
+  span {
   background-color: var(--body-color);
 }
 
@@ -628,6 +632,54 @@ h6 {
 }
 
 /*-------------------------------------*/
+/*               Layout                */
+/*-------------------------------------*/
+
+.row {
+  --gutter-x: 1.625rem;
+  --gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--gutter-y));
+  margin-right: calc(-0.5 * var(--gutter-x));
+  margin-left: calc(-0.5 * var(--gutter-x));
+}
+
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--gutter-x) * 0.5);
+  padding-left: calc(var(--gutter-x) * 0.5);
+  margin-top: var(--gutter-y);
+}
+
+.col {
+  flex: 1 0 0%;
+}
+
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.col-1 {
+  flex: 0 0 auto;
+  width: 8.33333333%;
+}
+
+.col-2 {
+  flex: 0 0 auto;
+  width: 16.66666667%;
+}
+
+.col-3 {
+  flex: 0 0 auto;
+  width: 25%;
+  border: 1px solid red;
+}
+
+/*-------------------------------------*/
 /*                Menu                 */
 /*-------------------------------------*/
 /*             Sidebar Menu            */
@@ -676,7 +728,7 @@ h6 {
   background-color: hsla(210, 29%, 19%, 0.06);
 }
 
-.menu>.menu-item.active>.menu-link {
+.menu > .menu-item.active > .menu-link {
   color: var(--primary-color);
   background-color: var(--primary-subtle-color);
 }
@@ -692,7 +744,7 @@ h6 {
   transition: transform 0.2s ease-out;
 }
 
-.menu-item.open>.menu-toggle::after {
+.menu-item.open > .menu-toggle::after {
   transform: rotate(90deg);
 }
 
@@ -710,7 +762,7 @@ h6 {
   padding-left: 2.5rem;
 }
 
-.menu-sub>.menu-item>.menu-link:before {
+.menu-sub > .menu-item > .menu-link:before {
   content: '';
   position: absolute;
   left: 2rem;
@@ -720,11 +772,11 @@ h6 {
   background-color: #a7acb2;
 }
 
-.menu-sub>.menu-item.active>.menu-link:before {
+.menu-sub > .menu-item.active > .menu-link:before {
   background-color: var(--primary-color) !important;
 }
 
-.menu-item.open>.menu-sub {
+.menu-item.open > .menu-sub {
   display: block;
 }
 

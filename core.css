@@ -16,7 +16,7 @@
   --secondary-shadow-color: hsla(214, 14%, 52%, 0.4);
 
   --secondary-medium-color: hsl(214, 14%, 62%);
-  --secondary-subtle-color: hsl(214, 14%, 75%);
+  --secondary-subtle-color: hsl(214, 100%, 96%);
 
   --success-color: hsl(100, 65%, 56%);
   --success-hover-color: hsl(100, 65%, 48%);
@@ -454,11 +454,15 @@ body {
   background-color: hsla(210, 29%, 19%, 0.06);
 }
 
-.dropdown-notifications-item:not(.mark-as-read) .dropdown-notifications-read span {
+.dropdown-notifications-item:not(.mark-as-read)
+  .dropdown-notifications-read
+  span {
   background-color: var(--primary-color);
 }
 
-.dropdown-notifications-item.mark-as-read:hover .dropdown-notifications-read span {
+.dropdown-notifications-item.mark-as-read:hover
+  .dropdown-notifications-read
+  span {
   background-color: var(--body-color);
 }
 
@@ -473,6 +477,26 @@ body {
 
 .dropdown-notifications-archive:hover {
   color: var(--black-color);
+}
+
+.dropdown-shortcuts-item {
+  cursor: pointer;
+}
+
+.dropdown-shortcuts-item:hover {
+  color: var(--heading-color);
+  background-color: hsla(210, 29%, 19%, 0.06);
+}
+
+.dropdown-shortcuts-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  color: var(--secondary-color);
+  background-color: var(--secondary-subtle-color);
+  border-radius: 50%;
 }
 
 .dropdown-divider {
@@ -632,22 +656,6 @@ h6 {
 /*-------------------------------------*/
 
 .row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/* .col {
-  flex: 1 0 0%;
-  border: 1px solid red;
-} */
-
-.col {
-  flex: 0 0 auto;
-  width: 50%;
-  border: 1px solid red;
-}
-
-/* .row {
   --gutter-x: 1.625rem;
   --gutter-y: 0;
   display: flex;
@@ -657,7 +665,7 @@ h6 {
   margin-left: calc(-0.5 * var(--gutter-x));
 }
 
-.row>* {
+.row > * {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
@@ -688,9 +696,52 @@ h6 {
 .col-3 {
   flex: 0 0 auto;
   width: 25%;
-  border: 1px solid red;
-} */
+}
 
+.col-4 {
+  flex: 0 0 auto;
+  width: 33.33333333%;
+}
+
+.col-5 {
+  flex: 0 0 auto;
+  width: 41.66666667%;
+}
+
+.col-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.col-7 {
+  flex: 0 0 auto;
+  width: 58.33333333%;
+}
+
+.col-8 {
+  flex: 0 0 auto;
+  width: 66.66666667%;
+}
+
+.col-9 {
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+.col-10 {
+  flex: 0 0 auto;
+  width: 83.33333333%;
+}
+
+.col-11 {
+  flex: 0 0 auto;
+  width: 91.66666667%;
+}
+
+.col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
 
 /*-------------------------------------*/
 /*                Menu                 */
@@ -741,7 +792,7 @@ h6 {
   background-color: hsla(210, 29%, 19%, 0.06);
 }
 
-.menu>.menu-item.active>.menu-link {
+.menu > .menu-item.active > .menu-link {
   color: var(--primary-color);
   background-color: var(--primary-subtle-color);
 }
@@ -757,7 +808,7 @@ h6 {
   transition: transform 0.2s ease-out;
 }
 
-.menu-item.open>.menu-toggle::after {
+.menu-item.open > .menu-toggle::after {
   transform: rotate(90deg);
 }
 
@@ -775,7 +826,7 @@ h6 {
   padding-left: 2.5rem;
 }
 
-.menu-sub>.menu-item>.menu-link:before {
+.menu-sub > .menu-item > .menu-link:before {
   content: '';
   position: absolute;
   left: 2rem;
@@ -785,11 +836,11 @@ h6 {
   background-color: #a7acb2;
 }
 
-.menu-sub>.menu-item.active>.menu-link:before {
+.menu-sub > .menu-item.active > .menu-link:before {
   background-color: var(--primary-color) !important;
 }
 
-.menu-item.open>.menu-sub {
+.menu-item.open > .menu-sub {
   display: block;
 }
 

@@ -98,6 +98,22 @@ notificationArchives.forEach((notificationArchive) => {
    })
 })
 
+// Theme Toggle
+const themeToggle = document.querySelector('.theme-toggle .nav-link i');
+
+themeToggle.addEventListener('click', () => {
+   body.classList.toggle('dark-mode')
+
+   if (body.classList.contains('dark-mode')) {
+      themeToggle.classList.remove('bx-moon');
+      themeToggle.classList.add('bx-sun');
+   }
+   else {
+      themeToggle.classList.remove('bx-sun');
+      themeToggle.classList.add('bx-moon');
+   }
+})
+
 //Click on empty area
 document.documentElement.addEventListener('click', (event) => {
 

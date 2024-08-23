@@ -110,6 +110,7 @@
   width: 100%;
   overflow-y: auto;
   scrollbar-color: #a6a6a6 transparent;
+  scrollbar-width: thin;
 }
 
 .main-layout:before {

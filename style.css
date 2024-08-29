@@ -404,7 +404,7 @@ body.sidebar-hidden .sidebar {
 .user-table tr,
 .user-table td,
 .user-table th {
-  border-bottom: 2px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .user-table th,

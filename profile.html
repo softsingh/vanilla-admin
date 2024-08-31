@@ -4,7 +4,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Dashboard</title>
+   <title>Profile</title>
    <link rel="stylesheet" href="core.css">
    <link rel="stylesheet" href="style.css">
    <link rel="stylesheet" href="assets/vendor/boxicons-2.1.4/css/boxicons.min.css">
@@ -25,13 +25,13 @@
             </a>
          </div>
          <div class="menu">
-            <div class="menu-item active">
+            <div class="menu-item">
                <a href="dashboard.html" class="menu-link">
                   <i class="bx bx-home fs-6"></i>
                   <span>Dashboard</span>
                </a>
             </div>
-            <div class="menu-item">
+            <div class="menu-item active open">
                <a href="#" class="menu-link menu-toggle">
                   <i class="bx bx-layout fs-6"></i>
                   <span>Pages</span>
@@ -52,7 +52,7 @@
                         <span>Login Page</span>
                      </a>
                   </div>
-                  <div class="menu-item">
+                  <div class="menu-item active">
                      <a href="profile.html" class="menu-link">
                         <span>Profile Page</span>
                      </a>
@@ -584,536 +584,53 @@
             </div>
          </nav>
          <div class="dash-content">
-            <div class="row g-6 mb-6">
-               <div class="col-sm-6 col-xl-3">
-                  <div class="card px-6 pt-4 pb-5">
-                     <div class="d-flex align-items-top justify-content-between mb-7">
-                        <div>
-                           <h5>Total</h5>
-                           <small>Users (This Month)</small>
-                        </div>
-                        <div class="dropdown">
-                           <a href="#" class="dropdown-toggle text-body">
-                              <i class="bx bx-dots-horizontal fs-4"></i>
-                           </a>
-                           <div class="dropdown-menu dropdown-menu-end">
-                              <div class="px-6 pt-2 pb-3 mb-1 border-bottom">Filter</div>
-                              <div class="dropdown-item">This Week</div>
-                              <div class="dropdown-item">This Month</div>
-                              <div class="dropdown-item">This Year</div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="d-flex align-items-center">
-                        <div class="avatar me-4">
-                           <span class="avatar-initial rounded bg-label-danger">
-                              <i class="bx bx-user fs-5"></i>
-                           </span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between">
-                           <h4 class="me-2">30146</h4>
-                           <p class="text-success">(+30%)</p>
-                        </div>
+            <div class="card mb-4">
+               <div class="mb-5 px-4 pt-7">
+                  <div class="d-flex flex-column align-items-center">
+                     <img class="rounded bg-primary-medium img-fluid mb-4" src="/assets/img/Avatars/Dollar Gill.png"
+                        width="110" alt="User avatar" />
+                     <div class="text-center">
+                        <h4 class="mb-3">Dollar Gill</h4><span class="badge fw-bold bg-label-primary">Admin</span>
                      </div>
                   </div>
                </div>
-               <div class="col-sm-6 col-xl-3">
-                  <div class="card px-6 pt-4 pb-5">
-                     <div class="d-flex align-items-top justify-content-between mb-7">
-                        <div>
-                           <h5>Registered</h5>
-                           <small>Users (This Month)</small>
-                        </div>
-                        <div class="dropdown">
-                           <a href="#" class="dropdown-toggle text-body">
-                              <i class="bx bx-dots-horizontal fs-4"></i>
-                           </a>
-                           <div class="dropdown-menu dropdown-menu-end">
-                              <div class="px-6 pt-2 pb-3 mb-1 border-bottom">Filter</div>
-                              <div class="dropdown-item">This Week</div>
-                              <div class="dropdown-item">This Month</div>
-                              <div class="dropdown-item">This Year</div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="d-flex align-items-center">
-                        <div class="avatar me-4">
-                           <span class="avatar-initial rounded bg-label-success">
-                              <i class="bx bx-user fs-5"></i>
-                           </span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between">
-                           <h4 class="me-2">513</h4>
-                           <p class="text-danger">(-10%)</p>
-                        </div>
-                     </div>
-                  </div>
+               <div class="border-bottom mb-5">
+                  <h5 class="px-7 mb-2">Details</h5>
                </div>
-               <div class="col-sm-6 col-xl-3">
-                  <div class="card px-6 pt-4 pb-5">
-                     <div class="d-flex align-items-top justify-content-between mb-7">
-                        <div>
-                           <h5>Active</h5>
-                           <small>Users (This Month)</small>
-                        </div>
-                        <div class="dropdown">
-                           <a href="#" class="dropdown-toggle text-body">
-                              <i class="bx bx-dots-horizontal fs-4"></i>
-                           </a>
-                           <div class="dropdown-menu dropdown-menu-end">
-                              <div class="px-6 pt-2 pb-3 mb-1 border-bottom">Filter</div>
-                              <div class="dropdown-item">This Week</div>
-                              <div class="dropdown-item">This Month</div>
-                              <div class="dropdown-item">This Year</div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="d-flex align-items-center">
-                        <div class="avatar me-4">
-                           <span class="avatar-initial rounded bg-label-primary">
-                              <i class="bx bx-user fs-5"></i>
-                           </span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between">
-                           <h4 class="me-2">20125</h4>
-                           <p class="text-success">(+20%)</p>
-                        </div>
-                     </div>
-                  </div>
+               <div class="px-7 mb-3">
+                  <ul class="list-unstyled">
+                     <li class="mb-4">
+                        <span class="fw-bold me-2">Full Name:</span><span>Dollar Gill</span>
+                     </li>
+                     <li class="mb-4">
+                        <span class="fw-bold me-2">Email Address:</span>
+                        <span>gilldollar@gmail.com</span>
+                     </li>
+                     <li class="mb-4">
+                        <span class="fw-bold me-2">Login ID:</span>
+                        <span>dollar</span>
+                     </li>
+                     <li class="mb-4">
+                        <span class="fw-bold me-2">Status:</span>
+                        <span class="badge fw-bold bg-label-success">Active</span>
+                     </li>
+                     <li class="mb-4">
+                        <span class="fw-bold me-2">Gender:</span>
+                        <span>Male</span>
+                     </li>
+                     <li class="mb-4">
+                        <span class="fw-bold me-2">Role:</span>
+                        <span>Admin</span>
+                     </li>
+                     <li class="mb-4">
+                        <span class="fw-bold me-2">Contact:</span>
+                        <span>12345-67890</span>
+                     </li>
+                  </ul>
                </div>
-               <div class="col-sm-6 col-xl-3">
-                  <div class="card px-6 pt-4 pb-5">
-                     <div class="d-flex align-items-top justify-content-between mb-7">
-                        <div>
-                           <h5>Pending</h5>
-                           <small>Users (This Month)</small>
-                        </div>
-                        <div class="dropdown">
-                           <a href="#" class="dropdown-toggle text-body">
-                              <i class="bx bx-dots-horizontal fs-4"></i>
-                           </a>
-                           <div class="dropdown-menu dropdown-menu-end">
-                              <div class="px-6 pt-2 pb-3 mb-1 border-bottom">Filter</div>
-                              <div class="dropdown-item">This Week</div>
-                              <div class="dropdown-item">This Month</div>
-                              <div class="dropdown-item">This Year</div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="d-flex align-items-center">
-                        <div class="avatar me-4">
-                           <span class="avatar-initial rounded bg-label-warning">
-                              <i class="bx bx-user fs-5"></i>
-                           </span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between">
-                           <h4 class="me-2">123</h4>
-                           <p class="text-success">(+31%)</p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="card">
-               <div class="px-6 py-6">
-                  <div class="d-flex align-items-center justify-content-between">
-                     <h6>User List</h6>
-                     <button class="btn btn-primary">
-                        <div class="d-flex align-items-center justify-content-between gap-1">
-                           <i class="bx bx-plus fs-4"></i>
-                           <span>Add User</span>
-                        </div>
-                     </button>
-                  </div>
-               </div>
-               <div class="mb-5">
-                  <table class="user-table">
-                     <thead>
-                        <tr>
-                           <th>User</th>
-                           <th>Role</th>
-                           <th>Actions</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-subtle"
-                                             src="assets/img/Avatars/Andrew Altman.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Andrew Altman</p>
-                                       <small class="text-muted">altman@gmail.com</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-user text-success fs-4"></i>
-                                 <span class="h-100">User</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-subtle"
-                                             src="assets/img/Avatars/Dollar Gill.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Dollar Gill</p>
-                                       <small class="text-muted">dgill@gmail.com</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-user text-success fs-4"></i>
-                                 <span class="h-100">User</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-subtle"
-                                             src="assets/img/Avatars/Hargun Chahal.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Hargun Chahal</p>
-                                       <small class="text-muted">chargun@gmail.com</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-desktop text-primary fs-4"></i>
-                                 <span class="h-100">Admin</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-subtle"
-                                             src="assets/img/Avatars/Harinder Singh.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Harinder Singh</p>
-                                       <small class="text-muted">singhhar@gmail.com</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-edit text-info fs-4"></i>
-                                 <span class="h-100">Editor</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-subtle"
-                                             src="assets/img/Avatars/Harishta Roy.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Harishta Roy</p>
-                                       <small class="text-muted">royalh@gmail.com</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-user text-success fs-4"></i>
-                                 <span class="h-100">User</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-subtle"
-                                             src="assets/img/Avatars/Ibadat Singh.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Ibadat Singh</p>
-                                       <small class="text-muted">ibbys@gmail.com</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-desktop text-primary fs-4"></i>
-                                 <span class="h-100">Admin</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-subtle"
-                                             src="assets/img/Avatars/Jassi Maan.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Jassi Maan</p>
-                                       <small class="text-muted">jassman@gmail.com</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-user text-success fs-4"></i>
-                                 <span class="h-100">User</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-subtle"
-                                             src="assets/img/Avatars/Joginder Singh.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Joginder Singh</p>
-                                       <small class="text-muted">jogisingh@gmail.com</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-user text-success fs-4"></i>
-                                 <span class="h-100">User</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-subtle"
-                                             src="assets/img/Avatars/Kenza Layli.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Kenza Layli</p>
-                                       <small class="text-muted">laylikenz@gmail.com</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-edit text-info fs-4"></i>
-                                 <span class="h-100">Editor</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-subtle"
-                                             src="assets/img/Avatars/Lalina.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Lalina</p>
-                                       <small class="text-muted">lalinaz@gmail.com</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-user text-success fs-4"></i>
-                                 <span class="h-100">User</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                        </tr>
-                     </tbody>
-                  </table>
-               </div>
-               <div class="row px-6 mb-5">
-                  <div class="col-sm-12 col-md-6">
-                     <div class="table-info text-muted">Showing 1 to 10 of 90</div>
-                  </div>
-                  <div class="col-sm-12 col-md-6">
-                     <div class="table-pagination">
-                        <ul class="pagination">
-                           <li class="page-item disabled">
-                              <a href="#" class="page-link">
-                                 <i class="bx bx-chevron-left bx-18px"></i>
-                              </a>
-                           </li>
-                           <li class="page-item active">
-                              <a href="#" class="page-link">1</a>
-                           </li>
-                           <li class="page-item">
-                              <a href="#" class="page-link">2</a>
-                           </li>
-                           <li class="page-item">
-                              <a href="#" class="page-link">3</a>
-                           </li>
-                           <li class="page-item">
-                              <a href="#" class="page-link">4</a>
-                           </li>
-                           <li class="page-item">
-                              <a href="#" class="page-link">5</a>
-                           </li>
-                           <li class="page-item">
-                              <a href="#" class="page-link">
-                                 <i class="bx bx-chevron-right bx-18px"></i>
-                              </a>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
+               <div class="d-flex justify-content-center gap-3 mb-6">
+                  <a class="btn btn-primary">Edit</a>
+                  <a class="btn btn-danger">Delete</a>
                </div>
             </div>
          </div>

@@ -240,7 +240,7 @@ body.sidebar-hidden .navbar .nav-logo {
   display: block;
 }
 
-.navbar .search-input-wrapper .search-input-typeahead {
+.navbar .search-input-wrapper .search-input-cover {
   position: absolute;
   left: 0;
   top: 0;
@@ -249,7 +249,7 @@ body.sidebar-hidden .navbar .nav-logo {
   display: flex;
 }
 
-.search-input-typeahead .search-input:focus {
+.search-input-cover .search-input:focus {
   border: 0;
 }
 

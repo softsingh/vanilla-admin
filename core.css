@@ -2460,7 +2460,65 @@ h6,
 }
 
 /*-------------------------------------*/
-/*                Table                */
+/*                 Nav                 */
+/*-------------------------------------*/
+
+.nav {
+  --nav-link-color: var(--body-color);
+  --nav-link-bg-color: hsl(220, 9%, 94%);
+  --nav-link-hover-bg-color: hsl(220, 9%, 84%);
+
+  --nav-link-disabled-color: hsl(210, 18%, 80%);
+  --nav-link-disabled-bg-color: hsl(220, 8%, 96%);
+
+  --nav-link-active-color: var(--white-color);
+  --nav-link-active-bg-color: var(--primary-color);
+  --nav-link-active-hover-bg-color: var(--primary-hover-color);
+
+  display: flex;
+  gap: 0.5rem;
+  padding-left: 0;
+  list-style: none;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.nav .nav-link {
+  /* position: relative; */
+  display: block;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--nav-link-color);
+  background-color: var(--nav-link-bg-color);
+  border-radius: var(--border-radius);
+}
+
+.nav .nav-link:hover {
+  color: var(--body-color);
+  background-color: var(--nav-link-hover-bg-color);
+}
+
+.nav .nav-item.active>.nav-link {
+  color: var(--nav-link-active-color);
+  background-color: var(--nav-link-active-bg-color);
+}
+
+.nav .nav-item.active>.nav-link:hover {
+  color: var(--nav-link-active-color);
+  background-color: var(--nav-link-active-hover-bg-color);
+}
+
+.nav .nav-item.disabled>.nav-link {
+  color: var(--nav-link-disabled-color);
+  background-color: var(--nav-link-disabled-bg-color);
+  pointer-events: none;
+}
+
+/*-------------------------------------*/
+/*             Pagination              */
 /*-------------------------------------*/
 
 .pagination {

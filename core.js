@@ -9,7 +9,7 @@ const menuItems = document.querySelectorAll('.menu>.menu-item');
 menuItems.forEach(menuItem => menuItem.addEventListener('click', (event) => {
    clearMenuItemOpenActive(menuItem);
    menuItem.classList.add('active');
-   menuItem.classList.toggle('open')
+   menuItem.classList.toggle('open');
    event.stopPropagation();
 }))
 
@@ -17,7 +17,16 @@ const menuSubItems = document.querySelectorAll('.menu-sub>.menu-item');
 
 menuSubItems.forEach(menuSubItem => menuSubItem.addEventListener('click', (event) => {
    clearMenuSubItemActive(menuSubItem);
-   menuSubItem.classList.add('active');
+
+   const menuSubSub = menuSubItem.querySelectorAll('.menu-sub');
+
+   if (menuSubSub.length > 0) {
+      menuSubItem.classList.toggle('open');
+   } 
+   else {
+      menuSubItem.classList.add('active');
+   }
+   
    event.stopPropagation();
 }))
 

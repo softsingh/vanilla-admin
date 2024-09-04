@@ -297,7 +297,7 @@ body.sidebar-hidden .navbar .nav-logo {
 
 .sidebar {
   z-index: 2;
-  width: 16rem;
+  width: 18rem;
   height: 100vh;
   background: var(--white-color);
   box-shadow: 0.2rem 0 0.5rem 0 hsla(210, 30%, 20%, 0.1);
@@ -312,7 +312,6 @@ body.sidebar-hidden .navbar .nav-logo {
   margin-top: 1rem;
   padding: 0.7rem 0 0 1.5rem;
   transition: 0.3s ease;
-  /* border: 1px solid red; */
 }
 
 body.sidebar-hidden .sidebar .app-brand {

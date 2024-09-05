@@ -67,6 +67,8 @@
   --link-color: #6666ff;
   --link-hover-color: #5252ff;
 
+  --menu-sub-bg-color: hsl(215, 100%, 98%);
+
   --scrollbar-color: hsl(240, 25%, 100%);
   --scrollbar-hover-color: var(--black-color);
 
@@ -2433,11 +2435,11 @@ h6,
 .menu-sub {
   display: none;
   position: relative;
-  transition: height 0.4s ease-in;
+  transition: size 0.4s ease-in;
 }
 
-.menu-sub .menu-item {
-  margin-top: 0.25rem;
+.menu-sub .menu-item:first-child {
+  margin-top: 0.3rem;
 }
 
 .menu-sub .menu-link {

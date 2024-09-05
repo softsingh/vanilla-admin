@@ -4,7 +4,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Account</title>
+   <title>Profile</title>
    <link rel="stylesheet" href="core.css">
    <link rel="stylesheet" href="style.css">
    <link rel="stylesheet" href="assets/vendor/boxicons-2.1.4/css/boxicons.min.css">
@@ -68,35 +68,18 @@
             <div class="menu-item active open">
                <a href="#" class="menu-link menu-toggle">
                   <i class="bx bx-user fs-6"></i>
-                  <span>User</span>
+                  <span>Users</span>
                </a>
                <div class="menu-sub">
-                  <div class="menu-item open">
-                     <a href="#" class="menu-link menu-toggle">
-                        <span>Account Settings</span>
+                  <div class="menu-item active">
+                     <a href="profile.html" class="menu-link">
+                        <span>Profile</span>
                      </a>
-                     <div class="menu-sub">
-                        <div class="menu-item">
-                           <a href="account-overview.html" class="menu-link">
-                              <span>Overview</span>
-                           </a>
-                        </div>
-                        <div class="menu-item active">
-                           <a href="account.html" class="menu-link">
-                              <span>Account</span>
-                           </a>
-                        </div>
-                        <div class="menu-item">
-                           <a href="account-address.html" class="menu-link">
-                              <span>Address</span>
-                           </a>
-                        </div>
-                        <div class="menu-item">
-                           <a href="account-password.html" class="menu-link">
-                              <span>Passsword</span>
-                           </a>
-                        </div>
-                     </div>
+                  </div>
+                  <div class="menu-item">
+                     <a href="edit-profile.html" class="menu-link">
+                        <span>Edit Profile</span>
+                     </a>
                   </div>
                </div>
             </div>
@@ -637,123 +620,53 @@
             </div>
          </nav>
          <div class="dash-content">
-            <ul class="nav">
-               <li class="nav-item">
-                  <a href="#" class="nav-link">
-                     <div class="d-flex align-items-center">
-                        <i class="bx bx-list-ul fs-5 me-1"></i>
-                        <span>Overview</span>
-                     </div>
-                  </a>
-               </li>
-               <li class="nav-item active">
-                  <a href="#" class="nav-link">
-                     <div class="d-flex align-items-center">
-                        <i class="bx bx-user fs-5 me-1"></i>
-                        <span>Account</span>
-                     </div>
-                  </a>
-               </li>
-               <li class="nav-item">
-                  <a href="#" class="nav-link">
-                     <div class="d-flex align-items-center">
-                        <i class="bx bx-home fs-5 me-1"></i>
-                        <span>Address</span>
-                     </div>
-                  </a>
-               </li>
-               <li class="nav-item">
-                  <a href="#" class="nav-link">
-                     <div class="d-flex align-items-center">
-                        <i class="bx bx-lock-alt fs-5 me-1"></i>
-                        <span>Password</span>
-                     </div>
-                  </a>
-               </li>
-            </ul>
-            <div class="card mb-6">
-               <!-- Edit Profile -->
-               <div class="card-body">
-                  <div class="d-flex align-items-start align-items-sm-center gap-6 pb-5 border-bottom">
-                     <img src="/assets/img/Avatars/Dollar Gill.png" alt="user-avatar"
-                        class="d-block rounded bg-primary-medium" height="100px" id="uploadedAvatar">
-                     <div>
-                        <label for="upload" class="btn btn-primary me-2 mb-4">
-                           <span class="d-none d-sm-block">Upload Photo</span>
-                           <i class="bx bx-upload d-block d-sm-none"></i>
-                           <input type="file" id="upload" class="" hidden accept="image/png, image/jpeg">
-                        </label>
-                        <button class="btn btn-secondary mb-4">
-                           <i class="bx bx-reset d-block d-sm-none"></i>
-                           <span class="d-none d-sm-block">Reset</span>
-                        </button>
-                        <div>Allowed JPG, GIF or PNG. Max size of 100K</div>
+            <div class="card mb-4">
+               <div class="mb-5 px-4 pt-7">
+                  <div class="d-flex flex-column align-items-center">
+                     <img class="rounded bg-primary-medium img-fluid mb-4" src="/assets/img/Avatars/Dollar Gill.png"
+                        width="110" alt="User avatar" />
+                     <div class="text-center">
+                        <h4 class="mb-3">Dollar Gill</h4><span class="badge fw-bold bg-label-primary">Admin</span>
                      </div>
                   </div>
                </div>
-               <div class="card-body pt-0">
-                  <form id="formAccountSettings" method="GET" onsubmit="return false">
-                     <div class="row g-6">
-                        <div class="col-md-6">
-                           <label for="fullName" class="form-label mb-2">Full Name</label>
-                           <input class="form-control" type="text" id="fullName" name="fullName" value="Dollar Gill"
-                              autofocus="">
-                        </div>
-                        <div class="col-md-6">
-                           <label for="emailAddress" class="form-label mb-2">Email Address</label>
-                           <input class="form-control" type="text" id="emailAddress" name="emailAddress"
-                              value="gilldollar@gmail.com" placeholder="Enter Email Address">
-                        </div>
-                        <div class="col-md-6">
-                           <label for="loginID" class="form-label mb-2">Login ID</label>
-                           <input type="text" class="form-control" id="loginID" name="loginID" value="gilldollar"
-                              placeholder="Enter Login ID">
-                        </div>
-                        <div class="col-md-6">
-                           <label class="form-label mb-2" for="phoneNumber">Phone Number</label>
-                           <input type="text" id="phoneNumber" name="phoneNumber" class="form-control"
-                              placeholder="Enter Phone Number">
-                        </div>
-                        <div class="col-md-6">
-                           <label for="address" class="form-label mb-2">Address</label>
-                           <input type="text" class="form-control" id="address" name="address"
-                              placeholder="Enter Address">
-                        </div>
-                        <div class="col-md-6">
-                           <label for="state" class="form-label mb-2">State</label>
-                           <input class="form-control" type="text" id="state" name="state" placeholder="Enter State">
-                        </div>
-                        <div class="col-md-6">
-                           <label for="pinCode" class="form-label mb-2">Pin Code</label>
-                           <input type="text" class="form-control" id="pinCode" name="pinCode"
-                              placeholder="Enter Pin Code" maxlength="6">
-                        </div>
-                     </div>
-                     <div class="mt-6">
-                        <button type="submit" class="btn btn-primary me-3">Save changes</button>
-                        <button type="reset" class="btn btn-secondary">Cancel</button>
-                     </div>
-                  </form>
+               <div class="border-bottom mb-5">
+                  <h5 class="px-7 mb-2">Details</h5>
                </div>
-               <!-- /Edit Profile -->
-            </div>
-            <div class="card">
-               <h5 class="p-6">Delete</h5>
-               <div class="px-6 pb-6">
-                  <div class="col-12">
-                     <div class="alert alert-warning">
-                        <h5 class="color-inherit mb-1">Are you sure you want to delete your account?</h5>
-                        <p class="mb-0">Once you delete your account, there is no going back.</p>
-                     </div>
-                  </div>
-                  <form id="formAccountDeactivation" onsubmit="return false">
-                     <div class="form-check my-8">
-                        <input class="form-check-input" type="checkbox" name="accountActivation" id="accountActivation">
-                        <label class="form-check-label" for="accountActivation">I confirm my account
-                           deletion</label>
-                     </div>
-                     <button type="submit" class="btn btn-danger" disabled>Delete Account</button>
-                  </form>
+               <div class="px-7 mb-3">
+                  <ul class="list-unstyled">
+                     <li class="mb-4">
+                        <span class="fw-bold me-2">Full Name:</span><span>Dollar Gill</span>
+                     </li>
+                     <li class="mb-4">
+                        <span class="fw-bold me-2">Email Address:</span>
+                        <span>gilldollar@gmail.com</span>
+                     </li>
+                     <li class="mb-4">
+                        <span class="fw-bold me-2">Login ID:</span>
+                        <span>gilldollar</span>
+                     </li>
+                     <li class="mb-4">
+                        <span class="fw-bold me-2">Status:</span>
+                        <span class="badge fw-bold bg-label-success">Active</span>
+                     </li>
+                     <li class="mb-4">
+                        <span class="fw-bold me-2">Gender:</span>
+                        <span>Male</span>
+                     </li>
+                     <li class="mb-4">
+                        <span class="fw-bold me-2">Role:</span>
+                        <span>Admin</span>
+                     </li>
+                     <li class="mb-4">
+                        <span class="fw-bold me-2">Contact:</span>
+                        <span>12345-67890</span>
+                     </li>
+                  </ul>
+               </div>
+               <div class="d-flex justify-content-center gap-3 mb-6">
+                  <a href="edit-profile.html" class="btn btn-primary">Edit</a>
+                  <a class="btn btn-danger">Delete</a>
                </div>
             </div>
          </div>

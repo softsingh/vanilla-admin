@@ -4,6 +4,7 @@ if (window.innerWidth <= 768) {
    document.body.classList.add('sidebar-hidden');
 }
 
+// Sidebar Menu
 const menuItems = document.querySelectorAll('.menu>.menu-item');
 
 menuItems.forEach(menuItem => menuItem.addEventListener('click', (event) => {
@@ -13,6 +14,7 @@ menuItems.forEach(menuItem => menuItem.addEventListener('click', (event) => {
    event.stopPropagation();
 }))
 
+// Sidebar Sub-Menu
 const menuSubItems = document.querySelectorAll('.menu-sub>.menu-item');
 
 menuSubItems.forEach(menuSubItem => menuSubItem.addEventListener('click', (event) => {
@@ -123,6 +125,15 @@ themeToggle.addEventListener('click', () => {
    }
 })
 
+// Nav
+const navItems = document.querySelectorAll('.nav>.nav-item');
+
+navItems.forEach(navItem => navItem.addEventListener('click', (event) => {
+   clearNavItemActive(navItem);
+   navItem.classList.add('active');
+   event.stopPropagation();
+}))
+
 //Click on empty area
 document.documentElement.addEventListener('click', (event) => {
 
@@ -150,7 +161,7 @@ function showNavbarSearchInput() {
 function hideAllDropdowns() {
    const dropdownMenus = document.querySelectorAll('.dropdown-menu');
 
-   dropdownMenus.forEach((dropdownMenu) => {
+   dropdownMenus.forEach(dropdownMenu => {
       if (dropdownMenu.classList.contains('show')) {
          if (event.currentTarget !== dropdownMenu) {
             dropdownMenu.classList.remove('show');
@@ -172,6 +183,14 @@ function clearMenuSubItemActive(currentMenuSubItem) {
    menuSubItems.forEach(menuSubItem => {
       if (menuSubItem !== currentMenuSubItem) {
          menuSubItem.classList.remove('active');
+      }
+   })
+}
+
+function clearNavItemActive(currentNavItem) {
+   navItems.forEach(navItem => {
+      if (navItem !== currentNavItem) {
+         navItem.classList.remove('active');
       }
    })
 }

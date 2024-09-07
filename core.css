@@ -2489,11 +2489,7 @@ h6,
   --nav-link-active-hover-bg-color: var(--primary-hover-color);
 
   display: flex;
-  gap: 0.5rem;
   list-style: none;
-  overflow-x: scroll;
-  scrollbar-width: thin;
-  scrollbar-color: transparent transparent;
 }
 
 .nav .nav-link {
@@ -2503,28 +2499,65 @@ h6,
   font-weight: 500;
   color: var(--nav-link-color);
   background-color: var(--nav-link-bg-color);
+}
+
+.nav.nav-pills {
+  gap: 0.5rem;
+}
+
+.nav.nav-pills .nav-link {
   border-radius: var(--border-radius);
 }
 
-.nav .nav-link:hover {
+.nav.nav-pills .nav-link:hover {
   color: var(--body-color);
   background-color: var(--nav-link-hover-bg-color);
 }
 
-.nav .nav-item.active > .nav-link {
+.nav.nav-pills .nav-item.active > .nav-link {
   color: var(--nav-link-active-color);
   background-color: var(--nav-link-active-bg-color);
 }
 
-.nav .nav-item.active > .nav-link:hover {
+.nav.nav-pills .nav-item.active > .nav-link:hover {
   color: var(--nav-link-active-color);
   background-color: var(--nav-link-active-hover-bg-color);
 }
 
-.nav .nav-item.disabled > .nav-link {
+.nav.nav-pills .nav-item.disabled > .nav-link {
   color: var(--nav-link-disabled-color);
   background-color: var(--nav-link-disabled-bg-color);
   pointer-events: none;
+}
+
+.nav.nav-tabs .nav-item > .nav-link {
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.nav.nav-tabs .nav-link:hover {
+  color: var(--body-color);
+  background-color: var(--nav-link-hover-bg-color);
+}
+
+.nav.nav-tabs .nav-item.active > .nav-link {
+  color: var(--nav-link-active-color);
+  background-color: var(--nav-link-active-bg-color);
+}
+
+.nav.nav-underline .nav-link {
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.nav.nav-underline .nav-link:hover {
+  color: var(--body-color);
+  background-color: var(--nav-link-hover-bg-color);
+  border-bottom: 2px solid var(--nav-link-hover-bg-color);
+}
+
+.nav.nav-underline .nav-item.active > .nav-link {
+  border-bottom: 2px solid var(--nav-link-active-bg-color);
 }
 
 /*-------------------------------------*/
@@ -2578,6 +2611,22 @@ h6,
   color: var(--page-link-disabled-color);
   background-color: var(--page-link-disabled-bg-color);
   pointer-events: none;
+}
+
+/*-------------------------------------*/
+/*               Scroll                */
+/*-------------------------------------*/
+
+.scroll-x {
+  overflow-x: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.scroll-y {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
 }
 
 /*-------------------------------------*/
@@ -3647,8 +3696,16 @@ small,
   color: var(--body-color);
 }
 
+.text-left {
+  text-align: left;
+}
+
 .text-center {
   text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .text-heading {

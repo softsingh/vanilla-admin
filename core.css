@@ -259,6 +259,8 @@ body {
 
 .btn {
   display: inline-block;
+  text-align: center;
+  vertical-align: middle;
   font-size: 0.9rem;
   font-weight: 500;
   line-height: 1.3;

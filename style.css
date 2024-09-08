@@ -127,6 +127,16 @@
   margin-bottom: 1.5rem;
 }
 
+@media (max-width: 576px) {
+
+  .login-container,
+  .register-container {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    width: auto;
+  }
+}
+
 .main-layout {
   height: 100vh;
   width: 100%;

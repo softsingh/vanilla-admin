@@ -46,6 +46,16 @@
 }
 
 /*-------------------------------------*/
+/*               Button                */
+/*-------------------------------------*/
+
+.btn-address {
+  font-size: 0.6rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+/*-------------------------------------*/
 /*             Dashboard               */
 /*-------------------------------------*/
 
@@ -273,25 +283,29 @@ body.sidebar-hidden .navbar .nav-logo {
   top: 2.75rem;
 }
 
-#dropdown-menu-notifications .dropdown-scroll-container {
-  height: calc(100vh - 20rem);
+#dropdown-menu-shortcuts .dropdown-scroll-container {
+  height: calc(100vh - 15rem);
 }
 
-/* @media (max-width: 576px) {
-  #dropdown-menu-shortcuts .dropdown-scroll-container {
-    height: calc(100vh - 18rem);
+@media (max-width: 576px) {
+  #dropdown-menu-notifications .dropdown-scroll-container {
+    height: calc(100vh - 25rem);
   }
-} */
+
+  #dropdown-menu-shortcuts .dropdown-scroll-container {
+    height: calc(100vh - 22rem);
+  }
+}
 
 @media (max-width: 768px) {
   #dropdown-menu-notifications {
-    max-width: 90vw;
-    right: -4.5rem;
+    max-width: 89vw;
+    right: -4.6rem;
   }
 
   #dropdown-menu-shortcuts {
-    width: 90vw;
-    right: -6.8rem;
+    width: 89vw;
+    right: -6.75rem;
   }
 }
 

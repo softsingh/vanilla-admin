@@ -273,9 +273,15 @@ body.sidebar-hidden .navbar .nav-logo {
   top: 2.75rem;
 }
 
-#dropdown-menu-shortcuts .dropdown-scroll-container {
-  height: calc(100vh - 15rem);
+#dropdown-menu-notifications .dropdown-scroll-container {
+  height: calc(100vh - 20rem);
 }
+
+/* @media (max-width: 576px) {
+  #dropdown-menu-shortcuts .dropdown-scroll-container {
+    height: calc(100vh - 18rem);
+  }
+} */
 
 @media (max-width: 768px) {
   #dropdown-menu-notifications {
@@ -407,4 +413,12 @@ body.sidebar-hidden .sidebar {
 
 .user-table tbody tr:hover {
   background-color: var(--heading-hover-bg-color);
+}
+
+@media (max-width: 576px) {
+
+  .user-table tbody td:nth-child(3),
+  .user-table thead th:nth-child(3) {
+    display: none;
+  }
 }

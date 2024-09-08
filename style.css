@@ -85,10 +85,8 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0.6rem;
-  margin-top: 1rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  margin: 1rem;
   border: 2px solid hsla(0, 0%, 100%, 0.9);
   background: hsla(0, 0%, 100%, 0.5);
   border-radius: 0.375rem;
@@ -441,8 +439,11 @@ body.sidebar-hidden .sidebar {
 
 @media (max-width: 576px) {
 
+  .user-table tbody td:nth-child(2),
   .user-table tbody td:nth-child(3),
+  .user-table thead th:nth-child(2),
   .user-table thead th:nth-child(3) {
     display: none;
   }
+
 }

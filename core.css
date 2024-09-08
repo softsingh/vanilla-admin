@@ -2849,6 +2849,14 @@ textarea {
   background-color: var(--danger-color);
 }
 
+.bg-danger-medium {
+  background-color: var(--danger-medium-color);
+}
+
+.bg-danger-subtle {
+  background-color: var(--danger-subtle-color);
+}
+
 /*-------------------------------------*/
 /*               Border                */
 /*-------------------------------------*/
@@ -3189,6 +3197,14 @@ textarea {
   font-size: 2rem;
 }
 
+.fs-16 {
+  font-size: 4rem;
+}
+
+.fs-24 {
+  font-size: 6rem;
+}
+
 .fw-lighter {
   font-weight: lighter;
 }
@@ -3241,6 +3257,66 @@ small,
 .img-fluid {
   max-width: 100%;
   height: auto;
+}
+
+/*-------------------------------------*/
+/*            Line Height              */
+/*-------------------------------------*/
+
+.lh-0 {
+  line-height: 0;
+}
+
+.lh-1 {
+  line-height: 0.25rem;
+}
+
+.lh-2 {
+  line-height: 0.5rem;
+}
+
+.lh-3 {
+  line-height: 0.75rem;
+}
+
+.lh-4 {
+  line-height: 1rem;
+}
+
+.lh-5 {
+  line-height: 1.25rem;
+}
+
+.lh-6 {
+  line-height: 1.5rem;
+}
+
+.lh-7 {
+  line-height: 1.75rem;
+}
+
+.lh-8 {
+  line-height: 2rem;
+}
+
+.lh-9 {
+  line-height: 2.25rem;
+}
+
+.lh-10 {
+  line-height: 2.5rem;
+}
+
+.lh-16 {
+  line-height: 4rem;
+}
+
+.lh-22 {
+  line-height: 5.5rem;
+}
+
+.lh-24 {
+  line-height: 6rem;
 }
 
 /*-------------------------------------*/
@@ -3549,6 +3625,20 @@ small,
   padding-right: 1.5rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.p-7 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
+.p-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .ps-4 {

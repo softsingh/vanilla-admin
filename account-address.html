@@ -681,42 +681,60 @@
                <div class="col-12 col-lg-6">
                   <div class="card">
                      <div class="card-body">
-                        <div class="row g-6 mb-6">
-                           <div class="col-7">
-                              <div class="text-truncate">
-                                 <h5>Office Address as per record</h5>
-                              </div>
+                        <div class="d-flex align-items-center justify-content-between mb-6">
+                           <div class="w-80">
+                              <h5 class="text-truncate">Office Address as per the record</h5>
                            </div>
-                           <div class="col-5 text-right">
-                              <div>
-                                 <a href="#" class="btn btn-address btn-danger">
-                                    <i class="bx bx-trash fs-3"></i>
-                                 </a>
-                                 <a href="#" class="btn btn-address btn-secondary">
-                                    <i class="bx bx-up-arrow-circle fs-3"></i>
-                                 </a>
-                                 <a href="#" class="btn btn-address btn-primary">
-                                    <i class="bx bx-plus-circle fs-3"></i>
-                                 </a>
+                           <div class="dropdown">
+                              <a href="#" class="dropdown-toggle text-body">
+                                 <i class="bx bx-dots-horizontal-rounded fs-4"></i>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-end">
+                                 <div class="dropdown-item">
+                                    <div class="d-flex align-items-center gap-2">
+                                       <i class="bx bx-up-arrow-circle fs-4"></i>
+                                       <span>Move up</span>
+                                    </div>
+                                 </div>
+                                 <div class="dropdown-item">
+                                    <div class="d-flex align-items-center gap-2">
+                                       <i class="bx bx-down-arrow-circle fs-4"></i>
+                                       <span>Move down</span>
+                                    </div>
+                                 </div>
+                                 <div class="dropdown-divider"></div>
+                                 <div class="dropdown-item">
+                                    <div class="d-flex align-items-center gap-2">
+                                       <i class="bx bx-trash fs-4"></i>
+                                       <span>Delete this address</span>
+                                    </div>
+                                 </div>
+                                 <div class="dropdown-item">
+                                    <div class="d-flex align-items-center gap-2">
+                                       <i class="bx bx-plus-circle fs-4"></i>
+                                       <span>Add new address</span>
+                                    </div>
+                                 </div>
+
                               </div>
                            </div>
                         </div>
                         <form id="formAccountAddress" method="GET" onsubmit="return false">
-                           <div class="mb-6">
+                           <div class="mb-5">
                               <label for="address-type" class="form-label mb-2">Address Type</label>
                               <input class="form-control" type="text" id="address-type" name="address-type"
                                  placeholder="Official/Personal/Temp/Other etc." autofocus>
                            </div>
-                           <div class="mb-6">
+                           <div class="mb-5">
                               <label for="address" class="form-label mb-2">Address</label>
                               <textarea class="form-control" id="address" name="address" rows="3"
                                  placeholder="Enter Address"></textarea>
                            </div>
-                           <div class="mb-6">
+                           <div class="mb-5">
                               <label for="state" class="form-label mb-2">State</label>
                               <input class="form-control" type="text" id="state" name="state" placeholder="Enter State">
                            </div>
-                           <div class="mb-6">
+                           <div class="mb-5">
                               <label for="pinCode" class="form-label mb-2">Pin Code</label>
                               <input type="text" class="form-control" id="pinCode" name="pinCode"
                                  placeholder="Enter Pin Code" maxlength="6">
@@ -732,42 +750,60 @@
                <div class="col-12 col-lg-6">
                   <div class="card">
                      <div class="card-body">
-                        <div class="row g-6 mb-6">
-                           <div class="col-7">
-                              <div class="text-truncate">
-                                 <h5>House Address as per record</h5>
-                              </div>
+                        <div class="d-flex align-items-center justify-content-between mb-6">
+                           <div class="w-80">
+                              <h5 class="text-truncate">House Address as per the record</h5>
                            </div>
-                           <div class="col-5 text-right">
-                              <div>
-                                 <a href="#" class="btn btn-address btn-danger">
-                                    <i class="bx bx-trash fs-3"></i>
-                                 </a>
-                                 <a href="#" class="btn btn-address btn-secondary">
-                                    <i class="bx bx-up-arrow-circle fs-3"></i>
-                                 </a>
-                                 <a href="#" class="btn btn-address btn-primary">
-                                    <i class="bx bx-plus-circle fs-3"></i>
-                                 </a>
+                           <div class="dropdown">
+                              <a href="#" class="dropdown-toggle text-body">
+                                 <i class="bx bx-dots-horizontal-rounded fs-4"></i>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-end">
+                                 <div class="dropdown-item">
+                                    <div class="d-flex align-items-center gap-2">
+                                       <i class="bx bx-up-arrow-circle fs-4"></i>
+                                       <span>Move up</span>
+                                    </div>
+                                 </div>
+                                 <div class="dropdown-item">
+                                    <div class="d-flex align-items-center gap-2">
+                                       <i class="bx bx-down-arrow-circle fs-4"></i>
+                                       <span>Move down</span>
+                                    </div>
+                                 </div>
+                                 <div class="dropdown-divider"></div>
+                                 <div class="dropdown-item">
+                                    <div class="d-flex align-items-center gap-2">
+                                       <i class="bx bx-trash fs-4"></i>
+                                       <span>Delete this address</span>
+                                    </div>
+                                 </div>
+                                 <div class="dropdown-item">
+                                    <div class="d-flex align-items-center gap-2">
+                                       <i class="bx bx-plus-circle fs-4"></i>
+                                       <span>Add new address</span>
+                                    </div>
+                                 </div>
+
                               </div>
                            </div>
                         </div>
                         <form id="formAccountAddress" method="GET" onsubmit="return false">
-                           <div class="mb-6">
+                           <div class="mb-5">
                               <label for="address-type" class="form-label mb-2">Address Type</label>
                               <input class="form-control" type="text" id="address-type" name="address-type"
                                  placeholder="Official/Personal/Temp/Other etc." autofocus>
                            </div>
-                           <div class="mb-6">
+                           <div class="mb-5">
                               <label for="address" class="form-label mb-2">Address</label>
                               <textarea class="form-control" id="address" name="address" rows="3"
                                  placeholder="Enter Address"></textarea>
                            </div>
-                           <div class="mb-6">
+                           <div class="mb-5">
                               <label for="state" class="form-label mb-2">State</label>
                               <input class="form-control" type="text" id="state" name="state" placeholder="Enter State">
                            </div>
-                           <div class="mb-6">
+                           <div class="mb-5">
                               <label for="pinCode" class="form-label mb-2">Pin Code</label>
                               <input type="text" class="form-control" id="pinCode" name="pinCode"
                                  placeholder="Enter Pin Code" maxlength="6">
@@ -783,42 +819,60 @@
                <div class="col-12 col-lg-6">
                   <div class="card">
                      <div class="card-body">
-                        <div class="row g-6 mb-6">
-                           <div class="col-7">
-                              <div class="text-truncate">
-                                 <h5>Other Address as per record</h5>
-                              </div>
+                        <div class="d-flex align-items-center justify-content-between mb-6">
+                           <div class="w-80">
+                              <h5 class="text-truncate">Other Address as per the record</h5>
                            </div>
-                           <div class="col-5 text-right">
-                              <div>
-                                 <a href="#" class="btn btn-address btn-danger">
-                                    <i class="bx bx-trash fs-3"></i>
-                                 </a>
-                                 <a href="#" class="btn btn-address btn-secondary">
-                                    <i class="bx bx-up-arrow-circle fs-3"></i>
-                                 </a>
-                                 <a href="#" class="btn btn-address btn-primary">
-                                    <i class="bx bx-plus-circle fs-3"></i>
-                                 </a>
+                           <div class="dropdown">
+                              <a href="#" class="dropdown-toggle text-body">
+                                 <i class="bx bx-dots-horizontal-rounded fs-4"></i>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-end">
+                                 <div class="dropdown-item">
+                                    <div class="d-flex align-items-center gap-2">
+                                       <i class="bx bx-up-arrow-circle fs-4"></i>
+                                       <span>Move up</span>
+                                    </div>
+                                 </div>
+                                 <div class="dropdown-item">
+                                    <div class="d-flex align-items-center gap-2">
+                                       <i class="bx bx-down-arrow-circle fs-4"></i>
+                                       <span>Move down</span>
+                                    </div>
+                                 </div>
+                                 <div class="dropdown-divider"></div>
+                                 <div class="dropdown-item">
+                                    <div class="d-flex align-items-center gap-2">
+                                       <i class="bx bx-trash fs-4"></i>
+                                       <span>Delete this address</span>
+                                    </div>
+                                 </div>
+                                 <div class="dropdown-item">
+                                    <div class="d-flex align-items-center gap-2">
+                                       <i class="bx bx-plus-circle fs-4"></i>
+                                       <span>Add new address</span>
+                                    </div>
+                                 </div>
+
                               </div>
                            </div>
                         </div>
                         <form id="formAccountAddress" method="GET" onsubmit="return false">
-                           <div class="mb-6">
+                           <div class="mb-5">
                               <label for="address-type" class="form-label mb-2">Address Type</label>
                               <input class="form-control" type="text" id="address-type" name="address-type"
                                  placeholder="Official/Personal/Temp/Other etc." autofocus>
                            </div>
-                           <div class="mb-6">
+                           <div class="mb-5">
                               <label for="address" class="form-label mb-2">Address</label>
                               <textarea class="form-control" id="address" name="address" rows="3"
                                  placeholder="Enter Address"></textarea>
                            </div>
-                           <div class="mb-6">
+                           <div class="mb-5">
                               <label for="state" class="form-label mb-2">State</label>
                               <input class="form-control" type="text" id="state" name="state" placeholder="Enter State">
                            </div>
-                           <div class="mb-6">
+                           <div class="mb-5">
                               <label for="pinCode" class="form-label mb-2">Pin Code</label>
                               <input type="text" class="form-control" id="pinCode" name="pinCode"
                                  placeholder="Enter Pin Code" maxlength="6">

@@ -26,10 +26,8 @@
   --secondary-hover-color: hsl(215, 14%, 46%);
   --secondary-shadow-color: hsla(214, 14%, 52%, 0.4);
 
-  --secondary-medium-color: hsl(214, 14%, 62%);
-  --secondary-subtle-color: hsl(214, 100%, 96%);
-
   --success-color: hsl(100, 65%, 56%);
+
   --success-hover-color: hsl(100, 65%, 48%);
   --success-shadow-color: hsla(100, 65%, 56%, 0.4);
 
@@ -2889,18 +2887,6 @@ textarea {
   background-color: var(--primary-darkest-color);
 }
 
-:root {
-  --secondary-lightest-color: hsl(214, 14%, 95%);
-  --secondary-lighter-color: hsl(214, 14%, 85%);
-  --secondary-light-color: hsl(214, 14%, 67%);
-
-  --secondary-color: hsl(214, 14%, 52%);
-
-  --secondary-dark-color: hsl(214, 14%, 42%);
-  --secondary-darker-color: hsl(214, 14%, 32%);
-  --secondary-darkest-color: hsl(214, 14%, 22%);
-}
-
 .bg-secondary-lightest {
   background-color: var(--secondary-lightest-color);
 }
@@ -2927,6 +2913,46 @@ textarea {
 
 .bg-secondary-darkest {
   background-color: var(--secondary-darkest-color);
+}
+
+:root {
+  --success-lightest-color: hsl(100, 65%, 94%);
+  --success-lighter-color: hsl(100, 65%, 84%);
+  --success-light-color: hsl(100, 65%, 70%);
+
+  --success-color: hsl(100, 65%, 56%);
+
+  --success-dark-color: hsl(100, 65%, 40%);
+  --success-darker-color: hsl(100, 65%, 26%);
+  --success-darkest-color: hsl(100, 65%, 16%);
+}
+
+.bg-success-lightest {
+  background-color: var(--success-lightest-color);
+}
+
+.bg-success-lighter {
+  background-color: var(--success-lighter-color);
+}
+
+.bg-success-light {
+  background-color: var(--success-light-color);
+}
+
+.bg-success {
+  background-color: var(--success-color);
+}
+
+.bg-success-dark {
+  background-color: var(--success-dark-color);
+}
+
+.bg-success-darker {
+  background-color: var(--success-darker-color);
+}
+
+.bg-success-darkest {
+  background-color: var(--success-darkest-color);
 }
 
 /*-------------------------------------*/

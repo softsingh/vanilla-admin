@@ -46,6 +46,15 @@
 }
 
 /*-------------------------------------*/
+/*                 Box                 */
+/*-------------------------------------*/
+
+.color-pelette-box {
+  height: 25px;
+  /* width: 100%; */
+}
+
+/*-------------------------------------*/
 /*               Button                */
 /*-------------------------------------*/
 
@@ -126,7 +135,6 @@
 }
 
 @media (max-width: 576px) {
-
   .login-container,
   .register-container {
     margin-left: 1.5rem;
@@ -155,10 +163,12 @@
 
 .main-layout:before {
   backdrop-filter: saturate(200%) blur(10px);
-  background: linear-gradient(180deg,
-      rgba(245, 245, 249, 0.7) 44%,
-      rgba(245, 245, 249, 0.43) 73%,
-      rgba(245, 245, 249, 0));
+  background: linear-gradient(
+    180deg,
+    rgba(245, 245, 249, 0.7) 44%,
+    rgba(245, 245, 249, 0.43) 73%,
+    rgba(245, 245, 249, 0)
+  );
   -webkit-mask: linear-gradient(#f5f5f9, #4949f5 18%, transparent 100%);
   mask: linear-gradient(#f5f5f9, #f5f5f9 18%, transparent 100%);
 }
@@ -438,12 +448,10 @@ body.sidebar-hidden .sidebar {
 }
 
 @media (max-width: 576px) {
-
   .user-table tbody td:nth-child(2),
   .user-table tbody td:nth-child(3),
   .user-table thead th:nth-child(2),
   .user-table thead th:nth-child(3) {
     display: none;
   }
-
 }

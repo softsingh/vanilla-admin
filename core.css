@@ -4,9 +4,9 @@
   --light-white-color: #f7f7f7;
   --light-gray-color: #e5e5e5;
 
-  --primary-lightest-color: hsl(240, 100%, 97%);
-  --primary-lighter-color: hsl(240, 100%, 90%);
-  --primary-light-color: hsl(240, 100%, 80%);
+  --primary-lightest-color: hsl(240, 100%, 95%);
+  --primary-lighter-color: hsl(240, 100%, 88%);
+  --primary-light-color: hsl(240, 100%, 78%);
   --primary-color: hsl(240, 100%, 70%);
   --primary-dark-color: hsl(240, 100%, 60%);
   --primary-darker-color: hsl(240, 100%, 50%);
@@ -44,7 +44,7 @@
   --danger-hover-color: hsl(8, 100%, 48%);
   --danger-shadow-color: hsla(8, 100%, 56%, 0.4);
 
-  --warning-lightest-color: hsl(40, 100%, 90%);
+  --warning-lightest-color: hsl(40, 100%, 94%);
   --warning-lighter-color: hsl(40, 100%, 75%);
   --warning-light-color: hsl(40, 100%, 60%);
   --warning-color: hsl(40, 100%, 50%);
@@ -54,10 +54,7 @@
   --warning-hover-color: hsl(40, 100%, 46%);
   --warning-shadow-color: hsla(40, 100%, 50%, 0.4);
 
-  /* --warning-medium-color: hsl(40, 100%, 60%);
-  --warning-subtle-color: hsl(40, 100%, 90%); */
-
-  --info-lightest-color: hsl(190, 100%, 90%);
+  --info-lightest-color: hsl(190, 100%, 94%);
   --info-lighter-color: hsl(190, 100%, 75%);
   --info-light-color: hsl(190, 100%, 62%);
   --info-color: hsl(190, 100%, 50%);
@@ -67,8 +64,24 @@
   --info-hover-color: hsl(190, 100%, 44%);
   --info-shadow-color: hsla(190, 100%, 50%, 0.4);
 
+  --light-lightest-color: hsl(204, 7%, 97%);
+  --light-lighter-color: hsl(204, 7%, 93%);
+  --light-light-color: hsl(204, 7%, 90%);
+  --light-color: hsl(204, 7%, 87%);
+  --light-dark-color: hsl(204, 7%, 77%);
+  --light-darker-color: hsl(204, 7%, 67%);
+  --light-darkest-color: hsl(204, 7%, 57%);
+  --light-hover-color: hsl(204, 7%, 77%);
+  --light-shadow-color: hsla(204, 7%, 87%, 0.4);
+
+  --dark-lightest-color: hsl(240, 20%, 70%);
+  --dark-lighter-color: hsl(240, 20%, 55%);
+  --dark-light-color: hsl(240, 20%, 40%);
   --dark-color: hsl(240, 20%, 20%);
-  --dark-hover-color: hsl(240, 20%, 30%);
+  --dark-dark-color: hsl(240, 20%, 15%);
+  --dark-darker-color: hsl(240, 20%, 10%);
+  --dark-darkest-color: hsl(240, 20%, 5%);
+  --dark-hover-color: hsl(240, 33%, 2%);
   --dark-shadow-color: hsla(240, 20%, 20%, 0.4);
 
   /* --body-color: hsl(212, 15%, 48%); */
@@ -139,17 +152,43 @@
 }
 
 .alert-primary {
-  color: hsl(29, 41%, 88%);
-  color: hsl(30, 51%, 80%);
-  color: hsl(30, 52%, 72%);
-  color: hsl(27, 31%, 55%);
-  color: hsl(24, 38%, 36%);
-  color: hsl(23, 39%, 44%);
+  color: var(--primary-color);
+  background-color: var(--primary-lightest-color);
+}
+
+.alert-secondary {
+  color: var(--secondary-color);
+  background-color: var(--secondary-lightest-color);
+}
+
+.alert-success {
+  color: var(--success-color);
+  background-color: var(--success-lightest-color);
+}
+
+.alert-danger {
+  color: var(--danger-color);
+  background-color: var(--danger-lightest-color);
 }
 
 .alert-warning {
   color: var(--warning-color);
-  background-color: var(--warning-subtle-color);
+  background-color: var(--warning-lightest-color);
+}
+
+.alert-info {
+  color: var(--info-color);
+  background-color: var(--info-lightest-color);
+}
+
+.alert-light {
+  color: var(--dark-color);
+  background-color: var(--light-color);
+}
+
+.alert-dark {
+  color: var(--dark-color);
+  background-color: var(--dark-lightest-color);
 }
 
 /*-------------------------------------*/
@@ -243,32 +282,32 @@ a:focus-visible {
 
 .bg-label-primary {
   color: var(--primary-color) !important;
-  background-color: var(--primary-subtle-color) !important;
+  background-color: var(--primary-lighter-color) !important;
 }
 
 .bg-label-secondary {
   color: var(--secondary-color) !important;
-  background-color: var(--secondary-subtle-color) !important;
+  background-color: var(--secondary-lighter-color) !important;
 }
 
 .bg-label-success {
   color: var(--success-color) !important;
-  background-color: var(--success-subtle-color) !important;
+  background-color: var(--success-lighter-color) !important;
 }
 
 .bg-label-danger {
   color: var(--danger-color) !important;
-  background-color: var(--danger-subtle-color) !important;
+  background-color: var(--danger-lighter-color) !important;
 }
 
 .bg-label-warning {
   color: var(--warning-color) !important;
-  background-color: var(--warning-subtle-color) !important;
+  background-color: var(--warning-lighter-color) !important;
 }
 
 .bg-label-info {
   color: var(--info-color) !important;
-  background-color: var(--info-subtle-color) !important;
+  background-color: var(--info-lighter-color) !important;
 }
 
 /*-------------------------------------*/
@@ -2438,7 +2477,7 @@ h6,
   font-weight: 400;
   text-transform: uppercase;
   white-space: nowrap;
-  color: var(--secondary-medium-color);
+  color: var(--secondary-dark-color);
 }
 
 .menu-link {
@@ -2460,7 +2499,7 @@ h6,
 
 .menu > .menu-item.active > .menu-link {
   color: var(--primary-color);
-  background-color: var(--primary-subtle-color);
+  background-color: var(--primary-lightest-color);
 }
 
 .menu-toggle::after {
@@ -3039,16 +3078,32 @@ textarea {
   background-color: var(--info-darkest-color);
 }
 
-:root {
-  --dark-lightest-color: hsl(240, 20%, 50%);
-  --dark-lighter-color: hsl(240, 20%, 40%);
-  --dark-light-color: hsl(240, 20%, 30%);
+.bg-light-lightest {
+  background-color: var(--light-lightest-color);
+}
 
-  --dark-color: hsl(240, 20%, 20%);
+.bg-light-lighter {
+  background-color: var(--light-lighter-color);
+}
 
-  --dark-dark-color: hsl(240, 20%, 15%);
-  --dark-darker-color: hsl(240, 20%, 10%);
-  --dark-darkest-color: hsl(240, 20%, 5%);
+.bg-light-light {
+  background-color: var(--light-light-color);
+}
+
+.bg-light {
+  background-color: var(--light-color);
+}
+
+.bg-light-dark {
+  background-color: var(--light-dark-color);
+}
+
+.bg-light-darker {
+  background-color: var(--light-darker-color);
+}
+
+.bg-light-darkest {
+  background-color: var(--light-darkest-color);
 }
 
 .bg-dark-lightest {

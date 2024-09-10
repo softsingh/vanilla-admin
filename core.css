@@ -11,7 +11,6 @@
   --primary-dark-color: hsl(240, 100%, 60%);
   --primary-darker-color: hsl(240, 100%, 50%);
   --primary-darkest-color: hsl(240, 100%, 40%);
-
   --primary-hover-color: #5252ff;
   --primary-shadow-color: #6666ff66;
 
@@ -22,38 +21,51 @@
   --secondary-dark-color: hsl(214, 14%, 42%);
   --secondary-darker-color: hsl(214, 14%, 32%);
   --secondary-darkest-color: hsl(214, 14%, 22%);
-
   --secondary-hover-color: hsl(215, 14%, 46%);
   --secondary-shadow-color: hsla(214, 14%, 52%, 0.4);
 
+  --success-lightest-color: hsl(100, 65%, 94%);
+  --success-lighter-color: hsl(100, 65%, 84%);
+  --success-light-color: hsl(100, 65%, 70%);
   --success-color: hsl(100, 65%, 56%);
-
+  --success-dark-color: hsl(100, 65%, 40%);
+  --success-darker-color: hsl(100, 65%, 26%);
+  --success-darkest-color: hsl(100, 65%, 16%);
   --success-hover-color: hsl(100, 65%, 48%);
   --success-shadow-color: hsla(100, 65%, 56%, 0.4);
 
-  --success-medium-color: hsl(100, 65%, 66%);
-  --success-subtle-color: hsl(100, 65%, 86%);
-
+  --danger-lightest-color: hsl(8, 100%, 94%);
+  --danger-lighter-color: hsl(8, 100%, 82%);
+  --danger-light-color: hsl(8, 100%, 68%);
   --danger-color: hsl(8, 100%, 56%);
+  --danger-dark-color: hsl(8, 100%, 46%);
+  --danger-darker-color: hsl(8, 100%, 36%);
+  --danger-darkest-color: hsl(8, 100%, 26%);
   --danger-hover-color: hsl(8, 100%, 48%);
   --danger-shadow-color: hsla(8, 100%, 56%, 0.4);
 
-  --danger-medium-color: hsl(8, 100%, 66%);
-  --danger-subtle-color: hsl(8, 100%, 90%);
-
+  --warning-lightest-color: hsl(40, 100%, 90%);
+  --warning-lighter-color: hsl(40, 100%, 75%);
+  --warning-light-color: hsl(40, 100%, 60%);
   --warning-color: hsl(40, 100%, 50%);
+  --warning-dark-color: hsl(40, 100%, 40%);
+  --warning-darker-color: hsl(40, 100%, 30%);
+  --warning-darkest-color: hsl(40, 100%, 20%);
   --warning-hover-color: hsl(40, 100%, 46%);
   --warning-shadow-color: hsla(40, 100%, 50%, 0.4);
 
-  --warning-medium-color: hsl(40, 100%, 60%);
-  --warning-subtle-color: hsl(40, 100%, 90%);
+  /* --warning-medium-color: hsl(40, 100%, 60%);
+  --warning-subtle-color: hsl(40, 100%, 90%); */
 
+  --info-lightest-color: hsl(190, 100%, 90%);
+  --info-lighter-color: hsl(190, 100%, 75%);
+  --info-light-color: hsl(190, 100%, 62%);
   --info-color: hsl(190, 100%, 50%);
+  --info-dark-color: hsl(190, 100%, 40%);
+  --info-darker-color: hsl(190, 100%, 30%);
+  --info-darkest-color: hsl(190, 100%, 20%);
   --info-hover-color: hsl(190, 100%, 44%);
   --info-shadow-color: hsla(190, 100%, 50%, 0.4);
-
-  --info-medium-color: hsl(190, 100%, 60%);
-  --info-subtle-color: hsl(190, 100%, 90%);
 
   --dark-color: hsl(240, 20%, 20%);
   --dark-hover-color: hsl(240, 20%, 30%);
@@ -2915,18 +2927,6 @@ textarea {
   background-color: var(--secondary-darkest-color);
 }
 
-:root {
-  --success-lightest-color: hsl(100, 65%, 94%);
-  --success-lighter-color: hsl(100, 65%, 84%);
-  --success-light-color: hsl(100, 65%, 70%);
-
-  --success-color: hsl(100, 65%, 56%);
-
-  --success-dark-color: hsl(100, 65%, 40%);
-  --success-darker-color: hsl(100, 65%, 26%);
-  --success-darkest-color: hsl(100, 65%, 16%);
-}
-
 .bg-success-lightest {
   background-color: var(--success-lightest-color);
 }
@@ -2953,6 +2953,130 @@ textarea {
 
 .bg-success-darkest {
   background-color: var(--success-darkest-color);
+}
+
+.bg-danger-lightest {
+  background-color: var(--danger-lightest-color);
+}
+
+.bg-danger-lighter {
+  background-color: var(--danger-lighter-color);
+}
+
+.bg-danger-light {
+  background-color: var(--danger-light-color);
+}
+
+.bg-danger {
+  background-color: var(--danger-color);
+}
+
+.bg-danger-dark {
+  background-color: var(--danger-dark-color);
+}
+
+.bg-danger-darker {
+  background-color: var(--danger-darker-color);
+}
+
+.bg-danger-darkest {
+  background-color: var(--danger-darkest-color);
+}
+
+.bg-warning-lightest {
+  background-color: var(--warning-lightest-color);
+}
+
+.bg-warning-lighter {
+  background-color: var(--warning-lighter-color);
+}
+
+.bg-warning-light {
+  background-color: var(--warning-light-color);
+}
+
+.bg-warning {
+  background-color: var(--warning-color);
+}
+
+.bg-warning-dark {
+  background-color: var(--warning-dark-color);
+}
+
+.bg-warning-darker {
+  background-color: var(--warning-darker-color);
+}
+
+.bg-warning-darkest {
+  background-color: var(--warning-darkest-color);
+}
+
+.bg-info-lightest {
+  background-color: var(--info-lightest-color);
+}
+
+.bg-info-lighter {
+  background-color: var(--info-lighter-color);
+}
+
+.bg-info-light {
+  background-color: var(--info-light-color);
+}
+
+.bg-info {
+  background-color: var(--info-color);
+}
+
+.bg-info-dark {
+  background-color: var(--info-dark-color);
+}
+
+.bg-info-darker {
+  background-color: var(--info-darker-color);
+}
+
+.bg-info-darkest {
+  background-color: var(--info-darkest-color);
+}
+
+:root {
+  --dark-lightest-color: hsl(240, 20%, 50%);
+  --dark-lighter-color: hsl(240, 20%, 40%);
+  --dark-light-color: hsl(240, 20%, 30%);
+
+  --dark-color: hsl(240, 20%, 20%);
+
+  --dark-dark-color: hsl(240, 20%, 15%);
+  --dark-darker-color: hsl(240, 20%, 10%);
+  --dark-darkest-color: hsl(240, 20%, 5%);
+}
+
+.bg-dark-lightest {
+  background-color: var(--dark-lightest-color);
+}
+
+.bg-dark-lighter {
+  background-color: var(--dark-lighter-color);
+}
+
+.bg-dark-light {
+  background-color: var(--dark-light-color);
+}
+
+.bg-dark {
+  background-color: var(--dark-color);
+}
+
+.bg-dark-dark {
+  background-color: var(--dark-dark-color);
+}
+
+.bg-dark-darker {
+  background-color: var(--dark-darker-color);
+}
+
+.bg-dark-darkest {
+  background-color: var(--dark-darkest-color);
 }
 
 /*-------------------------------------*/

@@ -4,6 +4,16 @@ if (window.innerWidth <= 768) {
    document.body.classList.add('sidebar-hidden');
 }
 
+// Alert Dismissible btn-close
+const alertDismissButtons = document.querySelectorAll('.alert-dismissible .btn-close');
+
+alertDismissButtons.forEach(alertDismissButton => alertDismissButton.addEventListener('click', (event) => {
+   const alertDismiss = alertDismissButton.closest('.alert-dismissible');
+   alertDismiss.classList.add('d-none');
+   event.stopPropagation();
+}))
+
+
 // Sidebar Menu
 const menuItems = document.querySelectorAll('.menu>.menu-item');
 

@@ -2571,16 +2571,17 @@ h6,
   position: relative;
 }
 
-.accordion .accordion-header {
-  padding-top: 1rem;
+.accordion-header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
 }
 
-.accordion .accordion-item {
+.accordion .accordion-item .accordion-collapse {
   display: none;
-  padding-top: 1rem;
 }
 
-.accordion.open > .accordion-item {
+.accordion .accordion-item.open > .accordion-collapse {
   display: block;
 }
 

@@ -4,6 +4,15 @@ if (window.innerWidth <= 768) {
    document.body.classList.add('sidebar-hidden');
 }
 
+// Accordions
+const accordionHeaders = document.querySelectorAll('.accordion .accordion-header');
+
+accordionHeaders.forEach(accordionHeader => accordionHeader.addEventListener('click',(event)=>{
+   accordionItem = accordionHeader.closest('.accordion-item');
+   accordionItem.classList.toggle('open')
+   event.stopPropagation();
+}))
+
 // Alert Dismissible btn-close
 const alertDismissButtons = document.querySelectorAll('.alert-dismissible .btn-close');
 

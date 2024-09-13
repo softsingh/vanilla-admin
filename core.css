@@ -85,7 +85,7 @@
   --dark-shadow-color: hsla(240, 20%, 20%, 0.4);
 
   /* --body-color: hsl(212, 15%, 48%); */
-  --body-color: hsl(210, 18%, 28%);
+  --body-color: #3b4754;
   --body-bg: #f5f5f9;
 
   --border-color: #d9dee3;
@@ -2567,22 +2567,47 @@ h6,
 /*             Accordion               */
 /*-------------------------------------*/
 
-.accordion {
-  position: relative;
-}
-
 .accordion-header {
   display: flex;
   align-items: start;
   justify-content: space-between;
+  cursor: pointer;
 }
 
-.accordion .accordion-item .accordion-collapse {
+.accordion-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  text-align: left;
+  font-size: 0.9rem;
+  border: none;
+  background: transparent;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.accordion-button::after {
+  flex-shrink: 0;
+  content: '';
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:%233b4754;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"/></svg>');
+  background-repeat: no-repeat;
+  width: 1.7em;
+  height: 1.7em;
+  background-size: 1.25rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.accordion-item .accordion-collapse {
   display: none;
 }
 
-.accordion .accordion-item.open > .accordion-collapse {
+.accordion-item:not(.no-collapse).open > .accordion-collapse {
   display: block;
+}
+
+.accordion-item:not(.no-collapse).open .accordion-button::after {
+  transform: rotate(180deg);
 }
 
 /*-------------------------------------*/

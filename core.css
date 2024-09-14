@@ -119,7 +119,7 @@
 /* Z-Index */
 
 :root {
-  --alert-dismissible-btn-close: 2;
+  --btn-close-z-index: 2;
   --navbar-z-index: 3;
   --dropdown-z-index: 1000;
 }
@@ -162,7 +162,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  z-index: var(--alert-dismissible-btn-close);
+  z-index: var(--btn-close-z-index);
   padding: 0.95rem 1rem;
   background-size: 0.625rem 0.625rem;
 }
@@ -351,15 +351,15 @@ a:focus-visible {
 
 .badge {
   display: inline-block;
-  padding: 0.7em;
-  font-size: 0.7em;
+  padding: 0.5em 0.75em;
+  font-size: 0.8em;
   font-weight: 500;
   line-height: 1;
   color: var(--white-color);
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  /* border-radius: var(--border-radius); */
+  border-radius: var(--border-radius);
 }
 
 .badge.badge-dot {
@@ -374,32 +374,42 @@ a:focus-visible {
 
 .bg-label-primary {
   color: var(--primary-color) !important;
-  background-color: var(--primary-lighter-color) !important;
+  background-color: var(--primary-lightest-color) !important;
 }
 
 .bg-label-secondary {
   color: var(--secondary-color) !important;
-  background-color: var(--secondary-lighter-color) !important;
+  background-color: var(--secondary-lightest-color) !important;
 }
 
 .bg-label-success {
   color: var(--success-color) !important;
-  background-color: var(--success-lighter-color) !important;
+  background-color: var(--success-lightest-color) !important;
 }
 
 .bg-label-danger {
   color: var(--danger-color) !important;
-  background-color: var(--danger-lighter-color) !important;
+  background-color: var(--danger-lightest-color) !important;
 }
 
 .bg-label-warning {
   color: var(--warning-color) !important;
-  background-color: var(--warning-lighter-color) !important;
+  background-color: var(--warning-lightest-color) !important;
 }
 
 .bg-label-info {
   color: var(--info-color) !important;
-  background-color: var(--info-lighter-color) !important;
+  background-color: var(--info-lightest-color) !important;
+}
+
+.bg-label-light {
+  color: var(--light-darkest-color) !important;
+  background-color: var(--light-lighter-color) !important;
+}
+
+.bg-label-dark {
+  color: var(--dark-color) !important;
+  background-color: var(--dark-lightest-color) !important;
 }
 
 /*-------------------------------------*/
@@ -3324,6 +3334,10 @@ textarea {
   border-radius: 50%;
 }
 
+.rounded-pill {
+  border-radius: 50rem !important;
+}
+
 /*-------------------------------------*/
 /*                Color                */
 /*-------------------------------------*/
@@ -3374,6 +3388,10 @@ textarea {
 
 .flex-row {
   flex-direction: row;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .flex-grow-0 {
@@ -4262,6 +4280,18 @@ small,
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+/*-------------------------------------*/
+/*              Position               */
+/*-------------------------------------*/
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-relative {
+  position: relative;
 }
 
 /*-------------------------------------*/

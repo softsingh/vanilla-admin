@@ -683,29 +683,140 @@
          <div class="dash-content">
             <div class="row g-6 mb-4">
                <div class="col-12 col-md-6">
-                  <div class="accordion">
-                     <div class="accordion-item card mb-2">
-                        <div class="accordion-header p-4">
-                           <h6>Very very long Accordion Item for testing the limits</h6>
-                           <button class="accordion-button"> </button>
+                  <h6 class="text-muted mb-4">Basic Accordion</h6>
+                  <div class="accordion" id="accordion-1">
+                     <div class="accordion-item card mb-2" parent="accordion-1">
+                        <div class="accordion-header fw-semibold px-6 py-4">
+                           <button class="accordion-button">Accordion Item 1</button>
                         </div>
-                        <div class="accordion-collapse px-4 pb-4">
-                           <p>This is the first hidden text in the accordion. This is the first hidden text in the
-                              accordion</p>
+                        <div class="accordion-body px-6 pb-6">
+                           <p>
+                              This is the first accordion item. Each <span class="text-danger-dark">accordion</span>
+                              contains <span class="text-danger-dark">accordion-item</span>. accordion-item contains
+                              <span class="text-danger-dark">accordion-header</span> and <span
+                                 class="text-danger-dark">accordion-body</span>.
+                              accordion-header contains <span class="text-danger-dark">accordion-button</span>.
+                              accordion-item can be opened by adding <span class="text-danger-dark">open</span>
+                              class to it. <span class="text-danger-dark">no-collapse</span> class will prevent
+                              accordion-item from opening. Add <span class="text-danger-dark">parent</span>
+                              attribute to
+                              each accordion-item so that only one accordion-item is opened at a time. If you omit the
+                              parent attribute the accordion-item will always remain opened. Add <span
+                                 class="text-danger-dark">no-arrow</span> class to accordion-item to hide the arrow.
+                           </p>
                         </div>
                      </div>
-                     <div class="accordion-item card">
-                        <div class="accordion-header p-4">
-                           <h6>Very very long Accordion Item for testing the limits</h6>
-                           <button class="accordion-button"> </button>
+                     <div class="accordion-item card mb-2 open" parent="accordion-1">
+                        <div class="accordion-header fw-semibold px-6 py-4">
+                           <button class="accordion-button">Accordion Item 2</button>
                         </div>
-                        <div class="accordion-collapse px-4 pb-4">
-                           <p>This is the Second hidden text in the accordion. This is the first hidden text in the
-                              accordion</p>
+                        <div class="accordion-body px-6 pb-6">
+                           <p>
+                              This is the second accordion item. Each <span class="text-danger-dark">accordion</span>
+                              contains <span class="text-danger-dark">accordion-item</span>. accordion-item contains
+                              <span class="text-danger-dark">accordion-header</span> and <span
+                                 class="text-danger-dark">accordion-body</span>.
+                              accordion-header contains <span class="text-danger-dark">accordion-button</span>.
+                              accordion-item can be opened by adding <span class="text-danger-dark">open</span>
+                              class to it. <span class="text-danger-dark">no-collapse</span> class will prevent
+                              accordion-item from opening. Add <span class="text-danger-dark">parent</span>
+                              attribute to
+                              each accordion-item so that only one accordion-item is opened at a time. If you omit the
+                              parent attribute the accordion-item will always remain opened. Add <span
+                                 class="text-danger-dark">no-arrow</span> class to accordion-item to hide the arrow.
+                           </p>
+                        </div>
+                     </div>
+                     <div class="accordion-item card mb-2" parent="accordion-1">
+                        <div class="accordion-header fw-semibold px-6 py-4">
+                           <button class="accordion-button">Accordion Item 3</button>
+                        </div>
+                        <div class="accordion-body px-6 pb-6">
+                           <p>
+                              This is the third accordion item. Each <span class="text-danger-dark">accordion</span>
+                              contains <span class="text-danger-dark">accordion-item</span>. accordion-item contains
+                              <span class="text-danger-dark">accordion-header</span> and <span
+                                 class="text-danger-dark">accordion-body</span>.
+                              accordion-header contains <span class="text-danger-dark">accordion-button</span>.
+                              accordion-item can be opened by adding <span class="text-danger-dark">open</span>
+                              class to it. <span class="text-danger-dark">no-collapse</span> class will prevent
+                              accordion-item from opening. Add <span class="text-danger-dark">parent</span>
+                              attribute to
+                              each accordion-item so that only one accordion-item is opened at a time. If you omit the
+                              parent attribute the accordion-item will always remain opened. Add <span
+                                 class="text-danger-dark">no-arrow</span> class to accordion-item to hide the arrow.
+                           </p>
                         </div>
                      </div>
                   </div>
-
+               </div>
+               <div class="col-12 col-md-6">
+                  <h6 class="text-muted mb-4">Accordion without Arrow</h6>
+                  <div class="accordion" id="accordion-2">
+                     <div class="accordion-item card mb-2 open" parent="accordion-2">
+                        <div class="accordion-header fw-semibold px-6 py-4">
+                           <button class="accordion-button">Accordion Item 1</button>
+                        </div>
+                        <div class="accordion-body px-6 pb-6">
+                           <p>
+                              This is the first accordion item. Each <span class="text-danger-dark">accordion</span>
+                              contains <span class="text-danger-dark">accordion-item</span>. accordion-item contains
+                              <span class="text-danger-dark">accordion-header</span> and <span
+                                 class="text-danger-dark">accordion-body</span>.
+                              accordion-header contains <span class="text-danger-dark">accordion-button</span>.
+                              accordion-item can be opened by adding <span class="text-danger-dark">open</span>
+                              class to it. <span class="text-danger-dark">no-collapse</span> class will prevent
+                              accordion-item from opening. Add <span class="text-danger-dark">parent</span>
+                              attribute to
+                              each accordion-item so that only one accordion-item is opened at a time. If you omit the
+                              parent attribute the accordion-item will always remain opened. Add <span
+                                 class="text-danger-dark">no-arrow</span> class to accordion-item to hide the arrow.
+                           </p>
+                        </div>
+                     </div>
+                     <div class="accordion-item card mb-2 no-arrow" parent="accordion-2">
+                        <div class="accordion-header fw-semibold px-6 py-4">
+                           <button class="accordion-button">Accordion Item 2</button>
+                        </div>
+                        <div class="accordion-body px-6 pb-6">
+                           <p>
+                              This is the second accordion item. Each <span class="text-danger-dark">accordion</span>
+                              contains <span class="text-danger-dark">accordion-item</span>. accordion-item contains
+                              <span class="text-danger-dark">accordion-header</span> and <span
+                                 class="text-danger-dark">accordion-body</span>.
+                              accordion-header contains <span class="text-danger-dark">accordion-button</span>.
+                              accordion-item can be opened by adding <span class="text-danger-dark">open</span>
+                              class to it. <span class="text-danger-dark">no-collapse</span> class will prevent
+                              accordion-item from opening. Add <span class="text-danger-dark">parent</span>
+                              attribute to
+                              each accordion-item so that only one accordion-item is opened at a time. If you omit the
+                              parent attribute the accordion-item will always remain opened. Add <span
+                                 class="text-danger-dark">no-arrow</span> class to accordion-item to hide the arrow.
+                           </p>
+                        </div>
+                     </div>
+                     <div class="accordion-item card mb-2" parent="accordion-2">
+                        <div class="accordion-header fw-semibold px-6 py-4">
+                           <button class="accordion-button">Accordion Item 3</button>
+                        </div>
+                        <div class="accordion-body px-6 pb-6">
+                           <p>
+                              This is the third accordion item. Each <span class="text-danger-dark">accordion</span>
+                              contains <span class="text-danger-dark">accordion-item</span>. accordion-item contains
+                              <span class="text-danger-dark">accordion-header</span> and <span
+                                 class="text-danger-dark">accordion-body</span>.
+                              accordion-header contains <span class="text-danger-dark">accordion-button</span>.
+                              accordion-item can be opened by adding <span class="text-danger-dark">open</span>
+                              class to it. <span class="text-danger-dark">no-collapse</span> class will prevent
+                              accordion-item from opening. Add <span class="text-danger-dark">parent</span>
+                              attribute to
+                              each accordion-item so that only one accordion-item is opened at a time. If you omit the
+                              parent attribute the accordion-item will always remain opened. Add <span
+                                 class="text-danger-dark">no-arrow</span> class to accordion-item to hide the arrow.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
                </div>
             </div>
          </div>

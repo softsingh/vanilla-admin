@@ -135,6 +135,7 @@
 }
 
 @media (max-width: 576px) {
+
   .login-container,
   .register-container {
     margin-left: 1.5rem;
@@ -158,17 +159,15 @@
   position: fixed;
   top: 0px;
   /* border: 1px solid blue; */
-  z-index: 1;
+  z-index: 3;
 }
 
 .main-layout:before {
   backdrop-filter: saturate(200%) blur(10px);
-  background: linear-gradient(
-    180deg,
-    rgba(245, 245, 249, 0.7) 44%,
-    rgba(245, 245, 249, 0.43) 73%,
-    rgba(245, 245, 249, 0)
-  );
+  background: linear-gradient(180deg,
+      rgba(245, 245, 249, 0.7) 44%,
+      rgba(245, 245, 249, 0.43) 73%,
+      rgba(245, 245, 249, 0));
   -webkit-mask: linear-gradient(#f5f5f9, #4949f5 18%, transparent 100%);
   mask: linear-gradient(#f5f5f9, #f5f5f9 18%, transparent 100%);
 }
@@ -188,7 +187,7 @@
   background-color: hsla(0, 0%, 100%, 0.88);
   backdrop-filter: saturate(200%) blur(6px);
   box-shadow: 0 0.2rem 0.5rem 0 hsla(210, 30%, 20%, 0.1);
-  z-index: 2;
+  z-index: var(--navbar-z-index);
 }
 
 .navbar .navbar-toggle {
@@ -332,7 +331,7 @@ body.sidebar-hidden .navbar .nav-logo {
 /*-------------------------------------*/
 
 .sidebar {
-  z-index: 2;
+  z-index: 4;
   width: 18rem;
   height: 100vh;
   background: var(--white-color);
@@ -448,6 +447,7 @@ body.sidebar-hidden .sidebar {
 }
 
 @media (max-width: 576px) {
+
   .user-table tbody td:nth-child(2),
   .user-table tbody td:nth-child(3),
   .user-table thead th:nth-child(2),

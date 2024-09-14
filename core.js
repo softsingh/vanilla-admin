@@ -7,11 +7,34 @@ if (window.innerWidth <= 768) {
 // Accordions
 const accordionHeaders = document.querySelectorAll('.accordion .accordion-header');
 
-accordionHeaders.forEach(accordionHeader => accordionHeader.addEventListener('click',(event)=>{
-   accordionItem = accordionHeader.closest('.accordion-item');
-   accordionItem.classList.toggle('open')
+accordionHeaders.forEach(accordionHeader => accordionHeader.addEventListener('click', (event) => {
+   const curentAccordionItem = accordionHeader.closest('.accordion-item');
+   const parentName = curentAccordionItem.getAttribute('parent');
+
+   if (parentName !== '') {
+      const parent = document.getElementById(parentName);
+
+      if (parent) {
+         const accordionItems = parent.querySelectorAll('.accordion-item');
+
+         accordionItems.forEach((accordionItem) => {
+
+            if (accordionItem !== curentAccordionItem) {
+
+               // Only close accordion-items having parent value equal to accordion id
+               if (accordionItem.getAttribute('parent') === parentName) {
+                  accordionItem.classList.remove('open')
+               }
+
+            }
+
+         });
+      }
+   }
+
+   curentAccordionItem.classList.toggle('open')
    event.stopPropagation();
-}))
+}));
 
 // Alert Dismissible btn-close
 const alertDismissButtons = document.querySelectorAll('.alert-dismissible .btn-close');
@@ -43,11 +66,11 @@ menuSubItems.forEach(menuSubItem => menuSubItem.addEventListener('click', (event
 
    if (menuSubSub.length > 0) {
       menuSubItem.classList.toggle('open');
-   } 
+   }
    else {
       menuSubItem.classList.add('active');
    }
-   
+
    event.stopPropagation();
 }))
 

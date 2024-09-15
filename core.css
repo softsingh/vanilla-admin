@@ -372,46 +372,6 @@ a:focus-visible {
   vertical-align: middle;
 }
 
-.bg-label-primary {
-  color: var(--primary-color) !important;
-  background-color: var(--primary-lightest-color) !important;
-}
-
-.bg-label-secondary {
-  color: var(--secondary-color) !important;
-  background-color: var(--secondary-lightest-color) !important;
-}
-
-.bg-label-success {
-  color: var(--success-color) !important;
-  background-color: var(--success-lightest-color) !important;
-}
-
-.bg-label-danger {
-  color: var(--danger-color) !important;
-  background-color: var(--danger-lightest-color) !important;
-}
-
-.bg-label-warning {
-  color: var(--warning-color) !important;
-  background-color: var(--warning-lightest-color) !important;
-}
-
-.bg-label-info {
-  color: var(--info-color) !important;
-  background-color: var(--info-lightest-color) !important;
-}
-
-.bg-label-light {
-  color: var(--light-darkest-color) !important;
-  background-color: var(--light-lighter-color) !important;
-}
-
-.bg-label-dark {
-  color: var(--dark-color) !important;
-  background-color: var(--dark-lightest-color) !important;
-}
-
 /*-------------------------------------*/
 /*                Body                 */
 /*-------------------------------------*/
@@ -444,8 +404,6 @@ button:not(:disabled),
   padding: 0.5rem 1rem;
   border: 1px solid transparent;
   border-radius: var(--border-radius);
-  /* cursor: pointer; */
-  /* user-select: none; */
 }
 
 .btn-xs {
@@ -3532,9 +3490,61 @@ textarea {
   background-color: var(--dark-darkest-color);
 }
 
+.bg-transparent {
+  background: transparent;
+}
+
+/*-------------------------------------*/
+/*          Background Label           */
+/*-------------------------------------*/
+
+.bg-label-primary {
+  color: var(--primary-color) !important;
+  background-color: var(--primary-lightest-color) !important;
+}
+
+.bg-label-secondary {
+  color: var(--secondary-color) !important;
+  background-color: var(--secondary-lightest-color) !important;
+}
+
+.bg-label-success {
+  color: var(--success-color) !important;
+  background-color: var(--success-lightest-color) !important;
+}
+
+.bg-label-danger {
+  color: var(--danger-color) !important;
+  background-color: var(--danger-lightest-color) !important;
+}
+
+.bg-label-warning {
+  color: var(--warning-color) !important;
+  background-color: var(--warning-lightest-color) !important;
+}
+
+.bg-label-info {
+  color: var(--info-color) !important;
+  background-color: var(--info-lightest-color) !important;
+}
+
+.bg-label-light {
+  color: var(--light-darkest-color) !important;
+  background-color: var(--light-lighter-color) !important;
+}
+
+.bg-label-dark {
+  color: var(--dark-color) !important;
+  background-color: var(--dark-lightest-color) !important;
+}
+
 /*-------------------------------------*/
 /*               Border                */
 /*-------------------------------------*/
+
+.border {
+  border: 1px solid var(--border-color);
+}
 
 .border-0 {
   border: 0;
@@ -3549,15 +3559,19 @@ textarea {
 }
 
 .rounded {
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius) !important;
 }
 
 .rounded-circle {
-  border-radius: 50%;
+  border-radius: 50% !important;
 }
 
 .rounded-pill {
   border-radius: 50rem !important;
+}
+
+.border-primary {
+  border-color: var(--primary-color) !important;
 }
 
 /*-------------------------------------*/
@@ -3574,6 +3588,22 @@ textarea {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.pointer-events-all {
+  pointer-events: all;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.user-select-all {
+  user-select: all;
+}
+
+.user-select-none {
+  user-select: none;
 }
 
 /*-------------------------------------*/
@@ -4517,6 +4547,14 @@ small,
 }
 
 /*-------------------------------------*/
+/*               Shadow                */
+/*-------------------------------------*/
+
+.shadow-none {
+  box-shadow: none !important;
+}
+
+/*-------------------------------------*/
 /*                Text                 */
 /*-------------------------------------*/
 
@@ -4635,6 +4673,10 @@ small,
 
 .text-black {
   color: var(--black-color);
+}
+
+.text-white {
+  color: var(--white-color);
 }
 
 /*-------------------------------------*/

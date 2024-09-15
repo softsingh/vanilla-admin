@@ -4,7 +4,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Dashboard</title>
+   <title>Buttons</title>
    <link rel="stylesheet" href="core.css">
    <link rel="stylesheet" href="style.css">
    <link rel="stylesheet" href="assets/vendor/boxicons-2.1.4/css/boxicons.min.css">
@@ -25,7 +25,7 @@
             </a>
          </div>
          <div class="menu">
-            <div class="menu-item active">
+            <div class="menu-item">
                <a href="dashboard.html" class="menu-link">
                   <i class="bx bx-home fs-6"></i>
                   <span>Dashboard</span>
@@ -131,7 +131,7 @@
             <div class="menu-header">
                <small class="menu-header-text">Components</small>
             </div>
-            <div class="menu-item">
+            <div class="menu-item active open">
                <a href="#" class="menu-link menu-toggle">
                   <i class="bx bx-rectangle fs-6"></i>
                   <span>Simple</span>
@@ -152,7 +152,7 @@
                         <span>Badges</span>
                      </a>
                   </div>
-                  <div class="menu-item">
+                  <div class="menu-item active">
                      <a href="buttons.html" class="menu-link">
                         <span>Buttons</span>
                      </a>
@@ -691,534 +691,146 @@
             </div>
          </nav>
          <div class="dash-content">
-            <div class="row g-6 mb-6">
-               <div class="col-sm-6 col-xl-3">
-                  <div class="card px-6 pt-4 pb-5">
-                     <div class="d-flex align-items-top justify-content-between mb-7">
-                        <div>
-                           <h5>Total</h5>
-                           <small>Users (This Month)</small>
-                        </div>
-                        <div class="dropdown">
-                           <a href="#" class="dropdown-toggle text-body">
-                              <i class="bx bx-dots-horizontal-rounded fs-4"></i>
-                           </a>
-                           <div class="dropdown-menu dropdown-menu-end">
-                              <div class="px-6 pt-2 pb-3 mb-1 border-bottom">Filter</div>
-                              <div class="dropdown-item">This Week</div>
-                              <div class="dropdown-item">This Month</div>
-                              <div class="dropdown-item">This Year</div>
-                           </div>
-                        </div>
+            <div class="row g-6">
+               <div class="col-12 col-md-6">
+                  <div class="card">
+                     <div class="card-header pb-0">
+                        <h5>Basic Buttons</h5>
                      </div>
-                     <div class="d-flex align-items-center">
-                        <div class="avatar me-4">
-                           <span class="avatar-initial rounded bg-label-danger">
-                              <i class="bx bx-user fs-5"></i>
-                           </span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between">
-                           <h4 class="me-2">30146</h4>
-                           <p class="text-success">(+30%)</p>
+                     <div class="card-body">
+                        <div class="badge-container">
+                           <button class="btn btn-primary">Primary</button>
+                           <button class="btn btn-secondary">Secondary</button>
+                           <button class="btn btn-success">Success</button>
+                           <button class="btn btn-danger">Danger</button>
+                           <button class="btn btn-warning">Warning</button>
+                           <button class="btn btn-info">Info</button>
+                           <button class="btn btn-light">Light</button>
+                           <button class="btn btn-dark">Dark</button>
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="col-sm-6 col-xl-3">
-                  <div class="card px-6 pt-4 pb-5">
-                     <div class="d-flex align-items-top justify-content-between mb-7">
-                        <div>
-                           <h5>Registered</h5>
-                           <small>Users (This Month)</small>
-                        </div>
-                        <div class="dropdown">
-                           <a href="#" class="dropdown-toggle text-body">
-                              <i class="bx bx-dots-horizontal-rounded fs-4"></i>
-                           </a>
-                           <div class="dropdown-menu dropdown-menu-end">
-                              <div class="px-6 pt-2 pb-3 mb-1 border-bottom">Filter</div>
-                              <div class="dropdown-item">This Week</div>
-                              <div class="dropdown-item">This Month</div>
-                              <div class="dropdown-item">This Year</div>
-                           </div>
-                        </div>
+               <div class="col-12 col-md-6">
+                  <div class="card">
+                     <div class="card-header pb-0">
+                        <h5>Label Buttons</h5>
                      </div>
-                     <div class="d-flex align-items-center">
-                        <div class="avatar me-4">
-                           <span class="avatar-initial rounded bg-label-success">
-                              <i class="bx bx-user fs-5"></i>
-                           </span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between">
-                           <h4 class="me-2">513</h4>
-                           <p class="text-danger">(-10%)</p>
+                     <div class="card-body">
+                        <div class="badge-container">
+                           <button class="btn btn-label-primary">Primary</button>
+                           <button class="btn btn-label-secondary">Secondary</button>
+                           <button class="btn btn-label-success">Success</button>
+                           <button class="btn btn-label-danger">Danger</button>
+                           <button class="btn btn-label-warning">Warning</button>
+                           <button class="btn btn-label-info">Info</button>
+                           <button class="btn btn-label-light">Light</button>
+                           <button class="btn btn-label-dark">Dark</button>
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="col-sm-6 col-xl-3">
-                  <div class="card px-6 pt-4 pb-5">
-                     <div class="d-flex align-items-top justify-content-between mb-7">
-                        <div>
-                           <h5>Active</h5>
-                           <small>Users (This Month)</small>
-                        </div>
-                        <div class="dropdown">
-                           <a href="#" class="dropdown-toggle text-body">
-                              <i class="bx bx-dots-horizontal-rounded fs-4"></i>
-                           </a>
-                           <div class="dropdown-menu dropdown-menu-end">
-                              <div class="px-6 pt-2 pb-3 mb-1 border-bottom">Filter</div>
-                              <div class="dropdown-item">This Week</div>
-                              <div class="dropdown-item">This Month</div>
-                              <div class="dropdown-item">This Year</div>
-                           </div>
-                        </div>
+               <div class="col-12 col-md-6">
+                  <div class="card">
+                     <div class="card-header pb-0">
+                        <h5>Basic Rounded Buttons</h5>
                      </div>
-                     <div class="d-flex align-items-center">
-                        <div class="avatar me-4">
-                           <span class="avatar-initial rounded bg-label-primary">
-                              <i class="bx bx-user fs-5"></i>
-                           </span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between">
-                           <h4 class="me-2">20125</h4>
-                           <p class="text-success">(+20%)</p>
+                     <div class="card-body">
+                        <div class="badge-container">
+                           <button class="btn rounded-pill btn-primary">Primary</button>
+                           <button class="btn rounded-pill btn-secondary">Secondary</button>
+                           <button class="btn rounded-pill btn-success">Success</button>
+                           <button class="btn rounded-pill btn-danger">Danger</button>
+                           <button class="btn rounded-pill btn-warning">Warning</button>
+                           <button class="btn rounded-pill btn-info">Info</button>
+                           <button class="btn rounded-pill btn-light">Light</button>
+                           <button class="btn rounded-pill btn-dark">Dark</button>
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="col-sm-6 col-xl-3">
-                  <div class="card px-6 pt-4 pb-5">
-                     <div class="d-flex align-items-top justify-content-between mb-7">
-                        <div>
-                           <h5>Pending</h5>
-                           <small>Users (This Month)</small>
-                        </div>
-                        <div class="dropdown">
-                           <a href="#" class="dropdown-toggle text-body">
-                              <i class="bx bx-dots-horizontal-rounded fs-4"></i>
-                           </a>
-                           <div class="dropdown-menu dropdown-menu-end">
-                              <div class="px-6 pt-2 pb-3 mb-1 border-bottom">Filter</div>
-                              <div class="dropdown-item">This Week</div>
-                              <div class="dropdown-item">This Month</div>
-                              <div class="dropdown-item">This Year</div>
-                           </div>
-                        </div>
+               <div class="col-12 col-md-6">
+                  <div class="card">
+                     <div class="card-header pb-0">
+                        <h5>Label Rounded Buttons</h5>
                      </div>
-                     <div class="d-flex align-items-center">
-                        <div class="avatar me-4">
-                           <span class="avatar-initial rounded bg-label-warning">
-                              <i class="bx bx-user fs-5"></i>
-                           </span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between">
-                           <h4 class="me-2">123</h4>
-                           <p class="text-success">(+31%)</p>
+                     <div class="card-body">
+                        <div class="badge-container">
+                           <button class="btn rounded-pill btn-label-primary">Primary</button>
+                           <button class="btn rounded-pill btn-label-secondary">Secondary</button>
+                           <button class="btn rounded-pill btn-label-success">Success</button>
+                           <button class="btn rounded-pill btn-label-danger">Danger</button>
+                           <button class="btn rounded-pill btn-label-warning">Warning</button>
+                           <button class="btn rounded-pill btn-label-info">Info</button>
+                           <button class="btn rounded-pill btn-label-light">Light</button>
+                           <button class="btn rounded-pill btn-label-dark">Dark</button>
                         </div>
                      </div>
                   </div>
                </div>
-            </div>
-            <div class="card">
-               <div class="px-6 py-6">
-                  <div class="d-flex align-items-center justify-content-between">
-                     <h5>User List</h5>
-                     <button class="btn btn-primary">
-                        <div class="d-flex align-items-center justify-content-between gap-1">
-                           <i class="bx bx-plus fs-4"></i>
-                           <span>Add User</span>
+               <div class="col-12 col-md-6">
+                  <div class="card">
+                     <div class="card-header pb-0">
+                        <h5>Basic Ouline Buttons</h5>
+                     </div>
+                     <div class="card-body">
+                        <div class="badge-container">
+                           <button class="btn btn-outline-primary">Primary</button>
+                           <button class="btn btn-outline-secondary">Secondary</button>
+                           <button class="btn btn-outline-success">Success</button>
+                           <button class="btn btn-outline-danger">Danger</button>
+                           <button class="btn btn-outline-warning">Warning</button>
+                           <button class="btn btn-outline-info">Info</button>
+                           <button class="btn btn-outline-light">Light</button>
+                           <button class="btn btn-outline-dark">Dark</button>
                         </div>
-                     </button>
+                     </div>
                   </div>
                </div>
-               <div class="mb-5">
-                  <table class="user-table">
-                     <thead>
-                        <tr>
-                           <th>User</th>
-                           <th>Role</th>
-                           <th>Actions</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-lightest"
-                                             src="assets/img/Avatars/Andrew Altman.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Andrew Altman</p>
-                                       <small class="text-muted">altman@gmail.com</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-user text-success fs-4"></i>
-                                 <span class="h-100">User</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-lightest"
-                                             src="assets/img/Avatars/Dollar Gill.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Dollar Gill</p>
-                                       <small class="text-muted">gilldollar@gmail.com</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-desktop text-primary fs-4"></i>
-                                 <span class="h-100">Admin</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-lightest"
-                                             src="assets/img/Avatars/Hargun Chahal.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Hargun Chahal</p>
-                                       <small class="text-muted">chargun@gmail.com</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-user text-success fs-4"></i>
-                                 <span class="h-100">User</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-lightest"
-                                             src="assets/img/Avatars/Harinder Singh.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Harinder Singh</p>
-                                       <small class="text-muted">singhhar@gmail.com</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-edit text-info fs-4"></i>
-                                 <span class="h-100">Editor</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-lightest"
-                                             src="assets/img/Avatars/Harishta Roy.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Harishta Roy</p>
-                                       <small class="text-muted">royalh@gmail.com</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-user text-success fs-4"></i>
-                                 <span class="h-100">User</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-lightest"
-                                             src="assets/img/Avatars/Ibadat Singh.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Ibadat Singh</p>
-                                       <small class="text-muted">ibbys@gmail.com</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-desktop text-primary fs-4"></i>
-                                 <span class="h-100">Admin</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-lightest"
-                                             src="assets/img/Avatars/Jassi Maan.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Jassi Maan</p>
-                                       <small class="text-muted">jassman@gmail.com</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-user text-success fs-4"></i>
-                                 <span class="h-100">User</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-lightest"
-                                             src="assets/img/Avatars/Joginder Singh.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Joginder Singh</p>
-                                       <small class="text-muted">jogisingh@gmail.com</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-user text-success fs-4"></i>
-                                 <span class="h-100">User</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-lightest"
-                                             src="assets/img/Avatars/Kenza Layli.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Kenza Layli</p>
-                                       <small class="text-muted">laylikenz@gmail.com</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-edit text-info fs-4"></i>
-                                 <span class="h-100">Editor</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-lightest"
-                                             src="assets/img/Avatars/Lalina.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Lalina</p>
-                                       <small class="text-muted">lalinaz@gmail.com</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-user text-success fs-4"></i>
-                                 <span class="h-100">User</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                        </tr>
-                     </tbody>
-                  </table>
-               </div>
-               <div class="row px-6 mb-5">
-                  <div class="col-sm-12 col-md-6">
-                     <div class="table-info text-muted">Showing 1 to 10 of 90</div>
+               <div class="col-12 col-md-6">
+                  <div class="card">
+                     <div class="card-header pb-0">
+                        <h5>Rounded Outline Buttons</h5>
+                     </div>
+                     <div class="card-body">
+                        <div class="badge-container">
+                           <button class="btn rounded-pill btn-outline-primary">Primary</button>
+                           <button class="btn rounded-pill btn-outline-secondary">Secondary</button>
+                           <button class="btn rounded-pill btn-outline-success">Success</button>
+                           <button class="btn rounded-pill btn-outline-danger">Danger</button>
+                           <button class="btn rounded-pill btn-outline-warning">Warning</button>
+                           <button class="btn rounded-pill btn-outline-info">Info</button>
+                           <button class="btn rounded-pill btn-outline-light">Light</button>
+                           <button class="btn rounded-pill btn-outline-dark">Dark</button>
+                        </div>
+                     </div>
                   </div>
-                  <div class="col-sm-12 col-md-6">
-                     <div class="table-pagination">
-                        <ul class="pagination">
-                           <li class="page-item disabled">
-                              <a href="#" class="page-link">
-                                 <i class="bx bx-chevron-left bx-18px"></i>
-                              </a>
-                           </li>
-                           <li class="page-item active">
-                              <a href="#" class="page-link">1</a>
-                           </li>
-                           <li class="page-item">
-                              <a href="#" class="page-link">2</a>
-                           </li>
-                           <li class="page-item">
-                              <a href="#" class="page-link">3</a>
-                           </li>
-                           <li class="page-item">
-                              <a href="#" class="page-link">4</a>
-                           </li>
-                           <li class="page-item">
-                              <a href="#" class="page-link">5</a>
-                           </li>
-                           <li class="page-item">
-                              <a href="#" class="page-link">
-                                 <i class="bx bx-chevron-right bx-18px"></i>
-                              </a>
-                           </li>
-                        </ul>
+               </div>
+               <div class="col-12 col-md-6">
+                  <div class="card">
+                     <div class="card-header pb-0">
+                        <h5>Basic Buttons Sizes</h5>
+                     </div>
+                     <div class="card-body">
+                        <div class="badge-container">
+                           <button class="btn btn-xs btn-primary">Extra Small</button>
+                           <button class="btn btn-sm btn-primary">Small</button>
+                           <button class="btn btn-primary">Normal</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-md-6">
+                  <div class="card">
+                     <div class="card-header pb-0">
+                        <h5>Rounded Buttons Sizes</h5>
+                     </div>
+                     <div class="card-body">
+                        <div class="badge-container">
+                           <button class="btn btn-xs rounded-pill btn-primary">Extra Small</button>
+                           <button class="btn btn-sm rounded-pill btn-primary">Small</button>
+                           <button class="btn rounded-pill btn-primary">Normal</button>
+                        </div>
                      </div>
                   </div>
                </div>

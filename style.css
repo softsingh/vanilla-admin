@@ -319,6 +319,14 @@ body.sidebar-hidden .navbar .nav-logo {
   height: calc(100vh - 15rem);
 }
 
+#dropdown-menu-scroll-demo {
+  width: 20rem;
+}
+
+#dropdown-menu-scroll-demo .dropdown-scroll-container {
+  height: calc(100vh - 27rem);
+}
+
 @media (max-width: 576px) {
   #dropdown-menu-notifications .dropdown-scroll-container {
     height: calc(100vh - 25rem);
@@ -327,6 +335,14 @@ body.sidebar-hidden .navbar .nav-logo {
   #dropdown-menu-shortcuts .dropdown-scroll-container {
     height: calc(100vh - 22rem);
   }
+
+  /* #dropdown-menu-scroll-demo {
+    width: 18rem;
+  }
+
+  #dropdown-menu-scroll-demo .dropdown-scroll-container {
+    height: calc(100vh - 39rem);
+  } */
 }
 
 @media (max-width: 768px) {
@@ -339,7 +355,19 @@ body.sidebar-hidden .navbar .nav-logo {
     width: 89vw;
     right: -6.75rem;
   }
+
+  #dropdown-menu-scroll-demo {
+    width: 18rem;
+  }
+
+  #dropdown-menu-scroll-demo .dropdown-scroll-container {
+    height: calc(100vh - 35rem);
+  }
 }
+
+
+
+
 
 /*-------------------------------------*/
 /*              Sidebar                */

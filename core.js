@@ -13,21 +13,15 @@ accordionHeaders.forEach(accordionHeader => accordionHeader.addEventListener('cl
 
    if (parentName !== '') {
       const parent = document.getElementById(parentName);
-
       if (parent) {
          const accordionItems = parent.querySelectorAll('.accordion-item');
-
          accordionItems.forEach((accordionItem) => {
-
             if (accordionItem !== curentAccordionItem) {
-
                // Only close accordion-items having parent value equal to accordion id
                if (accordionItem.getAttribute('parent') === parentName) {
                   accordionItem.classList.remove('open')
                }
-
             }
-
          });
       }
    }
@@ -151,6 +145,65 @@ notificationArchives.forEach((notificationArchive) => {
    })
 })
 
+// Modal
+const modalToggles = document.querySelectorAll('[data-toggle="modal"]');
+modalToggles.forEach(modalToggle => modalToggle.addEventListener('click', (event) => {
+   const modalName = modalToggle.getAttribute('data-target');
+   if(modalName) { 
+      const modal = document.getElementById(modalName);
+      if (modal) {
+         showModal(modal)
+      }
+   }
+   event.stopPropagation();
+}));
+
+// Hide modal when Modal Backdrop is clicked
+const modalBackdrop = document.getElementById('modalBackdrop');
+
+modalBackdrop.addEventListener('click', (event) => {
+   const modalName = modalBackdrop.getAttribute('data-target');
+   alert(modalName)
+   if(modalName) { 
+      const modal = document.getElementById(modalName);
+      if (modal) {
+         
+         hideModal(modal)
+      }
+   }
+});
+
+function showModal(modal) {
+   // Create the Backdrop div
+   const backdrop = document.createElement('div');
+   backdrop.id = 'modalBackdrop';
+   backdrop.className = 'modal-backdrop';
+   backdrop.setAttribute('data-target', modal.id);
+   document.body.appendChild(backdrop);
+
+   // Show the modal
+   modal.classList.add('show');
+}
+
+function hideModal(modal) {
+   // Remove the Backdrop div
+   const backdrop = document.getElementById('modalBackdrop');
+   if (backdrop) {
+      backdrop.remove();
+   }
+   // Hide the modal
+   modal.classList.remove('show');
+}
+
+// Nav
+const navItems = document.querySelectorAll('.nav>.nav-item');
+
+navItems.forEach(navItem => navItem.addEventListener('click', (event) => {
+   clearNavItemActive(navItem);
+   navItem.classList.add('active');
+   event.stopPropagation();
+}))
+
 // Theme Toggle
 const themeToggle = document.querySelector('.theme-toggle .nav-link i');
 
@@ -166,15 +219,6 @@ themeToggle.addEventListener('click', () => {
       themeToggle.classList.add('bx-moon');
    }
 })
-
-// Nav
-const navItems = document.querySelectorAll('.nav>.nav-item');
-
-navItems.forEach(navItem => navItem.addEventListener('click', (event) => {
-   clearNavItemActive(navItem);
-   navItem.classList.add('active');
-   event.stopPropagation();
-}))
 
 //Click on empty area
 document.documentElement.addEventListener('click', (event) => {

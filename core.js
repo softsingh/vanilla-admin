@@ -167,6 +167,7 @@ notificationArchives.forEach((notificationArchive) => {
 //////////////// Modal ////////////////
 
 const modals = document.querySelectorAll('.modal');
+const modalDialogs = document.querySelectorAll('.modal-dialog');
 const modalToggles = document.querySelectorAll('[data-toggle="modal"]');
 const modalDismissToggles = document.querySelectorAll('[data-dismiss="modal"]');
 
@@ -196,9 +197,10 @@ modalDismissToggles.forEach((modalDismissToggle) =>
 );
 
 // Hide model when clicked outside model-content
-modals.forEach((modal) =>
-  modal.addEventListener('click', (event) => {
-    if (event.target === modal) {
+modalDialogs.forEach((modalDialog) =>
+  modalDialog.addEventListener('click', (event) => {
+    if (event.target === modalDialog) {
+      const modal = modalDialog.closest('.modal');
       hideModal(modal);
       event.stopPropagation();
     }
@@ -211,7 +213,6 @@ function showModal(modal) {
   backdrop.className = 'modal-backdrop';
   backdrop.setAttribute('data-target', modal.id);
   document.body.appendChild(backdrop);
-
   modal.classList.add('show');
 }
 

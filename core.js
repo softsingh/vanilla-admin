@@ -168,6 +168,7 @@ notificationArchives.forEach((notificationArchive) => {
 
 const modals = document.querySelectorAll('.modal');
 const modalDialogs = document.querySelectorAll('.modal-dialog');
+const modalContents = document.querySelectorAll('.modal-content');
 const modalToggles = document.querySelectorAll('[data-toggle="modal"]');
 const modalDismissToggles = document.querySelectorAll('[data-dismiss="modal"]');
 
@@ -201,6 +202,16 @@ modalDialogs.forEach((modalDialog) =>
   modalDialog.addEventListener('click', (event) => {
     if (event.target === modalDialog) {
       const modal = modalDialog.closest('.modal');
+      hideModal(modal);
+      event.stopPropagation();
+    }
+  })
+);
+
+modals.forEach((modal) =>
+  modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
+      // const modal = modalContent.closest('.modal');
       hideModal(modal);
       event.stopPropagation();
     }

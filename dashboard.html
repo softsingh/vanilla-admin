@@ -11,16 +11,16 @@
 
 </head>
 
-<body class="">
+<body>
    <div class="dash-container">
-      <div class="screen-overlay"></div>
+      <div class="sidebar-backdrop"></div>
       <aside class="sidebar">
          <div class="app-brand">
             <a href="#" class="app-logo">
                <img src="assets/img/flask-logo.png" alt="Logo" class="logo-image">
                <h6 class="logo-text">Flask</h6>
             </a>
-            <a href="#" class="sidebar-toggle">
+            <a href="#" class="sidebar-toggle" data-toggle="sidebar">
                <i class="bx bx-chevron-left fs-5"></i>
             </a>
          </div>
@@ -277,7 +277,7 @@
       <main class="main-layout">
          <nav class="navbar mx-6">
             <div class="navbar-nav nav-left">
-               <div class="navbar-toggle">
+               <div class="navbar-toggle" data-toggle="sidebar">
                   <a href="#" class="nav-link">
                      <i class="bx bx-menu bx-sm cursor-pointer"></i>
                   </a>
@@ -1227,6 +1227,7 @@
       </main>
    </div>
    <script src="core.js"></script>
+   <script src="script.js"></script>
 </body>
 
 </html>

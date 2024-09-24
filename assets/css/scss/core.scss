@@ -1,5 +1,5 @@
 @use '_root.scss';
-@use '_temp.scss';
+@use '_colors.scss';
 @use '_html.scss';
 @use '_accordion.scss';
 @use '_alert.scss';
@@ -12,3 +12,10 @@
 @use '_form.scss';
 @use '_layout.scss';
 @use '_menu.scss';
+@use '_modal.scss';
+@use '_nav.scss';
+@use '_navbar.scss';
+@use '_pagination.scss';
+@use '_sidebar.scss';
+@use '_text.scss';
+@use '_utility.scss';

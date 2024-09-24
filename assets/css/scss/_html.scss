@@ -1,5 +1,7 @@
-//////////////////// Standard HTML Elements ////////////////////
-
+/*--------------------------------------------------------------------------*/
+/*                         Standard HTML Elements                           */
+/*--------------------------------------------------------------------------*/
+/*
 /*-------------------------------------*/
 /*               Anchor                */
 /*-------------------------------------*/
@@ -68,4 +70,55 @@ h5,
 h6,
 .h6 {
   font-size: 0.9375rem;
+}
+
+/*-------------------------------------*/
+/*                Table                */
+/*-------------------------------------*/
+
+table {
+  width: 100%;
+  border-collapse: collapse !important;
+  vertical-align: middle;
+  border-color: var(--border-color);
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0px;
+}
+
+thead {
+  text-align: left;
+}
+
+.table-info {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.table-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+@media screen and (max-width: 768px) {
+  .table-info {
+    height: inherit;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .table-pagination {
+    justify-content: center;
+  }
 }

@@ -134,6 +134,15 @@
 /*              Dropdown               */
 /*-------------------------------------*/
 
+#dropdown-menu-account {
+  top: 3.25rem;
+}
+
+#dropdown-menu-notifications {
+  max-width: 25rem;
+  top: 2.75rem;
+}
+
 .dropdown-notifications-item {
   display: block;
   width: 100%;
@@ -200,17 +209,8 @@
   margin-bottom: 0.5rem;
 }
 
-#dropdown-menu-account {
-  top: 3.25rem;
-}
-
-#dropdown-menu-notifications {
-  max-width: 25rem;
-  top: 2.75rem;
-}
-
 #dropdown-menu-shortcuts {
-  width: 23rem;
+  width: 25rem;
   top: 2.75rem;
 }
 

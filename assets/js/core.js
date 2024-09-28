@@ -45,18 +45,31 @@ alertDismissButtons.forEach((alertDismissButton) =>
 
 //////////////////// Dropdown ////////////////////
 
-// Dropdown Menu
 const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
 
-dropdownToggles.forEach((dropdownToggle) => {
+dropdownToggles.forEach((dropdownToggle) =>
   dropdownToggle.addEventListener('click', (event) => {
-    const parent = event.currentTarget.parentElement;
-    const dropdownMenu = parent.querySelector('.dropdown-menu');
+    const dropdown = dropdownToggle.closest('.dropdown');
+    const dropdownMenu = dropdown.querySelector('.dropdown-menu');
     hideAllDropdowns(event);
     dropdownMenu.classList.toggle('show');
     event.stopPropagation();
+  })
+);
+
+function hideAllDropdowns(event) {
+  const dropdownMenus = document.querySelectorAll('.dropdown-menu');
+
+  dropdownMenus.forEach((dropdownMenu) => {
+    if (dropdownMenu.classList.contains('show')) {
+      const dropdown = dropdownMenu.closest('.dropdown');
+      const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
+      if (event.currentTarget !== dropdownToggle) {
+        dropdownMenu.classList.remove('show');
+      }
+    }
   });
-});
+}
 
 //////////////////// Modal ////////////////////
 
@@ -217,19 +230,7 @@ sidebarBackdrop.addEventListener('click', () => {
 
 //////////////////// Click on Empty Area ////////////////////
 
-document.documentElement.addEventListener('click', (event) => {
+document.addEventListener('click', (event) => {
+  alert('hello');
   hideAllDropdowns(event);
 });
-
-// Hide all shown Dropdown Menus
-function hideAllDropdowns(event) {
-  const dropdownMenus = document.querySelectorAll('.dropdown-menu');
-
-  dropdownMenus.forEach((dropdownMenu) => {
-    if (dropdownMenu.classList.contains('show')) {
-      if (event.currentTarget !== dropdownMenu) {
-        dropdownMenu.classList.remove('show');
-      }
-    }
-  });
-}

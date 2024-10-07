@@ -231,6 +231,5 @@ sidebarBackdrop.addEventListener('click', () => {
 //////////////////// Click on Empty Area ////////////////////
 
 document.addEventListener('click', (event) => {
-  alert('hello');
   hideAllDropdowns(event);
 });

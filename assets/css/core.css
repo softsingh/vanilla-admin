@@ -1081,7 +1081,7 @@ button:not(:disabled),
   box-shadow: 0 0 0.25rem 0.05rem hsla(239, 100%, 70%, 0.1);
 }
 
-.form-control:focus {
+.form-control:focus:not([readonly]) {
   outline: 0;
   color: var(--body-color);
   background: var(--white-color);
@@ -1116,14 +1116,14 @@ button:not(:disabled),
   -webkit-transition: all 0.2s ease;
 }
 
-.form-control:focus::-moz-placeholder {
+.form-control:focus:not([readonly])::-moz-placeholder {
   transform: translateX(5px);
   -moz-transform: translateX(5px);
   -o-transform: translateX(5px);
   -webkit-transform: translateX(5px);
 }
 
-.form-control:focus::placeholder {
+.form-control:focus:not([readonly])::placeholder {
   transform: translateX(5px);
   -moz-transform: translateX(5px);
   -o-transform: translateX(5px);

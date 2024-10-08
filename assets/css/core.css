@@ -3634,6 +3634,11 @@ textarea {
 /*-------------------------------------*/
 /*               Font                  */
 /*-------------------------------------*/
+small,
+.small {
+  font-size: 0.8rem;
+}
+
 .fs-1 {
   font-size: 0.25rem;
 }
@@ -3710,11 +3715,6 @@ textarea {
 
 .fw-bolder {
   font-weight: bolder;
-}
-
-small,
-.small {
-  font-size: 0.8rem;
 }
 
 /*-------------------------------------*/

@@ -376,32 +376,39 @@ body.sidebar-hidden .navbar .navbar-toggle {
 }
 
 /*-------------------------------------*/
-/*             User Table              */
+/*          Dashboard Table            */
 /*-------------------------------------*/
 
-.user-table thead,
-.user-table tbody,
-.user-table tfoot,
-.user-table tr,
-.user-table td,
-.user-table th {
+.dash-table thead,
+.dash-table tbody,
+.dash-table tfoot,
+.dash-table tr,
+.dash-table td,
+.dash-table th {
   border-bottom: 1px solid var(--border-color);
 }
 
-.user-table th,
-.user-table td {
+.dash-table th,
+.dash-table td {
   padding: 0.75rem 0.5rem 0.75rem 1.5rem;
 }
 
-.user-table tbody tr:hover {
+.dash-table tbody tr:hover {
   background-color: var(--heading-hover-bg-color);
 }
 
 @media (max-width: 576px) {
-  .user-table tbody td:nth-child(2),
-  .user-table tbody td:nth-child(3),
-  .user-table thead th:nth-child(2),
-  .user-table thead th:nth-child(3) {
+  .dash-table thead th:nth-child(2),
+  .dash-table thead th:nth-child(3),
+  .dash-table tbody td:nth-child(2),
+  .dash-table tbody td:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) {
+  .dash-table thead th:nth-child(4),
+  .dash-table tbody td:nth-child(4) {
     display: none;
   }
 }

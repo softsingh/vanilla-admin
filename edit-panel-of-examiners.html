@@ -4,7 +4,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Panel of Examiners</title>
+   <title>Dashboard</title>
    <link rel="stylesheet" href="assets/css/core.css">
    <link rel="stylesheet" href="assets/css/style.css">
    <link rel="stylesheet" href="assets/vendor/boxicons-2.1.4/css/boxicons.min.css">
@@ -219,7 +219,7 @@
             <div class="menu-header">
                <small class="menu-header-text">Forms & Tables</small>
             </div>
-            <div class="menu-item active open">
+            <div class="menu-item open active">
                <a href="#" class="menu-link menu-toggle">
                   <i class="bx bx-detail fs-6"></i>
                   <span>Form Layouts</span>
@@ -690,609 +690,191 @@
             </div>
          </nav>
          <div class="dash-content">
-            <div class="card">
-               <div class="px-6 py-6">
-                  <div class="d-flex align-items-center justify-content-between">
-                     <div class="w-50">
-                        <h5 class="text-truncate">Panel of Examiners</h5>
-                     </div>
-                     <a href="edit-panel-of-examiners.html" class="btn btn-primary">
-                        <div class="d-flex align-items-center justify-content-between gap-1">
-                           <i class="bx bx-plus fs-4"></i>
-                           <span>Add Panel</span>
+            <div class="mb-3">
+               <h5 class="text-muted">Panel of Examiners</h5>
+            </div>
+            <div class="card mb-6">
+               <div class="card-body">
+                  <div class="mb-5">
+                     <label for="student-name" class="form-label mb-2">Student Name</label>
+                     <input class="form-control" type="text" id="student-name" name="student-name"
+                        placeholder="Enter name of Student" autofocus>
+                  </div>
+                  <div class="mb-5">
+                     <label for="regn-no" class="form-label mb-2">Registration No</label>
+                     <input class="form-control" type="text" id="regn-no" name="regn-no"
+                        placeholder="Enter Registeration No">
+                  </div>
+                  <div class="mb-3">
+                     <label for="pgbos-date" class="form-label mb-2">PGBOS Date</label>
+                     <input class="form-control" type="text" id="pgbos-date" name="pgbos-date"
+                        placeholder="Enter PGBOS Date">
+                  </div>
+               </div>
+            </div>
+            <div class="row g-6">
+               <div class="col-12 col-md-6">
+                  <div class="card">
+                     <div class="card-body">
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                           <div class="w-80">
+                              <h6 class="text-truncate">Examiner - 1</h6>
+                           </div>
+                           <div class="dropdown">
+                              <a href="#" class="dropdown-toggle text-body">
+                                 <i class="bx bx-dots-horizontal-rounded fs-4"></i>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-end">
+                                 <div class="dropdown-item">
+                                    <div class="d-flex align-items-center gap-2">
+                                       <i class="bx bx-search fs-4"></i>
+                                       <span>Search Examiner</span>
+                                    </div>
+                                 </div>
+                                 <div class="dropdown-item">
+                                    <div class="d-flex align-items-center gap-2">
+                                       <i class="bx bx-plus-circle fs-4"></i>
+                                       <span>Add More ...........</span>
+                                    </div>
+                                 </div>
+                                 <div class="dropdown-item">
+                                    <div class="d-flex align-items-center gap-2">
+                                       <i class="bx bx-trash fs-4"></i>
+                                       <span>Remove Examiner</span>
+                                    </div>
+                                 </div>
+                                 <div class="dropdown-divider"></div>
+                                 <div class="dropdown-item">
+                                    <div class="d-flex align-items-center gap-2">
+                                       <i class="bx bx-up-arrow-circle fs-4"></i>
+                                       <span>Move up</span>
+                                    </div>
+                                 </div>
+                                 <div class="dropdown-item">
+                                    <div class="d-flex align-items-center gap-2">
+                                       <i class="bx bx-down-arrow-circle fs-4"></i>
+                                       <span>Move down</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
-                     </a>
-                  </div>
-               </div>
-               <div class="mb-5">
-                  <table class="dash-table">
-                     <thead>
-                        <tr>
-                           <th>Student</th>
-                           <th>PGBOS Date</th>
-                           <th>Actions</th>
-                           <th>Actions</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-lightest"
-                                             src="assets/img/Avatars/Andrew Altman.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Andrew Altman</p>
-                                       <small class="text-muted">09-UD-821</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <span class="h-100">24-05-2024</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="dropdown">
-                                 <a href="#" class="dropdown-toggle text-body">
-                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
-                                 </a>
-                                 <div class="dropdown-menu dropdown-menu-end">
-                                    <div class="dropdown-item">
-                                       <div class="d-flex align-items-center gap-2">
-                                          <i class="bx bx-edit fs-4"></i>
-                                          <span>Edit</span>
-                                       </div>
-                                    </div>
-                                    <div class="dropdown-item">
-                                       <div class="d-flex align-items-center gap-2">
-                                          <i class="bx bx-trash fs-4"></i>
-                                          <span>Delete</span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-lightest"
-                                             src="assets/img/Avatars/Hargun Chahal.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Hargun Chahal</p>
-                                       <small class="text-muted">2025-UD-PHD-01</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <span class="h-100">27-09-2024</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="dropdown">
-                                 <a href="#" class="dropdown-toggle text-body">
-                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
-                                 </a>
-                                 <div class="dropdown-menu dropdown-menu-end">
-                                    <div class="dropdown-item">
-                                       <div class="d-flex align-items-center gap-2">
-                                          <i class="bx bx-edit fs-4"></i>
-                                          <span>Edit</span>
-                                       </div>
-                                    </div>
-                                    <div class="dropdown-item">
-                                       <div class="d-flex align-items-center gap-2">
-                                          <i class="bx bx-trash fs-4"></i>
-                                          <span>Delete</span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-lightest"
-                                             src="assets/img/Avatars/Harinder Singh.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Harinder Singh</p>
-                                       <small class="text-muted">05-EKA-144</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <span class="h-100">30-06-2024</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="dropdown">
-                                 <a href="#" class="dropdown-toggle text-body">
-                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
-                                 </a>
-                                 <div class="dropdown-menu dropdown-menu-end">
-                                    <div class="dropdown-item">
-                                       <div class="d-flex align-items-center gap-2">
-                                          <i class="bx bx-edit fs-4"></i>
-                                          <span>Edit</span>
-                                       </div>
-                                    </div>
-                                    <div class="dropdown-item">
-                                       <div class="d-flex align-items-center gap-2">
-                                          <i class="bx bx-trash fs-4"></i>
-                                          <span>Delete</span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-lightest"
-                                             src="assets/img/Avatars/Harishta Roy.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Harishta Roy</p>
-                                       <small class="text-muted">2K-HLI-240</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <span class="h-100">26-07-2024</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="dropdown">
-                                 <a href="#" class="dropdown-toggle text-body">
-                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
-                                 </a>
-                                 <div class="dropdown-menu dropdown-menu-end">
-                                    <div class="dropdown-item">
-                                       <div class="d-flex align-items-center gap-2">
-                                          <i class="bx bx-edit fs-4"></i>
-                                          <span>Edit</span>
-                                       </div>
-                                    </div>
-                                    <div class="dropdown-item">
-                                       <div class="d-flex align-items-center gap-2">
-                                          <i class="bx bx-trash fs-4"></i>
-                                          <span>Delete</span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-lightest"
-                                             src="assets/img/Avatars/Ibadat Singh.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Ibadat Singh</p>
-                                       <small class="text-muted">15-UMD-5</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <span class="h-100">23-04-2024</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="dropdown">
-                                 <a href="#" class="dropdown-toggle text-body">
-                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
-                                 </a>
-                                 <div class="dropdown-menu dropdown-menu-end">
-                                    <div class="dropdown-item">
-                                       <div class="d-flex align-items-center gap-2">
-                                          <i class="bx bx-edit fs-4"></i>
-                                          <span>Edit</span>
-                                       </div>
-                                    </div>
-                                    <div class="dropdown-item">
-                                       <div class="d-flex align-items-center gap-2">
-                                          <i class="bx bx-trash fs-4"></i>
-                                          <span>Delete</span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-lightest"
-                                             src="assets/img/Avatars/Jassi Maan.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Jassi Maan</p>
-                                       <small class="text-muted">10-DMK-166</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <span class="h-100">22-03-2024</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="dropdown">
-                                 <a href="#" class="dropdown-toggle text-body">
-                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
-                                 </a>
-                                 <div class="dropdown-menu dropdown-menu-end">
-                                    <div class="dropdown-item">
-                                       <div class="d-flex align-items-center gap-2">
-                                          <i class="bx bx-edit fs-4"></i>
-                                          <span>Edit</span>
-                                       </div>
-                                    </div>
-                                    <div class="dropdown-item">
-                                       <div class="d-flex align-items-center gap-2">
-                                          <i class="bx bx-trash fs-4"></i>
-                                          <span>Delete</span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-lightest"
-                                             src="assets/img/Avatars/Joginder Singh.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Joginder Singh</p>
-                                       <small class="text-muted">04-DTP-709</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <span class="h-100">28-10-2024</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="dropdown">
-                                 <a href="#" class="dropdown-toggle text-body">
-                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
-                                 </a>
-                                 <div class="dropdown-menu dropdown-menu-end">
-                                    <div class="dropdown-item">
-                                       <div class="d-flex align-items-center gap-2">
-                                          <i class="bx bx-edit fs-4"></i>
-                                          <span>Edit</span>
-                                       </div>
-                                    </div>
-                                    <div class="dropdown-item">
-                                       <div class="d-flex align-items-center gap-2">
-                                          <i class="bx bx-trash fs-4"></i>
-                                          <span>Delete</span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-lightest"
-                                             src="assets/img/Avatars/Kenza Layli.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Kenza Layli</p>
-                                       <small class="text-muted">14-SAB-18</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <span class="h-100">24-03-2024</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="dropdown">
-                                 <a href="#" class="dropdown-toggle text-body">
-                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
-                                 </a>
-                                 <div class="dropdown-menu dropdown-menu-end">
-                                    <div class="dropdown-item">
-                                       <div class="d-flex align-items-center gap-2">
-                                          <i class="bx bx-edit fs-4"></i>
-                                          <span>Edit</span>
-                                       </div>
-                                    </div>
-                                    <div class="dropdown-item">
-                                       <div class="d-flex align-items-center gap-2">
-                                          <i class="bx bx-trash fs-4"></i>
-                                          <span>Delete</span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-lightest"
-                                             src="assets/img/Avatars/Lalina.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Lalina</p>
-                                       <small class="text-muted">10-DGC-371</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <span class="h-100">26-06-2024</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="dropdown">
-                                 <a href="#" class="dropdown-toggle text-body">
-                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
-                                 </a>
-                                 <div class="dropdown-menu dropdown-menu-end">
-                                    <div class="dropdown-item">
-                                       <div class="d-flex align-items-center gap-2">
-                                          <i class="bx bx-edit fs-4"></i>
-                                          <span>Edit</span>
-                                       </div>
-                                    </div>
-                                    <div class="dropdown-item">
-                                       <div class="d-flex align-items-center gap-2">
-                                          <i class="bx bx-trash fs-4"></i>
-                                          <span>Delete</span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#" class="text-heading-link text-truncate">
-                                 <div class="d-flex">
-                                    <div class="me-3">
-                                       <div class="avatar">
-                                          <img class="rounded-circle bg-primary-lightest"
-                                             src="assets/img/Avatars/Lamia Abdullah.png" alt="Avatar" width="40px">
-                                       </div>
-                                    </div>
-                                    <div class="">
-                                       <p class="fs-4 mb-0">Lamia Abdullah</p>
-                                       <small class="text-muted">02-UAA-123</small>
-                                    </div>
-                                 </div>
-                              </a>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-2">
-                                 <span class="h-100">29-08-2024</span>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="d-flex align-items-center gap-1">
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-edit fs-5"></i>
-                                 </a>
-                                 <a href="#" class="text-heading-link">
-                                    <i class="bx bx-trash fs-5"></i>
-                                 </a>
-                              </div>
-                           </td>
-                           <td>
-                              <div class="dropdown">
-                                 <a href="#" class="dropdown-toggle text-body">
-                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
-                                 </a>
-                                 <div class="dropdown-menu dropdown-menu-end">
-                                    <div class="dropdown-item">
-                                       <div class="d-flex align-items-center gap-2">
-                                          <i class="bx bx-edit fs-4"></i>
-                                          <span>Edit</span>
-                                       </div>
-                                    </div>
-                                    <div class="dropdown-item">
-                                       <div class="d-flex align-items-center gap-2">
-                                          <i class="bx bx-trash fs-4"></i>
-                                          <span>Delete</span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </td>
-                        </tr>
-                     </tbody>
-                  </table>
-               </div>
-               <div class="row px-6 mb-5">
-                  <div class="col-sm-12 col-md-6">
-                     <div class="table-info text-muted">Showing 1 to 10 of 90</div>
-                  </div>
-                  <div class="col-sm-12 col-md-6">
-                     <div class="table-pagination">
-                        <ul class="pagination">
-                           <li class="page-item disabled">
-                              <a href="#" class="page-link">
-                                 <i class="bx bx-chevron-left bx-18px"></i>
-                              </a>
-                           </li>
-                           <li class="page-item active">
-                              <a href="#" class="page-link">1</a>
-                           </li>
-                           <li class="page-item">
-                              <a href="#" class="page-link">2</a>
-                           </li>
-                           <li class="page-item">
-                              <a href="#" class="page-link">3</a>
-                           </li>
-                           <li class="page-item">
-                              <a href="#" class="page-link">4</a>
-                           </li>
-                           <li class="page-item">
-                              <a href="#" class="page-link">5</a>
-                           </li>
-                           <li class="page-item">
-                              <a href="#" class="page-link">
-                                 <i class="bx bx-chevron-right bx-18px"></i>
-                              </a>
-                           </li>
-                        </ul>
+                        <div class="mb-2">
+                           <textarea class="form-control" id="examiner-1" name="examiner-1" rows="3"
+                              placeholder="Click on shortcut menu to search/add examiner" readonly></textarea>
+                        </div>
                      </div>
                   </div>
+               </div>
+               <div class="col-12 col-md-6">
+                  <div class="card">
+                     <div class="card-body">
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                           <div class="w-80">
+                              <h6 class="text-truncate">Examiner - 2</h6>
+                           </div>
+                           <div class="dropdown">
+                              <a href="#" class="dropdown-toggle text-body">
+                                 <i class="bx bx-dots-horizontal-rounded fs-4"></i>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-end">
+                                 <div class="dropdown-item">
+                                    <div class="d-flex align-items-center gap-2">
+                                       <i class="bx bx-search fs-4"></i>
+                                       <span>Search Examiner</span>
+                                    </div>
+                                 </div>
+                                 <div class="dropdown-item">
+                                    <div class="d-flex align-items-center gap-2">
+                                       <i class="bx bx-plus-circle fs-4"></i>
+                                       <span>Add More ...........</span>
+                                    </div>
+                                 </div>
+                                 <div class="dropdown-item">
+                                    <div class="d-flex align-items-center gap-2">
+                                       <i class="bx bx-trash fs-4"></i>
+                                       <span>Remove Examiner</span>
+                                    </div>
+                                 </div>
+                                 <div class="dropdown-divider"></div>
+                                 <div class="dropdown-item">
+                                    <div class="d-flex align-items-center gap-2">
+                                       <i class="bx bx-up-arrow-circle fs-4"></i>
+                                       <span>Move up</span>
+                                    </div>
+                                 </div>
+                                 <div class="dropdown-item">
+                                    <div class="d-flex align-items-center gap-2">
+                                       <i class="bx bx-down-arrow-circle fs-4"></i>
+                                       <span>Move down</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="mb-2">
+                           <textarea class="form-control" id="examiner-2" name="examiner-2" rows="3"
+                              placeholder="Click on shortcut menu to search/add examiner" readonly></textarea>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-md-6">
+                  <div class="card">
+                     <div class="card-body">
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                           <div class="w-80">
+                              <h6 class="text-truncate">Examiner - 3</h6>
+                           </div>
+                           <div class="dropdown">
+                              <a href="#" class="dropdown-toggle text-body">
+                                 <i class="bx bx-dots-horizontal-rounded fs-4"></i>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-end">
+                                 <div class="dropdown-item">
+                                    <div class="d-flex align-items-center gap-2">
+                                       <i class="bx bx-search fs-4"></i>
+                                       <span>Search Examiner</span>
+                                    </div>
+                                 </div>
+                                 <div class="dropdown-item">
+                                    <div class="d-flex align-items-center gap-2">
+                                       <i class="bx bx-plus-circle fs-4"></i>
+                                       <span>Add More ...........</span>
+                                    </div>
+                                 </div>
+                                 <div class="dropdown-item">
+                                    <div class="d-flex align-items-center gap-2">
+                                       <i class="bx bx-trash fs-4"></i>
+                                       <span>Remove Examiner</span>
+                                    </div>
+                                 </div>
+                                 <div class="dropdown-divider"></div>
+                                 <div class="dropdown-item">
+                                    <div class="d-flex align-items-center gap-2">
+                                       <i class="bx bx-up-arrow-circle fs-4"></i>
+                                       <span>Move up</span>
+                                    </div>
+                                 </div>
+                                 <div class="dropdown-item">
+                                    <div class="d-flex align-items-center gap-2">
+                                       <i class="bx bx-down-arrow-circle fs-4"></i>
+                                       <span>Move down</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="mb-2">
+                           <textarea class="form-control" id="examiner-3" name="examiner-3" rows="3"
+                              placeholder="Click on shortcut menu to search/add examiner" readonly></textarea>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="d-flex gap-2">
+                  <button class="btn btn-primary">Save</button>
+                  <button class="btn btn-secondary">Print</button>
                </div>
             </div>
          </div>

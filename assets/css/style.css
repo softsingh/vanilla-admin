@@ -397,18 +397,49 @@ body.sidebar-hidden .navbar .navbar-toggle {
   background-color: var(--heading-hover-bg-color);
 }
 
+/*-------------------------------------*/
+/*      Panel of Examiner Table        */
+/*-------------------------------------*/
+
 @media (max-width: 576px) {
-  .dash-table thead th:nth-child(2),
-  .dash-table thead th:nth-child(3),
-  .dash-table tbody td:nth-child(2),
-  .dash-table tbody td:nth-child(3) {
+  .dash-table.poe thead th:nth-child(3),
+  .dash-table.poe thead th:nth-child(4),
+  .dash-table.poe tbody td:nth-child(3),
+  .dash-table.poe tbody td:nth-child(4) {
     display: none;
   }
 }
 
 @media (min-width: 576px) {
-  .dash-table thead th:nth-child(4),
-  .dash-table tbody td:nth-child(4) {
+  .dash-table.poe thead th:nth-child(5),
+  .dash-table.poe tbody td:nth-child(5) {
+    display: none;
+  }
+}
+
+@media (max-width: 950px) {
+  .dash-table.poe thead th:nth-child(2),
+  .dash-table.poe tbody td:nth-child(2) {
+    display: none;
+  }
+}
+
+/*-------------------------------------*/
+/*             User Table              */
+/*-------------------------------------*/
+
+@media (max-width: 576px) {
+  .dash-table.user thead th:nth-child(2),
+  .dash-table.user thead th:nth-child(3),
+  .dash-table.user tbody td:nth-child(2),
+  .dash-table.user tbody td:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) {
+  .dash-table.user thead th:nth-child(4),
+  .dash-table.user tbody td:nth-child(4) {
     display: none;
   }
 }

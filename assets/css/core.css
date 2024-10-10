@@ -1133,6 +1133,7 @@ button:not(:disabled),
 .form-label {
   font-size: 0.9rem;
   font-weight: 500;
+  color: var(--secondary-color);
   display: inline-block;
 }
 

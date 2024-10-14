@@ -80,6 +80,24 @@ document.documentElement.addEventListener('click', (event) => {
   }
 });
 
+//////////////////// Panel of Examiners ////////////////////
+
+// Delete Panel Item
+const poeListDeptDelToggles = document.querySelectorAll(
+  '[type="tgl-poe-list-dept-del"]'
+);
+
+poeListDeptDelToggles.forEach((delToggle) =>
+  delToggle.addEventListener('click', (event) => {
+    const ret = confirm('Are you sure to delete the record?');
+    if (ret === false) {
+      return;
+    }
+    const tableRow = delToggle.closest('tr');
+    tableRow.parentNode.removeChild(tableRow);
+  })
+);
+
 //////////////////// Theme Toggle ////////////////////
 
 const themeToggle = document.querySelector('.theme-toggle .nav-link i');

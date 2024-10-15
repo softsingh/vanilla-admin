@@ -749,7 +749,7 @@
                                  <a href="poe-edit-filled.html" class="text-heading-link">
                                     <i class="bx bx-edit fs-5"></i>
                                  </a>
-                                 <a href="#" class="text-heading-link" type="tgl-poe-list-dept-del">
+                                 <a href="#" class="text-heading-link" data-toggle="modal" data-target="modalConfirm">
                                     <i class="bx bx-trash fs-5"></i>
                                  </a>
                               </div>
@@ -773,7 +773,8 @@
                                        </div>
                                     </a>
                                     <div class="dropdown-item">
-                                       <div class="d-flex align-items-center gap-2" type="tgl-poe-list-dept-del">
+                                       <div class="d-flex align-items-center gap-2" data-toggle="modal"
+                                          data-target="modalConfirm">
                                           <i class="bx bx-trash fs-4"></i>
                                           <span>Delete</span>
                                        </div>
@@ -1378,6 +1379,31 @@
                         </tr>
                      </tbody>
                   </table>
+               </div>
+               <div>
+                  <div class="modal modal-confirm" id="modalConfirm">
+                     <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                           <div class="modal-header">
+                              <div class="d-flex">
+                                 <h6>Header</h6>
+                                 <button class="btn-close" type="modalConfirmNo"></button>
+                              </div>
+                           </div>
+                           <div class="modal-body">
+                              <p class="mb-2">
+                                 Dummy Message for testing
+                              </p>
+                           </div>
+                           <div class="modal-footer">
+                              <div class="d-flex align-items-center gap-2">
+                                 <button class="btn btn-primary" type="modalConfirmYes">OK</button>
+                                 <button class="btn btn-secondary" type="modalConfirmNo">Cancel</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
                </div>
                <div class="row px-6 mb-5">
                   <div class="col-sm-12 col-md-6">

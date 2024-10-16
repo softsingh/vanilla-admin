@@ -71,20 +71,29 @@ function hideAllDropdowns(event) {
   });
 }
 
-//////////////////// Modal ////////////////////
+//////////////////// Modal (except ModalConfirm) ////////////////////
 
-const modals = document.querySelectorAll('.modal');
-const modalDialogs = document.querySelectorAll('.modal-dialog');
-const modalContents = document.querySelectorAll('.modal-content');
-const modalToggles = document.querySelectorAll('[data-toggle="modal"]');
-const modalDismissToggles = document.querySelectorAll('[data-dismiss="modal"]');
+const modals = document.querySelectorAll('.modal:not(.modal-confirm)');
+const modalDialogs = document.querySelectorAll(
+  '.modal:not(.modal-confirm) .modal-dialog'
+);
+const modalContents = document.querySelectorAll(
+  '.modal:not(.modal-confirm) .modal-content'
+);
+const modalToggles = document.querySelectorAll(
+  '.modal:not(.modal-confirm) [data-toggle="modal"]'
+);
+const modalDismissToggles = document.querySelectorAll(
+  '.modal:not(.modal-confirm) [data-dismiss="modal"]'
+);
 
 // Show modal if modal toggle clicked
 modalToggles.forEach((modalToggle) =>
   modalToggle.addEventListener('click', (event) => {
-    const modalName = modalToggle.getAttribute('data-target');
-    if (modalName) {
-      const modal = document.getElementById(modalName);
+    hideAllDropdowns(event);
+    const modalID = modalToggle.getAttribute('data-target');
+    if (modalID) {
+      const modal = document.getElementById(modalID);
       if (modal) {
         showModal(modal);
       }
@@ -140,6 +149,36 @@ function hideModal(modal) {
     backdrop.remove();
   }
   modal.classList.remove('show');
+}
+
+//////////////////// ModalConfirm ////////////////////
+
+//const modals = document.querySelectorAll('.modal');
+//const modalDialogs = document.querySelectorAll('.modal-dialog');
+//const modalContents = document.querySelectorAll('.modal-content');
+//const modalToggles = document.querySelectorAll('[data-toggle="modal"]');
+//const modalDismissToggles = document.querySelectorAll('[data-dismiss="modal"]');
+
+function modalConfirm(message) {
+  return new Promise((resolve) => {
+    const modal = document.getElementById('customConfirm');
+    const modalMessage = document.getElementById('modalMessage');
+    const confirmYes = document.getElementById('confirmYes');
+    const confirmNo = document.getElementById('confirmNo');
+
+    modalMessage.innerText = message;
+    modal.style.display = 'block';
+
+    confirmYes.onclick = () => {
+      modal.style.display = 'none';
+      resolve(true);
+    };
+
+    confirmNo.onclick = () => {
+      modal.style.display = 'none';
+      resolve(false);
+    };
+  });
 }
 
 //////////////////// Nav ////////////////////

@@ -153,18 +153,40 @@ function hideModal(modal) {
 
 //////////////////// ModalConfirm ////////////////////
 
-//const modals = document.querySelectorAll('.modal');
-//const modalDialogs = document.querySelectorAll('.modal-dialog');
-//const modalContents = document.querySelectorAll('.modal-content');
-//const modalToggles = document.querySelectorAll('[data-toggle="modal"]');
-//const modalDismissToggles = document.querySelectorAll('[data-dismiss="modal"]');
-
 function modalConfirm(message) {
   return new Promise((resolve) => {
-    const modal = document.getElementById('customConfirm');
-    const modalMessage = document.getElementById('modalMessage');
-    const confirmYes = document.getElementById('confirmYes');
-    const confirmNo = document.getElementById('confirmNo');
+    //const modals = document.querySelectorAll('.modal.modal-confirm');
+    //const modalDialogs = document.querySelectorAll('.modal-dialog');
+    //const modalContents = document.querySelectorAll('.modal-content');
+    //const modalToggles = document.querySelectorAll('[data-toggle="modal"]');
+    //const modalDismissToggles = document.querySelectorAll('[data-dismiss="modal"]');
+
+    // const modal = document.getElementById('customConfirm');
+    // const modalMessage = document.getElementById('modalMessage');
+    // const confirmYes = document.getElementById('confirmYes');
+    // const confirmNo = document.getElementById('confirmNo');
+
+    const modal = document.createElement('div');
+    modal.className = 'modal modal-confirm';
+    const modalDialog = modal.createElement('div');
+    modalDialog.className = 'modal-dialog modal-dialog-centered';
+    const modalContent = modalDialog.createElement('div');
+    modalContent.className = 'modal-content';
+
+    const modalHeader = modalContent.createElement('div');
+    modalHeader.className = 'modal-header';
+
+    const modalBody = modalContent.createElement('div');
+    modalBody.className = 'modal-body';
+    const messagePara = modalBody.createElement('p')
+    messagePara.className = 'mb-2'
+    messagePara.innerText = message;
+
+    const modalFooter = modalContent.createElement('div');
+    modalFooter.className = 'modal-footer';
+    const footerDiv = modalFooter.createElement('div');
+    footerDiv.className = 'd-flex align-items-center gap-2'
+
 
     modalMessage.innerText = message;
     modal.style.display = 'block';

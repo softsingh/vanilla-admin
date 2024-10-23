@@ -178,31 +178,47 @@ function modalConfirm(message) {
 
     const modalBody = modalContent.createElement('div');
     modalBody.className = 'modal-body';
-    const messagePara = modalBody.createElement('p')
-    messagePara.className = 'mb-2'
+    const messagePara = modalBody.createElement('p');
+    messagePara.className = 'mb-2';
     messagePara.innerText = message;
 
     const modalFooter = modalContent.createElement('div');
     modalFooter.className = 'modal-footer';
+
     const footerDiv = modalFooter.createElement('div');
-    footerDiv.className = 'd-flex align-items-center gap-2'
+    footerDiv.className = 'd-flex align-items-center gap-2';
 
+    buttonOK = footerDiv.createElement('button');
+    buttonOK.className = 'btn btn-primary';
+    buttonOK.innerText = 'OK';
 
-    modalMessage.innerText = message;
-    modal.style.display = 'block';
+    buttonCancel = footerDiv.createElement('button');
+    buttonCancel.className = 'btn btn-secondary';
+    buttonCancel.innerText = 'Cancel';
 
-    confirmYes.onclick = () => {
-      modal.style.display = 'none';
+    showModal(modal);
+
+    buttonOK.onclick = () => {
+      hideModal(modal);
       resolve(true);
     };
 
-    confirmNo.onclick = () => {
-      modal.style.display = 'none';
+    buttonCancel.onclick = () => {
+      hideModal(modal);
       resolve(false);
     };
   });
 }
 
+const modalConfirmToggles = document.querySelectorAll(
+  '[data-toggle="modal-confirm"]'
+);
+modalConfirmToggles.forEach((modalConfirmToggle) =>
+  modalConfirmToggle.addEventListener('click', (event) => {
+    const ret = modalConfirm('Hello World');
+    alert(ret);
+  })
+);
 //////////////////// Nav ////////////////////
 
 const navItems = document.querySelectorAll('.nav>.nav-item');

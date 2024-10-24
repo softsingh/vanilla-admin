@@ -166,8 +166,8 @@ function modalConfirm(message) {
     // const confirmYes = document.getElementById('confirmYes');
     // const confirmNo = document.getElementById('confirmNo');
 
-    const modal = document.createElement('div');
-    modal.className = 'modal modal-confirm';
+    const modal = document.body.createElement('div');
+    modal.className = 'modal-confirm';
     const modalDialog = modal.createElement('div');
     modalDialog.className = 'modal-dialog modal-dialog-centered';
     const modalContent = modalDialog.createElement('div');
@@ -213,12 +213,17 @@ function modalConfirm(message) {
 const modalConfirmToggles = document.querySelectorAll(
   '[data-toggle="modal-confirm"]'
 );
+
 modalConfirmToggles.forEach((modalConfirmToggle) =>
   modalConfirmToggle.addEventListener('click', (event) => {
-    const ret = modalConfirm('Hello World');
-    alert(ret);
+    modalConfirm('Hello World').then((ret) => {
+      // if (ret === true) alert('OK');
+      // else alert('Cancel');
+      alert(ret);
+    });
   })
 );
+
 //////////////////// Nav ////////////////////
 
 const navItems = document.querySelectorAll('.nav>.nav-item');

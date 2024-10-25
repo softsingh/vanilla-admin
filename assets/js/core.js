@@ -155,46 +155,57 @@ function hideModal(modal) {
 
 function modalConfirm(message) {
   return new Promise((resolve) => {
-    //const modals = document.querySelectorAll('.modal.modal-confirm');
-    //const modalDialogs = document.querySelectorAll('.modal-dialog');
-    //const modalContents = document.querySelectorAll('.modal-content');
-    //const modalToggles = document.querySelectorAll('[data-toggle="modal"]');
-    //const modalDismissToggles = document.querySelectorAll('[data-dismiss="modal"]');
+    const modal = document.createElement('div');
+    modal.id = 'modal-confirm'
+    modal.className = 'modal modal-confirm';
+    document.body.appendChild(modal);
 
-    // const modal = document.getElementById('customConfirm');
-    // const modalMessage = document.getElementById('modalMessage');
-    // const confirmYes = document.getElementById('confirmYes');
-    // const confirmNo = document.getElementById('confirmNo');
-
-    const modal = document.body.createElement('div');
-    modal.className = 'modal-confirm';
-    const modalDialog = modal.createElement('div');
+    const modalDialog = document.createElement('div');
     modalDialog.className = 'modal-dialog modal-dialog-centered';
-    const modalContent = modalDialog.createElement('div');
+    modal.appendChild(modalDialog);
+
+    const modalContent = document.createElement('div');
     modalContent.className = 'modal-content';
+    modalDialog.appendChild(modalContent);
 
-    const modalHeader = modalContent.createElement('div');
+    const modalHeader = document.createElement('div');
     modalHeader.className = 'modal-header';
+    modalContent.appendChild(modalHeader)
 
-    const modalBody = modalContent.createElement('div');
+    headerChildDiv = document.createElement('div')
+    headerChildDiv.className = 'd-flex'
+    modalHeader.appendChild(headerChildDiv)
+
+    modalHeading = document.createElement('h6')
+    modalHeading.innerText = 'Confirm'
+    headerChildDiv.appendChild(modalHeading)
+
+    const modalBody = document.createElement('div');
     modalBody.className = 'modal-body';
-    const messagePara = modalBody.createElement('p');
+    modalContent.appendChild(modalBody)
+
+    const messagePara = document.createElement('p');
     messagePara.className = 'mb-2';
     messagePara.innerText = message;
+    modalBody.appendChild(messagePara)
 
-    const modalFooter = modalContent.createElement('div');
+    const modalFooter = document.createElement('div');
     modalFooter.className = 'modal-footer';
+    modalContent.appendChild(modalFooter)
 
-    const footerDiv = modalFooter.createElement('div');
+    const footerDiv = document.createElement('div');
     footerDiv.className = 'd-flex align-items-center gap-2';
+    modalFooter.appendChild(footerDiv)
 
-    buttonOK = footerDiv.createElement('button');
+    buttonOK = document.createElement('button');
     buttonOK.className = 'btn btn-primary';
     buttonOK.innerText = 'OK';
+    footerDiv.appendChild(buttonOK)
 
-    buttonCancel = footerDiv.createElement('button');
+    buttonCancel = document.createElement('button');
     buttonCancel.className = 'btn btn-secondary';
     buttonCancel.innerText = 'Cancel';
+    footerDiv.appendChild(buttonCancel)
 
     showModal(modal);
 

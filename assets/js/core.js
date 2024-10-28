@@ -155,58 +155,6 @@ function hideModal(modal) {
 
 function modalConfirm(message) {
   return new Promise((resolve) => {
-    const modal = document.createElement('div');
-    modal.id = 'modal-confirm'
-    modal.className = 'modal modal-confirm';
-    document.body.appendChild(modal);
-
-    const modalDialog = document.createElement('div');
-    modalDialog.className = 'modal-dialog modal-dialog-centered';
-    modal.appendChild(modalDialog);
-
-    const modalContent = document.createElement('div');
-    modalContent.className = 'modal-content';
-    modalDialog.appendChild(modalContent);
-
-    const modalHeader = document.createElement('div');
-    modalHeader.className = 'modal-header';
-    modalContent.appendChild(modalHeader)
-
-    headerChildDiv = document.createElement('div')
-    headerChildDiv.className = 'd-flex'
-    modalHeader.appendChild(headerChildDiv)
-
-    modalHeading = document.createElement('h6')
-    modalHeading.innerText = 'Confirm'
-    headerChildDiv.appendChild(modalHeading)
-
-    const modalBody = document.createElement('div');
-    modalBody.className = 'modal-body';
-    modalContent.appendChild(modalBody)
-
-    const messagePara = document.createElement('p');
-    messagePara.className = 'mb-2';
-    messagePara.innerText = message;
-    modalBody.appendChild(messagePara)
-
-    const modalFooter = document.createElement('div');
-    modalFooter.className = 'modal-footer';
-    modalContent.appendChild(modalFooter)
-
-    const footerDiv = document.createElement('div');
-    footerDiv.className = 'd-flex align-items-center gap-2';
-    modalFooter.appendChild(footerDiv)
-
-    buttonOK = document.createElement('button');
-    buttonOK.className = 'btn btn-primary';
-    buttonOK.innerText = 'OK';
-    footerDiv.appendChild(buttonOK)
-
-    buttonCancel = document.createElement('button');
-    buttonCancel.className = 'btn btn-secondary';
-    buttonCancel.innerText = 'Cancel';
-    footerDiv.appendChild(buttonCancel)
-
     showModal(modal);
 
     buttonOK.onclick = () => {
@@ -218,22 +166,93 @@ function modalConfirm(message) {
       hideModal(modal);
       resolve(false);
     };
+
+    function showModal(modal) {
+      const backdrop = document.createElement('div');
+      backdrop.id = 'modalBackdrop';
+      backdrop.className = 'modal-backdrop';
+      backdrop.setAttribute('data-target', modal.id);
+      document.body.appendChild(backdrop);
+      modal.classList.add('show');
+    }
+
+    function hideModal(modal) {
+      const backdrop = document.getElementById('modalBackdrop');
+      if (backdrop) {
+        backdrop.remove();
+      }
+      modal.classList.remove('show');
+    }
+
+    function createBackdrop() {
+      const backdrop = document.createElement('div');
+      backdrop.id = 'modalConfirmBackdrop';
+      backdrop.className = 'modal-confirm-backdrop';
+      document.body.appendChild(backdrop);
+    }
+
+    function removeBackdrop() {
+      const backdrop = document.getElementById('modalConfirmBackdrop');
+      if (backdrop) {
+        backdrop.remove();
+      }
+    }
+
+    function createModal() {
+      const modal = document.createElement('div');
+      modal.id = 'modal-confirm';
+      modal.className = 'modal modal-confirm';
+      document.body.appendChild(modal);
+
+      const modalDialog = document.createElement('div');
+      modalDialog.className = 'modal-dialog modal-dialog-centered';
+      modal.appendChild(modalDialog);
+
+      const modalContent = document.createElement('div');
+      modalContent.className = 'modal-content';
+      modalDialog.appendChild(modalContent);
+
+      const modalHeader = document.createElement('div');
+      modalHeader.className = 'modal-header';
+      modalContent.appendChild(modalHeader);
+
+      headerChildDiv = document.createElement('div');
+      headerChildDiv.className = 'd-flex';
+      modalHeader.appendChild(headerChildDiv);
+
+      modalHeading = document.createElement('h6');
+      modalHeading.innerText = 'Confirm';
+      headerChildDiv.appendChild(modalHeading);
+
+      const modalBody = document.createElement('div');
+      modalBody.className = 'modal-body';
+      modalContent.appendChild(modalBody);
+
+      const messagePara = document.createElement('p');
+      messagePara.className = 'mb-2';
+      messagePara.innerText = message;
+      modalBody.appendChild(messagePara);
+
+      const modalFooter = document.createElement('div');
+      modalFooter.className = 'modal-footer';
+      modalContent.appendChild(modalFooter);
+
+      const footerDiv = document.createElement('div');
+      footerDiv.className = 'd-flex align-items-center gap-2';
+      modalFooter.appendChild(footerDiv);
+
+      buttonOK = document.createElement('button');
+      buttonOK.className = 'btn btn-primary';
+      buttonOK.innerText = 'OK';
+      footerDiv.appendChild(buttonOK);
+
+      buttonCancel = document.createElement('button');
+      buttonCancel.className = 'btn btn-secondary';
+      buttonCancel.innerText = 'Cancel';
+      footerDiv.appendChild(buttonCancel);
+    }
   });
 }
-
-const modalConfirmToggles = document.querySelectorAll(
-  '[data-toggle="modal-confirm"]'
-);
-
-modalConfirmToggles.forEach((modalConfirmToggle) =>
-  modalConfirmToggle.addEventListener('click', (event) => {
-    modalConfirm('Hello World').then((ret) => {
-      // if (ret === true) alert('OK');
-      // else alert('Cancel');
-      alert(ret);
-    });
-  })
-);
 
 //////////////////// Nav ////////////////////
 

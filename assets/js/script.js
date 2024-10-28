@@ -89,12 +89,13 @@ const poeListDeptDelToggles = document.querySelectorAll(
 
 poeListDeptDelToggles.forEach((delToggle) =>
   delToggle.addEventListener('click', (event) => {
-    const ret = confirm('Are you sure to delete the record?');
-    if (ret === false) {
-      return;
-    }
-    const tableRow = delToggle.closest('tr');
-    tableRow.parentNode.removeChild(tableRow);
+    modalConfirm('Are you sure to delete the record?').then((ret) => {
+      if (ret === false) {
+        return;
+      }
+      const tableRow = delToggle.closest('tr');
+      tableRow.parentNode.removeChild(tableRow);
+    });
   })
 );
 

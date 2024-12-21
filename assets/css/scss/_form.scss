@@ -35,6 +35,7 @@
   cursor: pointer;
   font-size: 0.9rem;
   font-weight: 500;
+  color: var(--secondary-color);
   display: inline-block;
 }
 
@@ -89,4 +90,12 @@
   font-weight: 500;
   color: var(--secondary-color);
   display: inline-block;
+}
+
+/* Container class for invalid form text message */
+
+.form-invalid {
+  width: 100%;
+  font-size: 0.8rem;
+  color: var(--danger-dark-color);
 }

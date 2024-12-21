@@ -65,7 +65,7 @@
   transform: translate(-0.7rem, 0.1rem);
 }
 
-.badge-container > * {
+.badge-container>* {
   margin: 1rem 0.25rem 0 0 !important;
 }
 
@@ -92,23 +92,29 @@
 /*             Container               */
 /*-------------------------------------*/
 
-.login-container,
-.register-container {
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
+@media (max-width: 450px) {
 
-@media (max-width: 576px) {
   .login-container,
   .register-container {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     width: auto;
   }
 }
+
+@media (min-width: 450px) {
+
+  .login-container,
+  .register-container {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
 
 /*-------------------------------------*/
 /*             Dashboard               */
@@ -157,15 +163,11 @@
   background-color: hsla(210, 29%, 19%, 0.06);
 }
 
-.dropdown-notifications-item:not(.mark-as-read)
-  .dropdown-notifications-read
-  span {
+.dropdown-notifications-item:not(.mark-as-read) .dropdown-notifications-read span {
   background-color: var(--primary-color);
 }
 
-.dropdown-notifications-item.mark-as-read:hover
-  .dropdown-notifications-read
-  span {
+.dropdown-notifications-item.mark-as-read:hover .dropdown-notifications-read span {
   background-color: var(--body-color);
 }
 
@@ -279,12 +281,10 @@
 
 .main-layout:before {
   backdrop-filter: saturate(200%) blur(10px);
-  background: linear-gradient(
-    180deg,
-    rgba(245, 245, 249, 0.7) 44%,
-    rgba(245, 245, 249, 0.43) 73%,
-    rgba(245, 245, 249, 0)
-  );
+  background: linear-gradient(180deg,
+      rgba(245, 245, 249, 0.7) 44%,
+      rgba(245, 245, 249, 0.43) 73%,
+      rgba(245, 245, 249, 0));
   -webkit-mask: linear-gradient(#f5f5f9, #4949f5 18%, transparent 100%);
   mask: linear-gradient(#f5f5f9, #f5f5f9 18%, transparent 100%);
 }
@@ -402,6 +402,7 @@ body.sidebar-hidden .navbar .navbar-toggle {
 /*-------------------------------------*/
 
 @media (max-width: 576px) {
+
   .dash-table.poe thead th:nth-child(3),
   .dash-table.poe thead th:nth-child(4),
   .dash-table.poe tbody td:nth-child(3),
@@ -411,6 +412,7 @@ body.sidebar-hidden .navbar .navbar-toggle {
 }
 
 @media (min-width: 576px) {
+
   .dash-table.poe thead th:nth-child(5),
   .dash-table.poe tbody td:nth-child(5) {
     display: none;
@@ -418,6 +420,7 @@ body.sidebar-hidden .navbar .navbar-toggle {
 }
 
 @media (max-width: 950px) {
+
   .dash-table.poe thead th:nth-child(2),
   .dash-table.poe tbody td:nth-child(2) {
     display: none;
@@ -429,6 +432,7 @@ body.sidebar-hidden .navbar .navbar-toggle {
 /*-------------------------------------*/
 
 @media (max-width: 576px) {
+
   .dash-table.user thead th:nth-child(2),
   .dash-table.user thead th:nth-child(3),
   .dash-table.user tbody td:nth-child(2),
@@ -438,6 +442,7 @@ body.sidebar-hidden .navbar .navbar-toggle {
 }
 
 @media (min-width: 576px) {
+
   .dash-table.user thead th:nth-child(4),
   .dash-table.user tbody td:nth-child(4) {
     display: none;

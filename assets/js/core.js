@@ -289,40 +289,40 @@ menuItems.forEach((menuItem) =>
 );
 
 // Sidebar Sub-Menu
-// const menuSubItems = document.querySelectorAll('.menu-sub>.menu-item');
+const menuSubItems = document.querySelectorAll('.menu-sub>.menu-item');
 
-// menuSubItems.forEach((menuSubItem) =>
-//   menuSubItem.addEventListener('click', (event) => {
-//     clearMenuSubItemActive(menuSubItem);
+menuSubItems.forEach((menuSubItem) =>
+  menuSubItem.addEventListener('click', (event) => {
+    clearMenuSubItemActive(menuSubItem);
 
-//     const menuSubSub = menuSubItem.querySelectorAll('.menu-sub');
+    const menuSubSub = menuSubItem.querySelectorAll('.menu-sub');
 
-//     if (menuSubSub.length > 0) {
-//       menuSubItem.classList.toggle('open');
-//     } else {
-//       menuSubItem.classList.add('active');
-//     }
+    if (menuSubSub.length > 0) {
+      menuSubItem.classList.toggle('open');
+    } else {
+      menuSubItem.classList.add('active');
+    }
 
-//     event.stopPropagation();
-//   })
-// );
+    event.stopPropagation();
+  })
+);
 
-// function clearMenuItemOpenActive(currentMenuItem) {
-//   menuItems.forEach((menuItem) => {
-//     if (menuItem !== currentMenuItem) {
-//       menuItem.classList.remove('active');
-//       menuItem.classList.remove('open');
-//     }
-//   });
-// }
+function clearMenuItemOpenActive(currentMenuItem) {
+  menuItems.forEach((menuItem) => {
+    if (menuItem !== currentMenuItem) {
+      menuItem.classList.remove('active');
+      menuItem.classList.remove('open');
+    }
+  });
+}
 
-// function clearMenuSubItemActive(currentMenuSubItem) {
-//   menuSubItems.forEach((menuSubItem) => {
-//     if (menuSubItem !== currentMenuSubItem) {
-//       menuSubItem.classList.remove('active');
-//     }
-//   });
-// }
+function clearMenuSubItemActive(currentMenuSubItem) {
+  menuSubItems.forEach((menuSubItem) => {
+    if (menuSubItem !== currentMenuSubItem) {
+      menuSubItem.classList.remove('active');
+    }
+  });
+}
 
 const sidebarToggles = document.querySelectorAll('[data-toggle="sidebar"]');
 

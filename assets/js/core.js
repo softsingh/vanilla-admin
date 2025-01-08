@@ -90,8 +90,10 @@ const modalDismissToggles = document.querySelectorAll(
 // Show modal if modal toggle clicked
 modalToggles.forEach((modalToggle) =>
   modalToggle.addEventListener('click', (event) => {
+    alert("before");
     hideAllDropdowns(event);
     const modalID = modalToggle.getAttribute('data-target');
+
     if (modalID) {
       const modal = document.getElementById(modalID);
       if (modal) {
@@ -155,6 +157,8 @@ function hideModal(modal) {
 
 function modalConfirm(message) {
   return new Promise((resolve) => {
+    const modal = createModal;
+
     showModal(modal);
 
     buttonOK.onclick = () => {
@@ -250,6 +254,8 @@ function modalConfirm(message) {
       buttonCancel.className = 'btn btn-secondary';
       buttonCancel.innerText = 'Cancel';
       footerDiv.appendChild(buttonCancel);
+
+      return modal;
     }
   });
 }

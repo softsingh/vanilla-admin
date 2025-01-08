@@ -99,17 +99,20 @@
   height: 100%;
 }
 
+.auth-inner {
+  width: 400px;
+}
+
 @media (max-width: 450px) {
 
-  .login-container,
-  .register-container {
-    margin-top: 1rem;
+  .auth-inner {
     margin-left: 1rem;
     margin-right: 1rem;
-    width: auto;
   }
 
-  .auth-inner {
+  .register-container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
     width: auto;
@@ -117,20 +120,14 @@
 }
 
 
-
 @media (min-width: 450px) {
 
-  .login-container,
   .register-container {
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
-  }
-
-  .auth-inner {
-    width: 400px;
   }
 }
 

@@ -2675,7 +2675,6 @@ button:not(:disabled),
   .modal-content {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-    /* width: auto; */
   }
 }
 .modal-dialog-scrollable .modal-content {

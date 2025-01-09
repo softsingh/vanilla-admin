@@ -71,6 +71,77 @@ function hideAllDropdowns(event) {
   });
 }
 
+//////////////////// Modal ////////////////////
+
+// const modals = document.querySelectorAll('.modal');
+// const modalDialogs = document.querySelectorAll('.modal .modal-dialog');
+// const modalContents = document.querySelectorAll('.modal .modal-content');
+// const modalToggles = document.querySelectorAll('[data-toggle="modal"]');
+// const modalDismissToggles = document.querySelectorAll('.modal [data-dismiss="modal"]');
+
+// // Show modal if modal toggle clicked
+// modalToggles.forEach((modalToggle) =>
+//   modalToggle.addEventListener('click', (event) => {
+//     const modalName = modalToggle.getAttribute('data-target');
+//     if (modalName) {
+//       const modal = document.getElementById(modalName);
+//       if (modal) {
+//         showModal(modal);
+//       }
+//     }
+//     event.stopPropagation();
+//   })
+// );
+
+// // Hide modal if modal dismiss toggle clicked
+// modalDismissToggles.forEach((modalDismissToggle) =>
+//   modalDismissToggle.addEventListener('click', (event) => {
+//     const modal = modalDismissToggle.closest('.modal');
+//     if (modal) {
+//       hideModal(modal);
+//     }
+//     event.stopPropagation();
+//   })
+// );
+
+// // Hide model when clicked outside model-content
+// modalDialogs.forEach((modalDialog) =>
+//   modalDialog.addEventListener('click', (event) => {
+//     if (event.target === modalDialog) {
+//       const modal = modalDialog.closest('.modal');
+//       hideModal(modal);
+//       event.stopPropagation();
+//     }
+//   })
+// );
+
+// // Hide model when clicked outside model-content
+// modals.forEach((modal) =>
+//   modal.addEventListener('click', (event) => {
+//     if (event.target === modal) {
+//       hideModal(modal);
+//       event.stopPropagation();
+//     }
+//   })
+// );
+
+// function showModal(modal) {
+//   const backdrop = document.createElement('div');
+//   backdrop.id = 'modalBackdrop';
+//   backdrop.className = 'modal-backdrop';
+//   backdrop.setAttribute('data-target', modal.id);
+//   document.body.appendChild(backdrop);
+//   modal.classList.add('show');
+// }
+
+// function hideModal(modal) {
+//   const backdrop = document.getElementById('modalBackdrop');
+//   if (backdrop) {
+//     backdrop.remove();
+//   }
+//   modal.classList.remove('show');
+// }
+
 //////////////////// Modal (except ModalConfirm) ////////////////////
 
 const modals = document.querySelectorAll('.modal:not(.modal-confirm)');
@@ -80,9 +151,7 @@ const modalDialogs = document.querySelectorAll(
 const modalContents = document.querySelectorAll(
   '.modal:not(.modal-confirm) .modal-content'
 );
-const modalToggles = document.querySelectorAll(
-  '.modal:not(.modal-confirm) [data-toggle="modal"]'
-);
+const modalToggles = document.querySelectorAll('[data-toggle="modal"]');
 const modalDismissToggles = document.querySelectorAll(
   '.modal:not(.modal-confirm) [data-dismiss="modal"]'
 );
@@ -90,7 +159,6 @@ const modalDismissToggles = document.querySelectorAll(
 // Show modal if modal toggle clicked
 modalToggles.forEach((modalToggle) =>
   modalToggle.addEventListener('click', (event) => {
-    alert("before");
     hideAllDropdowns(event);
     const modalID = modalToggle.getAttribute('data-target');
 
@@ -157,41 +225,44 @@ function hideModal(modal) {
 
 function modalConfirm(message) {
   return new Promise((resolve) => {
-    const modal = createModal;
 
+    const modal = createModal();
     showModal(modal);
 
     buttonOK.onclick = () => {
-      hideModal(modal);
+      removeModal(modal);
       resolve(true);
     };
 
     buttonCancel.onclick = () => {
-      hideModal(modal);
+      removeModal(modal);
       resolve(false);
     };
 
     function showModal(modal) {
-      const backdrop = document.createElement('div');
-      backdrop.id = 'modalBackdrop';
-      backdrop.className = 'modal-backdrop';
-      backdrop.setAttribute('data-target', modal.id);
-      document.body.appendChild(backdrop);
+      // const backdrop = document.createElement('div');
+      // backdrop.id = 'modalBackdrop';
+      // backdrop.className = 'modal-backdrop';
+      // backdrop.setAttribute('data-target', modal.id);
+      // document.body.appendChild(backdrop);
+      createBackdrop()
       modal.classList.add('show');
     }
 
-    function hideModal(modal) {
-      const backdrop = document.getElementById('modalBackdrop');
-      if (backdrop) {
-        backdrop.remove();
-      }
+    function removeModal(modal) {
+      // const backdrop = document.getElementById('modalBackdrop');
+      // if (backdrop) {
+      //   backdrop.remove();
+      // }
+      removeBackdrop()
+      modal.remove();
       modal.classList.remove('show');
     }
 
     function createBackdrop() {
       const backdrop = document.createElement('div');
       backdrop.id = 'modalConfirmBackdrop';
-      backdrop.className = 'modal-confirm-backdrop';
+      backdrop.className = 'modal-backdrop modal-confirm-backdrop';
       document.body.appendChild(backdrop);
     }
 

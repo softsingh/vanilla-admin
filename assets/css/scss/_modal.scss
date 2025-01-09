@@ -50,6 +50,7 @@
   flex-direction: column;
   margin: 1.5rem auto 1.5rem auto;
   max-width: 600px;
+  // width: 400px;
   background: var(--white-color);
   box-shadow: 0 0.2rem 1.5rem 1rem hsla(210, 30%, 20%, 0.1);
   border-radius: var(--border-radius);
@@ -87,7 +88,6 @@
   .modal-content {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-    /* width: auto; */
   }
 }
 

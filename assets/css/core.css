@@ -2624,10 +2624,11 @@ button:not(:disabled),
 
 .modal-dialog {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .modal-dialog-centered {
-  display: flex;
   align-items: center;
   min-height: 100%;
 }
@@ -2679,7 +2680,6 @@ button:not(:disabled),
 }
 .modal-dialog-scrollable .modal-content {
   max-height: 100%;
-  /* overflow: hidden; */
 }
 
 .modal-header {

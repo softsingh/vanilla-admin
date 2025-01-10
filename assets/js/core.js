@@ -223,37 +223,33 @@ function hideModal(modal) {
 
 //////////////////// ModalConfirm ////////////////////
 
-function modalConfirm(message) {
+function modalConfirm(message, headingText = 'Confirm', button1Text = "OK", button2Text = "", button3Text = "") {
   return new Promise((resolve) => {
 
     const modal = createModal();
     showModal(modal);
 
-    buttonOK.onclick = () => {
+    button1.onclick = () => {
       removeModal(modal);
-      resolve(true);
+      resolve("1");
     };
 
-    buttonCancel.onclick = () => {
+    button2.onclick = () => {
       removeModal(modal);
-      resolve(false);
+      resolve("2");
+    };
+
+    button3.onclick = () => {
+      removeModal(modal);
+      resolve("3");
     };
 
     function showModal(modal) {
-      // const backdrop = document.createElement('div');
-      // backdrop.id = 'modalBackdrop';
-      // backdrop.className = 'modal-backdrop';
-      // backdrop.setAttribute('data-target', modal.id);
-      // document.body.appendChild(backdrop);
       createBackdrop()
       modal.classList.add('show');
     }
 
     function removeModal(modal) {
-      // const backdrop = document.getElementById('modalBackdrop');
-      // if (backdrop) {
-      //   backdrop.remove();
-      // }
       removeBackdrop()
       modal.remove();
       modal.classList.remove('show');
@@ -296,7 +292,7 @@ function modalConfirm(message) {
       modalHeader.appendChild(headerChildDiv);
 
       modalHeading = document.createElement('h6');
-      modalHeading.innerText = 'Confirm';
+      modalHeading.innerText = headingText;
       headerChildDiv.appendChild(modalHeading);
 
       const modalBody = document.createElement('div');
@@ -316,15 +312,24 @@ function modalConfirm(message) {
       footerDiv.className = 'd-flex align-items-center gap-2';
       modalFooter.appendChild(footerDiv);
 
-      buttonOK = document.createElement('button');
-      buttonOK.className = 'btn btn-primary';
-      buttonOK.innerText = 'OK';
-      footerDiv.appendChild(buttonOK);
+      button1 = document.createElement('button');
+      button1.className = 'btn btn-primary';
+      button1.innerText = button1Text;
+      footerDiv.appendChild(button1);
 
-      buttonCancel = document.createElement('button');
-      buttonCancel.className = 'btn btn-secondary';
-      buttonCancel.innerText = 'Cancel';
-      footerDiv.appendChild(buttonCancel);
+      if (button2Text != "") {
+        button2 = document.createElement('button');
+        button2.className = 'btn btn-secondary';
+        button2.innerText = button2Text;
+        footerDiv.appendChild(button2);
+      }
+
+      if (button3Text != "") {
+        button3 = document.createElement('button');
+        button3.className = 'btn btn-secondary';
+        button3.innerText = button3Text;
+        footerDiv.appendChild(button3);
+      }
 
       return modal;
     }

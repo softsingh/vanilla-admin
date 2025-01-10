@@ -32,10 +32,12 @@
 
 .modal-dialog {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .modal-dialog-centered {
-  display: flex;
+  // display: flex;
   align-items: center;
   min-height: 100%;
 }
@@ -50,7 +52,6 @@
   flex-direction: column;
   margin: 1.5rem auto 1.5rem auto;
   max-width: 600px;
-  // width: 400px;
   background: var(--white-color);
   box-shadow: 0 0.2rem 1.5rem 1rem hsla(210, 30%, 20%, 0.1);
   border-radius: var(--border-radius);
@@ -93,7 +94,6 @@
 
 .modal-dialog-scrollable .modal-content {
   max-height: 100%;
-  /* overflow: hidden; */
 }
 
 .modal-header {

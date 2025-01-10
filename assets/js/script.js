@@ -80,6 +80,40 @@ document.documentElement.addEventListener('click', (event) => {
   }
 });
 
+//////////////////// Modal Confirm Demo ////////////////////
+
+const tglDemoModalConfirm = document.querySelector(
+  '[type="tgl-demo-modal-confirm"]'
+);
+
+tglDemoModalConfirm.addEventListener('click', (event) => {
+  modalConfirm('Are you sure to delete the file?', headingText = "Delete", button2Text = "Cancel").then((ret) => {
+    const lblDemoModalConfirm = document.getElementById('lblDemoModalConfirm');
+    if (lblDemoModalConfirm) {
+      lblDemoModalConfirm.innerText = 'Returned = ' + ret;
+    }
+  });
+})
+
+//////////////////// User List (Dashboard) ////////////////////
+
+// Delete User List Item
+const userListDelToggles = document.querySelectorAll(
+  '[type="tgl-user-list-del"]'
+);
+
+userListDelToggles.forEach((delToggle) =>
+  delToggle.addEventListener('click', (event) => {
+    modalConfirm('Are you sure to delete the record?', headingText = "Delete").then((ret) => {
+      if (ret === false) {
+        return;
+      }
+      const tableRow = delToggle.closest('tr');
+      tableRow.parentNode.removeChild(tableRow);
+    });
+  })
+);
+
 //////////////////// Panel of Examiners ////////////////////
 
 // Delete Panel Item
@@ -89,7 +123,7 @@ const poeListDeptDelToggles = document.querySelectorAll(
 
 poeListDeptDelToggles.forEach((delToggle) =>
   delToggle.addEventListener('click', (event) => {
-    modalConfirm('Are you sure to delete the record?').then((ret) => {
+    modalConfirm('Are you sure to delete the record?', headingText = "Delete").then((ret) => {
       if (ret === false) {
         return;
       }

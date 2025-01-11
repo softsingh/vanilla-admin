@@ -229,20 +229,28 @@ function modalConfirm(message, headingText = 'Confirm', button1Text = "OK", butt
     const modal = createModal();
     showModal(modal);
 
+    const button1 = modal.querySelector("#button1")
     button1.onclick = () => {
       removeModal(modal);
-      resolve("1");
+      resolve(1);
     };
 
-    button2.onclick = () => {
-      removeModal(modal);
-      resolve("2");
-    };
+    const button2 = modal.querySelector("#button2")
 
-    button3.onclick = () => {
-      removeModal(modal);
-      resolve("3");
-    };
+    if (button2) {
+      button2.onclick = () => {
+        removeModal(modal);
+        resolve(2);
+      };
+    }
+
+    const button3 = modal.querySelector("#button3")
+    if (button3) {
+      button3.onclick = () => {
+        removeModal(modal);
+        resolve(3);
+      };
+    }
 
     function showModal(modal) {
       createBackdrop()
@@ -312,21 +320,24 @@ function modalConfirm(message, headingText = 'Confirm', button1Text = "OK", butt
       footerDiv.className = 'd-flex align-items-center gap-2';
       modalFooter.appendChild(footerDiv);
 
-      button1 = document.createElement('button');
+      const button1 = document.createElement('button');
       button1.className = 'btn btn-primary';
+      button1.id = 'button1';
       button1.innerText = button1Text;
       footerDiv.appendChild(button1);
 
-      if (button2Text != "") {
-        button2 = document.createElement('button');
+      if (button2Text) {
+        const button2 = document.createElement('button');
         button2.className = 'btn btn-secondary';
+        button2.id = 'button2';
         button2.innerText = button2Text;
         footerDiv.appendChild(button2);
       }
 
-      if (button3Text != "") {
-        button3 = document.createElement('button');
-        button3.className = 'btn btn-secondary';
+      if (button3Text) {
+        const button3 = document.createElement('button');
+        button3.className = 'btn btn-success';
+        button3.id = 'button3';
         button3.innerText = button3Text;
         footerDiv.appendChild(button3);
       }

@@ -87,7 +87,7 @@ const tglDemoModalConfirm = document.querySelector(
 );
 
 tglDemoModalConfirm.addEventListener('click', () => {
-  modalConfirm('Are you sure to delete the file?', headingText = "Delete", button1Text = "OK", button2Text = "Cancel").then((ret) => {
+  modalConfirm('Are you sure to delete the file?', headingText = "Delete", button1Text = "Yes", button2Text = "No", button3Text = "Cancel").then((ret) => {
     const lblDemoModalConfirm = document.getElementById('lblDemoModalConfirm');
     if (lblDemoModalConfirm) {
       lblDemoModalConfirm.innerText = 'Returned = ' + ret;

@@ -1,5 +1,22 @@
 const body = document.querySelector('body');
 
+const textColorEnum = {
+  PRIMARY: 'text-primary',
+  SECONDARY: 'text-secondary',
+  SUCCESS: 'text-success',
+  DANGER: 'text-danger',
+  WARNING: 'text-warning',
+  INFO: 'text-info'
+}
+
+const bxIconEnum = {
+  SUCCESS: 'bx bx-check-circle',
+  DANGER: 'bx bx-x-circle',
+  WARNING: 'bx bx-info-circle bx-rotate-180',
+  INFO: 'bx bx-info-circle',
+  QUESTION: 'bx bx-help-circle'
+}
+
 //////////////////// Accordions ////////////////////
 
 const accordionHeaders = document.querySelectorAll(
@@ -70,77 +87,6 @@ function hideAllDropdowns(event) {
     }
   });
 }
-
-//////////////////// Modal ////////////////////
-
-// const modals = document.querySelectorAll('.modal');
-// const modalDialogs = document.querySelectorAll('.modal .modal-dialog');
-// const modalContents = document.querySelectorAll('.modal .modal-content');
-// const modalToggles = document.querySelectorAll('[data-toggle="modal"]');
-// const modalDismissToggles = document.querySelectorAll('.modal [data-dismiss="modal"]');
-
-// // Show modal if modal toggle clicked
-// modalToggles.forEach((modalToggle) =>
-//   modalToggle.addEventListener('click', (event) => {
-//     const modalName = modalToggle.getAttribute('data-target');
-//     if (modalName) {
-//       const modal = document.getElementById(modalName);
-//       if (modal) {
-//         showModal(modal);
-//       }
-//     }
-//     event.stopPropagation();
-//   })
-// );
-
-// // Hide modal if modal dismiss toggle clicked
-// modalDismissToggles.forEach((modalDismissToggle) =>
-//   modalDismissToggle.addEventListener('click', (event) => {
-//     const modal = modalDismissToggle.closest('.modal');
-//     if (modal) {
-//       hideModal(modal);
-//     }
-//     event.stopPropagation();
-//   })
-// );
-
-// // Hide model when clicked outside model-content
-// modalDialogs.forEach((modalDialog) =>
-//   modalDialog.addEventListener('click', (event) => {
-//     if (event.target === modalDialog) {
-//       const modal = modalDialog.closest('.modal');
-//       hideModal(modal);
-//       event.stopPropagation();
-//     }
-//   })
-// );
-
-// // Hide model when clicked outside model-content
-// modals.forEach((modal) =>
-//   modal.addEventListener('click', (event) => {
-//     if (event.target === modal) {
-//       hideModal(modal);
-//       event.stopPropagation();
-//     }
-//   })
-// );
-
-// function showModal(modal) {
-//   const backdrop = document.createElement('div');
-//   backdrop.id = 'modalBackdrop';
-//   backdrop.className = 'modal-backdrop';
-//   backdrop.setAttribute('data-target', modal.id);
-//   document.body.appendChild(backdrop);
-//   modal.classList.add('show');
-// }
-
-// function hideModal(modal) {
-//   const backdrop = document.getElementById('modalBackdrop');
-//   if (backdrop) {
-//     backdrop.remove();
-//   }
-//   modal.classList.remove('show');
-// }
 
 //////////////////// Modal (except ModalConfirm) ////////////////////
 
@@ -223,7 +169,7 @@ function hideModal(modal) {
 
 //////////////////// ModalConfirm ////////////////////
 
-function modalConfirm(message, headingText = 'Confirm', button1Text = "OK", button2Text = "", button3Text = "") {
+function modalConfirm(message, headingText = 'Confirm', button1Text = "OK", button2Text = "", button3Text = "",) {
   return new Promise((resolve) => {
 
     const modal = createModal();
@@ -296,10 +242,15 @@ function modalConfirm(message, headingText = 'Confirm', button1Text = "OK", butt
       modalContent.appendChild(modalHeader);
 
       headerChildDiv = document.createElement('div');
-      headerChildDiv.className = 'd-flex';
+      headerChildDiv.className = 'd-flex align-items-center';
       modalHeader.appendChild(headerChildDiv);
 
+      modalIcon = document.createElement('i');
+      modalIcon.className = 'bx bx-x-circle fs-7 text-danger me-1';
+      headerChildDiv.appendChild(modalIcon);
+
       modalHeading = document.createElement('h6');
+      modalHeading.className = 'text-danger';
       modalHeading.innerText = headingText;
       headerChildDiv.appendChild(modalHeading);
 

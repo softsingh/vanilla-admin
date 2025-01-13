@@ -86,8 +86,14 @@ const tglDemoModalConfirm = document.querySelector(
   '[type="tgl-demo-modal-confirm"]'
 );
 
-tglDemoModalConfirm.addEventListener('click', () => {
-  modalConfirm('Are you sure to delete the file?', headingText = "Delete", button1Text = "Yes", button2Text = "No", button3Text = "Cancel").then((ret) => {
+tglDemoModalConfirm?.addEventListener('click', () => {
+  modalConfirm('Are you sure to delete the file?', {
+    iconType: bxIconEnum.DANGER,
+    headingText: 'Delete',
+    button1Text: 'Yes',
+    button2Text: 'No',
+    button3Text: 'Cancel',
+  }).then((ret) => {
     const lblDemoModalConfirm = document.getElementById('lblDemoModalConfirm');
     if (lblDemoModalConfirm) {
       lblDemoModalConfirm.innerText = 'Returned = ' + ret;
@@ -104,12 +110,19 @@ const userListDelToggles = document.querySelectorAll(
 
 userListDelToggles.forEach((delToggle) =>
   delToggle.addEventListener('click', (event) => {
-    modalConfirm('Are you sure to delete the record?', headingText = "Delete").then((ret) => {
-      if (ret === false) {
+    modalConfirm('Are you sure to delete the user?', {
+      iconType: bxIconEnum.DANGER,
+      headingText: 'Delete',
+      button1Text: 'Yes',
+      button2Text: 'No',
+    }).then((ret) => {
+      if (ret === 1) {
+        const tableRow = delToggle.closest('tr');
+        tableRow.parentNode.removeChild(tableRow);
+      }
+      else {
         return;
       }
-      const tableRow = delToggle.closest('tr');
-      tableRow.parentNode.removeChild(tableRow);
     });
   })
 );
@@ -123,12 +136,19 @@ const poeListDeptDelToggles = document.querySelectorAll(
 
 poeListDeptDelToggles.forEach((delToggle) =>
   delToggle.addEventListener('click', (event) => {
-    modalConfirm('Are you sure to delete the record?', headingText = "Delete").then((ret) => {
-      if (ret === false) {
+    modalConfirm('Are you sure to delete the record?', {
+      iconType: bxIconEnum.DANGER,
+      headingText: 'Delete',
+      button1Text: 'Yes',
+      button2Text: 'No',
+    }).then((ret) => {
+      if (ret === 1) {
+        const tableRow = delToggle.closest('tr');
+        tableRow.parentNode.removeChild(tableRow);
+      }
+      else {
         return;
       }
-      const tableRow = delToggle.closest('tr');
-      tableRow.parentNode.removeChild(tableRow);
     });
   })
 );

@@ -10,11 +10,12 @@ const textColorEnum = {
 }
 
 const bxIconEnum = {
-  SUCCESS: 'bx bx-check-circle',
-  DANGER: 'bx bx-x-circle',
-  WARNING: 'bx bx-info-circle bx-rotate-180',
-  INFO: 'bx bx-info-circle',
-  QUESTION: 'bx bx-help-circle'
+  NONE: '',
+  SUCCESS: 'bx bx-check-circle text-success',
+  DANGER: 'bx bx-x-circle text-danger',
+  WARNING: 'bx bx-info-circle bx-rotate-180 text-warning',
+  INFO: 'bx bx-info-circle text-info',
+  QUESTION: 'bx bx-help-circle text-info'
 }
 
 //////////////////// Accordions ////////////////////
@@ -169,7 +170,16 @@ function hideModal(modal) {
 
 //////////////////// ModalConfirm ////////////////////
 
-function modalConfirm(message, headingText = 'Confirm', button1Text = "OK", button2Text = "", button3Text = "",) {
+function modalConfirm(message, options = {}) {
+
+  const {
+    headingText = '',
+    button1Text = '',
+    button2Text = '',
+    button3Text = '',
+    iconType = bxIconEnum.NONE
+  } = options;
+
   return new Promise((resolve) => {
 
     const modal = createModal();
@@ -245,12 +255,13 @@ function modalConfirm(message, headingText = 'Confirm', button1Text = "OK", butt
       headerChildDiv.className = 'd-flex align-items-center';
       modalHeader.appendChild(headerChildDiv);
 
-      modalIcon = document.createElement('i');
-      modalIcon.className = 'bx bx-x-circle fs-7 text-danger me-1';
-      headerChildDiv.appendChild(modalIcon);
+      if (iconType) {
+        modalIcon = document.createElement('i');
+        modalIcon.className = iconType + ' fs-7 me-1';
+        headerChildDiv.appendChild(modalIcon);
+      }
 
       modalHeading = document.createElement('h6');
-      modalHeading.className = 'text-danger';
       modalHeading.innerText = headingText;
       headerChildDiv.appendChild(modalHeading);
 
@@ -274,20 +285,25 @@ function modalConfirm(message, headingText = 'Confirm', button1Text = "OK", butt
       const button1 = document.createElement('button');
       button1.className = 'btn btn-primary';
       button1.id = 'button1';
-      button1.innerText = button1Text;
+      button1.innerText = button1Text ? button1Text : "OK";
       footerDiv.appendChild(button1);
 
       if (button2Text) {
         const button2 = document.createElement('button');
-        button2.className = 'btn btn-secondary';
+
+        if (button3Text)
+          button2.className = 'btn btn-danger'
+        else
+          button2.className = 'btn btn-secondary';
+
         button2.id = 'button2';
         button2.innerText = button2Text;
         footerDiv.appendChild(button2);
       }
 
-      if (button3Text) {
+      if (button3Text && button2Text) {
         const button3 = document.createElement('button');
-        button3.className = 'btn btn-success';
+        button3.className = 'btn btn-secondary';
         button3.id = 'button3';
         button3.innerText = button3Text;
         footerDiv.appendChild(button3);
@@ -297,6 +313,135 @@ function modalConfirm(message, headingText = 'Confirm', button1Text = "OK", butt
     }
   });
 }
+
+// function modalConfirm_Obsolete(message, headingText = 'Confirm', button1Text = "OK", button2Text = "", button3Text = "") {
+//   return new Promise((resolve) => {
+
+//     const modal = createModal();
+//     showModal(modal);
+
+//     const button1 = modal.querySelector("#button1")
+//     button1.onclick = () => {
+//       removeModal(modal);
+//       resolve(1);
+//     };
+
+//     const button2 = modal.querySelector("#button2")
+
+//     if (button2) {
+//       button2.onclick = () => {
+//         removeModal(modal);
+//         resolve(2);
+//       };
+//     }
+
+//     const button3 = modal.querySelector("#button3")
+//     if (button3) {
+//       button3.onclick = () => {
+//         removeModal(modal);
+//         resolve(3);
+//       };
+//     }
+
+//     function showModal(modal) {
+//       createBackdrop()
+//       modal.classList.add('show');
+//     }
+
+//     function removeModal(modal) {
+//       removeBackdrop()
+//       modal.remove();
+//       modal.classList.remove('show');
+//     }
+
+//     function createBackdrop() {
+//       const backdrop = document.createElement('div');
+//       backdrop.id = 'modalConfirmBackdrop';
+//       backdrop.className = 'modal-backdrop modal-confirm-backdrop';
+//       document.body.appendChild(backdrop);
+//     }
+
+//     function removeBackdrop() {
+//       const backdrop = document.getElementById('modalConfirmBackdrop');
+//       if (backdrop) {
+//         backdrop.remove();
+//       }
+//     }
+
+//     function createModal() {
+//       const modal = document.createElement('div');
+//       modal.id = 'modal-confirm';
+//       modal.className = 'modal modal-confirm';
+//       document.body.appendChild(modal);
+
+//       const modalDialog = document.createElement('div');
+//       modalDialog.className = 'modal-dialog modal-dialog-centered';
+//       modal.appendChild(modalDialog);
+
+//       const modalContent = document.createElement('div');
+//       modalContent.className = 'modal-content';
+//       modalDialog.appendChild(modalContent);
+
+//       const modalHeader = document.createElement('div');
+//       modalHeader.className = 'modal-header';
+//       modalContent.appendChild(modalHeader);
+
+//       headerChildDiv = document.createElement('div');
+//       headerChildDiv.className = 'd-flex align-items-center';
+//       modalHeader.appendChild(headerChildDiv);
+
+//       modalIcon = document.createElement('i');
+//       modalIcon.className = 'bx bx-x-circle fs-7 text-danger me-1';
+//       headerChildDiv.appendChild(modalIcon);
+
+//       modalHeading = document.createElement('h6');
+//       modalHeading.className = 'text-danger';
+//       modalHeading.innerText = headingText;
+//       headerChildDiv.appendChild(modalHeading);
+
+//       const modalBody = document.createElement('div');
+//       modalBody.className = 'modal-body';
+//       modalContent.appendChild(modalBody);
+
+//       const messagePara = document.createElement('p');
+//       messagePara.className = 'mb-2';
+//       messagePara.innerText = message;
+//       modalBody.appendChild(messagePara);
+
+//       const modalFooter = document.createElement('div');
+//       modalFooter.className = 'modal-footer';
+//       modalContent.appendChild(modalFooter);
+
+//       const footerDiv = document.createElement('div');
+//       footerDiv.className = 'd-flex align-items-center gap-2';
+//       modalFooter.appendChild(footerDiv);
+
+//       const button1 = document.createElement('button');
+//       button1.className = 'btn btn-primary';
+//       button1.id = 'button1';
+//       button1.innerText = button1Text;
+//       footerDiv.appendChild(button1);
+
+//       if (button2Text) {
+//         const button2 = document.createElement('button');
+//         button2.className = 'btn btn-secondary';
+//         button2.id = 'button2';
+//         button2.innerText = button2Text;
+//         footerDiv.appendChild(button2);
+//       }
+
+//       if (button3Text) {
+//         const button3 = document.createElement('button');
+//         button3.className = 'btn btn-success';
+//         button3.id = 'button3';
+//         button3.innerText = button3Text;
+//         footerDiv.appendChild(button3);
+//       }
+
+//       return modal;
+//     }
+//   });
+// }
 
 //////////////////// Nav ////////////////////
 

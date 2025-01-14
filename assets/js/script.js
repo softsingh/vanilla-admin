@@ -43,7 +43,7 @@ searchInput = document.querySelector(
 );
 
 searchButton = document.querySelector('.search-button');
-searchButton.addEventListener('click', (event) => {
+searchButton?.addEventListener('click', (event) => {
   showNavbarSearchInput(event);
   event.stopPropagation();
 });

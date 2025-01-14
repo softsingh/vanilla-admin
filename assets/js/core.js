@@ -525,7 +525,7 @@ sidebarToggles.forEach((sidebarToggle) =>
 // Hide Sidebar when Sidebar Backdrop is clicked
 const sidebarBackdrop = document.querySelector('.sidebar-backdrop');
 
-sidebarBackdrop.addEventListener('click', () => {
+sidebarBackdrop?.addEventListener('click', () => {
   document.body.classList.add('sidebar-hidden');
 });
 

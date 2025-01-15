@@ -718,10 +718,20 @@
                               placeholder="Enter Phone Number">
                         </div>
                         <div class="col-md-6">
-                           <label class="form-label mb-2" for="male">Male</label>
-                           <input type="radio" id="male" name="gender" class="form-control">
-                           <label class="form-label mb-2" for="female">Female</label>
-                           <input type="radio" id="female" name="gender" class="form-control">
+                           <label class="form-label d-block mb-2">Gender</label>
+                           <div class="form-check form-check-inline">
+                              <input type="radio" id="male" name="gender" class="form-check-input" value="male" checked>
+                              <label class="form-check-label" for="male">Male</label>
+                           </div>
+                           <div class="form-check form-check-inline">
+                              <input type="radio" id="female" name="gender" class="form-check-input" value="female">
+                              <label class="form-check-label" for="female">Female</label>
+                           </div>
+                           <div class="form-check form-check-inline">
+                              <input type="radio" id="transgender" name="gender" class="form-check-input"
+                                 value="transgender">
+                              <label class="form-check-label" for="transgender">Transgender</label>
+                           </div>
                         </div>
                         <div class="col-md-12">
                            <label class="form-label mb-2" for="id_remarks">Remarks</label>

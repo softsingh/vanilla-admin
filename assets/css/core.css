@@ -50,7 +50,7 @@
   --secondary-lightest-color: hsl(214, 14%, 90%);
   --secondary-lighter-color: hsl(214, 14%, 80%);
   --secondary-light-color: hsl(214, 14%, 65%);
-  --secondary-color: hsl(214, 14%, 52%);
+  --secondary-color: #738296;
   --secondary-dark-color: hsl(214, 14%, 42%);
   --secondary-darker-color: hsl(214, 14%, 32%);
   --secondary-darkest-color: hsl(214, 14%, 22%);
@@ -1147,6 +1147,13 @@ button:not(:disabled),
   -webkit-transform: translateX(5px);
 }
 
+/* Container class for invalid form text message */
+.form-invalid {
+  width: 100%;
+  font-size: 0.8rem;
+  color: var(--danger-dark-color);
+}
+
 .form-label {
   font-size: 0.9rem;
   font-weight: 500;
@@ -1154,11 +1161,33 @@ button:not(:disabled),
   display: inline-block;
 }
 
-/* Container class for invalid form text message */
-.form-invalid {
+.form-select {
+  display: block;
   width: 100%;
-  font-size: 0.8rem;
-  color: var(--danger-dark-color);
+  outline: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.35rem 0.75rem;
+  color: var(--body-color);
+  background: var(--white-color);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("data:image/svg+xml,<svg viewBox='0 0 12 7.333127' fill='none' version='1.1' id='svg1' width='12' height='7.333127' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'><defs id='defs1' /><path d='M 5.9999688,4.6669152 10.666843,0 12,1.3331162 5.9999688,7.3331268 0,1.3331162 1.3331264,0 Z' fill='%2322303e' fill-opacity='0.9' id='path1' style='fill:%23738296;fill-opacity:0.8;stroke-width:1.02851' /></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.form-select:hover:not([disabled]):not([focus]) {
+  box-shadow: 0 0 0.25rem 0.05rem hsla(239, 100%, 70%, 0.1);
+}
+
+.form-select:focus:not([readonly]) {
+  outline: 0;
+  border: 2px solid var(--form-control-focus-border-color);
+  box-shadow: 0 0 0.25rem 0.05rem hsla(239, 100%, 70%, 0.1);
 }
 
 /*-------------------------------------*/

@@ -18,7 +18,6 @@
   width: 1.2rem;
   height: 1.2rem;
   appearance: none;
-  // background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='17' viewBox='0 0 15 14' fill='none'%3E%3Cpath d='M3.41667 7L6.33333 9.91667L12.1667 4.08333' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
   border: 2px solid var(--border-color);
@@ -103,6 +102,14 @@
   -webkit-transform: translateX(5px);
 }
 
+/* Container class for invalid form text message */
+
+.form-invalid {
+  width: 100%;
+  font-size: 0.8rem;
+  color: var(--danger-dark-color);
+}
+
 .form-label {
   font-size: 0.9rem;
   font-weight: 500;
@@ -110,10 +117,29 @@
   display: inline-block;
 }
 
-/* Container class for invalid form text message */
-
-.form-invalid {
+.form-select {
+  display: block;
   width: 100%;
-  font-size: 0.8rem;
-  color: var(--danger-dark-color);
+  outline: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.35rem 0.75rem;
+  color: var(--body-color);
+  background: var(--white-color);
+  appearance: none; //hide default icon shown by browser
+  background-image: url("data:image/svg+xml,<svg viewBox='0 0 12 7.333127' fill='none' version='1.1' id='svg1' width='12' height='7.333127' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'><defs id='defs1' /><path d='M 5.9999688,4.6669152 10.666843,0 12,1.3331162 5.9999688,7.3331268 0,1.3331162 1.3331264,0 Z' fill='%2322303e' fill-opacity='0.9' id='path1' style='fill:%23738296;fill-opacity:0.8;stroke-width:1.02851' /></svg>");
+  background-repeat: no-repeat;
+  background-position: right .5rem center;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.form-select:hover:not([disabled]):not([focus]) {
+  box-shadow: 0 0 0.25rem 0.05rem hsla(239, 100%, 70%, 0.1);
+}
+
+.form-select:focus:not([readonly]) {
+  outline: 0;
+  border: 2px solid var(--form-control-focus-border-color);
+  box-shadow: 0 0 0.25rem 0.05rem hsla(239, 100%, 70%, 0.1);
 }

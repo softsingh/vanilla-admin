@@ -92,20 +92,20 @@
 /*             Container               */
 /*-------------------------------------*/
 
-.auth-container {
+.mid-center-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
 
-.auth-inner {
+.mid-center-inner {
   width: 400px;
 }
 
 @media (max-width: 450px) {
 
-  .auth-inner {
+  .mid-center-inner {
     margin-left: 1rem;
     margin-right: 1rem;
   }

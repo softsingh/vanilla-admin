@@ -1094,6 +1094,10 @@ button:not(:disabled),
   border-radius: var(--border-radius);
 }
 
+.form-control.invalid {
+  border-color: var(--danger-dark-color);
+}
+
 .form-control:hover:not([disabled]):not([focus]) {
   box-shadow: 0 0 0.25rem 0.05rem hsla(239, 100%, 70%, 0.1);
 }
@@ -1104,6 +1108,10 @@ button:not(:disabled),
   background: var(--white-color);
   border: 2px solid var(--form-control-focus-border-color);
   box-shadow: 0 0 0.25rem 0.05rem hsla(239, 100%, 70%, 0.1);
+}
+
+.form-control:focus.invalid {
+  border-color: var(--danger-dark-color);
 }
 
 .form-control::-moz-placeholder {
@@ -1148,9 +1156,10 @@ button:not(:disabled),
 }
 
 /* Container class for invalid form text message */
-.form-invalid {
+.form-invalid-message {
   width: 100%;
   font-size: 0.8rem;
+  margin-left: 0.5rem;
   color: var(--danger-dark-color);
 }
 

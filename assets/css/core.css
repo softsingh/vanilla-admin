@@ -1159,7 +1159,8 @@ button:not(:disabled),
 .form-invalid-message {
   width: 100%;
   font-size: 0.8rem;
-  margin-left: 0.5rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
   color: var(--danger-dark-color);
 }
 

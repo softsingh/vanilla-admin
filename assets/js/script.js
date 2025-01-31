@@ -93,13 +93,15 @@ function showNavbarSearchInput(event) {
 }
 
 // Click on empty area to close Navbar search-input
-document.documentElement.addEventListener('click', (event) => {
-  if (searchInputWrapper.classList.contains('show')) {
-    if (event.target !== searchInput) {
-      searchInputWrapper.classList.remove('show');
+if (searchInputWrapper) {
+  document.documentElement.addEventListener('click', (event) => {
+    if (searchInputWrapper.classList.contains('show')) {
+      if (event.target !== searchInput) {
+        searchInputWrapper.classList.remove('show');
+      }
     }
-  }
-});
+  });
+}
 
 //////////////////// Modal Confirm Demo ////////////////////
 

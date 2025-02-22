@@ -534,3 +534,140 @@ sidebarBackdrop?.addEventListener('click', () => {
 document.addEventListener('click', (event) => {
   hideAllDropdowns(event);
 });
+
+//////////////////// Multi Select ////////////////////
+document.addEventListener('DOMContentLoaded', () => {
+  const multiSelects = document.querySelectorAll('.multi-select');
+  function updatedSelectedOptions(multiSelect) {
+    const selectedOptions = Array.from(multiSelect.querySelectorAll('.option.active')).filter(
+      option => option !== multiSelect.querySelector('.option.select-all')).map(option => {
+        return {
+          value: option.getAttribute('data-value'),
+          text: option.textContent.trim(),
+        }
+      });
+
+    selectedValues = selectedOptions.map(option => option.value);
+
+    multiSelect.querySelector('.input-multi-select').value = selectedValues.join(', ');
+
+    let tagsHtml = '';
+
+    if (selectedOptions.length === 0) {
+      tagsHtml = '<span class="placeholder">No options selected</span>';
+    } else {
+      const maxTagsToShow = 4;
+      let addtionalTagsCount = 0;
+
+      selectedOptions.forEach((option, index) => {
+        if (index < maxTagsToShow) {  
+          tagsHtml += `<span class="tag"> ${option.text} <span class="remove-tag" data-value="${option.value}">&times;</span> </span>`;
+        } else {
+          addtionalTagsCount++;
+        }
+      });
+
+      if (addtionalTagsCount > 0) { 
+        tagsHtml += `<span class="tag">+${addtionalTagsCount}</span>`;
+      }
+    }
+
+    multiSelect.querySelector('.selected-options').innerHTML = tagsHtml;
+  }
+
+  multiSelects.forEach(multiSelect => {
+    const searchInput = multiSelect.querySelector('.input-search');
+    const optionsContainer = multiSelect.querySelector('.options');
+    const noResultMessage = multiSelect.querySelector('.no-result-message');
+    const options = multiSelect.querySelectorAll('.option');
+    const selectAllOption = multiSelect.querySelector('.option.select-all');
+    const clearButton = multiSelect.querySelector('.clear');
+    const inputMultiSelect = multiSelect.querySelector('.input-multi-select');
+
+    options.forEach(option => {
+      option.addEventListener('click', () => {
+        option.classList.toggle('active');
+        updatedSelectedOptions(multiSelect);
+      })
+    });
+
+    selectAllOption.addEventListener('click', () => {
+      const isActive = selectAllOption.classList.contains('active');
+      options.forEach(option => {
+        if (option !== selectAllOption) {
+          option.classList.toggle('active', isActive);
+        }
+      });
+
+      updatedSelectedOptions(multiSelect);
+    });
+
+    clearButton.addEventListener('click', () => {
+      searchInput.value = '';
+      options.forEach(option => {
+        option.style.display = 'block';
+      });
+      noResultMessage.style.display = 'none';
+      clearButton.style.display = 'none';
+    });
+
+    searchInput.addEventListener('input', () => {
+      const searchValue = searchInput.value.toLowerCase();
+      options.forEach(option => {
+        const optionText = option.textContent.trim().toLowerCase();
+        option.style.display = optionText.includes(searchValue) ? 'block' : 'none';
+      });
+
+      const anyOptionsMatch = Array.from(options).some(option => option.style.display === 'block');
+      noResultMessage.style.display = anyOptionsMatch ? 'none' : 'block';
+      clearButton.style.display = searchValue.length > 0 ? 'block' : 'none';
+    });
+
+    const inputMultiSelectValue = inputMultiSelect.value;
+    if (inputMultiSelectValue && inputMultiSelectValue !== '') {
+      const initialSelectedValues = inputMultiSelectValue.slice(1, -1).split(',').map(value => value.trim());
+      initialSelectedValues.forEach(value => {
+        const option = multiSelect.querySelector(`.option[data-value="${value}"]`);
+        if (option) {
+          option.classList.add('active');
+        }
+      });
+      updatedSelectedOptions(multiSelect);
+    }
+
+  })
+
+  document.addEventListener('click', event => {
+    const removeTag = event.target.closest('.remove-tag');
+    if (removeTag) {
+      const multiSelect = removeTag.closest('.multi-select');
+      const optionToRemove = multiSelect.querySelector(`.option[data-value="${removeTag.dataset.value}"]`);
+      optionToRemove.classList.remove('active');
+
+      const otherSelectedOptions = multiSelect.querySelectorAll(".option.active:not(.select-all");
+      const selectAllOption = multiSelect.querySelector('.option.select-all');
+
+      if (otherSelectedOptions.length === 0) {
+        selectAllOption.classList.remove('active');
+      }
+      updatedSelectedOptions(multiSelect);
+    }
+  });
+
+  const selectBoxes = document.querySelectorAll('.multi-select-box');
+  selectBoxes.forEach(selectBox => {
+    selectBox.addEventListener('click', (event) => {
+      if (!event.target.closest('.tag')) {
+        selectBox.parentNode.classList.toggle('open');
+      }
+    });
+  });
+
+  document.addEventListener('click', event => {
+    if (!event.target.closest('.multi-select') && !event.target.classList.contains('.remove-tag')) {
+      multiSelects.forEach(multiSelect => {
+        multiSelect.classList.remove('open');
+      })
+    }
+  });
+});

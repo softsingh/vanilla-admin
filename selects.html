@@ -4,7 +4,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Accordions</title>
+   <title>Selects</title>
    <link rel="stylesheet" href="assets/css/core.css">
    <link rel="stylesheet" href="assets/css/style.css">
    <link rel="stylesheet" href="assets/vendor/boxicons-2.1.4/css/boxicons.min.css">
@@ -137,7 +137,7 @@
                   <span>Simple</span>
                </a>
                <div class="menu-sub">
-                  <div class="menu-item active">
+                  <div class="menu-item">
                      <a href="accordions.html" class="menu-link">
                         <span>Accordions</span>
                      </a>
@@ -162,7 +162,7 @@
                         <span>Cards</span>
                      </a>
                   </div>
-                  <div class="menu-item">
+                  <div class="menu-item active">
                      <a href="dropdowns.html" class="menu-link">
                         <span>Dropdowns</span>
                      </a>
@@ -173,17 +173,27 @@
                      </a>
                   </div>
                   <div class="menu-item">
-                     <a href="#" class="menu-link">
+                     <a href="navs.html" class="menu-link">
+                        <span>Navs</span>
+                     </a>
+                  </div>
+                  <div class="menu-item">
+                     <a href="navbars.html" class="menu-link">
                         <span>Navbars</span>
                      </a>
                   </div>
                   <div class="menu-item">
-                     <a href="#" class="menu-link">
+                     <a href="pagination.html" class="menu-link">
+                        <span>Pagination</span>
+                     </a>
+                  </div>
+                  <div class="menu-item">
+                     <a href="toasts.html" class="menu-link">
                         <span>Toasts</span>
                      </a>
                   </div>
                   <div class="menu-item">
-                     <a href="#" class="menu-link">
+                     <a href="tooltips.html" class="menu-link">
                         <span>Tooltips</span>
                      </a>
                   </div>
@@ -392,7 +402,7 @@
                            <div class="d-flex">
                               <div class="flex-shrink-0 me-4">
                                  <div class="avatar">
-                                    <img class="rounded-circle bg-primary-subtle"
+                                    <img class="rounded-circle bg-primary-lightest"
                                        src="assets/img/Avatars/Joginder Singh.png" alt="Avatar" width="40px">
                                  </div>
                               </div>
@@ -418,7 +428,7 @@
                            <div class="d-flex">
                               <div class="flex-shrink-0 me-4">
                                  <div class="avatar">
-                                    <img class="rounded-circle bg-primary-subtle" src="assets/img/Avatars/Lalina.png"
+                                    <img class="rounded-circle bg-primary-lightest" src="assets/img/Avatars/Lalina.png"
                                        alt="Avatar" width="40px">
                                  </div>
                               </div>
@@ -446,7 +456,7 @@
                            <div class="d-flex">
                               <div class="flex-shrink-0 me-4">
                                  <div class="avatar">
-                                    <img class="rounded-circle bg-primary-subtle"
+                                    <img class="rounded-circle bg-primary-lightest"
                                        src="assets/img/Avatars/Andrew Altman.png" alt="Avatar" width="40px">
                                  </div>
                               </div>
@@ -496,7 +506,7 @@
                            <div class="d-flex">
                               <div class="flex-shrink-0 me-4">
                                  <div class="avatar">
-                                    <img class="rounded-circle bg-primary-subtle"
+                                    <img class="rounded-circle bg-primary-lightest"
                                        src="assets/img/Avatars/Dollar Gill.png" alt="Avatar" width="40px">
                                  </div>
                               </div>
@@ -547,7 +557,7 @@
                            <div class="d-flex">
                               <div class="flex-shrink-0 me-4">
                                  <div class="avatar">
-                                    <img class="rounded-circle bg-primary-subtle"
+                                    <img class="rounded-circle bg-primary-lightest"
                                        src="assets/img/Avatars/Hargun Chahal.png" alt="Avatar" width="40px">
                                  </div>
                               </div>
@@ -573,7 +583,7 @@
                            <div class="d-flex">
                               <div class="flex-shrink-0 me-4">
                                  <div class="avatar">
-                                    <img class="rounded-circle bg-primary-subtle"
+                                    <img class="rounded-circle bg-primary-lightest"
                                        src="assets/img/Avatars/Harinder Singh.png" alt="Avatar" width="40px">
                                  </div>
                               </div>
@@ -599,7 +609,7 @@
                            <div class="d-flex">
                               <div class="flex-shrink-0 me-4">
                                  <div class="avatar">
-                                    <img class="rounded-circle bg-primary-subtle"
+                                    <img class="rounded-circle bg-primary-lightest"
                                        src="assets/img/Avatars/Ruby Bajwa.png" alt="Avatar" width="40px">
                                  </div>
                               </div>
@@ -636,7 +646,7 @@
                <div class="dropdown">
                   <a class="dropdown-toggle">
                      <div class="avatar avatar-online">
-                        <img class="rounded-circle bg-primary-subtle" src="assets/img/Avatars/Dollar Gill.png"
+                        <img class="rounded-circle bg-primary-lightest" src="assets/img/Avatars/Dollar Gill.png"
                            alt="Avatar" width="40px">
                      </div>
                   </a>
@@ -645,8 +655,8 @@
                         <div class="d-flex">
                            <div class="me-3">
                               <div class="avatar avatar-online">
-                                 <img class="rounded-circle bg-primary-subtle" src="assets/img/Avatars/Dollar Gill.png"
-                                    alt="Avatar" width="40px">
+                                 <img class="rounded-circle bg-primary-lightest"
+                                    src="assets/img/Avatars/Dollar Gill.png" alt="Avatar" width="40px">
                               </div>
                            </div>
                            <div class="">
@@ -688,137 +698,70 @@
          <div class="dash-content">
             <div class="row g-6 mb-4">
                <div class="col-12 col-md-6">
-                  <h6 class="text-muted mb-4">Basic Accordion</h6>
-                  <div class="accordion" id="accordion-1">
-                     <div class="accordion-item card mb-2" parent="accordion-1">
-                        <div class="accordion-header fw-semibold px-6 py-4">
-                           <button class="accordion-button">Accordion Item 1</button>
-                        </div>
-                        <div class="accordion-body px-6 pb-6">
-                           <p>
-                              This is the first accordion item. Each <span class="text-danger-dark">accordion</span>
-                              contains <span class="text-danger-dark">accordion-item</span>. accordion-item contains
-                              <span class="text-danger-dark">accordion-header</span> and <span
-                                 class="text-danger-dark">accordion-body</span>.
-                              accordion-header contains <span class="text-danger-dark">accordion-button</span>.
-                              accordion-item can be opened by adding <span class="text-danger-dark">open</span>
-                              class to it. <span class="text-danger-dark">no-collapse</span> class will prevent
-                              accordion-item from opening. Add <span class="text-danger-dark">parent</span>
-                              attribute to
-                              each accordion-item so that only one accordion-item is opened at a time. If you omit the
-                              parent attribute the accordion-item will always remain opened. Add <span
-                                 class="text-danger-dark">no-arrow</span> class to accordion-item to hide the arrow.
-                           </p>
-                        </div>
+                  <div class="card">
+                     <div class="card-header pb-0">
+                        <h5>Select</h5>
                      </div>
-                     <div class="accordion-item card mb-2 open" parent="accordion-1">
-                        <div class="accordion-header fw-semibold px-6 py-4">
-                           <button class="accordion-button">Accordion Item 2</button>
-                        </div>
-                        <div class="accordion-body px-6 pb-6">
-                           <p>
-                              This is the second accordion item. Each <span class="text-danger-dark">accordion</span>
-                              contains <span class="text-danger-dark">accordion-item</span>. accordion-item contains
-                              <span class="text-danger-dark">accordion-header</span> and <span
-                                 class="text-danger-dark">accordion-body</span>.
-                              accordion-header contains <span class="text-danger-dark">accordion-button</span>.
-                              accordion-item can be opened by adding <span class="text-danger-dark">open</span>
-                              class to it. <span class="text-danger-dark">no-collapse</span> class will prevent
-                              accordion-item from opening. Add <span class="text-danger-dark">parent</span>
-                              attribute to
-                              each accordion-item so that only one accordion-item is opened at a time. If you omit the
-                              parent attribute the accordion-item will always remain opened. Add <span
-                                 class="text-danger-dark">no-arrow</span> class to accordion-item to hide the arrow.
-                           </p>
-                        </div>
-                     </div>
-                     <div class="accordion-item card mb-2" parent="accordion-1">
-                        <div class="accordion-header fw-semibold px-6 py-4">
-                           <button class="accordion-button">Accordion Item 3</button>
-                        </div>
-                        <div class="accordion-body px-6 pb-6">
-                           <p>
-                              This is the third accordion item. Each <span class="text-danger-dark">accordion</span>
-                              contains <span class="text-danger-dark">accordion-item</span>. accordion-item contains
-                              <span class="text-danger-dark">accordion-header</span> and <span
-                                 class="text-danger-dark">accordion-body</span>.
-                              accordion-header contains <span class="text-danger-dark">accordion-button</span>.
-                              accordion-item can be opened by adding <span class="text-danger-dark">open</span>
-                              class to it. <span class="text-danger-dark">no-collapse</span> class will prevent
-                              accordion-item from opening. Add <span class="text-danger-dark">parent</span>
-                              attribute to
-                              each accordion-item so that only one accordion-item is opened at a time. If you omit the
-                              parent attribute the accordion-item will always remain opened. Add <span
-                                 class="text-danger-dark">no-arrow</span> class to accordion-item to hide the arrow.
-                           </p>
+                     <div class="card-body">
+                        <div class="d-flex flex-column gap-2">
+                           <div class="mb-5">
+                              <label class="form-label mb-2" for="sport_id">
+                                 Select a sport
+                              </label>
+                              <select class="form-control" name="sport" id="sport_id">
+                                 <option value="">Select an option first</option>
+                                 <option value="1">Football</option>
+                                 <option value="2">Basketball</option>
+                                 <option value="3">Baseball</option>
+                                 <option value="4">Volleybal</option>
+                                 <option value="5">Tennis</option>
+                                 <option value="6">Cricket</option>
+                              </select>
+                           </div>
                         </div>
                      </div>
                   </div>
                </div>
                <div class="col-12 col-md-6">
-                  <h6 class="text-muted mb-4">Accordion without Arrow</h6>
-                  <div class="accordion" id="accordion-2">
-                     <div class="accordion-item card mb-2 open" parent="accordion-2">
-                        <div class="accordion-header fw-semibold px-6 py-4">
-                           <button class="accordion-button">Accordion Item 1</button>
-                        </div>
-                        <div class="accordion-body px-6 pb-6">
-                           <p>
-                              This is the first accordion item. Each <span class="text-danger-dark">accordion</span>
-                              contains <span class="text-danger-dark">accordion-item</span>. accordion-item contains
-                              <span class="text-danger-dark">accordion-header</span> and <span
-                                 class="text-danger-dark">accordion-body</span>.
-                              accordion-header contains <span class="text-danger-dark">accordion-button</span>.
-                              accordion-item can be opened by adding <span class="text-danger-dark">open</span>
-                              class to it. <span class="text-danger-dark">no-collapse</span> class will prevent
-                              accordion-item from opening. Add <span class="text-danger-dark">parent</span>
-                              attribute to
-                              each accordion-item so that only one accordion-item is opened at a time. If you omit the
-                              parent attribute the accordion-item will always remain opened. Add <span
-                                 class="text-danger-dark">no-arrow</span> class to accordion-item to hide the arrow.
-                           </p>
-                        </div>
+                  <div class="card">
+                     <div class="card-header pb-0">
+                        <h5>Multi Select</h5>
                      </div>
-                     <div class="accordion-item card mb-2 no-arrow" parent="accordion-2">
-                        <div class="accordion-header fw-semibold px-6 py-4">
-                           <button class="accordion-button">Accordion Item 2</button>
-                        </div>
-                        <div class="accordion-body px-6 pb-6">
-                           <p>
-                              This is the second accordion item. Each <span class="text-danger-dark">accordion</span>
-                              contains <span class="text-danger-dark">accordion-item</span>. accordion-item contains
-                              <span class="text-danger-dark">accordion-header</span> and <span
-                                 class="text-danger-dark">accordion-body</span>.
-                              accordion-header contains <span class="text-danger-dark">accordion-button</span>.
-                              accordion-item can be opened by adding <span class="text-danger-dark">open</span>
-                              class to it. <span class="text-danger-dark">no-collapse</span> class will prevent
-                              accordion-item from opening. Add <span class="text-danger-dark">parent</span>
-                              attribute to
-                              each accordion-item so that only one accordion-item is opened at a time. If you omit the
-                              parent attribute the accordion-item will always remain opened. Add <span
-                                 class="text-danger-dark">no-arrow</span> class to accordion-item to hide the arrow.
-                           </p>
-                        </div>
-                     </div>
-                     <div class="accordion-item card mb-2" parent="accordion-2">
-                        <div class="accordion-header fw-semibold px-6 py-4">
-                           <button class="accordion-button">Accordion Item 3</button>
-                        </div>
-                        <div class="accordion-body px-6 pb-6">
-                           <p>
-                              This is the third accordion item. Each <span class="text-danger-dark">accordion</span>
-                              contains <span class="text-danger-dark">accordion-item</span>. accordion-item contains
-                              <span class="text-danger-dark">accordion-header</span> and <span
-                                 class="text-danger-dark">accordion-body</span>.
-                              accordion-header contains <span class="text-danger-dark">accordion-button</span>.
-                              accordion-item can be opened by adding <span class="text-danger-dark">open</span>
-                              class to it. <span class="text-danger-dark">no-collapse</span> class will prevent
-                              accordion-item from opening. Add <span class="text-danger-dark">parent</span>
-                              attribute to
-                              each accordion-item so that only one accordion-item is opened at a time. If you omit the
-                              parent attribute the accordion-item will always remain opened. Add <span
-                                 class="text-danger-dark">no-arrow</span> class to accordion-item to hide the arrow.
-                           </p>
+                     <div class="card-body">
+                        <div class="d-flex flex-column gap-2">
+                           <div class="mb-5">
+                              <label class="form-label mb-2">Hobbies</label>
+                              <div class="multi-select">
+                                 <div class="multi-select-box">
+                                    <input class="input-multi-select" type="hidden" name="back_colors[_ids]" value="">
+                                    <div class="selected-options">
+                                       <span class="placeholder">No options selected</span>
+                                    </div>
+                                    <div class="arrow"><i class="bx bx-chevron-down"></i></div>
+                                 </div>
+                                 <div class="options">
+                                    <div class="options-search">
+                                       <input type="text" class="input-search" placeholder="Search ...">
+                                       <button style="display: none;" class="clear" type="button">
+                                          <i class="bx bxs-x-circle"></i>
+                                       </button>
+                                    </div>
+                                    <div class="options-list">
+                                       <div class="option select-all" data-value="all">** Select All **</div>
+                                       <div class="option" data-value="1">Video Games</div>
+                                       <div class="option" data-value="1">Movies</div>
+                                       <div class="option" data-value="1">Watch TV</div>
+                                       <div class="option" data-value="1">Walk with friends</div>
+                                       <div class="option" data-value="1">Teather</div>
+                                       <div class="option" data-value="1">Swim</div>
+                                       <div class="option" data-value="1">Dance</div>
+                                       <div class="option" data-value="1">Read Books</div>
+                                       <div class="option" data-value="1">Play Chess</div>
+                                       <div class="no-result-message" style="display: none;">No result matches your search</div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
                      </div>
                   </div>

@@ -41,7 +41,7 @@
   --primary-lightest-color: hsl(240, 100%, 95%);
   --primary-lighter-color: hsl(240, 100%, 88%);
   --primary-light-color: hsl(240, 100%, 78%);
-  --primary-color: hsl(240, 100%, 70%);
+  --primary-color: #6666ff;
   --primary-dark-color: hsl(240, 100%, 60%);
   --primary-darker-color: hsl(240, 100%, 50%);
   --primary-darkest-color: hsl(240, 100%, 40%);
@@ -2872,6 +2872,14 @@ button:not(:disabled),
 /*-------------------------------------*/
 /*               Navbar                */
 /*-------------------------------------*/
+.navbar > .container,
+.navbar > .container-fluid {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .navbar {
   position: sticky;
   top: 1rem;
@@ -2887,6 +2895,17 @@ button:not(:disabled),
   z-index: var(--navbar-z-index);
 }
 
+.navbar-brand {
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .navbar i {
   width: 1.375rem;
   height: 1.375rem;
@@ -2896,7 +2915,7 @@ button:not(:disabled),
   justify-content: center;
 }
 
-.navbar .navbar-nav {
+.navbar-nav {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -2913,6 +2932,29 @@ button:not(:disabled),
   color: var(--heading-color);
 }
 
+.navbar-collapse:not(.show) {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: row;
+  }
+  .navbar-expand-lg .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+  .navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+  .navbar-expand-lg .navbar-toggle {
+    display: none;
+  }
+}
 /*-------------------------------------*/
 /*             Pagination              */
 /*-------------------------------------*/

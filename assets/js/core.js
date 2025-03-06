@@ -314,135 +314,6 @@ function modalConfirm(message, options = {}) {
   });
 }
 
-// function modalConfirm_Obsolete(message, headingText = 'Confirm', button1Text = "OK", button2Text = "", button3Text = "") {
-//   return new Promise((resolve) => {
-
-//     const modal = createModal();
-//     showModal(modal);
-
-//     const button1 = modal.querySelector("#button1")
-//     button1.onclick = () => {
-//       removeModal(modal);
-//       resolve(1);
-//     };
-
-//     const button2 = modal.querySelector("#button2")
-
-//     if (button2) {
-//       button2.onclick = () => {
-//         removeModal(modal);
-//         resolve(2);
-//       };
-//     }
-
-//     const button3 = modal.querySelector("#button3")
-//     if (button3) {
-//       button3.onclick = () => {
-//         removeModal(modal);
-//         resolve(3);
-//       };
-//     }
-
-//     function showModal(modal) {
-//       createBackdrop()
-//       modal.classList.add('show');
-//     }
-
-//     function removeModal(modal) {
-//       removeBackdrop()
-//       modal.remove();
-//       modal.classList.remove('show');
-//     }
-
-//     function createBackdrop() {
-//       const backdrop = document.createElement('div');
-//       backdrop.id = 'modalConfirmBackdrop';
-//       backdrop.className = 'modal-backdrop modal-confirm-backdrop';
-//       document.body.appendChild(backdrop);
-//     }
-
-//     function removeBackdrop() {
-//       const backdrop = document.getElementById('modalConfirmBackdrop');
-//       if (backdrop) {
-//         backdrop.remove();
-//       }
-//     }
-
-//     function createModal() {
-//       const modal = document.createElement('div');
-//       modal.id = 'modal-confirm';
-//       modal.className = 'modal modal-confirm';
-//       document.body.appendChild(modal);
-
-//       const modalDialog = document.createElement('div');
-//       modalDialog.className = 'modal-dialog modal-dialog-centered';
-//       modal.appendChild(modalDialog);
-
-//       const modalContent = document.createElement('div');
-//       modalContent.className = 'modal-content';
-//       modalDialog.appendChild(modalContent);
-
-//       const modalHeader = document.createElement('div');
-//       modalHeader.className = 'modal-header';
-//       modalContent.appendChild(modalHeader);
-
-//       headerChildDiv = document.createElement('div');
-//       headerChildDiv.className = 'd-flex align-items-center';
-//       modalHeader.appendChild(headerChildDiv);
-
-//       modalIcon = document.createElement('i');
-//       modalIcon.className = 'bx bx-x-circle fs-7 text-danger me-1';
-//       headerChildDiv.appendChild(modalIcon);
-
-//       modalHeading = document.createElement('h6');
-//       modalHeading.className = 'text-danger';
-//       modalHeading.innerText = headingText;
-//       headerChildDiv.appendChild(modalHeading);
-
-//       const modalBody = document.createElement('div');
-//       modalBody.className = 'modal-body';
-//       modalContent.appendChild(modalBody);
-
-//       const messagePara = document.createElement('p');
-//       messagePara.className = 'mb-2';
-//       messagePara.innerText = message;
-//       modalBody.appendChild(messagePara);
-
-//       const modalFooter = document.createElement('div');
-//       modalFooter.className = 'modal-footer';
-//       modalContent.appendChild(modalFooter);
-
-//       const footerDiv = document.createElement('div');
-//       footerDiv.className = 'd-flex align-items-center gap-2';
-//       modalFooter.appendChild(footerDiv);
-
-//       const button1 = document.createElement('button');
-//       button1.className = 'btn btn-primary';
-//       button1.id = 'button1';
-//       button1.innerText = button1Text;
-//       footerDiv.appendChild(button1);
-
-//       if (button2Text) {
-//         const button2 = document.createElement('button');
-//         button2.className = 'btn btn-secondary';
-//         button2.id = 'button2';
-//         button2.innerText = button2Text;
-//         footerDiv.appendChild(button2);
-//       }
-
-//       if (button3Text) {
-//         const button3 = document.createElement('button');
-//         button3.className = 'btn btn-success';
-//         button3.id = 'button3';
-//         button3.innerText = button3Text;
-//         footerDiv.appendChild(button3);
-//       }
-
-//       return modal;
-//     }
-//   });
-// }
-
 //////////////////// Nav ////////////////////
 
 const navItems = document.querySelectorAll('.nav>.nav-item');
@@ -462,6 +333,27 @@ function clearNavItemActive(currentNavItem) {
     }
   });
 }
+
+//////////////////// Navbar ////////////////////
+
+const navbarToggles = document.querySelectorAll('.navbar-toggle');
+
+// Show modal if modal toggle clicked
+navbarToggles.forEach((navbarToggle) =>
+  navbarToggle.addEventListener('click', (event) => {
+    hideAllDropdowns(event);
+
+    const navbarCollapseID = navbarToggle.getAttribute('data-target');
+
+    if (navbarCollapseID) {
+      const navbarCollapse = document.getElementById(navbarCollapseID);
+      if (navbarCollapse) {
+        navbarCollapse.classList.toggle('show')
+      }
+    }
+    event.stopPropagation();
+  })
+);
 
 /////////////////// Sidebar ////////////////////
 

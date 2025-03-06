@@ -317,12 +317,12 @@
   }
 }
 
-.navbar .navbar-toggle {
+.navbar .sidebar-toggle {
   display: none;
   transition: 0.2s ease;
 }
 
-body.sidebar-hidden .navbar .navbar-toggle {
+body.sidebar-hidden .navbar .sidebar-toggle {
   display: block;
 }
 

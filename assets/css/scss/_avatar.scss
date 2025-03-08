@@ -24,7 +24,19 @@
 }
 
 .avatar.avatar-online::after {
-  background-color: #71dd37;
+  background-color: var(--success-color);
+}
+
+.avatar.avatar-offline::after {
+  background-color: var(--secondary-color);
+}
+
+.avatar.avatar-away::after {
+  background-color: var(--warning-color);
+}
+
+.avatar.avatar-busy::after {
+  background-color: var(--danger-color);
 }
 
 .avatar .avatar-initial {

@@ -448,7 +448,19 @@ thead {
 }
 
 .avatar.avatar-online::after {
-  background-color: #71dd37;
+  background-color: var(--success-color);
+}
+
+.avatar.avatar-offline::after {
+  background-color: var(--secondary-color);
+}
+
+.avatar.avatar-away::after {
+  background-color: var(--warning-color);
+}
+
+.avatar.avatar-busy::after {
+  background-color: var(--danger-color);
 }
 
 .avatar .avatar-initial {
@@ -3118,7 +3130,7 @@ textarea {
 /*             Background              */
 /*-------------------------------------*/
 .bg-primary-lightest {
-  background-color: var(--primary-lightest-color);
+  background-color: var(--primary-lightest-color) !important;
 }
 
 .bg-primary-lighter {
@@ -3130,7 +3142,7 @@ textarea {
 }
 
 .bg-primary {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color) !important;
 }
 
 .bg-primary-dark {
@@ -3158,7 +3170,7 @@ textarea {
 }
 
 .bg-secondary {
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-color) !important;
 }
 
 .bg-secondary-dark {
@@ -3186,7 +3198,7 @@ textarea {
 }
 
 .bg-success {
-  background-color: var(--success-color);
+  background-color: var(--success-color) !important;
 }
 
 .bg-success-dark {
@@ -3214,7 +3226,7 @@ textarea {
 }
 
 .bg-danger {
-  background-color: var(--danger-color);
+  background-color: var(--danger-color) !important;
 }
 
 .bg-danger-dark {
@@ -3242,7 +3254,7 @@ textarea {
 }
 
 .bg-warning {
-  background-color: var(--warning-color);
+  background-color: var(--warning-color) !important;
 }
 
 .bg-warning-dark {
@@ -3270,7 +3282,7 @@ textarea {
 }
 
 .bg-info {
-  background-color: var(--info-color);
+  background-color: var(--info-color) !important;
 }
 
 .bg-info-dark {
@@ -3298,7 +3310,7 @@ textarea {
 }
 
 .bg-light {
-  background-color: var(--light-color);
+  background-color: var(--light-color) !important;
 }
 
 .bg-light-dark {
@@ -3326,7 +3338,7 @@ textarea {
 }
 
 .bg-dark {
-  background-color: var(--dark-color);
+  background-color: var(--dark-color) !important;
 }
 
 .bg-dark-dark {

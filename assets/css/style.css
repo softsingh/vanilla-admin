@@ -392,7 +392,7 @@ body.sidebar-hidden .navbar .sidebar-toggle {
 }
 
 /*-------------------------------------*/
-/*          Dashboard Table            */
+/*                Table                */
 /*-------------------------------------*/
 
 .dash-table thead,
@@ -413,10 +413,6 @@ body.sidebar-hidden .navbar .sidebar-toggle {
   background-color: var(--heading-hover-bg-color);
 }
 
-/*-------------------------------------*/
-/*             User Table              */
-/*-------------------------------------*/
-
 @media (max-width: 576px) {
 
   .dash-table.user thead th:nth-child(2),
@@ -432,5 +428,30 @@ body.sidebar-hidden .navbar .sidebar-toggle {
   .dash-table.user thead th:nth-child(4),
   .dash-table.user tbody td:nth-child(4) {
     display: none;
+  }
+}
+
+.dash-table-pagination-info {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.dash-table-pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+@media screen and (max-width: 768px) {
+  .dash-table-pagination-info {
+    height: inherit;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .dash-table-pagination-container {
+    justify-content: center;
   }
 }

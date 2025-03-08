@@ -232,29 +232,6 @@ thead {
   text-align: left;
 }
 
-.table-info {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.table-pagination {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-}
-
-@media screen and (max-width: 768px) {
-  .table-info {
-    height: inherit;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-  }
-  .table-pagination {
-    justify-content: center;
-  }
-}
 /*-------------------------------------*/
 /*             Accordion               */
 /*-------------------------------------*/

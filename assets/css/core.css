@@ -2952,12 +2952,20 @@ button:not(:disabled),
 
 .page-link {
   position: relative;
-  display: block;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  min-block-size: calc(2.2508625rem + 2px);
+  min-inline-size: calc(2.2505625rem + 2px);
   padding: 0.5rem 0.75rem;
   font-size: 0.9rem;
   color: var(--page-link-color);
   background-color: var(--page-link-bg-color);
   border-radius: var(--border-radius);
+}
+
+.pagination-rounded-circle .page-link {
+  border-radius: 50%;
 }
 
 .page-link:hover {
@@ -3528,12 +3536,20 @@ textarea {
   align-items: end;
 }
 
+.justify-content-start {
+  justify-content: start;
+}
+
 .justify-content-between {
   justify-content: space-between;
 }
 
 .justify-content-center {
   justify-content: center;
+}
+
+.justify-content-end {
+  justify-content: end;
 }
 
 .g-0,

@@ -22,12 +22,20 @@
 
 .page-link {
   position: relative;
-  display: block;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  min-block-size: calc(2.2508625rem + calc(1px* 2));
+  min-inline-size: calc(2.2505625rem + calc(1px* 2));
   padding: 0.5rem 0.75rem;
   font-size: 0.9rem;
   color: var(--page-link-color);
   background-color: var(--page-link-bg-color);
   border-radius: var(--border-radius);
+}
+
+.pagination-rounded-circle .page-link {
+  border-radius: 50%;
 }
 
 .page-link:hover {

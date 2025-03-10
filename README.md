@@ -6,3 +6,18 @@
 Admin Dashboard using HTML, JS and CSS
 
 Live Preview: [Vanilla Admin](https://softsingh.github.io/vanilla-admin/)
+
+## To Do
+- Breadcrumbs
+- Carousels
+- Toasts
+- Tooltips
+- Icons
+- Progress Bars
+- Form Elements - Basic
+- Form Elements - Advance
+- Form Layouts
+- Tables
+- Color Palettes using CSS Color Mix
+- Dark Mode
+- Graphs & Charts

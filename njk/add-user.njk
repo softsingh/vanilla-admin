@@ -1,0 +1,60 @@
+{% set file_name = "add-user" %}
+{% extends "_dash_base.njk" %}
+{% block title %}
+   Add User
+{% endblock title %}
+{% block content %}
+   <div class="card">
+      <div class="card-body">
+         <div class="mb-4">
+            <h5 class="mb-1">Add New User</h5>
+         </div>
+         <form action="#" class="login-form" method="post">
+            <div class="mb-4">
+               <label class="form-label mb-2" for="login-id">Login ID</label>
+               <input id="login-id"
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter desired Login ID"
+                      name="login-id"
+                      autofocus="">
+            </div>
+            <div class="mb-4">
+               <label class="form-label mb-2" for="email">Email Address</label>
+               <input id="email"
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter your Email Address"
+                      name="email">
+            </div>
+            <div class="mb-4">
+               <label class="form-label mb-2" for="name">Full Name</label>
+               <input id="name"
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter your Full Name"
+                      name="name">
+            </div>
+            <div class="mb-4">
+               <label class="form-label mb-2" for="password">Password</label>
+               <input id="password"
+                      type="password"
+                      class="form-control"
+                      placeholder="························"
+                      name="password">
+            </div>
+            <div class="mb-4">
+               <label class="form-label mb-2" for="password">Confirm Password</label>
+               <input id="confirm-password"
+                      type="password"
+                      class="form-control"
+                      placeholder="························">
+            </div>
+            <div class="d-flex gap-2 mt-5">
+               <a href="dashboard.html" class="btn btn-primary">Add User</a>
+               <a href="dashboard.html" class="btn btn-secondary">Cancel</a>
+            </div>
+         </form>
+      </div>
+   </div>
+{% endblock content %}

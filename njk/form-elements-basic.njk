@@ -1,0 +1,26 @@
+{% set file_name = "form-elements-basic" %}
+{% extends "_dash_base.njk" %}
+{% block title %}
+   Basic Form Elements
+{% endblock title %}
+{% block content %}
+   <div class="row g-6">
+      <div class="col-12 col-md-6">
+         <div class="card">
+            <div class="card-header pb-0">
+               <h5>Text Input</h5>
+            </div>
+            <div class="card-body">
+               <div class="mb-4">
+                  <label class="form-label mb-2" for="username">Username</label>
+                  <input id="username"
+                         type="text"
+                         class="form-control"
+                         placeholder="Enter your username"
+                         name="username">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+{% endblock content %}

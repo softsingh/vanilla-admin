@@ -1,0 +1,79 @@
+{% set file_name = "cards" %}
+{% extends "_dash_base.njk" %}
+{% block title %}
+   Cards
+{% endblock title %}
+{% block content %}
+   <div class="row g-6">
+      <div class="col-12 col-md-6">
+         <h6 class="text-muted mb-4">Card with Header and Body</h6>
+         <div class="card">
+            <div class="card-header pb-0">
+               <h5>Card Header</h5>
+            </div>
+            <div class="card-body">
+               <p>
+                  Some quick example text to build on the card title and make up the bulk of the card's
+                  content.
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="col-12 col-md-6">
+         <h6 class="text-muted mb-4">Card with Body</h6>
+         <div class="card">
+            <div class="card-body">
+               <p>
+                  Some quick example text to build on the card title and make up the bulk of the card's
+                  content. Some quick example text to build on the card title and make up the bulk of the
+                  card's
+                  content. Some example text to build on the card title and the bulk of the card's
+                  content.
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="col-12 col-md-6">
+         <h6 class="text-muted mb-4">Solid Card</h6>
+         <div class="card bg-primary text-white">
+            <div class="card-body">
+               <p>
+                  Some quick example text to build on the card title and make up the bulk of the card's
+                  content. Some quick example text to build on the card title and make up the bulk of the
+                  card's
+                  content. Some example text to build on the card title and the bulk of the card's
+                  content.
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="col-12 col-md-6">
+         <h6 class="text-muted mb-4">Label Card</h6>
+         <div class="card bg-label-primary shadow-none">
+            <div class="card-body">
+               <p>
+                  Some quick example text to build on the card title and make up the bulk of the card's
+                  content. Some quick example text to build on the card title and make up the bulk of the
+                  card's
+                  content. Some example text to build on the card title and the bulk of the card's
+                  content.
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="col-12 col-md-6">
+         <h6 class="text-muted mb-4">Outline Card</h6>
+         <div class="card shadow-none bg-transparent text-primary border border-primary">
+            <div class="card-body">
+               <p>
+                  Some quick example text to build on the card title and make up the bulk of the card's
+                  content. Some quick example text to build on the card title and make up the bulk of the
+                  card's
+                  content. Some example text to build on the card title and the bulk of the card's
+                  content.
+               </p>
+            </div>
+         </div>
+      </div>
+   </div>
+{% endblock content %}

@@ -2,4 +2,6 @@
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features",
   },
+  "liveNjk.rootDirectory": "njk",
+  "liveNjk.outputDirectory": "../",
 }

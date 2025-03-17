@@ -1,0 +1,43 @@
+{% extends "_base.njk" %}
+{% block htmlclass %}
+   h-100
+{% endblock htmlclass %}
+{% block title %}
+   Verify Email
+{% endblock title %}
+{% block bodyclass %}
+   h-100
+{% endblock bodyclass %}
+{% block content %}
+   <div class="mid-center-container">
+      <div class="mid-center-inner">
+         <div class="card">
+            <div class="card-body">
+               <div class="app-brand">
+                  <a href="index.html" class="app-brand-link">
+                     <img src="assets/img/logo.png" alt="Logo" class="logo-image">
+                     <h5 class="logo-text">Vanilla Admin</h5>
+                  </a>
+               </div>
+               <div class="mb-5">
+                  <h5 class="mb-1">Verify your email</h5>
+                  <p>
+                     An verification email has been sent to your email address: <b>abc@xyz.com</b>. Follow the
+                     instructions inside it
+                     to verify it.
+                  </p>
+               </div>
+               <div class="mb-4">
+                  <a href="index.html" class="btn btn-primary w-100">Back to Home Page</a>
+               </div>
+               <p class="text-center">
+                  Didn't get email?
+                  <a href="#">
+                     <span>Resend</span>
+                  </a>
+               </p>
+            </div>
+         </div>
+      </div>
+   </div>
+{% endblock content %}

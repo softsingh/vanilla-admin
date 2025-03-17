@@ -1,0 +1,290 @@
+<div class="sidebar-backdrop"></div>
+<aside class="sidebar">
+    <div class="app-brand">
+        <a href="index.html" class="app-logo">
+            <img src="assets/img/logo.png" alt="Logo" class="logo-image">
+            <h6 class="logo-text">Vanilla Admin</h6>
+        </a>
+        <a href="#" class="sidebar-toggle" data-toggle="sidebar">
+            <i class="bx bx-chevron-left fs-5"></i>
+        </a>
+    </div>
+    <div class="menu">
+        <div class="menu-item {% if file_name == 'dashboard' %}active{% endif %}">
+            <a href="dashboard.html" class="menu-link">
+                <i class="bx bx-home fs-6"></i>
+                <span>Dashboard</span>
+            </a>
+        </div>
+        <div class="menu-header">
+            <small class="menu-header-text">Pages</small>
+        </div>
+        <div class="menu-item">
+            <a href="#" class="menu-link menu-toggle">
+                <i class="bx bx-layout fs-6"></i>
+                <span>Main Pages</span>
+            </a>
+            <div class="menu-sub">
+                <div class="menu-item">
+                    <a href="index.html" target="_blank" class="menu-link">
+                        <span>Landing Page</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="blank.html" target="_blank" class="menu-link">
+                        <span>Blank Page</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="menu-item">
+            <a href="#" class="menu-link menu-toggle">
+                <i class="bx bx-lock fs-6"></i>
+                <span>Authentication</span>
+            </a>
+            <div class="menu-sub">
+                <div class="menu-item">
+                    <a href="register.html" class="menu-link" target="_blank">
+                        <span>Register</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="login.html" class="menu-link" target="_blank">
+                        <span>Login</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="verify-email.html" class="menu-link" target="_blank">
+                        <span>Verify Email</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="forgot-password.html" class="menu-link" target="_blank">
+                        <span>Forgot Password</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="reset-password.html" class="menu-link" target="_blank">
+                        <span>Reset Password</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div
+            class="menu-item {% if file_name in ['add-user', 'account-overview', 'account', 'account-address', 'account-password'] %}active open{% endif %}">
+            <a href="#" class="menu-link menu-toggle">
+                <i class="bx bx-user fs-6"></i>
+                <span>User</span>
+            </a>
+            <div class="menu-sub">
+                <div class="menu-item {% if file_name == 'add-user' %}active{% endif %}">
+                    <a href="add-user.html" class="menu-link">
+                        <span>Add User</span>
+                    </a>
+                </div>
+                <div
+                    class="menu-item {% if file_name in ['account-overview', 'account', 'account-address', 'account-password'] %}open{% endif %}">
+                    <a href="#" class="menu-link menu-toggle">
+                        <span>Account Settings</span>
+                    </a>
+                    <div class="menu-sub">
+                        <div class="menu-item {% if file_name == 'account-overview' %}active{% endif %}">
+                            <a href="account-overview.html" class="menu-link">
+                                <span>Overview</span>
+                            </a>
+                        </div>
+                        <div class="menu-item {% if file_name == 'account' %}active{% endif %}">
+                            <a href="account.html" class="menu-link">
+                                <span>Account</span>
+                            </a>
+                        </div>
+                        <div class="menu-item {% if file_name == 'account-address' %}active{% endif %}">
+                            <a href="account-address.html" class="menu-link">
+                                <span>Address</span>
+                            </a>
+                        </div>
+                        <div class="menu-item {% if file_name == 'account-password' %}active{% endif %}">
+                            <a href="account-password.html" class="menu-link">
+                                <span>Passsword</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-item">
+            <a href="#" class="menu-link menu-toggle">
+                <i class="bx bx-layout fs-6"></i>
+                <span>Miscellaneous</span>
+            </a>
+            <div class="menu-sub">
+                <div class="menu-item">
+                    <a href="forbidden.html" target="_blank" class="menu-link">
+                        <span>Forbidden</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="not-authorized.html" target="_blank" class="menu-link">
+                        <span>Not Authorized</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="not-found.html" target="_blank" class="menu-link">
+                        <span>Not found</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="under-maintenance.html" target="_blank" class="menu-link">
+                        <span>Under Maintenance</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="menu-header">
+            <small class="menu-header-text">Components</small>
+        </div>
+        <div
+            class="menu-item {% if file_name in ['accordions', 'alerts', 'badges', 'breadcrumbs', 'buttons', 'cards', 'carousels', 'dropdowns', 'modals', 'navs', 'navbars', 'paginations', 'toasts', 'tooltips'] %}active open{% endif %}">
+            <a href="#" class="menu-link menu-toggle">
+                <i class="bx bx-rectangle fs-6"></i>
+                <span>Simple</span>
+            </a>
+            <div class="menu-sub">
+                <div class="menu-item {% if file_name == 'accordions' %}active{% endif %}">
+                    <a href="accordions.html" class="menu-link">
+                        <span>Accordions</span>
+                    </a>
+                </div>
+                <div class="menu-item {% if file_name == 'alerts' %}active{% endif %}">
+                    <a href="alerts.html" class="menu-link">
+                        <span>Alerts</span>
+                    </a>
+                </div>
+                <div class="menu-item {% if file_name == 'badges' %}active{% endif %}">
+                    <a href="badges.html" class="menu-link">
+                        <span>Badges</span>
+                    </a>
+                </div>
+                <div class="menu-item {% if file_name == 'breadcrumbs' %}active{% endif %}">
+                    <a href="breadcrumbs.html" class="menu-link">
+                        <span>Breadcrumbs</span>
+                    </a>
+                </div>
+                <div class="menu-item {% if file_name == 'buttons' %}active{% endif %}">
+                    <a href="buttons.html" class="menu-link">
+                        <span>Buttons</span>
+                    </a>
+                </div>
+                <div class="menu-item {% if file_name == 'cards' %}active{% endif %}">
+                    <a href="cards.html" class="menu-link">
+                        <span>Cards</span>
+                    </a>
+                </div>
+                <div class="menu-item  {% if file_name == 'carousels' %}active{% endif %}">
+                    <a href="carousels.html" class="menu-link">
+                        <span>Carousels</span>
+                    </a>
+                </div>
+                <div class="menu-item {% if file_name == 'dropdowns' %}active{% endif %}">
+                    <a href="dropdowns.html" class="menu-link">
+                        <span>Dropdowns</span>
+                    </a>
+                </div>
+                <div class="menu-item {% if file_name == 'modals' %}active{% endif %}">
+                    <a href="modals.html" class="menu-link">
+                        <span>Modals</span>
+                    </a>
+                </div>
+                <div class="menu-item {% if file_name == 'navs' %}active{% endif %}">
+                    <a href="navs.html" class="menu-link">
+                        <span>Navs</span>
+                    </a>
+                </div>
+                <div class="menu-item {% if file_name == 'navbars' %}active{% endif %}">
+                    <a href="navbars.html" class="menu-link">
+                        <span>Navbars</span>
+                    </a>
+                </div>
+                <div class="menu-item {% if file_name == 'paginations' %}active{% endif %}">
+                    <a href="paginations.html" class="menu-link">
+                        <span>Paginations</span>
+                    </a>
+                </div>
+                <div class="menu-item {% if file_name == 'toasts' %}active{% endif %}">
+                    <a href="toasts.html" class="menu-link">
+                        <span>Toasts</span>
+                    </a>
+                </div>
+                <div class="menu-item {% if file_name == 'tooltips' %}active{% endif %}">
+                    <a href="tooltips.html" class="menu-link">
+                        <span>Tooltips</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="menu-item {% if file_name in ['avatars', 'color-palettes'] %}active open{% endif %}">
+            <a href="#" class="menu-link menu-toggle">
+                <i class="bx bx-copy fs-6"></i>
+                <span>Advance</span>
+            </a>
+            <div class="menu-sub">
+                <div class="menu-item {% if file_name == 'avatars' %}active{% endif %}">
+                    <a href="avatars.html" class="menu-link">
+                        <span>Avatars</span>
+                    </a>
+                </div>
+                <div class="menu-item {% if file_name == 'color-palettes' %}active{% endif %}">
+                    <a href="color-palettes.html" class="menu-link">
+                        <span>Color Palettes</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="menu-header">
+            <small class="menu-header-text">Forms & Tables</small>
+        </div>
+        <div
+            class="menu-item {% if file_name in ['form-elements-basic', 'form-elements-advance'] %}active open{% endif %}">
+            <a href="#" class="menu-link menu-toggle">
+                <i class="bx bx-detail fs-6"></i>
+                <span>Form Elements</span>
+            </a>
+            <div class="menu-sub">
+                <div class="menu-item {% if file_name == 'form-elements-basic' %}active{% endif %}">
+                    <a href="form-elements-basic.html" class="menu-link">
+                        <span>Basic</span>
+                    </a>
+                </div>
+                <div class="menu-item {% if file_name == 'form-elements-advance' %}active{% endif %}">
+                    <a href="form-elements-advance.html" class="menu-link">
+                        <span>Advance</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="menu-item">
+            <a href="#" class="menu-link menu-toggle">
+                <i class="bx bx-detail fs-6"></i>
+                <span>Form Layouts</span>
+            </a>
+            <div class="menu-sub">
+                <div class="menu-item">
+                    <a href="#" class="menu-link">
+                        <span>Layout - 1</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="#" class="menu-link">
+                        <span>Layout - 2</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="menu-item">
+            <a href="#" class="menu-link">
+                <i class="bx bx-table fs-6"></i>
+                <span>Tables</span>
+            </a>
+        </div>
+    </div>
+</aside>

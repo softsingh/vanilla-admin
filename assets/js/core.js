@@ -421,6 +421,18 @@ sidebarBackdrop?.addEventListener('click', () => {
   document.body.classList.add('sidebar-hidden');
 });
 
+/////////////////// Toast ////////////////////
+
+const toastCloseButtons = document.querySelectorAll('.toast-header .btn-close');
+
+toastCloseButtons.forEach((toastCloseButton) =>
+  toastCloseButton.addEventListener('click', (event) => {
+    const toast = toastCloseButton.closest('.toast');
+    toast?.classList.remove('show');
+    event.stopPropagation();
+  })
+);
+
 //////////////////// Click on Empty Area ////////////////////
 
 document.addEventListener('click', (event) => {

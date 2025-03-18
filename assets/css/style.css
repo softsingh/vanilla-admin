@@ -131,7 +131,6 @@
   }
 }
 
-
 /*-------------------------------------*/
 /*             Dashboard               */
 /*-------------------------------------*/
@@ -454,4 +453,15 @@ body.sidebar-hidden .navbar .sidebar-toggle {
   .dash-table-pagination-container {
     justify-content: center;
   }
+}
+
+/*-------------------------------------*/
+/*                Toast                */
+/*-------------------------------------*/
+
+.toast-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 9999;
 }

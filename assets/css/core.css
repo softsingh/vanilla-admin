@@ -18,6 +18,7 @@
   --dropdown-z-index: 998;
   --modal-backdrop-z-index: 999;
   --modal-z-index: 1000;
+  --toast-z-index: 1001;
 }
 
 /* Breakpoints */
@@ -41,7 +42,7 @@
   --primary-lightest-color: hsl(240, 100%, 95%);
   --primary-lighter-color: hsl(240, 100%, 88%);
   --primary-light-color: hsl(240, 100%, 78%);
-  --primary-color: #6666ff;
+  --primary-color: hsl(240, 100%, 70%);
   --primary-dark-color: hsl(240, 100%, 60%);
   --primary-darker-color: hsl(240, 100%, 50%);
   --primary-darkest-color: hsl(240, 100%, 40%);
@@ -3130,20 +3131,23 @@ textarea {
   top: 1rem;
   right: 1rem;
   min-width: 250px;
+  max-width: 400px;
   padding: 1rem;
   border-radius: var(--border-radius);
   box-shadow: 0 0.2rem 1.5rem 1rem hsla(210, 30%, 20%, 0.1);
-  background-color: #fff;
-  color: #000;
+  background-color: var(--white-color);
+  color: var(--body-color);
   opacity: 0;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   transform: translateY(-100%);
-  z-index: 1050;
+  z-index: var(--toast-z-index);
 }
+
 .toast.show {
   opacity: 0.95;
   transform: translateY(0);
 }
+
 .toast-header {
   display: flex;
   align-items: center;
@@ -3151,10 +3155,12 @@ textarea {
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
+
 .toast-header .toast-title {
   margin: 0;
   font-size: 1rem;
 }
+
 .toast-header .btn-close {
   position: absolute;
   right: -0.5rem;
@@ -3168,32 +3174,66 @@ textarea {
   background-size: 0.65rem;
   transition: all 0.23s ease 0.1s;
 }
+
 .toast-header .btn-close:hover {
   right: -0.3rem;
   top: -0.3rem;
 }
+
 .toast-body {
   font-size: 0.875rem;
 }
+
 .toast-primary {
-  background-color: var(--primary-color);
-  color: var(--white-color);
+  background-color: var(--primary-color) !important;
+  color: var(--white-color) !important;
+  box-shadow: 0 0.25rem 1rem color-mix(in srgb, var(--primary-color), transparent 20%);
 }
+
+.toast-secondary {
+  background-color: var(--secondary-color) !important;
+  color: var(--white-color) !important;
+  box-shadow: 0 0.25rem 1rem color-mix(in srgb, var(--secondary-color), transparent 20%);
+}
+
 .toast-success {
-  background-color: #d4edda;
-  color: #155724;
+  background-color: var(--success-color) !important;
+  color: var(--white-color) !important;
+  box-shadow: 0 0.25rem 1rem color-mix(in srgb, var(--success-color), transparent 20%);
 }
-.toast-error {
-  background-color: #f8d7da;
-  color: #721c24;
+
+.toast-danger {
+  background-color: var(--danger-color) !important;
+  color: var(--white-color) !important;
+  box-shadow: 0 0.25rem 1rem color-mix(in srgb, var(--danger-color), transparent 20%);
 }
+
+.toast-danger .toast-header .btn-close {
+  background-color: var(--warning-color);
+}
+
 .toast-warning {
-  background-color: #fff3cd;
-  color: #856404;
+  background-color: var(--warning-color) !important;
+  color: var(--white-color) !important;
+  box-shadow: 0 0.25rem 1rem color-mix(in srgb, var(--warning-color), transparent 20%);
 }
+
 .toast-info {
-  background-color: #d1ecf1;
-  color: #0c5460;
+  background-color: var(--info-color) !important;
+  color: var(--white-color) !important;
+  box-shadow: 0 0.25rem 1rem color-mix(in srgb, var(--info-color), transparent 20%);
+}
+
+.toast-light {
+  background-color: var(--light-dark-color) !important;
+  color: var(--white-color) !important;
+  box-shadow: 0 0.25rem 1rem color-mix(in srgb, var(--light-dark-color), transparent 20%);
+}
+
+.toast-dark {
+  background-color: var(--dark-color) !important;
+  color: var(--white-color) !important;
+  box-shadow: 0 0.25rem 1rem color-mix(in srgb, var(--dark-color), transparent 20%);
 }
 
 /*--------------------------------------------------------------------------*/

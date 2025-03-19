@@ -459,6 +459,14 @@ body.sidebar-hidden .navbar .sidebar-toggle {
 /*                Toast                */
 /*-------------------------------------*/
 
+.demo {
+  padding: 1.5rem;
+}
+
+.demo .toast {
+  position: static;
+}
+
 .toast-container {
   position: fixed;
   top: 1rem;

@@ -149,6 +149,7 @@ showToastButton?.addEventListener('click', () => {
   defaultToast.classList.add('show');
   setTimeout(() => {
     defaultToast.classList.remove('show');
+    // defaultToast.style.display = 'none';
   }, 3000);
 }
 );

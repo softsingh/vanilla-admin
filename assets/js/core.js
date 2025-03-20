@@ -429,6 +429,7 @@ toastCloseButtons.forEach((toastCloseButton) =>
   toastCloseButton.addEventListener('click', (event) => {
     const toast = toastCloseButton.closest('.toast');
     toast?.classList.remove('show');
+    // toast?.style.display = 'none';
     event.stopPropagation();
   })
 );

@@ -467,6 +467,10 @@ body.sidebar-hidden .navbar .sidebar-toggle {
   position: static;
 }
 
+.demo .toast:not(.show) {
+  display: none;
+}
+
 .toast-container {
   position: fixed;
   top: 1rem;

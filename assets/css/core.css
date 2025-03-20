@@ -3134,7 +3134,7 @@ textarea {
   max-width: 400px;
   padding: 1rem;
   border-radius: var(--border-radius);
-  box-shadow: 0 0.2rem 1.5rem 1rem hsla(210, 30%, 20%, 0.1);
+  box-shadow: 0 0.2rem 1.5rem 1rem rgba(36, 51, 66, 0.1);
   background-color: var(--white-color);
   color: var(--body-color);
   opacity: 0;
@@ -3144,7 +3144,7 @@ textarea {
 }
 
 .toast.show {
-  opacity: 0.95;
+  opacity: 0.9;
   transform: translateY(0);
 }
 

@@ -727,13 +727,57 @@
                <div class="col-12 col-md-6">
                   <div class="card">
                      <div class="card-header pb-0">
-                        <h5>Default</h5>
+                        <h5>Toast Position</h5>
                      </div>
                      <div class="card-body">
-                        <button class="btn btn-primary" id="btnShowToast">Show Toast</button>
+                        <div class="row g-2">
+                           <div class="col-12">
+                              <button class="btn btn-primary" data-toggle="toast" data-target="#toastTopLeft">Top
+                                 Left</button>
+                              <button class="btn btn-primary" data-toggle="toast" data-target="#toastTopCenter">Top
+                                 Center</button>
+                              <button class="btn btn-primary" data-toggle="toast" data-target="#toastTopRight">Top
+                                 Right</button>
+                           </div>
+                           <div class="col-12">
+                              <button class="btn btn-primary" data-toggle="toast" data-target="#toastTopLeft">Top
+                                 Left</button>
+                              <button class="btn btn-primary" data-toggle="toast" data-target="#toastTopCenter">Top
+                                 Center</button>
+                              <button class="btn btn-primary" data-toggle="toast" data-target="#toastTopRight">Top
+                                 Right</button>
+                           </div>
+                        </div>
                      </div>
                   </div>
-                  <div class="toast toast-dark" id="defaultToast">
+                  <div class="toast toast-dark top-0 left-0 m-4" id="toastTopLeft" data-delay="3000">
+                     <div class="toast-header">
+                        <div class="d-flex align-items-center gap-2">
+                           <i class="bx bx-bell fs-5"></i>
+                           <div class="fw-bold">Toast Header</div>
+                        </div>
+                        <small>11 Min Ago</small>
+                        <button type="button" class="btn-close"></button>
+                     </div>
+                     <div class="toast-body">
+                        This is a sample toast message. This is a sample toast message. This is a sample toast message.
+                     </div>
+                  </div>
+                  <div class="toast toast-dark top-0 left-50 translate-middle-x m-4" id="toastTopCenter"
+                     data-delay="3000">
+                     <div class="toast-header">
+                        <div class="d-flex align-items-center gap-2">
+                           <i class="bx bx-bell fs-5"></i>
+                           <div class="fw-bold">Toast Header</div>
+                        </div>
+                        <small>11 Min Ago</small>
+                        <button type="button" class="btn-close"></button>
+                     </div>
+                     <div class="toast-body">
+                        This is a sample toast message. This is a sample toast message. This is a sample toast message.
+                     </div>
+                  </div>
+                  <div class="toast toast-dark top-0 right-0 m-4" id="toastTopRight" data-delay="3000">
                      <div class="toast-header">
                         <div class="d-flex align-items-center gap-2">
                            <i class="bx bx-bell fs-5"></i>

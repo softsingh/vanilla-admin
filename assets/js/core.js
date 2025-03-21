@@ -423,13 +423,33 @@ sidebarBackdrop?.addEventListener('click', () => {
 
 /////////////////// Toast ////////////////////
 
+const toastToggles = document.querySelectorAll('[data-toggle="toast"]');
+
+toastToggles.forEach((toastToggle) =>
+  toastToggle.addEventListener('click', (event) => {
+    const targetToast = toastToggle.getAttribute('data-target');
+    const toast = document.querySelector(targetToast)
+    let delay = parseInt(toast.getAttribute('data-delay'), 10);
+    if (isNaN(delay)) {
+      delay = 3000;
+    }
+
+    toast?.classList.add('show');
+
+    setTimeout(() => {
+      toast?.classList.remove('show');
+    }, delay);
+
+    event.stopPropagation();
+  })
+);
+
 const toastCloseButtons = document.querySelectorAll('.toast-header .btn-close');
 
 toastCloseButtons.forEach((toastCloseButton) =>
   toastCloseButton.addEventListener('click', (event) => {
     const toast = toastCloseButton.closest('.toast');
     toast?.classList.remove('show');
-    // toast?.style.display = 'none';
     event.stopPropagation();
   })
 );

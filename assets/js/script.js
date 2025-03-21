@@ -142,17 +142,16 @@ themeToggle?.addEventListener('click', () => {
 
 //////////////////// Toast ////////////////////
 
-showToastButton = document.querySelector('#btnShowToast');
-defaultToast = document.querySelector('#defaultToast');
+// showToastButton = document.querySelector('#btnShowToast');
+// defaultToast = document.querySelector('#defaultToast');
 
-showToastButton?.addEventListener('click', () => {
-  defaultToast.classList.add('show');
-  setTimeout(() => {
-    defaultToast.classList.remove('show');
-    // defaultToast.style.display = 'none';
-  }, 3000);
-}
-);
+// showToastButton?.addEventListener('click', () => {
+//   defaultToast.classList.add('show');
+//   setTimeout(() => {
+//     defaultToast.classList.remove('show');
+//   }, 3000);
+// }
+// );
 
 //////////////////// User List (Dashboard) ////////////////////
 

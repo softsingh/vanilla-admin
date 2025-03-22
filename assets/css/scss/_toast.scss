@@ -2,10 +2,15 @@
 /*                Toast                */
 /*-------------------------------------*/
 
-.toast {
+.toast-container {
     position: fixed;
-    // top: 1rem;
-    // right: 1rem;
+    top: 1rem;
+    right: 1rem;
+    z-index: 9999;
+}
+
+.toast {
+    position: relative;
     min-width: 250px;
     max-width: 400px;
     padding: 1rem;
@@ -13,15 +18,50 @@
     box-shadow: 0 0.2rem 1.5rem 1rem rgba(36, 51, 66, 0.1);
     background-color: var(--white-color);
     color: var(--body-color);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    transform: translateY(-100%);
+    // opacity: 0;
+    // transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    // transform: translateY(-100%);
     z-index: var(--toast-z-index);
+    display: none;
 }
 
 .toast.show {
-    opacity: 0.9;
-    transform: translateY(0);
+    // opacity: 0.9;
+    // transform: translateY(0);
+    display: block;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 0;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(20px);
+        opacity: 1;
+    }
+}
+
+.slide.show {
+    display: block;
+    animation: slideDown 0.5s ease-out forwards;
+}
+
+.slide.hide {
+    animation: slideUp 0.5s ease-in forwards;
 }
 
 .toast-header {
@@ -60,54 +100,18 @@
     font-size: 0.875rem;
 }
 
-.toast-primary {
-    background-color: var(--primary-color) !important;
-    color: var(--white-color) !important;
-    box-shadow: 0 0.25rem 1rem color-mix(in srgb, var(--primary-color), transparent 20%);
-}
+/* Toast Colors */
 
-.toast-secondary {
-    background-color: var(--secondary-color) !important;
-    color: var(--white-color) !important;
-    box-shadow: 0 0.25rem 1rem color-mix(in srgb, var(--secondary-color), transparent 20%);
-}
+$colors: primary, secondary, success, danger, warning, info, light, dark;
 
-.toast-success {
-    background-color: var(--success-color) !important;
-    color: var(--white-color) !important;
-    box-shadow: 0 0.25rem 1rem color-mix(in srgb, var(--success-color), transparent 20%);
-}
-
-.toast-danger {
-    background-color: var(--danger-color) !important;
-    color: var(--white-color) !important;
-    box-shadow: 0 0.25rem 1rem color-mix(in srgb, var(--danger-color), transparent 20%);
+@each $color in $colors {
+    .toast-#{$color} {
+        background-color: var(--#{$color}-color) !important;
+        color: var(--white-color) !important;
+        box-shadow: 0 0.25rem 1rem color-mix(in srgb, var(--#{$color}-color), transparent 20%);
+    }
 }
 
 .toast-danger .toast-header .btn-close {
     background-color: var(--warning-color);
-}
-
-.toast-warning {
-    background-color: var(--warning-color) !important;
-    color: var(--white-color) !important;
-    box-shadow: 0 0.25rem 1rem color-mix(in srgb, var(--warning-color), transparent 20%);
-}
-
-.toast-info {
-    background-color: var(--info-color) !important;
-    color: var(--white-color) !important;
-    box-shadow: 0 0.25rem 1rem color-mix(in srgb, var(--info-color), transparent 20%);
-}
-
-.toast-light {
-    background-color: var(--light-dark-color) !important;
-    color: var(--white-color) !important;
-    box-shadow: 0 0.25rem 1rem color-mix(in srgb, var(--light-dark-color), transparent 20%);
-}
-
-.toast-dark {
-    background-color: var(--dark-color) !important;
-    color: var(--white-color) !important;
-    box-shadow: 0 0.25rem 1rem color-mix(in srgb, var(--dark-color), transparent 20%);
 }

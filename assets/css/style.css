@@ -65,9 +65,9 @@
   transform: translate(-0.7rem, 0.1rem);
 }
 
-.badge-container>* {
+/* .badge-container>* {
   margin: 1rem 0.25rem 0 0 !important;
-}
+} */
 
 /*-------------------------------------*/
 /*                 Box                 */
@@ -459,21 +459,6 @@ body.sidebar-hidden .navbar .sidebar-toggle {
 /*                Toast                */
 /*-------------------------------------*/
 
-.demo {
-  padding: 1.5rem;
-}
-
-.demo .toast {
-  position: static;
-}
-
-.demo .toast:not(.show) {
-  display: none;
-}
-
-.toast-container {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  z-index: 9999;
+.card-body.toast-colors {
+  z-index: 1;
 }

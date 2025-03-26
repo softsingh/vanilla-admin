@@ -421,6 +421,60 @@ sidebarBackdrop?.addEventListener('click', () => {
   document.body.classList.add('sidebar-hidden');
 });
 
+/////////////////// Toast ////////////////////
+
+const toastToggles = document.querySelectorAll('[data-toggle="toast"]');
+
+toastToggles.forEach((toastToggle) =>
+  toastToggle.addEventListener('click', (event) => {
+    const targetToast = toastToggle.getAttribute('data-target');
+    const toast = document.querySelector(targetToast)
+
+    if (toast) {
+
+      let delay = parseInt(toast.getAttribute('data-delay'), 10);
+
+      if (isNaN(delay)) {
+        delay = 3000;
+      }
+
+      toast.style.display = 'block';
+      toast.classList.add('show');
+
+      setTimeout(() => {
+        toast.classList.remove('show');
+        toast.classList.add('hide');
+
+        // Wait for animation to finish before hiding completely
+        setTimeout(() => {
+          toast.classList.remove('hide');
+          toast.style.display = 'none';
+        }, 300); // Match animation duration
+
+      }, delay);
+    }
+
+    event.stopPropagation();
+  })
+);
+
+
+const toastCloseButtons = document.querySelectorAll('.toast-header .btn-close');
+
+toastCloseButtons.forEach((toastCloseButton) =>
+  toastCloseButton.addEventListener('click', (event) => {
+    const toast = toastCloseButton.closest('.toast');
+
+    if (toast) {
+      toast.classList.remove('show');
+      toast.classList.remove('hide');
+      toast.style.display = 'none';
+    }
+
+    event.stopPropagation();
+  })
+);
+
 //////////////////// Click on Empty Area ////////////////////
 
 document.addEventListener('click', (event) => {

@@ -809,6 +809,62 @@ small,
 /*              Margin                 */
 /*-------------------------------------*/
 
+.m-0 {
+  margin: 0 !important
+}
+
+.m-1 {
+  margin: .25rem !important
+}
+
+.m-2 {
+  margin: .5rem !important
+}
+
+.m-3 {
+  margin: .75rem !important
+}
+
+.m-4 {
+  margin: 1rem !important
+}
+
+.m-5 {
+  margin: 1.25rem !important
+}
+
+.m-6 {
+  margin: 1.5rem !important
+}
+
+.m-7 {
+  margin: 1.75rem !important
+}
+
+.m-8 {
+  margin: 2rem !important
+}
+
+.m-9 {
+  margin: 2.25rem !important
+}
+
+.m-10 {
+  margin: 2.5rem !important
+}
+
+.m-11 {
+  margin: 2.75rem !important
+}
+
+.m-12 {
+  margin: 3rem !important
+}
+
+.m-auto {
+  margin: auto !important
+}
+
 .ms-0 {
   margin-left: 0;
 }
@@ -1316,6 +1372,64 @@ small,
   position: relative;
 }
 
+.position-fixed {
+  position: fixed;
+}
+
+.left-0 {
+  inset-inline-start: 0 !important
+}
+
+.left-40 {
+  inset-inline-start: 40% !important
+}
+
+.left-50 {
+  inset-inline-start: 50% !important
+}
+
+.left-100 {
+  inset-inline-start: 100% !important
+}
+
+.right-0 {
+  inset-inline-end: 0 !important
+}
+
+.right-50 {
+  inset-inline-end: 50% !important
+}
+
+.right-100 {
+  inset-inline-end: 100% !important
+}
+
+.top-0 {
+  inset-block-start: 0 !important
+}
+
+.top-50 {
+  inset-block-start: 50% !important
+}
+
+.top-100 {
+  inset-block-start: 100% !important
+}
+
+.bottom-0 {
+  inset-block-end: 0 !important
+}
+
+.bottom-50 {
+  inset-block-end: 50% !important
+}
+
+.bottom-100 {
+  inset-block-end: 100% !important
+}
+
+
+
 /*-------------------------------------*/
 /*               Scroll                */
 /*-------------------------------------*/
@@ -1463,6 +1577,22 @@ small,
 
 .text-white {
   color: var(--white-color);
+}
+
+/*-------------------------------------*/
+/*              Translate              */
+/*-------------------------------------*/
+
+.translate-middle {
+  transform: translate(-50%, -50%) !important
+}
+
+.translate-middle-x {
+  transform: translateX(-50%) !important
+}
+
+.translate-middle-y {
+  transform: translateY(-50%) !important
 }
 
 /*-------------------------------------*/

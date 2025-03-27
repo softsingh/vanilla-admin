@@ -10,7 +10,7 @@ Live Preview: [Vanilla Admin](https://softsingh.github.io/vanilla-admin/)
 ## To Do
 - Breadcrumbs
 - Carousels
-- Toasts
+- Toast Stacking
 - Tooltips
 - Icons
 - Progress Bars

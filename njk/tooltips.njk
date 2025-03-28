@@ -1,17 +1,64 @@
 {% set file_name = "tooltips" %}
 {% extends "_dash_base.njk" %}
 {% block title %}
-   Tooltips
+Tooltips
 {% endblock title %}
 {% block content %}
-   <div class="row g-6">
-      <div class="col-12 col-md-6">
-         <div class="card">
-            <div class="card-header pb-0">
-               <h5>Default</h5>
-            </div>
-            <div class="card-body"></div>
+<div class="row g-6">
+   <div class="col-12 col-md-6">
+      <div class="card">
+         <div class="card-header pb-0">
+            <h5>Default</h5>
+         </div>
+         <div class="card-body">
+            <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+               title="Tooltip on topA">
+               Tooltip on top
+            </button>
+            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right"
+               title="Tooltip on right">
+               Tooltip on right
+            </button>
+            <button type="button" class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="bottom"
+               title="Tooltip on bottom">
+               Tooltip on bottom
+            </button>
+            <button type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Tooltip on left">
+               Tooltip on left
+            </button>
+
+            <script>
+               document.addEventListener('DOMContentLoaded', function () {
+                  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+                  tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+                     new Tooltip(tooltipTriggerEl);
+                  });
+               });
+
+               function Tooltip(el) {
+                  let tooltipText = el.getAttribute('title');
+                  if (!tooltipText) return;
+
+                  let tooltipDiv = document.createElement('div');
+                  tooltipDiv.className = 'tooltip';
+                  tooltipDiv.textContent = tooltipText;
+                  document.body.appendChild(tooltipDiv);
+
+                  el.addEventListener('mouseenter', function () {
+                     tooltipDiv.style.display = 'block';
+                     let rect = el.getBoundingClientRect();
+                     tooltipDiv.style.left = rect.left + window.pageXOffset + 'px';
+                     tooltipDiv.style.top = rect.top + window.pageYOffset - tooltipDiv.offsetHeight + 'px';
+                  });
+
+                  el.addEventListener('mouseleave', function () {
+                     tooltipDiv.style.display = 'none';
+                  });
+               }
+            </script>
          </div>
       </div>
    </div>
+</div>
 {% endblock content %}

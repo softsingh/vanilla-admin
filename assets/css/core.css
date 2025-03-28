@@ -3450,6 +3450,97 @@ textarea {
   background-color: var(--warning-color);
 }
 
+.tooltip {
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  opacity: 0;
+}
+.tooltip.show {
+  opacity: 0.9;
+}
+
+.tooltip-inner {
+  max-width: 200px;
+  padding: 0.25rem 0.5rem;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+  border-radius: 0.25rem;
+}
+
+.tooltip-arrow {
+  position: absolute;
+  display: block;
+  width: 0.8rem;
+  height: 0.4rem;
+}
+.tooltip-arrow::before {
+  position: absolute;
+  content: "";
+  border-color: transparent;
+  border-style: solid;
+}
+
+.tooltip-top {
+  padding: 0.4rem 0;
+}
+.tooltip-top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tooltip-top .tooltip-arrow::before {
+  top: 0;
+  border-width: 0.4rem 0.4rem 0;
+  border-top-color: #000;
+}
+
+.tooltip-right {
+  padding: 0 0.4rem;
+}
+.tooltip-right .tooltip-arrow {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.tooltip-right .tooltip-arrow::before {
+  right: 0;
+  border-width: 0.4rem 0.4rem 0.4rem 0;
+  border-right-color: #000;
+}
+
+.tooltip-bottom {
+  padding: 0.4rem 0;
+}
+.tooltip-bottom .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tooltip-bottom .tooltip-arrow::before {
+  bottom: 0;
+  border-width: 0 0.4rem 0.4rem;
+  border-bottom-color: #000;
+}
+
+.tooltip-left {
+  padding: 0 0.4rem;
+}
+.tooltip-left .tooltip-arrow {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.tooltip-left .tooltip-arrow::before {
+  left: 0;
+  border-width: 0.4rem 0 0.4rem 0.4rem;
+  border-left-color: #000;
+}
+
 /*--------------------------------------------------------------------------*/
 /*                             Utility Classes                              */
 /*--------------------------------------------------------------------------*/

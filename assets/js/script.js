@@ -140,19 +140,6 @@ themeToggle?.addEventListener('click', () => {
   }
 });
 
-//////////////////// Toast ////////////////////
-
-// showToastButton = document.querySelector('#btnShowToast');
-// defaultToast = document.querySelector('#defaultToast');
-
-// showToastButton?.addEventListener('click', () => {
-//   defaultToast.classList.add('show');
-//   setTimeout(() => {
-//     defaultToast.classList.remove('show');
-//   }, 3000);
-// }
-// );
-
 //////////////////// User List (Dashboard) ////////////////////
 
 // Delete User List Item

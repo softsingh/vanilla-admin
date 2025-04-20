@@ -1,0 +1,116 @@
+/*-------------------------------------*/
+/*              Tooltip                */
+/*-------------------------------------*/
+
+.tooltip {
+    --tooltip-background-color: var(--black-color);
+    --tooltip-color: var(--white-color);
+    --tooltip-opacity: 0.8;
+
+    position: absolute;
+    z-index: 1070;
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    opacity: 0;
+
+    &.show {
+        opacity: var(--tooltip-opacity);
+    }
+}
+
+.tooltip-inner {
+    max-width: 200px;
+    padding: 0.25rem 0.5rem;
+    color: var(--tooltip-color);
+    text-align: center;
+    background-color: var(--tooltip-background-color);
+    border-radius: 0.25rem;
+}
+
+.tooltip-arrow {
+    position: absolute;
+    display: block;
+    width: 0.8rem;
+    height: 0.4rem;
+
+    &::before {
+        position: absolute;
+        content: '';
+        border-color: transparent;
+        border-style: solid;
+    }
+}
+
+//////////////////// Tooltip Positions ////////////////////
+
+.tooltip-left {
+    transform: translateX(-0.4rem);
+
+    .tooltip-arrow {
+        right: -0.4rem;
+        top: calc(50% - 0.4rem);
+        transform: translate(50%);
+
+        &::before {
+            border-width: 0.4rem 0 0.4rem 0.4rem;
+            border-left-color: var(--tooltip-background-color);
+        }
+    }
+}
+
+.tooltip-right {
+    padding-left: 0.4rem;
+
+    .tooltip-arrow {
+        top: calc(50% - 0.4rem);
+        transform: translate(-50%);
+
+        &::before {
+            border-width: 0.4rem 0.4rem 0.4rem 0;
+            border-right-color: var(--tooltip-background-color);
+        }
+    }
+}
+
+.tooltip-top {
+    transform: translateY(-0.4rem);
+
+    .tooltip-arrow {
+        left: 50%;
+        transform: translateX(-50%);
+
+        &::before {
+            border-width: 0.4rem 0.4rem 0;
+            border-top-color: var(--tooltip-background-color);
+        }
+    }
+}
+
+.tooltip-bottom {
+    padding-top: 0.4rem;
+
+    .tooltip-arrow {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &::before {
+            border-width: 0 0.4rem 0.4rem;
+            border-bottom-color: var(--tooltip-background-color);
+        }
+    }
+}
+
+//////////////////// Tooltip Colors ////////////////////
+
+@import '_color_names.scss';
+
+@each $name in $color-names {
+    .tooltip-#{$name} {
+        --tooltip-background-color: var(--#{$name}-color) !important;
+        --tooltip-color: var(--white-color) !important;
+        --tooltip-opacity: 0.95;
+    }
+}

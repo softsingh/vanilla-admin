@@ -475,8 +475,120 @@ toastCloseButtons.forEach((toastCloseButton) =>
   })
 );
 
+/////////////////// Tooltip ////////////////////
+
+const tooltipToggles = document.querySelectorAll('[data-toggle="tooltip"]');
+
+tooltipToggles.forEach((tooltipToggle) => {
+
+  tooltipToggle.addEventListener('mouseenter', (event) => {
+    const tooltipID = "tooltip_" + getRandomInt(1, 65535);
+    const tooltip = new Tooltip(tooltipToggle, tooltipID);
+    if (!tooltip) return;
+
+    tooltip.classList.add('show');
+    tooltipToggle.setAttribute('data-target', "#" + tooltipID);
+
+    let rect = tooltipToggle.getBoundingClientRect();
+    let tooltipPlacement = tooltipToggle.getAttribute('data-placement');
+
+    switch (tooltipPlacement) {
+      case 'top':
+        tooltip.style.left = rect.left + window.pageXOffset + (tooltipToggle.offsetWidth - tooltip.offsetWidth) / 2 + 'px';
+        tooltip.style.top = rect.top + window.pageYOffset - tooltip.offsetHeight - 2 + 'px';
+        break;
+
+      case 'bottom':
+        tooltip.style.left = rect.left + window.pageXOffset + (tooltipToggle.offsetWidth - tooltip.offsetWidth) / 2 + 'px';
+        tooltip.style.top = rect.top + window.pageYOffset + tooltipToggle.offsetHeight + 2 + 'px';
+        break;
+
+      case 'left':
+        tooltip.style.left = rect.left + window.pageXOffset - tooltip.offsetWidth - 2 + 'px';
+        tooltip.style.top = rect.top + window.pageYOffset + (tooltipToggle.offsetHeight - tooltip.offsetHeight) / 2 + 'px';
+        break;
+
+      case 'right':
+        tooltip.style.left = rect.left + window.pageXOffset + tooltipToggle.offsetWidth + 2 + 'px';
+        tooltip.style.top = rect.top + window.pageYOffset + (tooltipToggle.offsetHeight - tooltip.offsetHeight) / 2 + 'px';
+        break;
+    }
+  });
+
+  tooltipToggle.addEventListener('mouseleave', (event) => {
+    const tooltipTarget = tooltipToggle.getAttribute('data-target');
+    const tooltip = document.querySelector(tooltipTarget);
+    if (tooltip) {
+      tooltip.remove();
+    }
+    tooltipToggle.removeAttribute('data-target');
+  });
+
+});
+
+function Tooltip(el, tooltipID) {
+  let tooltipText = el.getAttribute('data-title');
+  if (!tooltipText) return;
+
+  let tooltipPlacement = el.getAttribute('data-placement');
+
+  switch (tooltipPlacement) {
+    case 'top':
+      tooltipPlacement = 'tooltip-top';
+      break;
+
+    case 'bottom':
+      tooltipPlacement = 'tooltip-bottom';
+      break;
+
+    case 'left':
+      tooltipPlacement = 'tooltip-left';
+      break;
+
+    case 'right':
+      tooltipPlacement = 'tooltip-right';
+      break;
+
+    default:
+      tooltipPlacement = 'tooltip-top';
+  }
+
+  let tooltipDiv = document.createElement('div');
+  tooltipDiv.className = `tooltip ${tooltipPlacement}`;
+
+  const tooltipCustomClass = el.getAttribute('data-custom-class');
+
+  if (tooltipCustomClass) {
+    tooltipDiv.classList.add(tooltipCustomClass);
+  }
+
+  tooltipDiv.setAttribute('id', tooltipID);
+
+  let tooltipInner = document.createElement('div');
+  tooltipInner.className = 'tooltip-inner';
+  tooltipInner.textContent = tooltipText;
+
+  let tooltipArrow = document.createElement('div');
+  tooltipArrow.className = 'tooltip-arrow';
+
+  tooltipDiv.appendChild(tooltipInner);
+  tooltipDiv.appendChild(tooltipArrow);
+
+  document.body.appendChild(tooltipDiv);
+
+  return tooltipDiv;
+}
+
 //////////////////// Click on Empty Area ////////////////////
 
 document.addEventListener('click', (event) => {
   hideAllDropdowns(event);
 });
+
+/////////////////// Library Functions ////////////////////
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}

@@ -1,17 +1,79 @@
 {% set file_name = "tooltips" %}
 {% extends "_dash_base.njk" %}
 {% block title %}
-   Tooltips
+Tooltips
 {% endblock title %}
 {% block content %}
-   <div class="row g-6">
-      <div class="col-12 col-md-6">
-         <div class="card">
-            <div class="card-header pb-0">
-               <h5>Default</h5>
+<div class="row g-6">
+   <div class="col-12">
+      <div class="card">
+         <div class="card-header pb-0">
+            <h5>Tooltip Positions</h5>
+         </div>
+         <div class="card-body">
+            <div class="gap-container-2">
+               <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top"
+                  data-title="This is very long tooltip text to show">
+                  Tooltip on Top
+               </button>
+               <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom"
+                  data-title="This is very long tooltip text to show">
+                  Tooltip on Bottom
+               </button>
+               <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="right"
+                  data-title="This is very long tooltip text to show">
+                  Tooltip on Right
+               </button>
+               <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="left"
+                  data-title="This is very long tooltip text to show">
+                  Tooltip on Left
+               </button>
             </div>
-            <div class="card-body"></div>
          </div>
       </div>
    </div>
+   <div class="col-12">
+      <div class="card">
+         <div class="card-header pb-0">
+            <h5>Tooltip Colors</h5>
+         </div>
+         <div class="card-body">
+            <div class="gap-container-2">
+               <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top"
+                  data-custom-class="tooltip-primary" data-title="Primary tooltip text">
+                  Primary
+               </button>
+               <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top"
+                  data-custom-class="tooltip-secondary" data-title="Secondary tooltip text">
+                  Secondary
+               </button>
+               <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top"
+                  data-custom-class="tooltip-success" data-title="Success tooltip text">
+                  Success
+               </button>
+               <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top"
+                  data-custom-class="tooltip-danger" data-title="Danger tooltip text">
+                  Danger
+               </button>
+               <button type="button" class="btn btn-warning" data-toggle="tooltip" data-placement="top"
+                  data-custom-class="tooltip-warning" data-title="Warning tooltip text">
+                  Warning
+               </button>
+               <button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top"
+                  data-custom-class="tooltip-info" data-title="Info tooltip text">
+                  Info
+               </button>
+               <button type="button" class="btn btn-light" data-toggle="tooltip" data-placement="top"
+                  data-custom-class="tooltip-light" data-title="Light tooltip text">
+                  Light
+               </button>
+               <button type="button" class="btn btn-dark" data-toggle="tooltip" data-placement="top"
+                  data-custom-class="tooltip-dark" data-title="Dark tooltip text">
+                  Dark
+               </button>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
 {% endblock content %}

@@ -155,13 +155,13 @@
 
 //////////////////// Toast Colors ////////////////////
 
-$colors: primary, secondary, success, danger, warning, info, light, dark;
+@import '_color_names.scss';
 
-@each $color in $colors {
-    .toast-#{$color} {
-        background-color: var(--#{$color}-color) !important;
+@each $name in $color-names {
+    .toast-#{$name} {
+        background-color: var(--#{$name}-color) !important;
         color: var(--white-color) !important;
-        box-shadow: 0 0.25rem 1rem color-mix(in srgb, var(--#{$color}-color), transparent 20%);
+        box-shadow: 0 0.25rem 1rem color-mix(in srgb, var(--#{$name}-color), transparent 20%);
     }
 }
 

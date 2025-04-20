@@ -872,9 +872,7 @@ button:not(:disabled),
 .btn-close:disabled,
 .btn-close.disabled {
   pointer-events: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   opacity: 0.25;
 }
 
@@ -1162,9 +1160,7 @@ button:not(:disabled),
   cursor: pointer;
   width: 1.2rem;
   height: 1.2rem;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   background-repeat: no-repeat;
   background-position: center;
   border: 2px solid var(--border-color);
@@ -1235,23 +1231,10 @@ button:not(:disabled),
   border-color: var(--danger-dark-color);
 }
 
-.form-control::-moz-placeholder {
-  color: #b4bdc6;
-  font-weight: 450;
-  opacity: 1;
-}
-
 .form-control::placeholder {
   color: #b4bdc6;
   font-weight: 450;
   opacity: 1;
-}
-
-.form-control::-moz-placeholder, .form-control:focus::-moz-placeholder {
-  transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease;
 }
 
 .form-control::placeholder,
@@ -1260,13 +1243,6 @@ button:not(:disabled),
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
-}
-
-.form-control:focus:not([readonly])::-moz-placeholder {
-  transform: translateX(5px);
-  -moz-transform: translateX(5px);
-  -o-transform: translateX(5px);
-  -webkit-transform: translateX(5px);
 }
 
 .form-control:focus:not([readonly])::placeholder {
@@ -1301,9 +1277,7 @@ button:not(:disabled),
   padding: 0.35rem 0.75rem;
   color: var(--body-color);
   background: var(--white-color);
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   background-image: url("data:image/svg+xml,<svg viewBox='0 0 12 7.333127' fill='none' version='1.1' id='svg1' width='12' height='7.333127' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'><defs id='defs1' /><path d='M 5.9999688,4.6669152 10.666843,0 12,1.3331162 5.9999688,7.3331268 0,1.3331162 1.3331264,0 Z' fill='%2322303e' fill-opacity='0.9' id='path1' style='fill:%23738296;fill-opacity:0.8;stroke-width:1.02851' /></svg>");
   background-repeat: no-repeat;
   background-position: right 0.5rem center;
@@ -3010,8 +2984,7 @@ button:not(:disabled),
   padding: 0.5rem 0.9rem;
   border-radius: var(--border-radius);
   background-color: hsla(0, 0%, 100%, 0.88);
-  -webkit-backdrop-filter: saturate(200%) blur(6px);
-          backdrop-filter: saturate(200%) blur(6px);
+  backdrop-filter: saturate(200%) blur(6px);
   box-shadow: 0 0.2rem 0.5rem 0 hsla(210, 30%, 20%, 0.1);
   z-index: var(--navbar-z-index);
 }
@@ -3450,6 +3423,145 @@ textarea {
   background-color: var(--warning-color);
 }
 
+/*-------------------------------------*/
+/*              Tooltip                */
+/*-------------------------------------*/
+.tooltip {
+  --tooltip-background-color: var(--black-color);
+  --tooltip-color: var(--white-color);
+  --tooltip-opacity: 0.8;
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  opacity: 0;
+}
+.tooltip.show {
+  opacity: var(--tooltip-opacity);
+}
+
+.tooltip-inner {
+  max-width: 200px;
+  padding: 0.25rem 0.5rem;
+  color: var(--tooltip-color);
+  text-align: center;
+  background-color: var(--tooltip-background-color);
+  border-radius: 0.25rem;
+}
+
+.tooltip-arrow {
+  position: absolute;
+  display: block;
+  width: 0.8rem;
+  height: 0.4rem;
+}
+.tooltip-arrow::before {
+  position: absolute;
+  content: "";
+  border-color: transparent;
+  border-style: solid;
+}
+
+.tooltip-left {
+  transform: translateX(-0.4rem);
+}
+.tooltip-left .tooltip-arrow {
+  right: -0.4rem;
+  top: calc(50% - 0.4rem);
+  transform: translate(50%);
+}
+.tooltip-left .tooltip-arrow::before {
+  border-width: 0.4rem 0 0.4rem 0.4rem;
+  border-left-color: var(--tooltip-background-color);
+}
+
+.tooltip-right {
+  padding-left: 0.4rem;
+}
+.tooltip-right .tooltip-arrow {
+  top: calc(50% - 0.4rem);
+  transform: translate(-50%);
+}
+.tooltip-right .tooltip-arrow::before {
+  border-width: 0.4rem 0.4rem 0.4rem 0;
+  border-right-color: var(--tooltip-background-color);
+}
+
+.tooltip-top {
+  transform: translateY(-0.4rem);
+}
+.tooltip-top .tooltip-arrow {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tooltip-top .tooltip-arrow::before {
+  border-width: 0.4rem 0.4rem 0;
+  border-top-color: var(--tooltip-background-color);
+}
+
+.tooltip-bottom {
+  padding-top: 0.4rem;
+}
+.tooltip-bottom .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tooltip-bottom .tooltip-arrow::before {
+  border-width: 0 0.4rem 0.4rem;
+  border-bottom-color: var(--tooltip-background-color);
+}
+
+.tooltip-primary {
+  --tooltip-background-color: var(--primary-color) !important;
+  --tooltip-color: var(--white-color) !important;
+  --tooltip-opacity: 0.95;
+}
+
+.tooltip-secondary {
+  --tooltip-background-color: var(--secondary-color) !important;
+  --tooltip-color: var(--white-color) !important;
+  --tooltip-opacity: 0.95;
+}
+
+.tooltip-success {
+  --tooltip-background-color: var(--success-color) !important;
+  --tooltip-color: var(--white-color) !important;
+  --tooltip-opacity: 0.95;
+}
+
+.tooltip-danger {
+  --tooltip-background-color: var(--danger-color) !important;
+  --tooltip-color: var(--white-color) !important;
+  --tooltip-opacity: 0.95;
+}
+
+.tooltip-warning {
+  --tooltip-background-color: var(--warning-color) !important;
+  --tooltip-color: var(--white-color) !important;
+  --tooltip-opacity: 0.95;
+}
+
+.tooltip-info {
+  --tooltip-background-color: var(--info-color) !important;
+  --tooltip-color: var(--white-color) !important;
+  --tooltip-opacity: 0.95;
+}
+
+.tooltip-light {
+  --tooltip-background-color: var(--light-color) !important;
+  --tooltip-color: var(--white-color) !important;
+  --tooltip-opacity: 0.95;
+}
+
+.tooltip-dark {
+  --tooltip-background-color: var(--dark-color) !important;
+  --tooltip-color: var(--white-color) !important;
+  --tooltip-opacity: 0.95;
+}
+
 /*--------------------------------------------------------------------------*/
 /*                             Utility Classes                              */
 /*--------------------------------------------------------------------------*/
@@ -3786,15 +3898,11 @@ textarea {
 }
 
 .user-select-all {
-  -webkit-user-select: all;
-     -moz-user-select: all;
-          user-select: all;
+  user-select: all;
 }
 
 .user-select-none {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 
 /*-------------------------------------*/

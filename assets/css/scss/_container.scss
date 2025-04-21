@@ -44,17 +44,24 @@
 /*            Gap Container            */
 /*-------------------------------------*/
 
-@mixin _gap-container($postfix, $gap) {
-  .gap-container-#{$postfix} {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    gap: #{$gap}rem;
-  }
+.gap-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-@for $i from 1 through 8 {
-  @include _gap-container($i, 0.25 * $i);
-  @include _gap-container(#{$i}_5, (0.25 * $i) + 0.125);
-}
+// @mixin _gap-container($postfix, $gap) {
+//   .gap-container-#{$postfix} {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: flex-start;
+//     align-items: center;
+//     gap: #{$gap}rem;
+//   }
+// }
+
+// @for $i from 1 through 8 {
+//   @include _gap-container($i, 0.25 * $i);
+//   @include _gap-container(#{$i}_5, (0.25 * $i) + 0.125);
+// }

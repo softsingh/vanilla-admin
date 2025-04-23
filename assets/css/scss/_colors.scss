@@ -96,7 +96,8 @@
 
   --dropdown-divider-color: hsl(210, 8%, 90%);
 
-  --form-control-focus-border-color: hsla(240, 100%, 58%, 0.7);
+  // --form-control-focus-border-color: hsla(240, 100%, 58%, 0.7);
+  --form-control-focus-border-color: color-mix(in srgb, var(--primary-color), transparent 10%);
 
   --heading-color: hsl(210, 18%, 28%);
   --heading-hover-color: hsl(210, 38%, 10%);

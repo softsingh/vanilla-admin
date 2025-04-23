@@ -10,10 +10,16 @@
 
 .form-check-inline {
   display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   margin-right: 0.75rem;
 }
 
 .form-check-input {
+  --form-check-input-checked-bg-color: var(--primary-color);
+  --form-check-input-checked-border-color: var(--primary-color);
+  --form-check-input-shadow-color: var(--primary-color);
+
   cursor: pointer;
   width: 1.2rem;
   height: 1.2rem;
@@ -22,6 +28,22 @@
   background-position: center;
   border: 2px solid var(--border-color);
   border-radius: 0.3rem;
+}
+
+.form-check-input:disabled,
+.form-check-input.disabled,
+.form-check-label:disabled,
+.form-check-label.disabled {
+  opacity: 0.45;
+  user-select: none;
+  pointer-events: none;
+}
+
+.form-check-input[disabled]~.form-check-label,
+.form-check-input:disabled~.form-check-label {
+  cursor: default;
+  pointer-events: none;
+  opacity: .45
 }
 
 .form-check-input[type=checkbox] {
@@ -40,12 +62,26 @@
 .form-check-input:focus {
   outline: 0;
   border-color: var(--form-control-focus-border-color);
-  box-shadow: 0 0.25rem 0.25rem 0.05rem hsla(239, 100%, 70%, 0.2);
+  // box-shadow: 0 0.25rem 0.25rem 0.05rem hsla(239, 100%, 70%, 0.2);
+  box-shadow: 0 0.25rem 0.25rem 0.05rem color-mix(in srgb, var(--form-check-input-shadow-color), transparent 80%);
 }
 
 .form-check-input:checked {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
+  background-color: var(--form-check-input-checked-bg-color);
+  border-color: var(--form-check-input-checked-border-color);
+}
+
+//////////////////// Form Check Colors ////////////////////
+
+@import '_color_names.scss';
+
+@each $name in $color-names {
+  .form-check-#{$name} .form-check-input {
+    --form-check-input-checked-bg-color: var(--#{$name}-color);
+    --form-check-input-checked-border-color: var(--#{$name}-color);
+    --form-control-focus-border-color: var(--#{$name}-color);
+    --form-check-input-shadow-color: var(--#{$name}-color);
+  }
 }
 
 .form-check-label {

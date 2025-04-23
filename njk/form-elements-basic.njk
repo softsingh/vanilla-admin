@@ -1,26 +1,254 @@
 {% set file_name = "form-elements-basic" %}
 {% extends "_dash_base.njk" %}
 {% block title %}
-   Basic Form Elements
+Basic Form Elements
 {% endblock title %}
 {% block content %}
-   <div class="row g-6">
-      <div class="col-12 col-md-6">
-         <div class="card">
-            <div class="card-header pb-0">
-               <h5>Text Input</h5>
+<div class="row g-6">
+   <div class="col-12 col-md-6">
+      <div class="card">
+         <div class="card-header pb-0">
+            <h5>Text Input</h5>
+         </div>
+         <div class="card-body">
+            <div class="mb-4">
+               <label class="form-label mb-2" for="username">Username</label>
+               <input id="username" type="text" class="form-control" placeholder="Enter your username" name="username">
             </div>
-            <div class="card-body">
-               <div class="mb-4">
-                  <label class="form-label mb-2" for="username">Username</label>
-                  <input id="username"
-                         type="text"
-                         class="form-control"
-                         placeholder="Enter your username"
-                         name="username">
+         </div>
+      </div>
+   </div>
+   <div class="col-12 col-md-6">
+      <div class="card">
+         <div class="card-header pb-0">
+            <h5>Select Input</h5>
+         </div>
+         <div class="card-body">
+            <div class="mb-4">
+               <label class="form-label mb-2" for="department">Department</label>
+               <select class="form control form-select" name="department" id="department">
+                  <option value="0">Choose Department ...</option>
+                  <option value="1">Department - 1</option>
+                  <option value="2">Department - 2</option>
+                  <option value="3">Department - 3</option>
+                  <option value="4">Department - 4</option>
+                  <option value="5">Department - 5</option>
+               </select>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-12 col-md-6">
+      <div class="card">
+         <div class="card-header pb-0">
+            <h5>Checkbox</h5>
+         </div>
+         <div class="card-body">
+            <div class="mb-4">
+               <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" id="checkbox1" name="checkbox1" value="checkbox1">
+                  <label class="form-check-label" for="checkbox1">Unchecked</label>
+               </div>
+               <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" id="checked" name="checkbox2" value="checkbox2"
+                     checked>
+                  <label class="form-check-label" for="checkbox2">Checked</label>
+               </div>
+               <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" id="checkbox3" name="checkbox3" value="checkbox3"
+                     disabled>
+                  <label class="form-check-label" for="checkbox3">Disabled Unchecked</label>
+               </div>
+               <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="checkbox4" name="checkbox4" value="checkbox4"
+                     checked disabled>
+                  <label class="form-check-label" for="checkbox4">Disabled Checked</label>
                </div>
             </div>
          </div>
       </div>
    </div>
+   <div class="col-12 col-md-6">
+      <div class="card">
+         <div class="card-header pb-0">
+            <h5>Radio</h5>
+         </div>
+         <div class="card-body">
+            <div class="mb-4">
+               <div class="form-check mb-3">
+                  <input class="form-check-input" type="radio" id="radio1" name="radio1" value="radio1">
+                  <label class="form-check-label" for="radio1">Unchecked</label>
+               </div>
+               <div class="form-check mb-3">
+                  <input class="form-check-input" type="radio" id="radio2" name="radio1" value="radio2" checked>
+                  <label class="form-check-label" for="radio2">Checked</label>
+               </div>
+               <div class="form-check mb-3">
+                  <input class="form-check-input" type="radio" id="radio3" name="radio2" value="radio3" disabled>
+                  <label class="form-check-label" for="radio3">Disabled Unchecked</label>
+               </div>
+               <div class="form-check mb-3">
+                  <input class="form-check-input" type="radio" id="radio3" name="radio2" value="radio3" checked
+                     disabled>
+                  <label class="form-check-label" for="radio2">Disabled Checked</label>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-12 col-md-6">
+      <div class="card">
+         <div class="card-header pb-0">
+            <h5>Inline Checkbox</h5>
+         </div>
+         <div class="card-body">
+            <div class="mb-4">
+               <div class="form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlinecheckbox1" name="inlinecheckbox1"
+                     value="inlinecheckbox1">
+                  <label class="form-check-label" for="inlinecheckbox1">Option-1</label>
+               </div>
+               <div class="form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlinecheckbox2" name="inlinecheckbox2"
+                     value="inlinecheckbox2" checked>
+                  <label class="form-check-label" for="inlinecheckbox2">Option-2</label>
+               </div>
+               <div class="form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlinecheckbox3" name="inlinecheckbox3"
+                     value="inlinecheckbox3" disabled>
+                  <label class="form-check-label" for="inlinecheckbox3">Option-3</label>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-12 col-md-6">
+      <div class="card">
+         <div class="card-header pb-0">
+            <h5>Inline Radio</h5>
+         </div>
+         <div class="card-body">
+            <div class="mb-4">
+               <div class="form-check-inline">
+                  <input class="form-check-input" type="radio" id="inlineradio1" name="inlineradio"
+                     value="inlineradio1">
+                  <label class="form-check-label" for="inlineradio1">Option-1</label>
+               </div>
+               <div class="form-check-inline">
+                  <input class="form-check-input" type="radio" id="inlineradio2" name="inlineradio" value="inlineradio2"
+                     checked>
+                  <label class="form-check-label" for="inlineradio2">Option-2</label>
+               </div>
+               <div class="form-check-inline">
+                  <input class="form-check-input" type="radio" id="inlineradio3" name="inlineradio" value="inlineradio3"
+                     disabled>
+                  <label class="form-check-label" for="inlineradio3">Option-3</label>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-12 col-md-6">
+      <div class="card">
+         <div class="card-header pb-0">
+            <h5>Checkbox Colors</h5>
+         </div>
+         <div class="card-body">
+            <div class="mb-4">
+               <div class="form-check form-check-primary mb-3">
+                  <input class="form-check-input" type="checkbox" id="checkboxPrimary" name="checkboxPrimary"
+                     value="checkboxPrimary" checked>
+                  <label class="form-check-label" for="checkboxPrimary">Primary</label>
+               </div>
+               <div class="form-check form-check-secondary mb-3">
+                  <input class="form-check-input" type="checkbox" id="checkboxSecondary" name="checkboxSecondary"
+                     value="checkboxSecondary" checked>
+                  <label class="form-check-label" for="checkboxSecondary">Secondary</label>
+               </div>
+               <div class="form-check form-check-success mb-3">
+                  <input class="form-check-input" type="checkbox" id="checkboxSuccess" name="checkboxSuccess"
+                     value="checkboxSuccess" checked>
+                  <label class="form-check-label" for="checkboxSuccess">Success</label>
+               </div>
+               <div class="form-check form-check-danger mb-3">
+                  <input class="form-check-input" type="checkbox" id="checkboxDanger" name="checkboxDanger"
+                     value="checkboxDanger" checked>
+                  <label class="form-check-label" for="checkboxDanger">Danger</label>
+               </div>
+               <div class="form-check form-check-warning mb-3">
+                  <input class="form-check-input" type="checkbox" id="checkboxWarning" name="checkboxWarning"
+                     value="checkboxWarning" checked>
+                  <label class="form-check-label" for="checkboxWarning">Warning</label>
+               </div>
+               <div class="form-check form-check-info mb-3">
+                  <input class="form-check-input" type="checkbox" id="checkboxInfo" name="checkboxInfo"
+                     value="checkboxInfo" checked>
+                  <label class="form-check-label" for="checkboxInfo">Info</label>
+               </div>
+               <div class="form-check form-check-light mb-3">
+                  <input class="form-check-input" type="checkbox" id="checkboxLight" name="checkboxLight"
+                     value="checkboxLight" checked>
+                  <label class="form-check-label" for="checkboxLight">Light</label>
+               </div>
+               <div class="form-check form-check-dark mb-3">
+                  <input class="form-check-input" type="checkbox" id="checkboxDark" name="checkboxDark"
+                     value="checkboxDark" checked>
+                  <label class="form-check-label" for="checkboxDark">Dark</label>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-12 col-md-6">
+      <div class="card">
+         <div class="card-header pb-0">
+            <h5>Radio Colors</h5>
+         </div>
+         <div class="card-body">
+            <div class="mb-4">
+               <div class="form-check mb-3">
+                  <input class="form-check-input" type="radio" id="radioPrimary" name="radioPrimary"
+                     value="radioPrimary" checked>
+                  <label class="form-check-label" for="radioPrimary">Primary</label>
+               </div>
+               <div class="form-check form-check-secondary mb-3">
+                  <input class="form-check-input" type="radio" id="radioSecondary" name="radioSecondary"
+                     value="radioSecondary" checked>
+                  <label class="form-check-label" for="radioSecondary">Secondary</label>
+               </div>
+               <div class="form-check form-check-success mb-3">
+                  <input class="form-check-input" type="radio" id="radioSuccess" name="radioSuccess"
+                     value="radioSuccess" checked>
+                  <label class="form-check-label" for="radioSuccess">Success</label>
+               </div>
+               <div class="form-check form-check-danger mb-3">
+                  <input class="form-check-input" type="radio" id="radioDanger" name="radioDanger" value="radioDanger"
+                     checked>
+                  <label class="form-check-label" for="radioDanger">Danger</label>
+               </div>
+               <div class="form-check form-check-warning mb-3">
+                  <input class="form-check-input" type="radio" id="radioWarning" name="radioWarning"
+                     value="radioWarning" checked>
+                  <label class="form-check-label" for="radioWarning">Warning</label>
+               </div>
+               <div class="form-check form-check-info mb-3">
+                  <input class="form-check-input" type="radio" id="radioInfo" name="radioInfo" value="radioInfo"
+                     checked>
+                  <label class="form-check-label" for="radioInfo">Info</label>
+               </div>
+               <div class="form-check form-check-light mb-3">
+                  <input class="form-check-input" type="radio" id="radioLight" name="radioLight" value="radioLight"
+                     checked>
+                  <label class="form-check-label" for="radioLight">Light</label>
+               </div>
+               <div class="form-check form-check-dark mb-3">
+                  <input class="form-check-input" type="radio" id="radioDark" name="radioDark" value="radioDark"
+                     checked>
+                  <label class="form-check-label" for="radioDark">Dark</label>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
 {% endblock content %}

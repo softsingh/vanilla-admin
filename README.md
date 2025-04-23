@@ -8,6 +8,8 @@ Admin Dashboard using HTML, JS and CSS
 Live Preview: [Vanilla Admin](https://softsingh.github.io/vanilla-admin/)
 
 ## To Do
+- Color Palettes using CSS Color Mix
+- Dark Mode
 - Breadcrumbs
 - Carousels
 - Toast Stacking
@@ -16,8 +18,6 @@ Live Preview: [Vanilla Admin](https://softsingh.github.io/vanilla-admin/)
 - Form Elements - Advance
 - Form Layouts
 - Tables
-- Color Palettes using CSS Color Mix
-- Dark Mode
 - Graphs & Charts
 
 ## Known Issues

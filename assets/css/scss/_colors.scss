@@ -2,6 +2,32 @@
 /*               Colors                */
 /*-------------------------------------*/
 
+@import '_color_names.scss';
+
+:root {
+
+  --primary-color: hsl(240, 100%, 70%);
+  --secondary-color: hsl(214, 14%, 52%);
+  --success-color: hsl(100, 65%, 60%);
+  --danger-color: hsl(8, 100%, 56%);
+  --warning-color: hsl(40, 100%, 50%);
+  --info-color: hsl(190, 100%, 50%);
+  --light-color: hsl(210, 6%, 87%);
+  --dark-color: hsl(240, 20%, 20%);
+
+  @each $name in $color-names {
+    @for $i from 19 through 1 {
+      $step: 5 * $i;
+      --#{$name}-light-#{$step}: color-mix(in oklch, white #{$step}%, var(--#{$name}-color));
+    }
+
+    @for $i from 1 through 19 {
+      $step: 5 * $i;
+      --#{$name}-dark-#{$step}: color-mix(in oklch, black #{$step}%, var(--#{$name}-color));
+    }
+  }
+}
+
 :root {
   --white-color: #ffffff;
   --black-color: #000000;

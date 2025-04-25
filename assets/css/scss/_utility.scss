@@ -5,6 +5,25 @@
 /*-------------------------------------*/
 /*             Background              */
 /*-------------------------------------*/
+@import '_color_names.scss';
+
+@each $name in $color-names {
+  @for $i from 19 through 1 {
+    $step: 5 * $i;
+
+    .bg-#{$name}-light-#{$step} {
+      background-color: var(--#{$name}-light-#{$step}) !important;
+    }
+  }
+
+  @for $i from 1 through 19 {
+    $step: 5 * $i;
+
+    .bg-#{$name}-dark-#{$step} {
+      background-color: var(--#{$name}-dark-#{$step}) !important;
+    }
+  }
+}
 
 .bg-primary-lightest {
   background-color: var(--primary-lightest-color) !important;
@@ -240,42 +259,42 @@
 
 .bg-label-primary {
   color: var(--primary-color) !important;
-  background-color: var(--primary-lightest-color) !important;
+  background-color: var(--primary-light-80) !important;
 }
 
 .bg-label-secondary {
   color: var(--secondary-color) !important;
-  background-color: var(--secondary-lightest-color) !important;
+  background-color: var(--secondary-light-80) !important;
 }
 
 .bg-label-success {
   color: var(--success-color) !important;
-  background-color: var(--success-lightest-color) !important;
+  background-color: var(--success-light-70) !important;
 }
 
 .bg-label-danger {
   color: var(--danger-color) !important;
-  background-color: var(--danger-lightest-color) !important;
+  background-color: var(--danger-light-70) !important;
 }
 
 .bg-label-warning {
   color: var(--warning-color) !important;
-  background-color: var(--warning-lightest-color) !important;
+  background-color: var(--warning-light-70) !important;
 }
 
 .bg-label-info {
   color: var(--info-color) !important;
-  background-color: var(--info-lightest-color) !important;
+  background-color: var(--info-light-70) !important;
 }
 
 .bg-label-light {
   color: var(--light-darkest-color) !important;
-  background-color: var(--light-lighter-color) !important;
+  background-color: var(--light-light-60) !important;
 }
 
 .bg-label-dark {
   color: var(--dark-color) !important;
-  background-color: var(--dark-lightest-color) !important;
+  background-color: var(--dark-light-80) !important;
 }
 
 /*-------------------------------------*/

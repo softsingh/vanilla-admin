@@ -35,6 +35,321 @@
 /*               Colors                */
 /*-------------------------------------*/
 :root {
+  --primary-color: hsl(240, 100%, 70%);
+  --secondary-color: hsl(214, 14%, 52%);
+  --success-color: hsl(100, 65%, 60%);
+  --danger-color: hsl(8, 100%, 56%);
+  --warning-color: hsl(40, 100%, 50%);
+  --info-color: hsl(190, 100%, 50%);
+  --light-color: hsl(210, 6%, 87%);
+  --dark-color: hsl(240, 20%, 20%);
+  --primary-light-95: color-mix(in oklch, white 95%, var(--primary-color));
+  --primary-light-90: color-mix(in oklch, white 90%, var(--primary-color));
+  --primary-light-85: color-mix(in oklch, white 85%, var(--primary-color));
+  --primary-light-80: color-mix(in oklch, white 80%, var(--primary-color));
+  --primary-light-75: color-mix(in oklch, white 75%, var(--primary-color));
+  --primary-light-70: color-mix(in oklch, white 70%, var(--primary-color));
+  --primary-light-65: color-mix(in oklch, white 65%, var(--primary-color));
+  --primary-light-60: color-mix(in oklch, white 60%, var(--primary-color));
+  --primary-light-55: color-mix(in oklch, white 55%, var(--primary-color));
+  --primary-light-50: color-mix(in oklch, white 50%, var(--primary-color));
+  --primary-light-45: color-mix(in oklch, white 45%, var(--primary-color));
+  --primary-light-40: color-mix(in oklch, white 40%, var(--primary-color));
+  --primary-light-35: color-mix(in oklch, white 35%, var(--primary-color));
+  --primary-light-30: color-mix(in oklch, white 30%, var(--primary-color));
+  --primary-light-25: color-mix(in oklch, white 25%, var(--primary-color));
+  --primary-light-20: color-mix(in oklch, white 20%, var(--primary-color));
+  --primary-light-15: color-mix(in oklch, white 15%, var(--primary-color));
+  --primary-light-10: color-mix(in oklch, white 10%, var(--primary-color));
+  --primary-light-5: color-mix(in oklch, white 5%, var(--primary-color));
+  --primary-dark-5: color-mix(in oklch, black 5%, var(--primary-color));
+  --primary-dark-10: color-mix(in oklch, black 10%, var(--primary-color));
+  --primary-dark-15: color-mix(in oklch, black 15%, var(--primary-color));
+  --primary-dark-20: color-mix(in oklch, black 20%, var(--primary-color));
+  --primary-dark-25: color-mix(in oklch, black 25%, var(--primary-color));
+  --primary-dark-30: color-mix(in oklch, black 30%, var(--primary-color));
+  --primary-dark-35: color-mix(in oklch, black 35%, var(--primary-color));
+  --primary-dark-40: color-mix(in oklch, black 40%, var(--primary-color));
+  --primary-dark-45: color-mix(in oklch, black 45%, var(--primary-color));
+  --primary-dark-50: color-mix(in oklch, black 50%, var(--primary-color));
+  --primary-dark-55: color-mix(in oklch, black 55%, var(--primary-color));
+  --primary-dark-60: color-mix(in oklch, black 60%, var(--primary-color));
+  --primary-dark-65: color-mix(in oklch, black 65%, var(--primary-color));
+  --primary-dark-70: color-mix(in oklch, black 70%, var(--primary-color));
+  --primary-dark-75: color-mix(in oklch, black 75%, var(--primary-color));
+  --primary-dark-80: color-mix(in oklch, black 80%, var(--primary-color));
+  --primary-dark-85: color-mix(in oklch, black 85%, var(--primary-color));
+  --primary-dark-90: color-mix(in oklch, black 90%, var(--primary-color));
+  --primary-dark-95: color-mix(in oklch, black 95%, var(--primary-color));
+  --secondary-light-95: color-mix(in oklch, white 95%, var(--secondary-color));
+  --secondary-light-90: color-mix(in oklch, white 90%, var(--secondary-color));
+  --secondary-light-85: color-mix(in oklch, white 85%, var(--secondary-color));
+  --secondary-light-80: color-mix(in oklch, white 80%, var(--secondary-color));
+  --secondary-light-75: color-mix(in oklch, white 75%, var(--secondary-color));
+  --secondary-light-70: color-mix(in oklch, white 70%, var(--secondary-color));
+  --secondary-light-65: color-mix(in oklch, white 65%, var(--secondary-color));
+  --secondary-light-60: color-mix(in oklch, white 60%, var(--secondary-color));
+  --secondary-light-55: color-mix(in oklch, white 55%, var(--secondary-color));
+  --secondary-light-50: color-mix(in oklch, white 50%, var(--secondary-color));
+  --secondary-light-45: color-mix(in oklch, white 45%, var(--secondary-color));
+  --secondary-light-40: color-mix(in oklch, white 40%, var(--secondary-color));
+  --secondary-light-35: color-mix(in oklch, white 35%, var(--secondary-color));
+  --secondary-light-30: color-mix(in oklch, white 30%, var(--secondary-color));
+  --secondary-light-25: color-mix(in oklch, white 25%, var(--secondary-color));
+  --secondary-light-20: color-mix(in oklch, white 20%, var(--secondary-color));
+  --secondary-light-15: color-mix(in oklch, white 15%, var(--secondary-color));
+  --secondary-light-10: color-mix(in oklch, white 10%, var(--secondary-color));
+  --secondary-light-5: color-mix(in oklch, white 5%, var(--secondary-color));
+  --secondary-dark-5: color-mix(in oklch, black 5%, var(--secondary-color));
+  --secondary-dark-10: color-mix(in oklch, black 10%, var(--secondary-color));
+  --secondary-dark-15: color-mix(in oklch, black 15%, var(--secondary-color));
+  --secondary-dark-20: color-mix(in oklch, black 20%, var(--secondary-color));
+  --secondary-dark-25: color-mix(in oklch, black 25%, var(--secondary-color));
+  --secondary-dark-30: color-mix(in oklch, black 30%, var(--secondary-color));
+  --secondary-dark-35: color-mix(in oklch, black 35%, var(--secondary-color));
+  --secondary-dark-40: color-mix(in oklch, black 40%, var(--secondary-color));
+  --secondary-dark-45: color-mix(in oklch, black 45%, var(--secondary-color));
+  --secondary-dark-50: color-mix(in oklch, black 50%, var(--secondary-color));
+  --secondary-dark-55: color-mix(in oklch, black 55%, var(--secondary-color));
+  --secondary-dark-60: color-mix(in oklch, black 60%, var(--secondary-color));
+  --secondary-dark-65: color-mix(in oklch, black 65%, var(--secondary-color));
+  --secondary-dark-70: color-mix(in oklch, black 70%, var(--secondary-color));
+  --secondary-dark-75: color-mix(in oklch, black 75%, var(--secondary-color));
+  --secondary-dark-80: color-mix(in oklch, black 80%, var(--secondary-color));
+  --secondary-dark-85: color-mix(in oklch, black 85%, var(--secondary-color));
+  --secondary-dark-90: color-mix(in oklch, black 90%, var(--secondary-color));
+  --secondary-dark-95: color-mix(in oklch, black 95%, var(--secondary-color));
+  --success-light-95: color-mix(in oklch, white 95%, var(--success-color));
+  --success-light-90: color-mix(in oklch, white 90%, var(--success-color));
+  --success-light-85: color-mix(in oklch, white 85%, var(--success-color));
+  --success-light-80: color-mix(in oklch, white 80%, var(--success-color));
+  --success-light-75: color-mix(in oklch, white 75%, var(--success-color));
+  --success-light-70: color-mix(in oklch, white 70%, var(--success-color));
+  --success-light-65: color-mix(in oklch, white 65%, var(--success-color));
+  --success-light-60: color-mix(in oklch, white 60%, var(--success-color));
+  --success-light-55: color-mix(in oklch, white 55%, var(--success-color));
+  --success-light-50: color-mix(in oklch, white 50%, var(--success-color));
+  --success-light-45: color-mix(in oklch, white 45%, var(--success-color));
+  --success-light-40: color-mix(in oklch, white 40%, var(--success-color));
+  --success-light-35: color-mix(in oklch, white 35%, var(--success-color));
+  --success-light-30: color-mix(in oklch, white 30%, var(--success-color));
+  --success-light-25: color-mix(in oklch, white 25%, var(--success-color));
+  --success-light-20: color-mix(in oklch, white 20%, var(--success-color));
+  --success-light-15: color-mix(in oklch, white 15%, var(--success-color));
+  --success-light-10: color-mix(in oklch, white 10%, var(--success-color));
+  --success-light-5: color-mix(in oklch, white 5%, var(--success-color));
+  --success-dark-5: color-mix(in oklch, black 5%, var(--success-color));
+  --success-dark-10: color-mix(in oklch, black 10%, var(--success-color));
+  --success-dark-15: color-mix(in oklch, black 15%, var(--success-color));
+  --success-dark-20: color-mix(in oklch, black 20%, var(--success-color));
+  --success-dark-25: color-mix(in oklch, black 25%, var(--success-color));
+  --success-dark-30: color-mix(in oklch, black 30%, var(--success-color));
+  --success-dark-35: color-mix(in oklch, black 35%, var(--success-color));
+  --success-dark-40: color-mix(in oklch, black 40%, var(--success-color));
+  --success-dark-45: color-mix(in oklch, black 45%, var(--success-color));
+  --success-dark-50: color-mix(in oklch, black 50%, var(--success-color));
+  --success-dark-55: color-mix(in oklch, black 55%, var(--success-color));
+  --success-dark-60: color-mix(in oklch, black 60%, var(--success-color));
+  --success-dark-65: color-mix(in oklch, black 65%, var(--success-color));
+  --success-dark-70: color-mix(in oklch, black 70%, var(--success-color));
+  --success-dark-75: color-mix(in oklch, black 75%, var(--success-color));
+  --success-dark-80: color-mix(in oklch, black 80%, var(--success-color));
+  --success-dark-85: color-mix(in oklch, black 85%, var(--success-color));
+  --success-dark-90: color-mix(in oklch, black 90%, var(--success-color));
+  --success-dark-95: color-mix(in oklch, black 95%, var(--success-color));
+  --danger-light-95: color-mix(in oklch, white 95%, var(--danger-color));
+  --danger-light-90: color-mix(in oklch, white 90%, var(--danger-color));
+  --danger-light-85: color-mix(in oklch, white 85%, var(--danger-color));
+  --danger-light-80: color-mix(in oklch, white 80%, var(--danger-color));
+  --danger-light-75: color-mix(in oklch, white 75%, var(--danger-color));
+  --danger-light-70: color-mix(in oklch, white 70%, var(--danger-color));
+  --danger-light-65: color-mix(in oklch, white 65%, var(--danger-color));
+  --danger-light-60: color-mix(in oklch, white 60%, var(--danger-color));
+  --danger-light-55: color-mix(in oklch, white 55%, var(--danger-color));
+  --danger-light-50: color-mix(in oklch, white 50%, var(--danger-color));
+  --danger-light-45: color-mix(in oklch, white 45%, var(--danger-color));
+  --danger-light-40: color-mix(in oklch, white 40%, var(--danger-color));
+  --danger-light-35: color-mix(in oklch, white 35%, var(--danger-color));
+  --danger-light-30: color-mix(in oklch, white 30%, var(--danger-color));
+  --danger-light-25: color-mix(in oklch, white 25%, var(--danger-color));
+  --danger-light-20: color-mix(in oklch, white 20%, var(--danger-color));
+  --danger-light-15: color-mix(in oklch, white 15%, var(--danger-color));
+  --danger-light-10: color-mix(in oklch, white 10%, var(--danger-color));
+  --danger-light-5: color-mix(in oklch, white 5%, var(--danger-color));
+  --danger-dark-5: color-mix(in oklch, black 5%, var(--danger-color));
+  --danger-dark-10: color-mix(in oklch, black 10%, var(--danger-color));
+  --danger-dark-15: color-mix(in oklch, black 15%, var(--danger-color));
+  --danger-dark-20: color-mix(in oklch, black 20%, var(--danger-color));
+  --danger-dark-25: color-mix(in oklch, black 25%, var(--danger-color));
+  --danger-dark-30: color-mix(in oklch, black 30%, var(--danger-color));
+  --danger-dark-35: color-mix(in oklch, black 35%, var(--danger-color));
+  --danger-dark-40: color-mix(in oklch, black 40%, var(--danger-color));
+  --danger-dark-45: color-mix(in oklch, black 45%, var(--danger-color));
+  --danger-dark-50: color-mix(in oklch, black 50%, var(--danger-color));
+  --danger-dark-55: color-mix(in oklch, black 55%, var(--danger-color));
+  --danger-dark-60: color-mix(in oklch, black 60%, var(--danger-color));
+  --danger-dark-65: color-mix(in oklch, black 65%, var(--danger-color));
+  --danger-dark-70: color-mix(in oklch, black 70%, var(--danger-color));
+  --danger-dark-75: color-mix(in oklch, black 75%, var(--danger-color));
+  --danger-dark-80: color-mix(in oklch, black 80%, var(--danger-color));
+  --danger-dark-85: color-mix(in oklch, black 85%, var(--danger-color));
+  --danger-dark-90: color-mix(in oklch, black 90%, var(--danger-color));
+  --danger-dark-95: color-mix(in oklch, black 95%, var(--danger-color));
+  --warning-light-95: color-mix(in oklch, white 95%, var(--warning-color));
+  --warning-light-90: color-mix(in oklch, white 90%, var(--warning-color));
+  --warning-light-85: color-mix(in oklch, white 85%, var(--warning-color));
+  --warning-light-80: color-mix(in oklch, white 80%, var(--warning-color));
+  --warning-light-75: color-mix(in oklch, white 75%, var(--warning-color));
+  --warning-light-70: color-mix(in oklch, white 70%, var(--warning-color));
+  --warning-light-65: color-mix(in oklch, white 65%, var(--warning-color));
+  --warning-light-60: color-mix(in oklch, white 60%, var(--warning-color));
+  --warning-light-55: color-mix(in oklch, white 55%, var(--warning-color));
+  --warning-light-50: color-mix(in oklch, white 50%, var(--warning-color));
+  --warning-light-45: color-mix(in oklch, white 45%, var(--warning-color));
+  --warning-light-40: color-mix(in oklch, white 40%, var(--warning-color));
+  --warning-light-35: color-mix(in oklch, white 35%, var(--warning-color));
+  --warning-light-30: color-mix(in oklch, white 30%, var(--warning-color));
+  --warning-light-25: color-mix(in oklch, white 25%, var(--warning-color));
+  --warning-light-20: color-mix(in oklch, white 20%, var(--warning-color));
+  --warning-light-15: color-mix(in oklch, white 15%, var(--warning-color));
+  --warning-light-10: color-mix(in oklch, white 10%, var(--warning-color));
+  --warning-light-5: color-mix(in oklch, white 5%, var(--warning-color));
+  --warning-dark-5: color-mix(in oklch, black 5%, var(--warning-color));
+  --warning-dark-10: color-mix(in oklch, black 10%, var(--warning-color));
+  --warning-dark-15: color-mix(in oklch, black 15%, var(--warning-color));
+  --warning-dark-20: color-mix(in oklch, black 20%, var(--warning-color));
+  --warning-dark-25: color-mix(in oklch, black 25%, var(--warning-color));
+  --warning-dark-30: color-mix(in oklch, black 30%, var(--warning-color));
+  --warning-dark-35: color-mix(in oklch, black 35%, var(--warning-color));
+  --warning-dark-40: color-mix(in oklch, black 40%, var(--warning-color));
+  --warning-dark-45: color-mix(in oklch, black 45%, var(--warning-color));
+  --warning-dark-50: color-mix(in oklch, black 50%, var(--warning-color));
+  --warning-dark-55: color-mix(in oklch, black 55%, var(--warning-color));
+  --warning-dark-60: color-mix(in oklch, black 60%, var(--warning-color));
+  --warning-dark-65: color-mix(in oklch, black 65%, var(--warning-color));
+  --warning-dark-70: color-mix(in oklch, black 70%, var(--warning-color));
+  --warning-dark-75: color-mix(in oklch, black 75%, var(--warning-color));
+  --warning-dark-80: color-mix(in oklch, black 80%, var(--warning-color));
+  --warning-dark-85: color-mix(in oklch, black 85%, var(--warning-color));
+  --warning-dark-90: color-mix(in oklch, black 90%, var(--warning-color));
+  --warning-dark-95: color-mix(in oklch, black 95%, var(--warning-color));
+  --info-light-95: color-mix(in oklch, white 95%, var(--info-color));
+  --info-light-90: color-mix(in oklch, white 90%, var(--info-color));
+  --info-light-85: color-mix(in oklch, white 85%, var(--info-color));
+  --info-light-80: color-mix(in oklch, white 80%, var(--info-color));
+  --info-light-75: color-mix(in oklch, white 75%, var(--info-color));
+  --info-light-70: color-mix(in oklch, white 70%, var(--info-color));
+  --info-light-65: color-mix(in oklch, white 65%, var(--info-color));
+  --info-light-60: color-mix(in oklch, white 60%, var(--info-color));
+  --info-light-55: color-mix(in oklch, white 55%, var(--info-color));
+  --info-light-50: color-mix(in oklch, white 50%, var(--info-color));
+  --info-light-45: color-mix(in oklch, white 45%, var(--info-color));
+  --info-light-40: color-mix(in oklch, white 40%, var(--info-color));
+  --info-light-35: color-mix(in oklch, white 35%, var(--info-color));
+  --info-light-30: color-mix(in oklch, white 30%, var(--info-color));
+  --info-light-25: color-mix(in oklch, white 25%, var(--info-color));
+  --info-light-20: color-mix(in oklch, white 20%, var(--info-color));
+  --info-light-15: color-mix(in oklch, white 15%, var(--info-color));
+  --info-light-10: color-mix(in oklch, white 10%, var(--info-color));
+  --info-light-5: color-mix(in oklch, white 5%, var(--info-color));
+  --info-dark-5: color-mix(in oklch, black 5%, var(--info-color));
+  --info-dark-10: color-mix(in oklch, black 10%, var(--info-color));
+  --info-dark-15: color-mix(in oklch, black 15%, var(--info-color));
+  --info-dark-20: color-mix(in oklch, black 20%, var(--info-color));
+  --info-dark-25: color-mix(in oklch, black 25%, var(--info-color));
+  --info-dark-30: color-mix(in oklch, black 30%, var(--info-color));
+  --info-dark-35: color-mix(in oklch, black 35%, var(--info-color));
+  --info-dark-40: color-mix(in oklch, black 40%, var(--info-color));
+  --info-dark-45: color-mix(in oklch, black 45%, var(--info-color));
+  --info-dark-50: color-mix(in oklch, black 50%, var(--info-color));
+  --info-dark-55: color-mix(in oklch, black 55%, var(--info-color));
+  --info-dark-60: color-mix(in oklch, black 60%, var(--info-color));
+  --info-dark-65: color-mix(in oklch, black 65%, var(--info-color));
+  --info-dark-70: color-mix(in oklch, black 70%, var(--info-color));
+  --info-dark-75: color-mix(in oklch, black 75%, var(--info-color));
+  --info-dark-80: color-mix(in oklch, black 80%, var(--info-color));
+  --info-dark-85: color-mix(in oklch, black 85%, var(--info-color));
+  --info-dark-90: color-mix(in oklch, black 90%, var(--info-color));
+  --info-dark-95: color-mix(in oklch, black 95%, var(--info-color));
+  --light-light-95: color-mix(in oklch, white 95%, var(--light-color));
+  --light-light-90: color-mix(in oklch, white 90%, var(--light-color));
+  --light-light-85: color-mix(in oklch, white 85%, var(--light-color));
+  --light-light-80: color-mix(in oklch, white 80%, var(--light-color));
+  --light-light-75: color-mix(in oklch, white 75%, var(--light-color));
+  --light-light-70: color-mix(in oklch, white 70%, var(--light-color));
+  --light-light-65: color-mix(in oklch, white 65%, var(--light-color));
+  --light-light-60: color-mix(in oklch, white 60%, var(--light-color));
+  --light-light-55: color-mix(in oklch, white 55%, var(--light-color));
+  --light-light-50: color-mix(in oklch, white 50%, var(--light-color));
+  --light-light-45: color-mix(in oklch, white 45%, var(--light-color));
+  --light-light-40: color-mix(in oklch, white 40%, var(--light-color));
+  --light-light-35: color-mix(in oklch, white 35%, var(--light-color));
+  --light-light-30: color-mix(in oklch, white 30%, var(--light-color));
+  --light-light-25: color-mix(in oklch, white 25%, var(--light-color));
+  --light-light-20: color-mix(in oklch, white 20%, var(--light-color));
+  --light-light-15: color-mix(in oklch, white 15%, var(--light-color));
+  --light-light-10: color-mix(in oklch, white 10%, var(--light-color));
+  --light-light-5: color-mix(in oklch, white 5%, var(--light-color));
+  --light-dark-5: color-mix(in oklch, black 5%, var(--light-color));
+  --light-dark-10: color-mix(in oklch, black 10%, var(--light-color));
+  --light-dark-15: color-mix(in oklch, black 15%, var(--light-color));
+  --light-dark-20: color-mix(in oklch, black 20%, var(--light-color));
+  --light-dark-25: color-mix(in oklch, black 25%, var(--light-color));
+  --light-dark-30: color-mix(in oklch, black 30%, var(--light-color));
+  --light-dark-35: color-mix(in oklch, black 35%, var(--light-color));
+  --light-dark-40: color-mix(in oklch, black 40%, var(--light-color));
+  --light-dark-45: color-mix(in oklch, black 45%, var(--light-color));
+  --light-dark-50: color-mix(in oklch, black 50%, var(--light-color));
+  --light-dark-55: color-mix(in oklch, black 55%, var(--light-color));
+  --light-dark-60: color-mix(in oklch, black 60%, var(--light-color));
+  --light-dark-65: color-mix(in oklch, black 65%, var(--light-color));
+  --light-dark-70: color-mix(in oklch, black 70%, var(--light-color));
+  --light-dark-75: color-mix(in oklch, black 75%, var(--light-color));
+  --light-dark-80: color-mix(in oklch, black 80%, var(--light-color));
+  --light-dark-85: color-mix(in oklch, black 85%, var(--light-color));
+  --light-dark-90: color-mix(in oklch, black 90%, var(--light-color));
+  --light-dark-95: color-mix(in oklch, black 95%, var(--light-color));
+  --dark-light-95: color-mix(in oklch, white 95%, var(--dark-color));
+  --dark-light-90: color-mix(in oklch, white 90%, var(--dark-color));
+  --dark-light-85: color-mix(in oklch, white 85%, var(--dark-color));
+  --dark-light-80: color-mix(in oklch, white 80%, var(--dark-color));
+  --dark-light-75: color-mix(in oklch, white 75%, var(--dark-color));
+  --dark-light-70: color-mix(in oklch, white 70%, var(--dark-color));
+  --dark-light-65: color-mix(in oklch, white 65%, var(--dark-color));
+  --dark-light-60: color-mix(in oklch, white 60%, var(--dark-color));
+  --dark-light-55: color-mix(in oklch, white 55%, var(--dark-color));
+  --dark-light-50: color-mix(in oklch, white 50%, var(--dark-color));
+  --dark-light-45: color-mix(in oklch, white 45%, var(--dark-color));
+  --dark-light-40: color-mix(in oklch, white 40%, var(--dark-color));
+  --dark-light-35: color-mix(in oklch, white 35%, var(--dark-color));
+  --dark-light-30: color-mix(in oklch, white 30%, var(--dark-color));
+  --dark-light-25: color-mix(in oklch, white 25%, var(--dark-color));
+  --dark-light-20: color-mix(in oklch, white 20%, var(--dark-color));
+  --dark-light-15: color-mix(in oklch, white 15%, var(--dark-color));
+  --dark-light-10: color-mix(in oklch, white 10%, var(--dark-color));
+  --dark-light-5: color-mix(in oklch, white 5%, var(--dark-color));
+  --dark-dark-5: color-mix(in oklch, black 5%, var(--dark-color));
+  --dark-dark-10: color-mix(in oklch, black 10%, var(--dark-color));
+  --dark-dark-15: color-mix(in oklch, black 15%, var(--dark-color));
+  --dark-dark-20: color-mix(in oklch, black 20%, var(--dark-color));
+  --dark-dark-25: color-mix(in oklch, black 25%, var(--dark-color));
+  --dark-dark-30: color-mix(in oklch, black 30%, var(--dark-color));
+  --dark-dark-35: color-mix(in oklch, black 35%, var(--dark-color));
+  --dark-dark-40: color-mix(in oklch, black 40%, var(--dark-color));
+  --dark-dark-45: color-mix(in oklch, black 45%, var(--dark-color));
+  --dark-dark-50: color-mix(in oklch, black 50%, var(--dark-color));
+  --dark-dark-55: color-mix(in oklch, black 55%, var(--dark-color));
+  --dark-dark-60: color-mix(in oklch, black 60%, var(--dark-color));
+  --dark-dark-65: color-mix(in oklch, black 65%, var(--dark-color));
+  --dark-dark-70: color-mix(in oklch, black 70%, var(--dark-color));
+  --dark-dark-75: color-mix(in oklch, black 75%, var(--dark-color));
+  --dark-dark-80: color-mix(in oklch, black 80%, var(--dark-color));
+  --dark-dark-85: color-mix(in oklch, black 85%, var(--dark-color));
+  --dark-dark-90: color-mix(in oklch, black 90%, var(--dark-color));
+  --dark-dark-95: color-mix(in oklch, black 95%, var(--dark-color));
+}
+
+:root {
   --white-color: #ffffff;
   --black-color: #000000;
   --light-white-color: #f7f7f7;
@@ -3554,6 +3869,1222 @@ textarea {
 /*-------------------------------------*/
 /*             Background              */
 /*-------------------------------------*/
+.bg-primary-light-95 {
+  background-color: var(--primary-light-95) !important;
+}
+
+.bg-primary-light-90 {
+  background-color: var(--primary-light-90) !important;
+}
+
+.bg-primary-light-85 {
+  background-color: var(--primary-light-85) !important;
+}
+
+.bg-primary-light-80 {
+  background-color: var(--primary-light-80) !important;
+}
+
+.bg-primary-light-75 {
+  background-color: var(--primary-light-75) !important;
+}
+
+.bg-primary-light-70 {
+  background-color: var(--primary-light-70) !important;
+}
+
+.bg-primary-light-65 {
+  background-color: var(--primary-light-65) !important;
+}
+
+.bg-primary-light-60 {
+  background-color: var(--primary-light-60) !important;
+}
+
+.bg-primary-light-55 {
+  background-color: var(--primary-light-55) !important;
+}
+
+.bg-primary-light-50 {
+  background-color: var(--primary-light-50) !important;
+}
+
+.bg-primary-light-45 {
+  background-color: var(--primary-light-45) !important;
+}
+
+.bg-primary-light-40 {
+  background-color: var(--primary-light-40) !important;
+}
+
+.bg-primary-light-35 {
+  background-color: var(--primary-light-35) !important;
+}
+
+.bg-primary-light-30 {
+  background-color: var(--primary-light-30) !important;
+}
+
+.bg-primary-light-25 {
+  background-color: var(--primary-light-25) !important;
+}
+
+.bg-primary-light-20 {
+  background-color: var(--primary-light-20) !important;
+}
+
+.bg-primary-light-15 {
+  background-color: var(--primary-light-15) !important;
+}
+
+.bg-primary-light-10 {
+  background-color: var(--primary-light-10) !important;
+}
+
+.bg-primary-light-5 {
+  background-color: var(--primary-light-5) !important;
+}
+
+.bg-primary-dark-5 {
+  background-color: var(--primary-dark-5) !important;
+}
+
+.bg-primary-dark-10 {
+  background-color: var(--primary-dark-10) !important;
+}
+
+.bg-primary-dark-15 {
+  background-color: var(--primary-dark-15) !important;
+}
+
+.bg-primary-dark-20 {
+  background-color: var(--primary-dark-20) !important;
+}
+
+.bg-primary-dark-25 {
+  background-color: var(--primary-dark-25) !important;
+}
+
+.bg-primary-dark-30 {
+  background-color: var(--primary-dark-30) !important;
+}
+
+.bg-primary-dark-35 {
+  background-color: var(--primary-dark-35) !important;
+}
+
+.bg-primary-dark-40 {
+  background-color: var(--primary-dark-40) !important;
+}
+
+.bg-primary-dark-45 {
+  background-color: var(--primary-dark-45) !important;
+}
+
+.bg-primary-dark-50 {
+  background-color: var(--primary-dark-50) !important;
+}
+
+.bg-primary-dark-55 {
+  background-color: var(--primary-dark-55) !important;
+}
+
+.bg-primary-dark-60 {
+  background-color: var(--primary-dark-60) !important;
+}
+
+.bg-primary-dark-65 {
+  background-color: var(--primary-dark-65) !important;
+}
+
+.bg-primary-dark-70 {
+  background-color: var(--primary-dark-70) !important;
+}
+
+.bg-primary-dark-75 {
+  background-color: var(--primary-dark-75) !important;
+}
+
+.bg-primary-dark-80 {
+  background-color: var(--primary-dark-80) !important;
+}
+
+.bg-primary-dark-85 {
+  background-color: var(--primary-dark-85) !important;
+}
+
+.bg-primary-dark-90 {
+  background-color: var(--primary-dark-90) !important;
+}
+
+.bg-primary-dark-95 {
+  background-color: var(--primary-dark-95) !important;
+}
+
+.bg-secondary-light-95 {
+  background-color: var(--secondary-light-95) !important;
+}
+
+.bg-secondary-light-90 {
+  background-color: var(--secondary-light-90) !important;
+}
+
+.bg-secondary-light-85 {
+  background-color: var(--secondary-light-85) !important;
+}
+
+.bg-secondary-light-80 {
+  background-color: var(--secondary-light-80) !important;
+}
+
+.bg-secondary-light-75 {
+  background-color: var(--secondary-light-75) !important;
+}
+
+.bg-secondary-light-70 {
+  background-color: var(--secondary-light-70) !important;
+}
+
+.bg-secondary-light-65 {
+  background-color: var(--secondary-light-65) !important;
+}
+
+.bg-secondary-light-60 {
+  background-color: var(--secondary-light-60) !important;
+}
+
+.bg-secondary-light-55 {
+  background-color: var(--secondary-light-55) !important;
+}
+
+.bg-secondary-light-50 {
+  background-color: var(--secondary-light-50) !important;
+}
+
+.bg-secondary-light-45 {
+  background-color: var(--secondary-light-45) !important;
+}
+
+.bg-secondary-light-40 {
+  background-color: var(--secondary-light-40) !important;
+}
+
+.bg-secondary-light-35 {
+  background-color: var(--secondary-light-35) !important;
+}
+
+.bg-secondary-light-30 {
+  background-color: var(--secondary-light-30) !important;
+}
+
+.bg-secondary-light-25 {
+  background-color: var(--secondary-light-25) !important;
+}
+
+.bg-secondary-light-20 {
+  background-color: var(--secondary-light-20) !important;
+}
+
+.bg-secondary-light-15 {
+  background-color: var(--secondary-light-15) !important;
+}
+
+.bg-secondary-light-10 {
+  background-color: var(--secondary-light-10) !important;
+}
+
+.bg-secondary-light-5 {
+  background-color: var(--secondary-light-5) !important;
+}
+
+.bg-secondary-dark-5 {
+  background-color: var(--secondary-dark-5) !important;
+}
+
+.bg-secondary-dark-10 {
+  background-color: var(--secondary-dark-10) !important;
+}
+
+.bg-secondary-dark-15 {
+  background-color: var(--secondary-dark-15) !important;
+}
+
+.bg-secondary-dark-20 {
+  background-color: var(--secondary-dark-20) !important;
+}
+
+.bg-secondary-dark-25 {
+  background-color: var(--secondary-dark-25) !important;
+}
+
+.bg-secondary-dark-30 {
+  background-color: var(--secondary-dark-30) !important;
+}
+
+.bg-secondary-dark-35 {
+  background-color: var(--secondary-dark-35) !important;
+}
+
+.bg-secondary-dark-40 {
+  background-color: var(--secondary-dark-40) !important;
+}
+
+.bg-secondary-dark-45 {
+  background-color: var(--secondary-dark-45) !important;
+}
+
+.bg-secondary-dark-50 {
+  background-color: var(--secondary-dark-50) !important;
+}
+
+.bg-secondary-dark-55 {
+  background-color: var(--secondary-dark-55) !important;
+}
+
+.bg-secondary-dark-60 {
+  background-color: var(--secondary-dark-60) !important;
+}
+
+.bg-secondary-dark-65 {
+  background-color: var(--secondary-dark-65) !important;
+}
+
+.bg-secondary-dark-70 {
+  background-color: var(--secondary-dark-70) !important;
+}
+
+.bg-secondary-dark-75 {
+  background-color: var(--secondary-dark-75) !important;
+}
+
+.bg-secondary-dark-80 {
+  background-color: var(--secondary-dark-80) !important;
+}
+
+.bg-secondary-dark-85 {
+  background-color: var(--secondary-dark-85) !important;
+}
+
+.bg-secondary-dark-90 {
+  background-color: var(--secondary-dark-90) !important;
+}
+
+.bg-secondary-dark-95 {
+  background-color: var(--secondary-dark-95) !important;
+}
+
+.bg-success-light-95 {
+  background-color: var(--success-light-95) !important;
+}
+
+.bg-success-light-90 {
+  background-color: var(--success-light-90) !important;
+}
+
+.bg-success-light-85 {
+  background-color: var(--success-light-85) !important;
+}
+
+.bg-success-light-80 {
+  background-color: var(--success-light-80) !important;
+}
+
+.bg-success-light-75 {
+  background-color: var(--success-light-75) !important;
+}
+
+.bg-success-light-70 {
+  background-color: var(--success-light-70) !important;
+}
+
+.bg-success-light-65 {
+  background-color: var(--success-light-65) !important;
+}
+
+.bg-success-light-60 {
+  background-color: var(--success-light-60) !important;
+}
+
+.bg-success-light-55 {
+  background-color: var(--success-light-55) !important;
+}
+
+.bg-success-light-50 {
+  background-color: var(--success-light-50) !important;
+}
+
+.bg-success-light-45 {
+  background-color: var(--success-light-45) !important;
+}
+
+.bg-success-light-40 {
+  background-color: var(--success-light-40) !important;
+}
+
+.bg-success-light-35 {
+  background-color: var(--success-light-35) !important;
+}
+
+.bg-success-light-30 {
+  background-color: var(--success-light-30) !important;
+}
+
+.bg-success-light-25 {
+  background-color: var(--success-light-25) !important;
+}
+
+.bg-success-light-20 {
+  background-color: var(--success-light-20) !important;
+}
+
+.bg-success-light-15 {
+  background-color: var(--success-light-15) !important;
+}
+
+.bg-success-light-10 {
+  background-color: var(--success-light-10) !important;
+}
+
+.bg-success-light-5 {
+  background-color: var(--success-light-5) !important;
+}
+
+.bg-success-dark-5 {
+  background-color: var(--success-dark-5) !important;
+}
+
+.bg-success-dark-10 {
+  background-color: var(--success-dark-10) !important;
+}
+
+.bg-success-dark-15 {
+  background-color: var(--success-dark-15) !important;
+}
+
+.bg-success-dark-20 {
+  background-color: var(--success-dark-20) !important;
+}
+
+.bg-success-dark-25 {
+  background-color: var(--success-dark-25) !important;
+}
+
+.bg-success-dark-30 {
+  background-color: var(--success-dark-30) !important;
+}
+
+.bg-success-dark-35 {
+  background-color: var(--success-dark-35) !important;
+}
+
+.bg-success-dark-40 {
+  background-color: var(--success-dark-40) !important;
+}
+
+.bg-success-dark-45 {
+  background-color: var(--success-dark-45) !important;
+}
+
+.bg-success-dark-50 {
+  background-color: var(--success-dark-50) !important;
+}
+
+.bg-success-dark-55 {
+  background-color: var(--success-dark-55) !important;
+}
+
+.bg-success-dark-60 {
+  background-color: var(--success-dark-60) !important;
+}
+
+.bg-success-dark-65 {
+  background-color: var(--success-dark-65) !important;
+}
+
+.bg-success-dark-70 {
+  background-color: var(--success-dark-70) !important;
+}
+
+.bg-success-dark-75 {
+  background-color: var(--success-dark-75) !important;
+}
+
+.bg-success-dark-80 {
+  background-color: var(--success-dark-80) !important;
+}
+
+.bg-success-dark-85 {
+  background-color: var(--success-dark-85) !important;
+}
+
+.bg-success-dark-90 {
+  background-color: var(--success-dark-90) !important;
+}
+
+.bg-success-dark-95 {
+  background-color: var(--success-dark-95) !important;
+}
+
+.bg-danger-light-95 {
+  background-color: var(--danger-light-95) !important;
+}
+
+.bg-danger-light-90 {
+  background-color: var(--danger-light-90) !important;
+}
+
+.bg-danger-light-85 {
+  background-color: var(--danger-light-85) !important;
+}
+
+.bg-danger-light-80 {
+  background-color: var(--danger-light-80) !important;
+}
+
+.bg-danger-light-75 {
+  background-color: var(--danger-light-75) !important;
+}
+
+.bg-danger-light-70 {
+  background-color: var(--danger-light-70) !important;
+}
+
+.bg-danger-light-65 {
+  background-color: var(--danger-light-65) !important;
+}
+
+.bg-danger-light-60 {
+  background-color: var(--danger-light-60) !important;
+}
+
+.bg-danger-light-55 {
+  background-color: var(--danger-light-55) !important;
+}
+
+.bg-danger-light-50 {
+  background-color: var(--danger-light-50) !important;
+}
+
+.bg-danger-light-45 {
+  background-color: var(--danger-light-45) !important;
+}
+
+.bg-danger-light-40 {
+  background-color: var(--danger-light-40) !important;
+}
+
+.bg-danger-light-35 {
+  background-color: var(--danger-light-35) !important;
+}
+
+.bg-danger-light-30 {
+  background-color: var(--danger-light-30) !important;
+}
+
+.bg-danger-light-25 {
+  background-color: var(--danger-light-25) !important;
+}
+
+.bg-danger-light-20 {
+  background-color: var(--danger-light-20) !important;
+}
+
+.bg-danger-light-15 {
+  background-color: var(--danger-light-15) !important;
+}
+
+.bg-danger-light-10 {
+  background-color: var(--danger-light-10) !important;
+}
+
+.bg-danger-light-5 {
+  background-color: var(--danger-light-5) !important;
+}
+
+.bg-danger-dark-5 {
+  background-color: var(--danger-dark-5) !important;
+}
+
+.bg-danger-dark-10 {
+  background-color: var(--danger-dark-10) !important;
+}
+
+.bg-danger-dark-15 {
+  background-color: var(--danger-dark-15) !important;
+}
+
+.bg-danger-dark-20 {
+  background-color: var(--danger-dark-20) !important;
+}
+
+.bg-danger-dark-25 {
+  background-color: var(--danger-dark-25) !important;
+}
+
+.bg-danger-dark-30 {
+  background-color: var(--danger-dark-30) !important;
+}
+
+.bg-danger-dark-35 {
+  background-color: var(--danger-dark-35) !important;
+}
+
+.bg-danger-dark-40 {
+  background-color: var(--danger-dark-40) !important;
+}
+
+.bg-danger-dark-45 {
+  background-color: var(--danger-dark-45) !important;
+}
+
+.bg-danger-dark-50 {
+  background-color: var(--danger-dark-50) !important;
+}
+
+.bg-danger-dark-55 {
+  background-color: var(--danger-dark-55) !important;
+}
+
+.bg-danger-dark-60 {
+  background-color: var(--danger-dark-60) !important;
+}
+
+.bg-danger-dark-65 {
+  background-color: var(--danger-dark-65) !important;
+}
+
+.bg-danger-dark-70 {
+  background-color: var(--danger-dark-70) !important;
+}
+
+.bg-danger-dark-75 {
+  background-color: var(--danger-dark-75) !important;
+}
+
+.bg-danger-dark-80 {
+  background-color: var(--danger-dark-80) !important;
+}
+
+.bg-danger-dark-85 {
+  background-color: var(--danger-dark-85) !important;
+}
+
+.bg-danger-dark-90 {
+  background-color: var(--danger-dark-90) !important;
+}
+
+.bg-danger-dark-95 {
+  background-color: var(--danger-dark-95) !important;
+}
+
+.bg-warning-light-95 {
+  background-color: var(--warning-light-95) !important;
+}
+
+.bg-warning-light-90 {
+  background-color: var(--warning-light-90) !important;
+}
+
+.bg-warning-light-85 {
+  background-color: var(--warning-light-85) !important;
+}
+
+.bg-warning-light-80 {
+  background-color: var(--warning-light-80) !important;
+}
+
+.bg-warning-light-75 {
+  background-color: var(--warning-light-75) !important;
+}
+
+.bg-warning-light-70 {
+  background-color: var(--warning-light-70) !important;
+}
+
+.bg-warning-light-65 {
+  background-color: var(--warning-light-65) !important;
+}
+
+.bg-warning-light-60 {
+  background-color: var(--warning-light-60) !important;
+}
+
+.bg-warning-light-55 {
+  background-color: var(--warning-light-55) !important;
+}
+
+.bg-warning-light-50 {
+  background-color: var(--warning-light-50) !important;
+}
+
+.bg-warning-light-45 {
+  background-color: var(--warning-light-45) !important;
+}
+
+.bg-warning-light-40 {
+  background-color: var(--warning-light-40) !important;
+}
+
+.bg-warning-light-35 {
+  background-color: var(--warning-light-35) !important;
+}
+
+.bg-warning-light-30 {
+  background-color: var(--warning-light-30) !important;
+}
+
+.bg-warning-light-25 {
+  background-color: var(--warning-light-25) !important;
+}
+
+.bg-warning-light-20 {
+  background-color: var(--warning-light-20) !important;
+}
+
+.bg-warning-light-15 {
+  background-color: var(--warning-light-15) !important;
+}
+
+.bg-warning-light-10 {
+  background-color: var(--warning-light-10) !important;
+}
+
+.bg-warning-light-5 {
+  background-color: var(--warning-light-5) !important;
+}
+
+.bg-warning-dark-5 {
+  background-color: var(--warning-dark-5) !important;
+}
+
+.bg-warning-dark-10 {
+  background-color: var(--warning-dark-10) !important;
+}
+
+.bg-warning-dark-15 {
+  background-color: var(--warning-dark-15) !important;
+}
+
+.bg-warning-dark-20 {
+  background-color: var(--warning-dark-20) !important;
+}
+
+.bg-warning-dark-25 {
+  background-color: var(--warning-dark-25) !important;
+}
+
+.bg-warning-dark-30 {
+  background-color: var(--warning-dark-30) !important;
+}
+
+.bg-warning-dark-35 {
+  background-color: var(--warning-dark-35) !important;
+}
+
+.bg-warning-dark-40 {
+  background-color: var(--warning-dark-40) !important;
+}
+
+.bg-warning-dark-45 {
+  background-color: var(--warning-dark-45) !important;
+}
+
+.bg-warning-dark-50 {
+  background-color: var(--warning-dark-50) !important;
+}
+
+.bg-warning-dark-55 {
+  background-color: var(--warning-dark-55) !important;
+}
+
+.bg-warning-dark-60 {
+  background-color: var(--warning-dark-60) !important;
+}
+
+.bg-warning-dark-65 {
+  background-color: var(--warning-dark-65) !important;
+}
+
+.bg-warning-dark-70 {
+  background-color: var(--warning-dark-70) !important;
+}
+
+.bg-warning-dark-75 {
+  background-color: var(--warning-dark-75) !important;
+}
+
+.bg-warning-dark-80 {
+  background-color: var(--warning-dark-80) !important;
+}
+
+.bg-warning-dark-85 {
+  background-color: var(--warning-dark-85) !important;
+}
+
+.bg-warning-dark-90 {
+  background-color: var(--warning-dark-90) !important;
+}
+
+.bg-warning-dark-95 {
+  background-color: var(--warning-dark-95) !important;
+}
+
+.bg-info-light-95 {
+  background-color: var(--info-light-95) !important;
+}
+
+.bg-info-light-90 {
+  background-color: var(--info-light-90) !important;
+}
+
+.bg-info-light-85 {
+  background-color: var(--info-light-85) !important;
+}
+
+.bg-info-light-80 {
+  background-color: var(--info-light-80) !important;
+}
+
+.bg-info-light-75 {
+  background-color: var(--info-light-75) !important;
+}
+
+.bg-info-light-70 {
+  background-color: var(--info-light-70) !important;
+}
+
+.bg-info-light-65 {
+  background-color: var(--info-light-65) !important;
+}
+
+.bg-info-light-60 {
+  background-color: var(--info-light-60) !important;
+}
+
+.bg-info-light-55 {
+  background-color: var(--info-light-55) !important;
+}
+
+.bg-info-light-50 {
+  background-color: var(--info-light-50) !important;
+}
+
+.bg-info-light-45 {
+  background-color: var(--info-light-45) !important;
+}
+
+.bg-info-light-40 {
+  background-color: var(--info-light-40) !important;
+}
+
+.bg-info-light-35 {
+  background-color: var(--info-light-35) !important;
+}
+
+.bg-info-light-30 {
+  background-color: var(--info-light-30) !important;
+}
+
+.bg-info-light-25 {
+  background-color: var(--info-light-25) !important;
+}
+
+.bg-info-light-20 {
+  background-color: var(--info-light-20) !important;
+}
+
+.bg-info-light-15 {
+  background-color: var(--info-light-15) !important;
+}
+
+.bg-info-light-10 {
+  background-color: var(--info-light-10) !important;
+}
+
+.bg-info-light-5 {
+  background-color: var(--info-light-5) !important;
+}
+
+.bg-info-dark-5 {
+  background-color: var(--info-dark-5) !important;
+}
+
+.bg-info-dark-10 {
+  background-color: var(--info-dark-10) !important;
+}
+
+.bg-info-dark-15 {
+  background-color: var(--info-dark-15) !important;
+}
+
+.bg-info-dark-20 {
+  background-color: var(--info-dark-20) !important;
+}
+
+.bg-info-dark-25 {
+  background-color: var(--info-dark-25) !important;
+}
+
+.bg-info-dark-30 {
+  background-color: var(--info-dark-30) !important;
+}
+
+.bg-info-dark-35 {
+  background-color: var(--info-dark-35) !important;
+}
+
+.bg-info-dark-40 {
+  background-color: var(--info-dark-40) !important;
+}
+
+.bg-info-dark-45 {
+  background-color: var(--info-dark-45) !important;
+}
+
+.bg-info-dark-50 {
+  background-color: var(--info-dark-50) !important;
+}
+
+.bg-info-dark-55 {
+  background-color: var(--info-dark-55) !important;
+}
+
+.bg-info-dark-60 {
+  background-color: var(--info-dark-60) !important;
+}
+
+.bg-info-dark-65 {
+  background-color: var(--info-dark-65) !important;
+}
+
+.bg-info-dark-70 {
+  background-color: var(--info-dark-70) !important;
+}
+
+.bg-info-dark-75 {
+  background-color: var(--info-dark-75) !important;
+}
+
+.bg-info-dark-80 {
+  background-color: var(--info-dark-80) !important;
+}
+
+.bg-info-dark-85 {
+  background-color: var(--info-dark-85) !important;
+}
+
+.bg-info-dark-90 {
+  background-color: var(--info-dark-90) !important;
+}
+
+.bg-info-dark-95 {
+  background-color: var(--info-dark-95) !important;
+}
+
+.bg-light-light-95 {
+  background-color: var(--light-light-95) !important;
+}
+
+.bg-light-light-90 {
+  background-color: var(--light-light-90) !important;
+}
+
+.bg-light-light-85 {
+  background-color: var(--light-light-85) !important;
+}
+
+.bg-light-light-80 {
+  background-color: var(--light-light-80) !important;
+}
+
+.bg-light-light-75 {
+  background-color: var(--light-light-75) !important;
+}
+
+.bg-light-light-70 {
+  background-color: var(--light-light-70) !important;
+}
+
+.bg-light-light-65 {
+  background-color: var(--light-light-65) !important;
+}
+
+.bg-light-light-60 {
+  background-color: var(--light-light-60) !important;
+}
+
+.bg-light-light-55 {
+  background-color: var(--light-light-55) !important;
+}
+
+.bg-light-light-50 {
+  background-color: var(--light-light-50) !important;
+}
+
+.bg-light-light-45 {
+  background-color: var(--light-light-45) !important;
+}
+
+.bg-light-light-40 {
+  background-color: var(--light-light-40) !important;
+}
+
+.bg-light-light-35 {
+  background-color: var(--light-light-35) !important;
+}
+
+.bg-light-light-30 {
+  background-color: var(--light-light-30) !important;
+}
+
+.bg-light-light-25 {
+  background-color: var(--light-light-25) !important;
+}
+
+.bg-light-light-20 {
+  background-color: var(--light-light-20) !important;
+}
+
+.bg-light-light-15 {
+  background-color: var(--light-light-15) !important;
+}
+
+.bg-light-light-10 {
+  background-color: var(--light-light-10) !important;
+}
+
+.bg-light-light-5 {
+  background-color: var(--light-light-5) !important;
+}
+
+.bg-light-dark-5 {
+  background-color: var(--light-dark-5) !important;
+}
+
+.bg-light-dark-10 {
+  background-color: var(--light-dark-10) !important;
+}
+
+.bg-light-dark-15 {
+  background-color: var(--light-dark-15) !important;
+}
+
+.bg-light-dark-20 {
+  background-color: var(--light-dark-20) !important;
+}
+
+.bg-light-dark-25 {
+  background-color: var(--light-dark-25) !important;
+}
+
+.bg-light-dark-30 {
+  background-color: var(--light-dark-30) !important;
+}
+
+.bg-light-dark-35 {
+  background-color: var(--light-dark-35) !important;
+}
+
+.bg-light-dark-40 {
+  background-color: var(--light-dark-40) !important;
+}
+
+.bg-light-dark-45 {
+  background-color: var(--light-dark-45) !important;
+}
+
+.bg-light-dark-50 {
+  background-color: var(--light-dark-50) !important;
+}
+
+.bg-light-dark-55 {
+  background-color: var(--light-dark-55) !important;
+}
+
+.bg-light-dark-60 {
+  background-color: var(--light-dark-60) !important;
+}
+
+.bg-light-dark-65 {
+  background-color: var(--light-dark-65) !important;
+}
+
+.bg-light-dark-70 {
+  background-color: var(--light-dark-70) !important;
+}
+
+.bg-light-dark-75 {
+  background-color: var(--light-dark-75) !important;
+}
+
+.bg-light-dark-80 {
+  background-color: var(--light-dark-80) !important;
+}
+
+.bg-light-dark-85 {
+  background-color: var(--light-dark-85) !important;
+}
+
+.bg-light-dark-90 {
+  background-color: var(--light-dark-90) !important;
+}
+
+.bg-light-dark-95 {
+  background-color: var(--light-dark-95) !important;
+}
+
+.bg-dark-light-95 {
+  background-color: var(--dark-light-95) !important;
+}
+
+.bg-dark-light-90 {
+  background-color: var(--dark-light-90) !important;
+}
+
+.bg-dark-light-85 {
+  background-color: var(--dark-light-85) !important;
+}
+
+.bg-dark-light-80 {
+  background-color: var(--dark-light-80) !important;
+}
+
+.bg-dark-light-75 {
+  background-color: var(--dark-light-75) !important;
+}
+
+.bg-dark-light-70 {
+  background-color: var(--dark-light-70) !important;
+}
+
+.bg-dark-light-65 {
+  background-color: var(--dark-light-65) !important;
+}
+
+.bg-dark-light-60 {
+  background-color: var(--dark-light-60) !important;
+}
+
+.bg-dark-light-55 {
+  background-color: var(--dark-light-55) !important;
+}
+
+.bg-dark-light-50 {
+  background-color: var(--dark-light-50) !important;
+}
+
+.bg-dark-light-45 {
+  background-color: var(--dark-light-45) !important;
+}
+
+.bg-dark-light-40 {
+  background-color: var(--dark-light-40) !important;
+}
+
+.bg-dark-light-35 {
+  background-color: var(--dark-light-35) !important;
+}
+
+.bg-dark-light-30 {
+  background-color: var(--dark-light-30) !important;
+}
+
+.bg-dark-light-25 {
+  background-color: var(--dark-light-25) !important;
+}
+
+.bg-dark-light-20 {
+  background-color: var(--dark-light-20) !important;
+}
+
+.bg-dark-light-15 {
+  background-color: var(--dark-light-15) !important;
+}
+
+.bg-dark-light-10 {
+  background-color: var(--dark-light-10) !important;
+}
+
+.bg-dark-light-5 {
+  background-color: var(--dark-light-5) !important;
+}
+
+.bg-dark-dark-5 {
+  background-color: var(--dark-dark-5) !important;
+}
+
+.bg-dark-dark-10 {
+  background-color: var(--dark-dark-10) !important;
+}
+
+.bg-dark-dark-15 {
+  background-color: var(--dark-dark-15) !important;
+}
+
+.bg-dark-dark-20 {
+  background-color: var(--dark-dark-20) !important;
+}
+
+.bg-dark-dark-25 {
+  background-color: var(--dark-dark-25) !important;
+}
+
+.bg-dark-dark-30 {
+  background-color: var(--dark-dark-30) !important;
+}
+
+.bg-dark-dark-35 {
+  background-color: var(--dark-dark-35) !important;
+}
+
+.bg-dark-dark-40 {
+  background-color: var(--dark-dark-40) !important;
+}
+
+.bg-dark-dark-45 {
+  background-color: var(--dark-dark-45) !important;
+}
+
+.bg-dark-dark-50 {
+  background-color: var(--dark-dark-50) !important;
+}
+
+.bg-dark-dark-55 {
+  background-color: var(--dark-dark-55) !important;
+}
+
+.bg-dark-dark-60 {
+  background-color: var(--dark-dark-60) !important;
+}
+
+.bg-dark-dark-65 {
+  background-color: var(--dark-dark-65) !important;
+}
+
+.bg-dark-dark-70 {
+  background-color: var(--dark-dark-70) !important;
+}
+
+.bg-dark-dark-75 {
+  background-color: var(--dark-dark-75) !important;
+}
+
+.bg-dark-dark-80 {
+  background-color: var(--dark-dark-80) !important;
+}
+
+.bg-dark-dark-85 {
+  background-color: var(--dark-dark-85) !important;
+}
+
+.bg-dark-dark-90 {
+  background-color: var(--dark-dark-90) !important;
+}
+
+.bg-dark-dark-95 {
+  background-color: var(--dark-dark-95) !important;
+}
+
 .bg-primary-lightest {
   background-color: var(--primary-lightest-color) !important;
 }
@@ -3787,42 +5318,42 @@ textarea {
 /*-------------------------------------*/
 .bg-label-primary {
   color: var(--primary-color) !important;
-  background-color: var(--primary-lightest-color) !important;
+  background-color: var(--primary-light-80) !important;
 }
 
 .bg-label-secondary {
   color: var(--secondary-color) !important;
-  background-color: var(--secondary-lightest-color) !important;
+  background-color: var(--secondary-light-80) !important;
 }
 
 .bg-label-success {
   color: var(--success-color) !important;
-  background-color: var(--success-lightest-color) !important;
+  background-color: var(--success-light-70) !important;
 }
 
 .bg-label-danger {
   color: var(--danger-color) !important;
-  background-color: var(--danger-lightest-color) !important;
+  background-color: var(--danger-light-70) !important;
 }
 
 .bg-label-warning {
   color: var(--warning-color) !important;
-  background-color: var(--warning-lightest-color) !important;
+  background-color: var(--warning-light-70) !important;
 }
 
 .bg-label-info {
   color: var(--info-color) !important;
-  background-color: var(--info-lightest-color) !important;
+  background-color: var(--info-light-70) !important;
 }
 
 .bg-label-light {
   color: var(--light-darkest-color) !important;
-  background-color: var(--light-lighter-color) !important;
+  background-color: var(--light-light-60) !important;
 }
 
 .bg-label-dark {
   color: var(--dark-color) !important;
-  background-color: var(--dark-lightest-color) !important;
+  background-color: var(--dark-light-80) !important;
 }
 
 /*-------------------------------------*/

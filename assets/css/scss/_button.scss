@@ -1,6 +1,7 @@
 /*-------------------------------------*/
 /*              Buttons                */
 /*-------------------------------------*/
+@import '_color_names.scss';
 
 button:not(:disabled),
 [type='button']:not(:disabled),
@@ -38,111 +39,128 @@ button:not(:disabled),
   transform: translateY(-1px);
 }
 
-.btn-primary {
-  color: white;
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
-  box-shadow: 0 0.125rem 0.25rem 0 var(--primary-shadow-color);
+@each $name in $color-names {
+  .btn-#{$name} {
+    color: white;
+    background-color: var(--#{$name}-color);
+    border-color: var(--#{$name}-color);
+    box-shadow: 0 0.125rem 0.25rem 0 var(--#{$name}-shadow-color);
+
+    &:hover,
+    &:focus {
+      outline: none;
+      color: white;
+      background-color: var(--#{$name}-hover-color);
+      border-color: var(--#{$name}-hover-color);
+    }
+  }
 }
 
-.btn-primary:hover,
-.btn-primary:focus {
-  outline: none;
-  color: white;
-  background-color: var(--primary-hover-color);
-  border-color: var(--primary-hover-color);
-}
+// .btn-primary {
+//   color: white;
+//   background-color: var(--primary-color);
+//   border-color: var(--primary-color);
+//   box-shadow: 0 0.125rem 0.25rem 0 var(--primary-shadow-color);
+// }
 
-.btn-secondary {
-  color: white;
-  background-color: var(--secondary-color);
-  border-color: var(--secondary-color);
-  box-shadow: 0 0.125rem 0.25rem 0 var(--secondary-shadow-color);
-}
+// .btn-primary:hover,
+// .btn-primary:focus {
+//   outline: none;
+//   color: white;
+//   background-color: var(--primary-hover-color);
+//   border-color: var(--primary-hover-color);
+// }
 
-.btn-secondary:hover {
-  color: white;
-  background-color: var(--secondary-hover-color);
-  border-color: var(--secondary-hover-color);
-}
+// .btn-secondary {
+//   color: white;
+//   background-color: var(--secondary-color);
+//   border-color: var(--secondary-color);
+//   box-shadow: 0 0.125rem 0.25rem 0 var(--secondary-shadow-color);
+// }
 
-.btn-success {
-  color: white;
-  background-color: var(--success-color);
-  border-color: var(--success-color);
-  box-shadow: 0 0.125rem 0.25rem 0 var(--success-shadow-color);
-}
+// .btn-secondary:hover {
+//   color: white;
+//   background-color: var(--secondary-hover-color);
+//   border-color: var(--secondary-hover-color);
+// }
 
-.btn-success:hover {
-  color: white;
-  background-color: var(--success-hover-color);
-  border-color: var(--success-hover-color);
-}
+// .btn-success {
+//   color: white;
+//   background-color: var(--success-color);
+//   border-color: var(--success-color);
+//   box-shadow: 0 0.125rem 0.25rem 0 var(--success-shadow-color);
+// }
 
-.btn-danger {
-  color: white;
-  background-color: var(--danger-color);
-  border-color: var(--danger-color);
-  box-shadow: 0 0.125rem 0.25rem 0 var(--danger-shadow-color);
-}
+// .btn-success:hover {
+//   color: white;
+//   background-color: var(--success-hover-color);
+//   border-color: var(--success-hover-color);
+// }
 
-.btn-danger:hover {
-  color: white;
-  background-color: var(--danger-hover-color);
-  border-color: var(--danger-hover-color);
-}
+// .btn-danger {
+//   color: white;
+//   background-color: var(--danger-color);
+//   border-color: var(--danger-color);
+//   box-shadow: 0 0.125rem 0.25rem 0 var(--danger-shadow-color);
+// }
 
-.btn-warning {
-  color: white;
-  background-color: var(--warning-color);
-  border-color: var(--warning-color);
-  box-shadow: 0 0.125rem 0.25rem 0 var(--warning-shadow-color);
-}
+// .btn-danger:hover {
+//   color: white;
+//   background-color: var(--danger-hover-color);
+//   border-color: var(--danger-hover-color);
+// }
 
-.btn-warning:hover {
-  color: white;
-  background-color: var(--warning-hover-color);
-  border-color: var(--warning-hover-color);
-}
+// .btn-warning {
+//   color: white;
+//   background-color: var(--warning-color);
+//   border-color: var(--warning-color);
+//   box-shadow: 0 0.125rem 0.25rem 0 var(--warning-shadow-color);
+// }
 
-.btn-info {
-  color: white;
-  background-color: var(--info-color);
-  border-color: var(--info-color);
-  box-shadow: 0 0.125rem 0.25rem 0 var(--info-shadow-color);
-}
+// .btn-warning:hover {
+//   color: white;
+//   background-color: var(--warning-hover-color);
+//   border-color: var(--warning-hover-color);
+// }
 
-.btn-info:hover {
-  color: white;
-  background-color: var(--info-hover-color);
-  border-color: var(--info-hover-color);
-}
+// .btn-info {
+//   color: white;
+//   background-color: var(--info-color);
+//   border-color: var(--info-color);
+//   box-shadow: 0 0.125rem 0.25rem 0 var(--info-shadow-color);
+// }
 
-.btn-light {
-  color: white;
-  background-color: var(--light-color);
-  border-color: var(--light-color);
-  box-shadow: 0 0.125rem 0.25rem 0 var(--light-shadow-color);
-}
+// .btn-info:hover {
+//   color: white;
+//   background-color: var(--info-hover-color);
+//   border-color: var(--info-hover-color);
+// }
 
-.btn-light:hover {
-  color: white;
-  background-color: var(--light-hover-color);
-  border-color: var(--light-hover-color);
-}
+// .btn-light {
+//   color: white;
+//   background-color: var(--light-color);
+//   border-color: var(--light-color);
+//   box-shadow: 0 0.125rem 0.25rem 0 var(--light-shadow-color);
+// }
 
-.btn-dark {
-  color: white;
-  background-color: var(--dark-color);
-  border-color: var(--dark-color);
-  box-shadow: 0 0.125rem 0.25rem 0 var(--dark-shadow-color);
-}
+// .btn-light:hover {
+//   color: white;
+//   background-color: var(--light-hover-color);
+//   border-color: var(--light-hover-color);
+// }
 
-.btn-dark:hover {
-  color: white;
-  background-color: var(--dark-hover-color);
-  border-color: var(--dark-hover-color);
-}
+// .btn-dark {
+//   color: white;
+//   background-color: var(--dark-color);
+//   border-color: var(--dark-color);
+//   box-shadow: 0 0.125rem 0.25rem 0 var(--dark-shadow-color);
+// }
+
+// .btn-dark:hover {
+//   color: white;
+//   background-color: var(--dark-hover-color);
+//   border-color: var(--dark-hover-color);
+// }
 
 .btn-label-primary {
   color: var(--primary-color);

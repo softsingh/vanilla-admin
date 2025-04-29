@@ -1,6 +1,7 @@
 /*-------------------------------------*/
 /*           Form Elements             */
 /*-------------------------------------*/
+@import '_color_map.scss';
 
 .form-check {
   display: flex;
@@ -73,9 +74,7 @@
 
 //////////////////// Form Check Colors ////////////////////
 
-@import '_color_names.scss';
-
-@each $name in $color-names {
+@each $name, $value in $color-map {
   .form-check-#{$name} .form-check-input {
     --form-check-input-checked-bg-color: var(--#{$name}-color);
     --form-check-input-checked-border-color: var(--#{$name}-color);

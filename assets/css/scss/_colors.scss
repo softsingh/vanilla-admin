@@ -2,19 +2,14 @@
 /*               Colors                */
 /*-------------------------------------*/
 
-@import '_color_names.scss';
+@import '_color_map.scss';
 
 :root {
-  --primary-color: hsl(240, 100%, 70%);
-  --secondary-color: hsl(214, 14%, 52%);
-  --success-color: hsl(100, 65%, 60%);
-  --danger-color: hsl(8, 100%, 56%);
-  --warning-color: hsl(40, 100%, 50%);
-  --info-color: hsl(190, 100%, 50%);
-  --light-color: hsl(210, 6%, 87%);
-  --dark-color: hsl(240, 20%, 20%);
+  @each $name, $value in $color-map {
+    --#{$name}-color: #{$value};
+  }
 
-  @each $name in $color-names {
+  @each $name, $value in $color-map {
     @if $name =='dark' {
       --#{$name}-hover-color: color-mix(in oklch, white 6%, var(--#{$name}-color));
     }
@@ -26,7 +21,7 @@
     --#{$name}-shadow-color: color-mix(in oklch, var(--#{$name}-color), transparent 60%);
   }
 
-  @each $name in $color-names {
+  @each $name, $value in $color-map {
     @for $i from 19 through 1 {
       $step: 5 * $i;
       --#{$name}-light-#{$step}: color-mix(in oklch, white #{$step}%, var(--#{$name}-color));

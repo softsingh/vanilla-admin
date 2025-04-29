@@ -41,7 +41,7 @@
   --danger-color: hsl(8, 100%, 56%);
   --warning-color: hsl(40, 100%, 50%);
   --info-color: hsl(190, 100%, 50%);
-  --light-color: hsl(210, 6%, 87%);
+  --light-color: hsl(210, 6%, 80%);
   --dark-color: hsl(240, 20%, 20%);
   --primary-hover-color: color-mix(in oklch, black 6%, var(--primary-color));
   --primary-shadow-color: color-mix(in oklch, var(--primary-color), transparent 60%);
@@ -569,72 +569,64 @@ thead {
 
 .alert-primary {
   color: var(--primary-color);
-  background-color: var(--primary-lightest-color);
+  background-color: var(--primary-light-80);
 }
-
 .alert-primary .btn-close {
   background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8" standalone="no"%3F><svg width="100" height="100" viewBox="0 0 100 99.999998" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs1" /><path d="M 87.501105,0 49.99558,37.5 12.498895,0 0,12.5 37.496685,50 0,87.5 12.498895,100 49.99558,62.5 87.501105,100 100,87.5 62.503315,50 100,12.5 Z" id="path1" style="fill:%236666ff;fill-opacity:1;stroke-width:8.83978" /></svg>');
 }
 
 .alert-secondary {
   color: var(--secondary-color);
-  background-color: var(--secondary-lightest-color);
+  background-color: var(--secondary-light-80);
 }
-
 .alert-secondary .btn-close {
   background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8" standalone="no"%3F><svg width="100" height="100" viewBox="0 0 100 99.999998" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs1" /><path d="M 87.501105,0 49.99558,37.5 12.498895,0 0,12.5 37.496685,50 0,87.5 12.498895,100 49.99558,62.5 87.501105,100 100,87.5 62.503315,50 100,12.5 Z" id="path1" style="fill:%23738296;fill-opacity:1;stroke-width:8.83978" /></svg>');
 }
 
 .alert-success {
   color: var(--success-color);
-  background-color: var(--success-lightest-color);
+  background-color: var(--success-light-80);
 }
-
 .alert-success .btn-close {
-  background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8" standalone="no"%3F><svg width="100" height="100" viewBox="0 0 100 99.999998" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs1" /><path d="M 87.501105,0 49.99558,37.5 12.498895,0 0,12.5 37.496685,50 0,87.5 12.498895,100 49.99558,62.5 87.501105,100 100,87.5 62.503315,50 100,12.5 Z" id="path1" style="fill:%2376d846;fill-opacity:1;stroke-width:8.83978" /></svg>');
+  background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8" standalone="no"%3F><svg width="100" height="100" viewBox="0 0 100 99.999998" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs1" /><path d="M 87.501105,0 49.99558,37.5 12.498895,0 0,12.5 37.496685,50 0,87.5 12.498895,100 49.99558,62.5 87.501105,100 100,87.5 62.503315,50 100,12.5 Z" id="path1" style="fill:%2383db57;fill-opacity:1;stroke-width:8.83978" /></svg>');
 }
 
 .alert-danger {
   color: var(--danger-color);
-  background-color: var(--danger-lightest-color);
+  background-color: var(--danger-light-80);
 }
-
 .alert-danger .btn-close {
   background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8" standalone="no"%3F><svg width="100" height="100" viewBox="0 0 100 99.999998" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs1" /><path d="M 87.501105,0 49.99558,37.5 12.498895,0 0,12.5 37.496685,50 0,87.5 12.498895,100 49.99558,62.5 87.501105,100 100,87.5 62.503315,50 100,12.5 Z" id="path1" style="fill:%23ff3d1f;fill-opacity:1;stroke-width:8.83978" /></svg>');
 }
 
 .alert-warning {
   color: var(--warning-color);
-  background-color: var(--warning-lightest-color);
+  background-color: var(--warning-light-80);
 }
-
 .alert-warning .btn-close {
   background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8" standalone="no"%3F><svg width="100" height="100" viewBox="0 0 100 99.999998" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs1" /><path d="M 87.501105,0 49.99558,37.5 12.498895,0 0,12.5 37.496685,50 0,87.5 12.498895,100 49.99558,62.5 87.501105,100 100,87.5 62.503315,50 100,12.5 Z" id="path1" style="fill:%23ffaa00;fill-opacity:1;stroke-width:8.83978" /></svg>');
 }
 
 .alert-info {
   color: var(--info-color);
-  background-color: var(--info-lightest-color);
+  background-color: var(--info-light-80);
 }
-
 .alert-info .btn-close {
-  background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8" standalone="no"%3F><svg width="100" height="100" viewBox="0 0 100 99.999998" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs1" /><path d="M 87.501105,0 49.99558,37.5 12.498895,0 0,12.5 37.496685,50 0,87.5 12.498895,100 49.99558,62.5 87.501105,100 100,87.5 62.503315,50 100,12.5 Z" id="path1" style="fill:%2300d5ff;fill-opacity:1;stroke-width:8.83978" /></svg>');
+  background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8" standalone="no"%3F><svg width="100" height="100" viewBox="0 0 100 99.999998" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs1" /><path d="M 87.501105,0 49.99558,37.5 12.498895,0 0,12.5 37.496685,50 0,87.5 12.498895,100 49.99558,62.5 87.501105,100 100,87.5 62.503315,50 100,12.5 Z" id="path1" style="fill:%230d5ff;fill-opacity:1;stroke-width:8.83978" /></svg>');
 }
 
 .alert-light {
-  color: var(--light-darkest-color);
-  background-color: var(--light-lighter-color);
+  color: var(--light-dark-10);
+  background-color: var(--light-light-70);
 }
-
 .alert-light .btn-close {
-  background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8" standalone="no"%3F><svg width="100" height="100" viewBox="0 0 100 99.999998" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs1" /><path d="M 87.501105,0 49.99558,37.5 12.498895,0 0,12.5 37.496685,50 0,87.5 12.498895,100 49.99558,62.5 87.501105,100 100,87.5 62.503315,50 100,12.5 Z" id="path1" style="fill:%23738296;fill-opacity:1;stroke-width:8.83978" /></svg>');
+  background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8" standalone="no"%3F><svg width="100" height="100" viewBox="0 0 100 99.999998" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs1" /><path d="M 87.501105,0 49.99558,37.5 12.498895,0 0,12.5 37.496685,50 0,87.5 12.498895,100 49.99558,62.5 87.501105,100 100,87.5 62.503315,50 100,12.5 Z" id="path1" style="fill:%23c9cccf;fill-opacity:1;stroke-width:8.83978" /></svg>');
 }
 
 .alert-dark {
   color: var(--dark-color);
-  background-color: var(--dark-lightest-color);
+  background-color: var(--dark-light-80);
 }
-
 .alert-dark .btn-close {
   background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8" standalone="no"%3F><svg width="100" height="100" viewBox="0 0 100 99.999998" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs1" /><path d="M 87.501105,0 49.99558,37.5 12.498895,0 0,12.5 37.496685,50 0,87.5 12.498895,100 49.99558,62.5 87.501105,100 100,87.5 62.503315,50 100,12.5 Z" id="path1" style="fill:%2329293d;fill-opacity:1;stroke-width:8.83978" /></svg>');
 }
@@ -804,201 +796,192 @@ button:not(:disabled),
 }
 
 .btn-primary {
-  color: white;
+  color: var(--white-color);
   background-color: var(--primary-color);
   border-color: var(--primary-color);
   box-shadow: 0 0.125rem 0.25rem 0 var(--primary-shadow-color);
 }
 .btn-primary:hover, .btn-primary:focus {
   outline: none;
-  color: white;
+  color: var(--white-color);
   background-color: var(--primary-hover-color);
   border-color: var(--primary-hover-color);
 }
 
 .btn-secondary {
-  color: white;
+  color: var(--white-color);
   background-color: var(--secondary-color);
   border-color: var(--secondary-color);
   box-shadow: 0 0.125rem 0.25rem 0 var(--secondary-shadow-color);
 }
 .btn-secondary:hover, .btn-secondary:focus {
   outline: none;
-  color: white;
+  color: var(--white-color);
   background-color: var(--secondary-hover-color);
   border-color: var(--secondary-hover-color);
 }
 
 .btn-success {
-  color: white;
+  color: var(--white-color);
   background-color: var(--success-color);
   border-color: var(--success-color);
   box-shadow: 0 0.125rem 0.25rem 0 var(--success-shadow-color);
 }
 .btn-success:hover, .btn-success:focus {
   outline: none;
-  color: white;
+  color: var(--white-color);
   background-color: var(--success-hover-color);
   border-color: var(--success-hover-color);
 }
 
 .btn-danger {
-  color: white;
+  color: var(--white-color);
   background-color: var(--danger-color);
   border-color: var(--danger-color);
   box-shadow: 0 0.125rem 0.25rem 0 var(--danger-shadow-color);
 }
 .btn-danger:hover, .btn-danger:focus {
   outline: none;
-  color: white;
+  color: var(--white-color);
   background-color: var(--danger-hover-color);
   border-color: var(--danger-hover-color);
 }
 
 .btn-warning {
-  color: white;
+  color: var(--white-color);
   background-color: var(--warning-color);
   border-color: var(--warning-color);
   box-shadow: 0 0.125rem 0.25rem 0 var(--warning-shadow-color);
 }
 .btn-warning:hover, .btn-warning:focus {
   outline: none;
-  color: white;
+  color: var(--white-color);
   background-color: var(--warning-hover-color);
   border-color: var(--warning-hover-color);
 }
 
 .btn-info {
-  color: white;
+  color: var(--white-color);
   background-color: var(--info-color);
   border-color: var(--info-color);
   box-shadow: 0 0.125rem 0.25rem 0 var(--info-shadow-color);
 }
 .btn-info:hover, .btn-info:focus {
   outline: none;
-  color: white;
+  color: var(--white-color);
   background-color: var(--info-hover-color);
   border-color: var(--info-hover-color);
 }
 
 .btn-light {
-  color: white;
+  color: var(--white-color);
   background-color: var(--light-color);
   border-color: var(--light-color);
   box-shadow: 0 0.125rem 0.25rem 0 var(--light-shadow-color);
 }
 .btn-light:hover, .btn-light:focus {
   outline: none;
-  color: white;
+  color: var(--white-color);
   background-color: var(--light-hover-color);
   border-color: var(--light-hover-color);
 }
 
 .btn-dark {
-  color: white;
+  color: var(--white-color);
   background-color: var(--dark-color);
   border-color: var(--dark-color);
   box-shadow: 0 0.125rem 0.25rem 0 var(--dark-shadow-color);
 }
 .btn-dark:hover, .btn-dark:focus {
   outline: none;
-  color: white;
+  color: var(--white-color);
   background-color: var(--dark-hover-color);
   border-color: var(--dark-hover-color);
 }
 
 .btn-label-primary {
-  color: var(--primary-color);
   border-color: none;
-  background-color: var(--primary-lightest-color);
+  color: var(--primary-dark-10);
+  background-color: var(--primary-light-80);
 }
-
-.btn-label-primary:hover,
-.btn-label-primary:focus {
+.btn-label-primary:hover, .btn-label-primary:focus {
   color: var(--white-color);
   border-color: none;
   background-color: var(--primary-color);
 }
 
 .btn-label-secondary {
-  color: var(--secondary-color);
-  background-color: var(--secondary-lightest-color);
+  border-color: none;
+  color: var(--secondary-dark-10);
+  background-color: var(--secondary-light-80);
 }
-
-.btn-label-secondary:hover,
-.btn-label-secondary:focus {
+.btn-label-secondary:hover, .btn-label-secondary:focus {
   color: var(--white-color);
   border-color: none;
   background-color: var(--secondary-color);
 }
 
 .btn-label-success {
-  color: var(--success-color);
-  background-color: var(--success-lightest-color);
+  border-color: none;
+  color: var(--success-dark-10);
+  background-color: var(--success-light-80);
 }
-
-.btn-label-success:hover,
-.btn-label-success:focus {
+.btn-label-success:hover, .btn-label-success:focus {
   color: var(--white-color);
   border-color: none;
   background-color: var(--success-color);
 }
 
 .btn-label-danger {
-  color: var(--danger-color);
-  background-color: var(--danger-lightest-color);
+  border-color: none;
+  color: var(--danger-dark-10);
+  background-color: var(--danger-light-80);
 }
-
-.btn-label-danger:hover,
-.btn-label-danger:focus {
+.btn-label-danger:hover, .btn-label-danger:focus {
   color: var(--white-color);
   border-color: none;
   background-color: var(--danger-color);
 }
 
 .btn-label-warning {
-  color: var(--warning-color);
-  background-color: var(--warning-lightest-color);
+  border-color: none;
+  color: var(--warning-dark-10);
+  background-color: var(--warning-light-80);
 }
-
-.btn-label-warning:hover,
-.btn-label-warning:focus {
+.btn-label-warning:hover, .btn-label-warning:focus {
   color: var(--white-color);
   border-color: none;
   background-color: var(--warning-color);
 }
 
 .btn-label-info {
-  color: var(--info-color);
-  background-color: var(--info-lightest-color);
+  border-color: none;
+  color: var(--info-dark-10);
+  background-color: var(--info-light-80);
 }
-
-.btn-label-info:hover,
-.btn-label-info:focus {
+.btn-label-info:hover, .btn-label-info:focus {
   color: var(--white-color);
   border-color: none;
   background-color: var(--info-color);
 }
 
 .btn-label-light {
-  color: var(--light-darkest-color);
-  background-color: var(--light-lighter-color);
+  border-color: none;
+  color: var(--light-dark-10);
+  background-color: var(--light-light-80);
 }
-
-.btn-label-light:hover,
-.btn-label-light:focus {
+.btn-label-light:hover, .btn-label-light:focus {
   color: var(--white-color);
   border-color: none;
-  background-color: var(--light-darkest-color);
+  background-color: var(--light-color);
 }
 
 .btn-label-dark {
-  color: var(--dark-color);
-  background-color: var(--dark-lightest-color);
+  border-color: none;
+  color: var(--dark-dark-10);
+  background-color: var(--dark-light-80);
 }
-
-.btn-label-dark:hover,
-.btn-label-dark:focus {
+.btn-label-dark:hover, .btn-label-dark:focus {
   color: var(--white-color);
   border-color: none;
   background-color: var(--dark-color);
@@ -1009,9 +992,7 @@ button:not(:disabled),
   border-color: var(--primary-color);
   background-color: transparent;
 }
-
-.btn-outline-primary:hover,
-.btn-outline-primary:focus {
+.btn-outline-primary:hover, .btn-outline-primary:focus {
   color: var(--white-color);
   border-color: none;
   background-color: var(--primary-color);
@@ -1022,9 +1003,7 @@ button:not(:disabled),
   border-color: var(--secondary-color);
   background-color: transparent;
 }
-
-.btn-outline-secondary:hover,
-.btn-outline-secondary:focus {
+.btn-outline-secondary:hover, .btn-outline-secondary:focus {
   color: var(--white-color);
   border-color: none;
   background-color: var(--secondary-color);
@@ -1035,9 +1014,7 @@ button:not(:disabled),
   border-color: var(--success-color);
   background-color: transparent;
 }
-
-.btn-outline-success:hover,
-.btn-outline-success:focus {
+.btn-outline-success:hover, .btn-outline-success:focus {
   color: var(--white-color);
   border-color: none;
   background-color: var(--success-color);
@@ -1048,9 +1025,7 @@ button:not(:disabled),
   border-color: var(--danger-color);
   background-color: transparent;
 }
-
-.btn-outline-danger:hover,
-.btn-outline-danger:focus {
+.btn-outline-danger:hover, .btn-outline-danger:focus {
   color: var(--white-color);
   border-color: none;
   background-color: var(--danger-color);
@@ -1061,9 +1036,7 @@ button:not(:disabled),
   border-color: var(--warning-color);
   background-color: transparent;
 }
-
-.btn-outline-warning:hover,
-.btn-outline-warning:focus {
+.btn-outline-warning:hover, .btn-outline-warning:focus {
   color: var(--white-color);
   border-color: none;
   background-color: var(--warning-color);
@@ -1074,25 +1047,21 @@ button:not(:disabled),
   border-color: var(--info-color);
   background-color: transparent;
 }
-
-.btn-outline-info:hover,
-.btn-outline-info:focus {
+.btn-outline-info:hover, .btn-outline-info:focus {
   color: var(--white-color);
   border-color: none;
   background-color: var(--info-color);
 }
 
 .btn-outline-light {
-  color: var(--light-darkest-color);
-  border-color: var(--light-darkest-color);
+  color: var(--light-color);
+  border-color: var(--light-color);
   background-color: transparent;
 }
-
-.btn-outline-light:hover,
-.btn-outline-light:focus {
+.btn-outline-light:hover, .btn-outline-light:focus {
   color: var(--white-color);
   border-color: none;
-  background-color: var(--light-darkest-color);
+  background-color: var(--light-color);
 }
 
 .btn-outline-dark {
@@ -1100,9 +1069,7 @@ button:not(:disabled),
   border-color: var(--dark-color);
   background-color: transparent;
 }
-
-.btn-outline-dark:hover,
-.btn-outline-dark:focus {
+.btn-outline-dark:hover, .btn-outline-dark:focus {
   color: var(--white-color);
   border-color: none;
   background-color: var(--dark-color);
@@ -1114,7 +1081,7 @@ button:not(:disabled),
   width: 1em;
   height: 1em;
   padding: 0.25em 0.25em;
-  color: #000;
+  color: var(--black-color);
   background: transparent var(--btn-close-bg) center/1em auto no-repeat;
   border: 0;
   border-radius: 0.375rem;
@@ -1122,7 +1089,7 @@ button:not(:disabled),
 }
 
 .btn-close:hover {
-  color: #000;
+  color: var(--black-color);
   text-decoration: none;
 }
 
@@ -3811,6 +3778,38 @@ textarea {
 /*-------------------------------------*/
 /*             Background              */
 /*-------------------------------------*/
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color) !important;
+}
+
+.bg-success {
+  background-color: var(--success-color) !important;
+}
+
+.bg-danger {
+  background-color: var(--danger-color) !important;
+}
+
+.bg-warning {
+  background-color: var(--warning-color) !important;
+}
+
+.bg-info {
+  background-color: var(--info-color) !important;
+}
+
+.bg-light {
+  background-color: var(--light-color) !important;
+}
+
+.bg-dark {
+  background-color: var(--dark-color) !important;
+}
+
 .bg-primary-light-95 {
   background-color: var(--primary-light-95) !important;
 }
@@ -5027,230 +5026,6 @@ textarea {
   background-color: var(--dark-dark-95) !important;
 }
 
-.bg-primary-lightest {
-  background-color: var(--primary-lightest-color) !important;
-}
-
-.bg-primary-lighter {
-  background-color: var(--primary-lighter-color);
-}
-
-.bg-primary-light {
-  background-color: var(--primary-light-color);
-}
-
-.bg-primary {
-  background-color: var(--primary-color) !important;
-}
-
-.bg-primary-dark {
-  background-color: var(--primary-dark-color);
-}
-
-.bg-primary-darker {
-  background-color: var(--primary-darker-color);
-}
-
-.bg-primary-darkest {
-  background-color: var(--primary-darkest-color);
-}
-
-.bg-secondary-lightest {
-  background-color: var(--secondary-lightest-color);
-}
-
-.bg-secondary-lighter {
-  background-color: var(--secondary-lighter-color);
-}
-
-.bg-secondary-light {
-  background-color: var(--secondary-light-color);
-}
-
-.bg-secondary {
-  background-color: var(--secondary-color) !important;
-}
-
-.bg-secondary-dark {
-  background-color: var(--secondary-dark-color);
-}
-
-.bg-secondary-darker {
-  background-color: var(--secondary-darker-color);
-}
-
-.bg-secondary-darkest {
-  background-color: var(--secondary-darkest-color);
-}
-
-.bg-success-lightest {
-  background-color: var(--success-lightest-color);
-}
-
-.bg-success-lighter {
-  background-color: var(--success-lighter-color);
-}
-
-.bg-success-light {
-  background-color: var(--success-light-color);
-}
-
-.bg-success {
-  background-color: var(--success-color) !important;
-}
-
-.bg-success-dark {
-  background-color: var(--success-dark-color);
-}
-
-.bg-success-darker {
-  background-color: var(--success-darker-color);
-}
-
-.bg-success-darkest {
-  background-color: var(--success-darkest-color);
-}
-
-.bg-danger-lightest {
-  background-color: var(--danger-lightest-color);
-}
-
-.bg-danger-lighter {
-  background-color: var(--danger-lighter-color);
-}
-
-.bg-danger-light {
-  background-color: var(--danger-light-color);
-}
-
-.bg-danger {
-  background-color: var(--danger-color) !important;
-}
-
-.bg-danger-dark {
-  background-color: var(--danger-dark-color);
-}
-
-.bg-danger-darker {
-  background-color: var(--danger-darker-color);
-}
-
-.bg-danger-darkest {
-  background-color: var(--danger-darkest-color);
-}
-
-.bg-warning-lightest {
-  background-color: var(--warning-lightest-color);
-}
-
-.bg-warning-lighter {
-  background-color: var(--warning-lighter-color);
-}
-
-.bg-warning-light {
-  background-color: var(--warning-light-color);
-}
-
-.bg-warning {
-  background-color: var(--warning-color) !important;
-}
-
-.bg-warning-dark {
-  background-color: var(--warning-dark-color);
-}
-
-.bg-warning-darker {
-  background-color: var(--warning-darker-color);
-}
-
-.bg-warning-darkest {
-  background-color: var(--warning-darkest-color);
-}
-
-.bg-info-lightest {
-  background-color: var(--info-lightest-color);
-}
-
-.bg-info-lighter {
-  background-color: var(--info-lighter-color);
-}
-
-.bg-info-light {
-  background-color: var(--info-light-color);
-}
-
-.bg-info {
-  background-color: var(--info-color) !important;
-}
-
-.bg-info-dark {
-  background-color: var(--info-dark-color);
-}
-
-.bg-info-darker {
-  background-color: var(--info-darker-color);
-}
-
-.bg-info-darkest {
-  background-color: var(--info-darkest-color);
-}
-
-.bg-light-lightest {
-  background-color: var(--light-lightest-color);
-}
-
-.bg-light-lighter {
-  background-color: var(--light-lighter-color);
-}
-
-.bg-light-light {
-  background-color: var(--light-light-color);
-}
-
-.bg-light {
-  background-color: var(--light-color) !important;
-}
-
-.bg-light-dark {
-  background-color: var(--light-dark-color);
-}
-
-.bg-light-darker {
-  background-color: var(--light-darker-color);
-}
-
-.bg-light-darkest {
-  background-color: var(--light-darkest-color);
-}
-
-.bg-dark-lightest {
-  background-color: var(--dark-lightest-color);
-}
-
-.bg-dark-lighter {
-  background-color: var(--dark-lighter-color);
-}
-
-.bg-dark-light {
-  background-color: var(--dark-light-color);
-}
-
-.bg-dark {
-  background-color: var(--dark-color) !important;
-}
-
-.bg-dark-dark {
-  background-color: var(--dark-dark-color);
-}
-
-.bg-dark-darker {
-  background-color: var(--dark-darker-color);
-}
-
-.bg-dark-darkest {
-  background-color: var(--dark-darkest-color);
-}
-
 .bg-transparent {
   background: transparent;
 }
@@ -5270,26 +5045,26 @@ textarea {
 
 .bg-label-success {
   color: var(--success-color) !important;
-  background-color: var(--success-light-70) !important;
+  background-color: var(--success-light-80) !important;
 }
 
 .bg-label-danger {
   color: var(--danger-color) !important;
-  background-color: var(--danger-light-70) !important;
+  background-color: var(--danger-light-80) !important;
 }
 
 .bg-label-warning {
   color: var(--warning-color) !important;
-  background-color: var(--warning-light-70) !important;
+  background-color: var(--warning-light-80) !important;
 }
 
 .bg-label-info {
   color: var(--info-color) !important;
-  background-color: var(--info-light-70) !important;
+  background-color: var(--info-light-80) !important;
 }
 
 .bg-label-light {
-  color: var(--light-darkest-color) !important;
+  color: var(--light-dark-10) !important;
   background-color: var(--light-light-60) !important;
 }
 

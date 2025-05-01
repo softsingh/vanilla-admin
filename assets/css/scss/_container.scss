@@ -7,7 +7,6 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  /* border: 2px solid rgb(106, 255, 0); */
 }
 
 @media (min-width: 576px) {
@@ -49,19 +48,5 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
+  gap: 0.25rem;
 }
-
-// @mixin _gap-container($postfix, $gap) {
-//   .gap-container-#{$postfix} {
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: flex-start;
-//     align-items: center;
-//     gap: #{$gap}rem;
-//   }
-// }
-
-// @for $i from 1 through 8 {
-//   @include _gap-container($i, 0.25 * $i);
-//   @include _gap-container(#{$i}_5, (0.25 * $i) + 0.125);
-// }

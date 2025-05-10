@@ -370,7 +370,7 @@
   --black-color: #000000;
   --light-white-color: hsl(0, 0%, 97%);
   --light-gray-color: hsl(0, 0%, 90%);
-  --body-color: hsl(211, 17%, 28%);
+  --body-color: #3b4754;
   --body-bg: hsl(240, 25%, 97%);
   --border-color: #d9dee3;
   --form-control-focus-border-color: color-mix(in srgb, var(--primary-color), transparent 10%);
@@ -390,8 +390,8 @@
 .dark-mode {
   --white-color: #171717;
   --black-color: #d4d4d4;
-  --light-white-color: #333;
-  --light-gray-color: #404040;
+  --body-color: #b2b2c4;
+  --body-bg: #232333;
 }
 
 /*--------------------------------------------------------------------------*/
@@ -1095,9 +1095,7 @@ button:not(:disabled),
 .btn-close:disabled,
 .btn-close.disabled {
   pointer-events: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   opacity: 0.25;
 }
 
@@ -1273,9 +1271,7 @@ button:not(:disabled),
   cursor: pointer;
   width: 1.2rem;
   height: 1.2rem;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   background-repeat: no-repeat;
   background-position: center;
   border: 2px solid var(--border-color);
@@ -1287,9 +1283,7 @@ button:not(:disabled),
 .form-check-label:disabled,
 .form-check-label.disabled {
   opacity: 0.45;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   pointer-events: none;
 }
 
@@ -1421,23 +1415,10 @@ button:not(:disabled),
   border-color: var(--danger-dark-color);
 }
 
-.form-control::-moz-placeholder {
-  color: #b4bdc6;
-  font-weight: 450;
-  opacity: 1;
-}
-
 .form-control::placeholder {
   color: #b4bdc6;
   font-weight: 450;
   opacity: 1;
-}
-
-.form-control::-moz-placeholder, .form-control:focus::-moz-placeholder {
-  transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease;
 }
 
 .form-control::placeholder,
@@ -1446,13 +1427,6 @@ button:not(:disabled),
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
-}
-
-.form-control:focus:not([readonly])::-moz-placeholder {
-  transform: translateX(5px);
-  -moz-transform: translateX(5px);
-  -o-transform: translateX(5px);
-  -webkit-transform: translateX(5px);
 }
 
 .form-control:focus:not([readonly])::placeholder {
@@ -1486,9 +1460,7 @@ button:not(:disabled),
   padding: 0.35rem 0.75rem;
   color: var(--body-color);
   background: var(--white-color);
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   background-image: url("data:image/svg+xml,<svg viewBox='0 0 12 7.333127' fill='none' version='1.1' id='svg1' width='12' height='7.333127' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'><defs id='defs1' /><path d='M 5.9999688,4.6669152 10.666843,0 12,1.3331162 5.9999688,7.3331268 0,1.3331162 1.3331264,0 Z' fill='%2322303e' fill-opacity='0.9' id='path1' style='fill:%23738296;fill-opacity:0.8;stroke-width:1.02851' /></svg>");
   background-repeat: no-repeat;
   background-position: right 0.5rem center;
@@ -3195,8 +3167,7 @@ button:not(:disabled),
   padding: 0.5rem 0.9rem;
   border-radius: var(--border-radius);
   background-color: hsla(0, 0%, 100%, 0.88);
-  -webkit-backdrop-filter: saturate(200%) blur(6px);
-          backdrop-filter: saturate(200%) blur(6px);
+  backdrop-filter: saturate(200%) blur(6px);
   box-shadow: 0 0.2rem 0.5rem 0 hsla(210, 30%, 20%, 0.1);
   z-index: var(--navbar-z-index);
 }
@@ -5134,15 +5105,11 @@ textarea {
 }
 
 .user-select-all {
-  -webkit-user-select: all;
-     -moz-user-select: all;
-          user-select: all;
+  user-select: all;
 }
 
 .user-select-none {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 
 /*-------------------------------------*/
@@ -6357,16 +6324,16 @@ small,
   color: var(--warning-color);
 }
 
-.text-danger-lightest {
-  color: var(--danger-lightest-color);
+.text-danger-light-95 {
+  color: var(--danger-light-95);
 }
 
 .text-danger {
   color: var(--danger-color);
 }
 
-.text-danger-dark {
-  color: var(--danger-dark-color);
+.text-danger-dark-50 {
+  color: var(--danger-dark-50);
 }
 
 .text-light {

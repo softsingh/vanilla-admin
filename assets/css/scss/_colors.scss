@@ -40,7 +40,7 @@
   --light-white-color: hsl(0, 0%, 97%);
   --light-gray-color: hsl(0, 0%, 90%);
 
-  --body-color: hsl(211, 17%, 28%);
+  --body-color: #3b4754;
   --body-bg: hsl(240, 25%, 97%);
 
   --border-color: #d9dee3;
@@ -69,6 +69,7 @@
 .dark-mode {
   --white-color: #171717;
   --black-color: #d4d4d4;
-  --light-white-color: #333;
-  --light-gray-color: #404040;
+
+  --body-color: #b2b2c4;
+  --body-bg: #232333;
 }

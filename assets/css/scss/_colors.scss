@@ -43,6 +43,8 @@
   --body-color: #3b4754;
   --body-bg: hsl(240, 25%, 97%);
 
+  --paper-bg: #fff;
+
   --border-color: #d9dee3;
 
   --form-control-focus-border-color: color-mix(in srgb, var(--primary-color), transparent 10%);
@@ -72,4 +74,7 @@
 
   --body-color: #b2b2c4;
   --body-bg: #232333;
+
+  --paper-bg: #2b2c40;
+
 }

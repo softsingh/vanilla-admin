@@ -1,23 +1,3 @@
-// // TEMP => Refresh Page if server restarts
-
-// let lastServerRestart = Date.now();
-
-// function checkForServerRestart() {
-//   fetch(window.location.href, { method: 'HEAD', cache: 'no-store' })
-//     .then(response => {
-//       const serverRestartTime = new Date(response.headers.get('Date')).getTime();
-//       if (serverRestartTime > lastServerRestart) {
-//         // Server restart detected, reload the page
-//         console.log("Server restart detected. Reloading the page...");
-//         window.location.reload();
-//       }
-//     })
-//     .catch(error => console.error("Error checking server status:", error));
-// }
-
-// Check every 3 seconds for server restarts
-// setInterval(checkForServerRestart, 3000);
-
 
 // Hide Sidebar by default on small screens
 if (window.innerWidth <= 768) {

@@ -89,6 +89,20 @@ function hideAllDropdowns(event) {
   });
 }
 
+//////////////////// Form Control ////////////////////
+
+const invalidInputs = document.querySelectorAll('.form-control.invalid');
+
+invalidInputs.forEach((invalidInput) => {
+  invalidInput.addEventListener('input', (event) => {
+    if (invalidInput.classList.contains('invalid')) {
+      invalidInput.classList.remove('invalid');
+    }
+    event.stopPropagation();
+  });
+})
+
+
 //////////////////// Modal (except ModalConfirm) ////////////////////
 
 const modals = document.querySelectorAll('.modal:not(.modal-confirm)');

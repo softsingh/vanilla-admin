@@ -104,7 +104,8 @@
 }
 
 .form-control.invalid {
-  border-color: var(--danger-dark-color);
+  color: var(--danger-color);
+  border-color: var(--danger-color);
 }
 
 .form-control:hover:not([disabled]):not([focus]) {
@@ -120,7 +121,8 @@
 }
 
 .form-control:focus.invalid {
-  border-color: var(--danger-dark-color);
+  color: var(--danger-color);
+  border-color: var(--danger-color);
 }
 
 .form-control::placeholder {
@@ -151,7 +153,7 @@
   font-size: 0.8rem;
   margin-left: 0.25rem;
   margin-right: 0.25rem;
-  color: var(--danger-dark-color);
+  color: var(--danger-color);
 }
 
 .form-label {

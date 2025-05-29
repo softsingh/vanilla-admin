@@ -369,6 +369,29 @@ navbarToggles.forEach((navbarToggle) =>
   })
 );
 
+/////////////////// Pagination Overflow ////////////////////
+
+const paginationOverflows = document.querySelectorAll('.pagination-overflow');
+paginationOverflows?.forEach((paginationOverflow) => {
+  const pageItems = paginationOverflow.querySelectorAll('.page-item');
+  let pageItemCount = 0;
+  if (pageItems) {
+    for (let i = 0; i < pageItems.length; i++) {
+      if (
+        !pageItems[i].classList.contains('page-item-first') &&
+        !pageItems[i].classList.contains('page-item-previous') &&
+        !pageItems[i].classList.contains('page-item-next') &&
+        !pageItems[i].classList.contains('page-item-last')
+      ) {
+        pageItemCount++;
+      }
+    }
+
+
+
+  }
+});
+
 /////////////////// Sidebar ////////////////////
 
 // Sidebar Menu

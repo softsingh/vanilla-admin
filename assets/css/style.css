@@ -442,7 +442,7 @@ body.sidebar-hidden .navbar .sidebar-toggle {
   justify-content: end;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .dash-table-pagination-info {
     height: inherit;
     align-items: center;

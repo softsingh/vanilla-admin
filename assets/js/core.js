@@ -374,21 +374,115 @@ navbarToggles.forEach((navbarToggle) =>
 const paginationOverflows = document.querySelectorAll('.pagination-overflow');
 paginationOverflows?.forEach((paginationOverflow) => {
   const pageItems = paginationOverflow.querySelectorAll('.page-item');
-  let pageItemCount = 0;
-  if (pageItems) {
-    for (let i = 0; i < pageItems.length; i++) {
+
+  if (!pageItems)
+    return;
+
+  let pageItemCount = 0, activePageItem = 0, i = 0;
+
+  for (i = 0; i < pageItems.length; i++) {
+    if (
+      !pageItems[i].classList.contains('page-item-first') &&
+      !pageItems[i].classList.contains('page-item-previous') &&
+      !pageItems[i].classList.contains('page-item-next') &&
+      !pageItems[i].classList.contains('page-item-last')
+    ) {
+      pageItemCount++;
+    }
+  }
+
+  if (pageItemCount <= 5) {
+    return;
+  }
+
+  for (i = 0; i < pageItems.length; i++) {
+    if (
+      !pageItems[i].classList.contains('page-item-first') &&
+      !pageItems[i].classList.contains('page-item-previous') &&
+      !pageItems[i].classList.contains('page-item-next') &&
+      !pageItems[i].classList.contains('page-item-last')
+    ) {
+      if (pageItems[i].classList.contains('active')) {
+        activePageItem = i;
+        break;
+      }
+    }
+  }
+
+  const screenWidth = window.screen.width;
+
+  if (screenWidth < 576) {
+    for (i = activePageItem - 1; i >= 0; i--) {
       if (
-        !pageItems[i].classList.contains('page-item-first') &&
-        !pageItems[i].classList.contains('page-item-previous') &&
-        !pageItems[i].classList.contains('page-item-next') &&
-        !pageItems[i].classList.contains('page-item-last')
+        !pageItems[i]?.classList.contains('page-item-first') &&
+        !pageItems[i]?.classList.contains('page-item-previous') &&
+        !pageItems[i]?.classList.contains('page-item-next') &&
+        !pageItems[i]?.classList.contains('page-item-last')
       ) {
-        pageItemCount++;
+        pageItems[i]?.classList.add('d-none');
+      }
+    }
+    for (i = activePageItem + 1; i <= pageItems.length; i++) {
+      if (
+        !pageItems[i]?.classList.contains('page-item-first') &&
+        !pageItems[i]?.classList.contains('page-item-previous') &&
+        !pageItems[i]?.classList.contains('page-item-next') &&
+        !pageItems[i]?.classList.contains('page-item-last')
+      ) {
+        pageItems[i]?.classList.add('d-none');
+      }
+    }
+  }
+  else {
+    // Before active page item
+    let pageLink = pageItems[activePageItem - 2].querySelector('.page-link');
+
+    if (pageLink) {
+      if (
+        !pageLink.closest('.page-item')?.classList.contains('page-item-first') &&
+        !pageLink.closest('.page-item')?.classList.contains('page-item-previous') &&
+        !pageLink.closest('.page-item')?.classList.contains('page-item-next') &&
+        !pageLink.closest('.page-item')?.classList.contains('page-item-last')
+      ) {
+        pageLink.innerHTML = '<i class="bx bx-dots-horizontal-rounded"></i>';
       }
     }
 
+    for (i = activePageItem - 3; i >= 0; i--) {
+      if (
+        !pageItems[i]?.classList.contains('page-item-first') &&
+        !pageItems[i]?.classList.contains('page-item-previous') &&
+        !pageItems[i]?.classList.contains('page-item-next') &&
+        !pageItems[i]?.classList.contains('page-item-last')
+      ) {
+        pageItems[i]?.classList.add('d-none');
+      }
+    }
 
+    // After active page item
+    pageLink = pageItems[activePageItem + 2].querySelector('.page-link');
 
+    if (pageLink) {
+      if (
+        !pageLink.closest('.page-item')?.classList.contains('page-item-first') &&
+        !pageLink.closest('.page-item')?.classList.contains('page-item-previous') &&
+        !pageLink.closest('.page-item')?.classList.contains('page-item-next') &&
+        !pageLink.closest('.page-item')?.classList.contains('page-item-last')
+      ) {
+        pageLink.innerHTML = '<i class="bx bx-dots-horizontal-rounded"></i>';
+      }
+    }
+
+    for (i = activePageItem + 3; i <= pageItems.length; i++) {
+      if (
+        !pageItems[i]?.classList.contains('page-item-first') &&
+        !pageItems[i]?.classList.contains('page-item-previous') &&
+        !pageItems[i]?.classList.contains('page-item-next') &&
+        !pageItems[i]?.classList.contains('page-item-last')
+      ) {
+        pageItems[i]?.classList.add('d-none');
+      }
+    }
   }
 });
 

@@ -409,9 +409,9 @@ paginationOverflows?.forEach((paginationOverflow) => {
     }
   }
 
-  const screenWidth = window.screen.width;
+  const viewportWidth = window.innerWidth;
 
-  if (screenWidth < 576) {
+  if (viewportWidth < 576) {
     for (i = activePageItem - 1; i >= 0; i--) {
       if (
         !pageItems[i]?.classList.contains('page-item-first') &&
@@ -444,6 +444,7 @@ paginationOverflows?.forEach((paginationOverflow) => {
         !pageLink.closest('.page-item')?.classList.contains('page-item-next') &&
         !pageLink.closest('.page-item')?.classList.contains('page-item-last')
       ) {
+        pageLink.setAttribute('href', '#');
         pageLink.innerHTML = '<i class="bx bx-dots-horizontal-rounded"></i>';
       }
     }
@@ -469,6 +470,7 @@ paginationOverflows?.forEach((paginationOverflow) => {
         !pageLink.closest('.page-item')?.classList.contains('page-item-next') &&
         !pageLink.closest('.page-item')?.classList.contains('page-item-last')
       ) {
+        pageLink.setAttribute('href', '#');
         pageLink.innerHTML = '<i class="bx bx-dots-horizontal-rounded"></i>';
       }
     }

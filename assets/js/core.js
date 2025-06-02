@@ -409,79 +409,22 @@ paginationOverflows?.forEach((paginationOverflow) => {
     }
   }
 
-  const viewportWidth = window.innerWidth;
-
-  if (viewportWidth < 576) {
-    for (i = activePageItem - 1; i >= 0; i--) {
-      if (
-        !pageItems[i]?.classList.contains('page-item-first') &&
-        !pageItems[i]?.classList.contains('page-item-previous') &&
-        !pageItems[i]?.classList.contains('page-item-next') &&
-        !pageItems[i]?.classList.contains('page-item-last')
-      ) {
-        pageItems[i]?.classList.add('d-none');
+  for (i = 0; i < pageItems.length; i++) {
+    if (
+      !pageItems[i]?.classList.contains('page-item-first') &&
+      !pageItems[i]?.classList.contains('page-item-previous') &&
+      !pageItems[i]?.classList.contains('page-item-next') &&
+      !pageItems[i]?.classList.contains('page-item-last') &&
+      i != activePageItem
+    ) {
+      if (i == activePageItem - 1 || i == activePageItem + 1) {
+        let pageLink = pageItems[i]?.querySelector('.page-link');
+        if (pageLink) {
+          pageLink.setAttribute('href', '#');
+          pageLink.innerHTML = '<i class="bx bx-dots-horizontal-rounded"></i>';
+        }
       }
-    }
-    for (i = activePageItem + 1; i <= pageItems.length; i++) {
-      if (
-        !pageItems[i]?.classList.contains('page-item-first') &&
-        !pageItems[i]?.classList.contains('page-item-previous') &&
-        !pageItems[i]?.classList.contains('page-item-next') &&
-        !pageItems[i]?.classList.contains('page-item-last')
-      ) {
-        pageItems[i]?.classList.add('d-none');
-      }
-    }
-  }
-  else {
-    // Before active page item
-    let pageLink = pageItems[activePageItem - 2].querySelector('.page-link');
-
-    if (pageLink) {
-      if (
-        !pageLink.closest('.page-item')?.classList.contains('page-item-first') &&
-        !pageLink.closest('.page-item')?.classList.contains('page-item-previous') &&
-        !pageLink.closest('.page-item')?.classList.contains('page-item-next') &&
-        !pageLink.closest('.page-item')?.classList.contains('page-item-last')
-      ) {
-        pageLink.setAttribute('href', '#');
-        pageLink.innerHTML = '<i class="bx bx-dots-horizontal-rounded"></i>';
-      }
-    }
-
-    for (i = activePageItem - 3; i >= 0; i--) {
-      if (
-        !pageItems[i]?.classList.contains('page-item-first') &&
-        !pageItems[i]?.classList.contains('page-item-previous') &&
-        !pageItems[i]?.classList.contains('page-item-next') &&
-        !pageItems[i]?.classList.contains('page-item-last')
-      ) {
-        pageItems[i]?.classList.add('d-none');
-      }
-    }
-
-    // After active page item
-    pageLink = pageItems[activePageItem + 2].querySelector('.page-link');
-
-    if (pageLink) {
-      if (
-        !pageLink.closest('.page-item')?.classList.contains('page-item-first') &&
-        !pageLink.closest('.page-item')?.classList.contains('page-item-previous') &&
-        !pageLink.closest('.page-item')?.classList.contains('page-item-next') &&
-        !pageLink.closest('.page-item')?.classList.contains('page-item-last')
-      ) {
-        pageLink.setAttribute('href', '#');
-        pageLink.innerHTML = '<i class="bx bx-dots-horizontal-rounded"></i>';
-      }
-    }
-
-    for (i = activePageItem + 3; i <= pageItems.length; i++) {
-      if (
-        !pageItems[i]?.classList.contains('page-item-first') &&
-        !pageItems[i]?.classList.contains('page-item-previous') &&
-        !pageItems[i]?.classList.contains('page-item-next') &&
-        !pageItems[i]?.classList.contains('page-item-last')
-      ) {
+      else {
         pageItems[i]?.classList.add('d-none');
       }
     }

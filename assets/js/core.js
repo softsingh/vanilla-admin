@@ -391,7 +391,8 @@ paginationOverflows?.forEach((paginationOverflow) => {
     }
   }
 
-  if (pageItemCount <= 5) {
+  // Apply overflow only if there are more than 4 page items
+  if (pageItemCount <= 4) {
     return;
   }
 

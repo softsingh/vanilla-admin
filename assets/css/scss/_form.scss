@@ -169,7 +169,7 @@
   outline: 0;
   font-size: 0.9rem;
   font-weight: 500;
-  padding: 0.35rem 0.75rem;
+  padding: 0.35rem 1.75rem 0.5rem 0.75rem; // increased right padding for spacing
   color: var(--body-color);
   background: var(--white-color);
   appearance: none; //hide default icon shown by browser
@@ -188,4 +188,81 @@
   outline: 0;
   border: 2px solid var(--form-control-focus-border-color);
   box-shadow: 0 0 0.25rem 0.05rem hsla(239, 100%, 70%, 0.1);
+}
+
+// Input Group Styles
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+
+.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  margin-left: calc(2px * -1);
+  border-end-start-radius: 0;
+  border-start-start-radius: 0;
+}
+
+.input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
+.input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3),
+.input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-control,
+.input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-select {
+  border-end-end-radius: 0;
+  border-start-end-radius: 0;
+}
+
+.input-group .form-control,
+.input-group .form-control:focus,
+.input-group .form-control:focus-within,
+.was-validated .input-group .form-control:invalid,
+.was-validated .input-group .form-control:valid,
+.input-group .form-control.is-invalid,
+.input-group .form-control.is-valid,
+.input-group .input-group-text,
+.input-group .input-group-text:focus,
+.input-group .input-group-text:focus-within,
+.was-validated .input-group .input-group-text:invalid,
+.was-validated .input-group .input-group-text:valid,
+.input-group .input-group-text.is-invalid,
+.input-group .input-group-text.is-valid,
+.was-validated .input-group:has(:invalid) .form-control,
+.was-validated .input-group:has(:invalid) .form-control:focus,
+.was-validated .input-group:has(:invalid) .form-control:focus-within,
+.was-validated .was-validated .input-group:has(:invalid) .form-control:invalid,
+.was-validated .was-validated .input-group:has(:invalid) .form-control:valid,
+.was-validated .input-group:has(:invalid) .form-control.is-invalid,
+.was-validated .input-group:has(:invalid) .form-control.is-valid,
+.was-validated .input-group:has(:invalid) .input-group-text,
+.was-validated .input-group:has(:invalid) .input-group-text:focus,
+.was-validated .input-group:has(:invalid) .input-group-text:focus-within,
+.was-validated .was-validated .input-group:has(:invalid) .input-group-text:invalid,
+.was-validated .was-validated .input-group:has(:invalid) .input-group-text:valid,
+.was-validated .input-group:has(:invalid) .input-group-text.is-invalid,
+.was-validated .input-group:has(:invalid) .input-group-text.is-valid,
+.was-validated .input-group:has(:valid) .form-control,
+.was-validated .input-group:has(:valid) .form-control:focus,
+.was-validated .input-group:has(:valid) .form-control:focus-within,
+.was-validated .was-validated .input-group:has(:valid) .form-control:invalid,
+.was-validated .was-validated .input-group:has(:valid) .form-control:valid,
+.was-validated .input-group:has(:valid) .form-control.is-invalid,
+.was-validated .input-group:has(:valid) .form-control.is-valid,
+.was-validated .input-group:has(:valid) .input-group-text,
+.was-validated .input-group:has(:valid) .input-group-text:focus,
+.was-validated .input-group:has(:valid) .input-group-text:focus-within,
+.was-validated .was-validated .input-group:has(:valid) .input-group-text:invalid,
+.was-validated .was-validated .input-group:has(:valid) .input-group-text:valid,
+.was-validated .input-group:has(:valid) .input-group-text.is-invalid,
+.was-validated .input-group:has(:valid) .input-group-text.is-valid {
+  padding-block: calc(.543rem - 2px);
+  padding-inline: calc(.9375rem - 2px);
+}
+
+.input-group>.form-control,
+.input-group>.form-select {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
 }

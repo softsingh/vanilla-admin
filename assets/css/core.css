@@ -1487,7 +1487,7 @@ button:not(:disabled),
   outline: 0;
   font-size: 0.9rem;
   font-weight: 500;
-  padding: 0.35rem 1.75rem 0.5rem 0.75rem;
+  padding: 0.35rem 0.75rem;
   color: var(--body-color);
   background: var(--white-color);
   -webkit-appearance: none;
@@ -1508,6 +1508,34 @@ button:not(:disabled),
   outline: 0;
   border: 2px solid var(--form-control-focus-border-color);
   box-shadow: 0 0 0.25rem 0.05rem hsla(239, 100%, 70%, 0.1);
+}
+
+.search-close-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-close-wrapper .search-closer {
+  position: absolute;
+  display: none;
+  color: var(--secondary-light-20);
+  right: 0.25rem;
+  z-index: 1;
+}
+
+.search-input:not(:-moz-placeholder-shown) + .search-closer {
+  display: block;
+}
+
+.search-close-wrapper:hover .search-closer,
+.search-input:focus + .search-closer,
+.search-input:not(:placeholder-shown) + .search-closer {
+  display: block;
+}
+
+.search-close-wrapper .search-closer:hover {
+  color: var(--secondary-dark-20);
 }
 
 .input-group {

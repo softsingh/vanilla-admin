@@ -37,47 +37,47 @@ notificationArchives.forEach((notificationArchive) => {
 
 //////////////////// Navbar ////////////////////
 
-// Navbar Search Input
-searchInputWrapper = document.querySelector('.navbar .search-input-wrapper');
-searchInput = document.querySelector(
-  '.navbar .search-input-wrapper .search-input'
+// Navbar Command Palette Input
+commandPaletteInputWrapper = document.querySelector('.navbar .command-palette-input-wrapper');
+commandPaletteInput = document.querySelector(
+  '.navbar .command-palette-input-wrapper .command-palette-input'
 );
 
-searchButton = document.querySelector('.search-button');
-searchButton?.addEventListener('click', (event) => {
-  showNavbarSearchInput(event);
+commandPaletteButton = document.querySelector('.command-palette-button');
+commandPaletteButton?.addEventListener('click', (event) => {
+  showNavbarCommandPaletteInput(event);
   event.stopPropagation();
 });
 
-searchCloser = document.querySelector('.search-closer');
-searchCloser?.addEventListener('click', () => {
-  searchInputWrapper.classList.remove('show');
+commandPaletteCloser = document.querySelector('.command-palette-closer');
+commandPaletteCloser?.addEventListener('click', () => {
+  commandPaletteInputWrapper.classList.remove('show');
 });
 
 document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' || (event.ctrlKey && event.key === '/')) {
-    searchInputWrapper.classList.remove('show');
+  if (event.key === 'Escape' || (event.ctrlKey && event.key === '\\')) {
+    commandPaletteInputWrapper.classList.remove('show');
   }
 
-  if (event.ctrlKey && event.key === '/') {
-    showNavbarSearchInput();
+  if (event.ctrlKey && event.key === '\\') {
+    showNavbarCommandPaletteInput();
   }
 });
 
-// Show Navbar Search Box
-function showNavbarSearchInput(event) {
+// Show Navbar Command Palette Box
+function showNavbarCommandPaletteInput(event) {
   hideAllDropdowns(event);
-  searchInputWrapper.classList.add('show');
-  searchInput.focus();
-  searchInput.value = '';
+  commandPaletteInputWrapper.classList.add('show');
+  commandPaletteInput.focus();
+  commandPaletteInput.value = '';
 }
 
-// Click on empty area to close Navbar search-input
-if (searchInputWrapper) {
+// Click on empty area to close Navbar command-palette-input
+if (commandPaletteInputWrapper) {
   document.documentElement.addEventListener('click', (event) => {
-    if (searchInputWrapper.classList.contains('show')) {
-      if (event.target !== searchInput) {
-        searchInputWrapper.classList.remove('show');
+    if (commandPaletteInputWrapper.classList.contains('show')) {
+      if (event.target !== commandPaletteInput) {
+        commandPaletteInputWrapper.classList.remove('show');
       }
     }
   });

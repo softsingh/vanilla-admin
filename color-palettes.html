@@ -313,10 +313,16 @@
                      <i class="bx bx-menu bx-sm cursor-pointer"></i>
                   </a>
                </div>
-               <a href="#" class="nav-link search-button">
+               <a href="#" class="nav-link command-palette-button">
                   <i class="bx bx-search bx-sm mt-1"></i>
-                  <span class="ms-3 d-none d-sm-block">Search (Ctrl +/)</span>
+                  <span class="ms-3 d-none d-sm-block">Search (Ctrl + \)</span>
                </a>
+            </div>
+            <div class="command-palette-results">
+               <div>
+                  <h6 class="fs-4">Search Results</h6>
+                  <span class="text-muted">Type to search</span>
+               </div>
             </div>
             <div class="navbar-nav nav-right">
                <div class="theme-toggle">
@@ -713,11 +719,12 @@
                   </div>
                </div>
             </div>
-            <div class="search-input-wrapper">
-               <span class="search-input-cover">
-                  <input type="text" placeholder="Search ......." class="form-control search-input ps-6 border-0">
+            <div class="command-palette-input-wrapper">
+               <span class="command-palette-input-cover">
+                  <input type="text" placeholder="Search ......."
+                     class="form-control command-palette-input ps-6 border-0">
                </span>
-               <i class="bx bx-x bx-sm search-closer cursor-pointer"></i>
+               <i class="bx bx-x bx-sm command-palette-closer cursor-pointer"></i>
             </div>
          </nav>
          <div class="dash-content">

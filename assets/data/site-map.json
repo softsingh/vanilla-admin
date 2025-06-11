@@ -1,0 +1,38 @@
+[
+    {
+        "label": "Dashboard",
+        "url": "/dashboard.html"
+    },
+    {
+        "label": "Index Page",
+        "url": "/index.html"
+    },
+    {
+        "label": "Landing Page",
+        "url": "/index.html"
+    },
+    {
+        "label": "Blank Page",
+        "url": "/blank.html"
+    },
+    {
+        "label": "Register Page",
+        "url": "/ragister.html"
+    },
+    {
+        "label": "Login Page",
+        "url": "/login.html"
+    },
+    {
+        "label": "View User Account",
+        "url": "/account-overview.html"
+    },
+    {
+        "label": "Account Overview",
+        "url": "/account-overview.html"
+    },
+    {
+        "label": "Edit User Account",
+        "url": "/account.html"
+    }
+]

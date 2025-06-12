@@ -1,38 +1,52 @@
 [
     {
         "label": "Dashboard",
+        "icon": "home",
         "url": "/dashboard.html"
     },
     {
         "label": "Index Page",
+        "icon": "home",
         "url": "/index.html"
     },
     {
         "label": "Landing Page",
+        "icon": "home",
         "url": "/index.html"
     },
     {
         "label": "Blank Page",
+        "icon": "home",
         "url": "/blank.html"
     },
     {
         "label": "Register Page",
-        "url": "/ragister.html"
+        "icon": "home",
+        "url": "/register.html"
     },
     {
         "label": "Login Page",
+        "icon": "home",
         "url": "/login.html"
     },
     {
+        "label": "Verify Email",
+        "icon": "home",
+        "url": "/verify-email.html"
+    },
+    {
         "label": "View User Account",
+        "icon": "home",
         "url": "/account-overview.html"
     },
     {
         "label": "Account Overview",
+        "icon": "home",
         "url": "/account-overview.html"
     },
     {
         "label": "Edit User Account",
+        "icon": "home",
         "url": "/account.html"
     }
 ]

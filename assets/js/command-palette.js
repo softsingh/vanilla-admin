@@ -39,10 +39,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
         filtered.forEach(link => {
             const item = document.createElement("a");
-            item.setAttribute("href", link.url);
+            item.setAttribute("href", link.url ? link.url : "#");
             item.setAttribute("target", "_blank");
             item.className = "command-palette-result-item";
-            item.textContent = link.label;
+
+            const div = document.createElement("div");
+            div.className = "d-flex align-items-center gap-3";
+
+            const icon = document.createElement("i");
+            icon.className = link.icon ? link.icon : "bx bx-search fs-5";
+
+            const span = document.createElement("span");
+            span.textContent = link.label;
+
+            div.appendChild(icon);
+            div.appendChild(span);
+            item.appendChild(div);
             resultList.appendChild(item);
         });
 
@@ -113,6 +125,10 @@ document.addEventListener("DOMContentLoaded", function () {
             items.forEach(item => item.classList.remove('active'));
             if (items[activeIndex]) {
                 items[activeIndex].classList.add('active');
+                items[activeIndex].scrollIntoView({
+                    block: 'nearest',
+                    behavior: 'smooth'
+                });
             }
         }
     });

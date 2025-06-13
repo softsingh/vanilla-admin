@@ -35,69 +35,6 @@ notificationArchives.forEach((notificationArchive) => {
   });
 });
 
-//////////////////// Navbar ////////////////////
-
-// // Navbar Command Palette Input
-// const commandPaletteBackdrop = document.querySelector(
-//   '.command-palette-backdrop');
-// const commandPaletteInputWrapper = document.querySelector('.navbar .command-palette-input-wrapper');
-// const commandPaletteInput = document.querySelector(
-//   '.navbar .command-palette-input-wrapper .command-palette-input'
-// );
-
-// const commandPaletteButton = document.querySelector('.command-palette-button');
-// commandPaletteButton?.addEventListener('click', (event) => {
-//   showCommandPaletteInput(event);
-//   event.stopPropagation();
-// });
-
-// const commandPaletteCloser = document.querySelector('.command-palette-closer');
-// commandPaletteCloser?.addEventListener('click', (event) => {
-//   // commandPaletteInputWrapper.classList.remove('show');
-//   hideCommandPaletteInput(event);
-// });
-
-// document.addEventListener('keydown', (event) => {
-//   if (event.key === 'Escape' || (event.ctrlKey && event.key === '\\')) {
-//     // commandPaletteInputWrapper.classList.remove('show');
-//     hideCommandPaletteInput(event);
-//   }
-
-//   if (event.ctrlKey && event.key === '\\') {
-//     showCommandPaletteInput(event);
-//   }
-// });
-
-// // Show Navbar Command Palette Input
-// function showCommandPaletteInput(event) {
-//   hideAllDropdowns(event);
-//   commandPaletteBackdrop?.classList.add('show');
-//   commandPaletteInputWrapper?.classList.add('show');
-//   commandPaletteInput?.focus();
-//   commandPaletteInput.value = '';
-// }
-
-// // Hide Navbar Command Palette Input
-// function hideCommandPaletteInput(event) {
-//   hideAllDropdowns(event);
-//   commandPaletteBackdrop?.classList.remove('show');
-//   commandPaletteInputWrapper?.classList.remove('show');
-//   commandPaletteInput?.focus();
-//   commandPaletteInput.value = '';
-// }
-
-// // Click on empty area to close Navbar command-palette-input
-// if (commandPaletteInputWrapper) {
-//   document.documentElement.addEventListener('click', (event) => {
-//     if (commandPaletteInputWrapper.classList.contains('show')) {
-//       if (event.target !== commandPaletteInput) {
-//         // commandPaletteInputWrapper.classList.remove('show');
-//         hideCommandPaletteInput(event);
-//       }
-//     }
-//   });
-// }
-
 //////////////////// Modal Confirm Demo ////////////////////
 
 const tglDemoModalConfirm = document.querySelector(

@@ -374,6 +374,8 @@ body.sidebar-hidden .navbar .sidebar-toggle {
 .command-palette-result .command-palette-result-item {
   display: block;
   text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
   color: var(--body-color);
   padding: 0.25rem 1.5rem;
   cursor: pointer;
@@ -381,7 +383,7 @@ body.sidebar-hidden .navbar .sidebar-toggle {
 
 .command-palette-result .command-palette-result-item:hover,
 .command-palette-result .command-palette-result-item.active {
-  background-color: var(--heading-hover-bg-color);
+  background-color: var(--secondary-light-80);
 }
 
 .navbar .command-palette-input-wrapper {

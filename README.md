@@ -8,9 +8,8 @@ Admin Dashboard using HTML, JS and CSS
 Live Preview: [Vanilla Admin](https://softsingh.github.io/vanilla-admin/)
 
 ## To Do
-- 2 search closers in search from users
-- align-items-cemter in dropdown demo
-- add all links to site-map.json
+- 2 search closers in search from users in google chrome
+- all links to site-map.json
 - Breadcrumbs
 - Carousels
 - Icons

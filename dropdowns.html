@@ -306,6 +306,7 @@
          </div>
       </aside>
       <main class="main-layout">
+         <div class="command-palette-backdrop"></div>
          <nav class="navbar mx-6">
             <div class="navbar-nav nav-left">
                <div class="sidebar-toggle" data-toggle="sidebar">
@@ -313,9 +314,9 @@
                      <i class="bx bx-menu bx-sm cursor-pointer"></i>
                   </a>
                </div>
-               <a href="#" class="nav-link search-button">
+               <a href="#" class="nav-link command-palette-button">
                   <i class="bx bx-search bx-sm mt-1"></i>
-                  <span class="ms-3 d-none d-sm-block">Search (Ctrl +/)</span>
+                  <span class="ms-3 d-none d-sm-block">Search (Ctrl + \)</span>
                </a>
             </div>
             <div class="navbar-nav nav-right">
@@ -428,7 +429,7 @@
                            <div class="d-flex">
                               <div class="flex-shrink-0 me-4">
                                  <div class="avatar">
-                                    <img class="rounded-circle bg-primary-lightest"
+                                    <img class="rounded-circle bg-primary-light-80"
                                        src="assets/img/Avatars/Joginder Singh.png" alt="Avatar" width="40px">
                                  </div>
                               </div>
@@ -454,7 +455,7 @@
                            <div class="d-flex">
                               <div class="flex-shrink-0 me-4">
                                  <div class="avatar">
-                                    <img class="rounded-circle bg-primary-lightest" src="assets/img/Avatars/Lalina.png"
+                                    <img class="rounded-circle bg-primary-light-80" src="assets/img/Avatars/Lalina.png"
                                        alt="Avatar" width="40px">
                                  </div>
                               </div>
@@ -482,7 +483,7 @@
                            <div class="d-flex">
                               <div class="flex-shrink-0 me-4">
                                  <div class="avatar">
-                                    <img class="rounded-circle bg-primary-lightest"
+                                    <img class="rounded-circle bg-primary-light-80"
                                        src="assets/img/Avatars/Andrew Altman.png" alt="Avatar" width="40px">
                                  </div>
                               </div>
@@ -531,7 +532,7 @@
                            <div class="d-flex">
                               <div class="flex-shrink-0 me-4">
                                  <div class="avatar">
-                                    <img class="rounded-circle bg-primary-lightest"
+                                    <img class="rounded-circle bg-primary-light-80"
                                        src="assets/img/Avatars/Dollar Gill.png" alt="Avatar" width="40px">
                                  </div>
                               </div>
@@ -582,7 +583,7 @@
                            <div class="d-flex">
                               <div class="flex-shrink-0 me-4">
                                  <div class="avatar">
-                                    <img class="rounded-circle bg-primary-lightest"
+                                    <img class="rounded-circle bg-primary-light-80"
                                        src="assets/img/Avatars/Hargun Chahal.png" alt="Avatar" width="40px">
                                  </div>
                               </div>
@@ -608,7 +609,7 @@
                            <div class="d-flex">
                               <div class="flex-shrink-0 me-4">
                                  <div class="avatar">
-                                    <img class="rounded-circle bg-primary-lightest"
+                                    <img class="rounded-circle bg-primary-light-80"
                                        src="assets/img/Avatars/Harinder Singh.png" alt="Avatar" width="40px">
                                  </div>
                               </div>
@@ -634,7 +635,7 @@
                            <div class="d-flex">
                               <div class="flex-shrink-0 me-4">
                                  <div class="avatar">
-                                    <img class="rounded-circle bg-primary-lightest"
+                                    <img class="rounded-circle bg-primary-light-80"
                                        src="assets/img/Avatars/Ruby Bajwa.png" alt="Avatar" width="40px">
                                  </div>
                               </div>
@@ -671,7 +672,7 @@
                <div class="dropdown">
                   <a class="dropdown-toggle">
                      <div class="avatar avatar-online">
-                        <img class="rounded-circle bg-primary-lightest" src="assets/img/Avatars/Dollar Gill.png"
+                        <img class="rounded-circle bg-primary-light-80" src="assets/img/Avatars/Dollar Gill.png"
                            alt="Avatar" width="40px">
                      </div>
                   </a>
@@ -680,7 +681,7 @@
                         <div class="d-flex">
                            <div class="me-3">
                               <div class="avatar avatar-online">
-                                 <img class="rounded-circle bg-primary-lightest"
+                                 <img class="rounded-circle bg-primary-light-80"
                                     src="assets/img/Avatars/Dollar Gill.png" alt="Avatar" width="40px">
                               </div>
                            </div>
@@ -713,14 +714,23 @@
                   </div>
                </div>
             </div>
-            <div class="search-input-wrapper">
-               <span class="search-input-cover">
-                  <input type="text" placeholder="Search ......." class="form-control search-input ps-6 border-0">
+            <div class="command-palette-input-wrapper">
+               <span class="command-palette-input-cover">
+                  <input type="text" placeholder="Search ......."
+                     class="form-control command-palette-input ps-6 border-0">
                </span>
-               <i class="bx bx-x bx-sm search-closer cursor-pointer"></i>
+               <i class="bx bx-x bx-sm command-palette-closer cursor-pointer"></i>
+            </div>
+            <div class="command-palette-result">
+               <div class="command-palette-result-header">
+                  <h6 class="fs-4">Results</h6>
+                  <span class="command-palette-result-count text-muted">0 result found</span>
+               </div>
+               <div class="command-palette-result-list">
+                  <!-- <a href="#" class="command-palette-result-item">First</a> -->
+               </div>
             </div>
          </nav>
-
          <div class="dash-content">
 
             <div class="row g-6">
@@ -745,27 +755,27 @@
                               <button class="btn btn-primary dropdown-toggle">With Icons</button>
                               <div class="dropdown-menu dropdown-menu-end">
                                  <a href="#" class="dropdown-item">
-                                    <div class="d-flex align-items-cemter gap-3">
+                                    <div class="d-flex align-items-center gap-3">
                                        <i class="bx bx-list-ul fs-5"></i>
                                        <span>Overview</span>
                                     </div>
                                  </a>
                                  <div class="dropdown-divider"></div>
                                  <a href="#" class="dropdown-item">
-                                    <div class="d-flex align-items-cemter gap-3">
+                                    <div class="d-flex align-items-center gap-3">
                                        <i class="bx bx-user fs-5"></i>
                                        <span>Profile</span>
                                     </div>
                                  </a>
                                  <a href="#" class="dropdown-item">
-                                    <div class="d-flex align-items-cemter gap-3">
+                                    <div class="d-flex align-items-center gap-3">
                                        <i class="bx bx-cog fs-5"></i>
                                        <span>Settings</span>
                                     </div>
                                  </a>
                                  <div class="dropdown-divider"></div>
                                  <a href="#" class="dropdown-item">
-                                    <div class="d-flex align-items-cemter gap-3">
+                                    <div class="d-flex align-items-center gap-3">
                                        <i class="bx bx-power-off fs-5"></i>
                                        <span>Logout</span>
                                     </div>
@@ -937,6 +947,7 @@
    </div>
    <script src="assets/js/core.js"></script>
    <script src="assets/js/script.js"></script>
+   <script src="assets/js/command-palette.js"></script>
 </body>
 
 </html>

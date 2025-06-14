@@ -155,9 +155,9 @@
 
 //////////////////// Toast Colors ////////////////////
 
-@import '_color_names.scss';
+@import '_color_map.scss';
 
-@each $name in $color-names {
+@each $name, $value in $color-map {
     .toast-#{$name} {
         background-color: var(--#{$name}-color) !important;
         color: var(--white-color) !important;

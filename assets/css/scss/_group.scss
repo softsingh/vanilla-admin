@@ -1,0 +1,44 @@
+// Input Group Styles
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+
+.input-group>:not(:first-child):not(.dropdown-menu) {
+    margin-left: calc(2px * -1);
+    border-end-start-radius: 0;
+    border-start-start-radius: 0;
+}
+
+.input-group>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu),
+.input-group>.dropdown-toggle:nth-last-child(n+3),
+.input-group>.form-floating:not(:last-child)>.form-control {
+    border-end-end-radius: 0;
+    border-start-end-radius: 0;
+}
+
+.input-group .form-control,
+.input-group .form-control:focus,
+.input-group .form-control:focus-within,
+.input-group .input-group-text,
+.input-group .input-group-text:focus,
+.input-group .input-group-text:focus-within {
+    padding-block: calc(.543rem - 2px);
+    padding-inline: calc(.9375rem - 2px);
+}
+
+.input-group>.form-control,
+.input-group>.form-select {
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+}
+
+.input-group>.btn:hover,
+.input-group>.btn:focus {
+    transform: none
+}

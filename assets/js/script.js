@@ -1,23 +1,3 @@
-// // TEMP => Refresh Page if server restarts
-
-// let lastServerRestart = Date.now();
-
-// function checkForServerRestart() {
-//   fetch(window.location.href, { method: 'HEAD', cache: 'no-store' })
-//     .then(response => {
-//       const serverRestartTime = new Date(response.headers.get('Date')).getTime();
-//       if (serverRestartTime > lastServerRestart) {
-//         // Server restart detected, reload the page
-//         console.log("Server restart detected. Reloading the page...");
-//         window.location.reload();
-//       }
-//     })
-//     .catch(error => console.error("Error checking server status:", error));
-// }
-
-// Check every 3 seconds for server restarts
-// setInterval(checkForServerRestart, 3000);
-
 
 // Hide Sidebar by default on small screens
 if (window.innerWidth <= 768) {
@@ -54,54 +34,6 @@ notificationArchives.forEach((notificationArchive) => {
     event.stopPropagation();
   });
 });
-
-//////////////////// Navbar ////////////////////
-
-// Navbar Search Input
-searchInputWrapper = document.querySelector('.navbar .search-input-wrapper');
-searchInput = document.querySelector(
-  '.navbar .search-input-wrapper .search-input'
-);
-
-searchButton = document.querySelector('.search-button');
-searchButton?.addEventListener('click', (event) => {
-  showNavbarSearchInput(event);
-  event.stopPropagation();
-});
-
-searchCloser = document.querySelector('.search-closer');
-searchCloser?.addEventListener('click', () => {
-  searchInputWrapper.classList.remove('show');
-});
-
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' || (event.ctrlKey && event.key === '/')) {
-    searchInputWrapper.classList.remove('show');
-  }
-
-  if (event.ctrlKey && event.key === '/') {
-    showNavbarSearchInput();
-  }
-});
-
-// Show Navbar Search Box
-function showNavbarSearchInput(event) {
-  hideAllDropdowns(event);
-  searchInputWrapper.classList.add('show');
-  searchInput.focus();
-  searchInput.value = '';
-}
-
-// Click on empty area to close Navbar search-input
-if (searchInputWrapper) {
-  document.documentElement.addEventListener('click', (event) => {
-    if (searchInputWrapper.classList.contains('show')) {
-      if (event.target !== searchInput) {
-        searchInputWrapper.classList.remove('show');
-      }
-    }
-  });
-}
 
 //////////////////// Modal Confirm Demo ////////////////////
 

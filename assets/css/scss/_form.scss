@@ -1,6 +1,7 @@
 /*-------------------------------------*/
 /*           Form Elements             */
 /*-------------------------------------*/
+@import '_color_map.scss';
 
 .form-check {
   display: flex;
@@ -51,7 +52,6 @@
 }
 
 .form-check-input[type=radio] {
-  // background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='1.6' fill='%23fff'  /%3e%3c/svg%3e")
   background-image: url('data:image/svg+xml,<svg viewBox="-4 -4 8 8" version="1.1" id="svg1" width="8" height="8" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs1" /><circle r="4" fill="%23ffffff" id="circle1" cx="2.220446e-16" cy="2.220446e-16" style="fill:%23ffffff;stroke-width:2.5" /></svg>');
 }
 
@@ -62,8 +62,7 @@
 .form-check-input:focus {
   outline: 0;
   border-color: var(--form-control-focus-border-color);
-  // box-shadow: 0 0.25rem 0.25rem 0.05rem hsla(239, 100%, 70%, 0.2);
-  box-shadow: 0 0.25rem 0.25rem 0.05rem color-mix(in srgb, var(--form-check-input-shadow-color), transparent 80%);
+  box-shadow: 0 0.25rem 0.25rem 0.05rem color-mix(in oklch, var(--form-check-input-shadow-color), transparent 80%);
 }
 
 .form-check-input:checked {
@@ -73,9 +72,7 @@
 
 //////////////////// Form Check Colors ////////////////////
 
-@import '_color_names.scss';
-
-@each $name in $color-names {
+@each $name, $value in $color-map {
   .form-check-#{$name} .form-check-input {
     --form-check-input-checked-bg-color: var(--#{$name}-color);
     --form-check-input-checked-border-color: var(--#{$name}-color);
@@ -93,6 +90,7 @@
 }
 
 .form-control {
+  --form-control-hover-shadow-color: hsla(239, 100%, 70%, 0.1);
   display: block;
   width: 100%;
   outline: 0;
@@ -106,11 +104,12 @@
 }
 
 .form-control.invalid {
-  border-color: var(--danger-dark-color);
+  color: var(--danger-color);
+  border-color: var(--danger-color);
 }
 
 .form-control:hover:not([disabled]):not([focus]) {
-  box-shadow: 0 0 0.25rem 0.05rem hsla(239, 100%, 70%, 0.1);
+  box-shadow: 0 0 0.25rem 0.05rem var(--form-control-hover-shadow-color);
 }
 
 .form-control:focus:not([readonly]) {
@@ -122,7 +121,8 @@
 }
 
 .form-control:focus.invalid {
-  border-color: var(--danger-dark-color);
+  color: var(--danger-color);
+  border-color: var(--danger-color);
 }
 
 .form-control::placeholder {
@@ -146,14 +146,14 @@
   -webkit-transform: translateX(5px);
 }
 
-/* Container class for invalid form text message */
+///////////////// Container class for invalid form text message /////////////////
 
 .form-invalid-message {
   width: 100%;
   font-size: 0.8rem;
   margin-left: 0.25rem;
   margin-right: 0.25rem;
-  color: var(--danger-dark-color);
+  color: var(--danger-color);
 }
 
 .form-label {
@@ -188,4 +188,30 @@
   outline: 0;
   border: 2px solid var(--form-control-focus-border-color);
   box-shadow: 0 0 0.25rem 0.05rem hsla(239, 100%, 70%, 0.1);
+}
+
+// Search input with close button
+.search-close-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-close-wrapper .search-closer {
+  position: absolute;
+  display: none;
+  color: var(--secondary-light-20);
+  right: 0.25rem;
+  // font-size: 0.1rem;
+  // z-index: 1;
+}
+
+.search-close-wrapper:hover .search-closer,
+.search-input:focus+.search-closer,
+.search-input:not(:placeholder-shown)+.search-closer {
+  display: block;
+}
+
+.search-close-wrapper .search-closer:hover {
+  color: var(--secondary-dark-20);
 }

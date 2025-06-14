@@ -89,6 +89,20 @@ function hideAllDropdowns(event) {
   });
 }
 
+//////////////////// Form Control ////////////////////
+
+const invalidInputs = document.querySelectorAll('.form-control.invalid');
+
+invalidInputs.forEach((invalidInput) => {
+  invalidInput.addEventListener('input', (event) => {
+    if (invalidInput.classList.contains('invalid')) {
+      invalidInput.classList.remove('invalid');
+    }
+    event.stopPropagation();
+  });
+})
+
+
 //////////////////// Modal (except ModalConfirm) ////////////////////
 
 const modals = document.querySelectorAll('.modal:not(.modal-confirm)');
@@ -354,6 +368,69 @@ navbarToggles.forEach((navbarToggle) =>
     event.stopPropagation();
   })
 );
+
+/////////////////// Pagination Overflow ////////////////////
+
+const paginationOverflows = document.querySelectorAll('.pagination-overflow');
+paginationOverflows?.forEach((paginationOverflow) => {
+  const pageItems = paginationOverflow.querySelectorAll('.page-item');
+
+  if (!pageItems)
+    return;
+
+  let pageItemCount = 0, activePageItem = 0, i = 0;
+
+  for (i = 0; i < pageItems.length; i++) {
+    if (
+      !pageItems[i].classList.contains('page-item-first') &&
+      !pageItems[i].classList.contains('page-item-previous') &&
+      !pageItems[i].classList.contains('page-item-next') &&
+      !pageItems[i].classList.contains('page-item-last')
+    ) {
+      pageItemCount++;
+    }
+  }
+
+  // Apply overflow only if there are more than 4 page items
+  if (pageItemCount <= 4) {
+    return;
+  }
+
+  for (i = 0; i < pageItems.length; i++) {
+    if (
+      !pageItems[i].classList.contains('page-item-first') &&
+      !pageItems[i].classList.contains('page-item-previous') &&
+      !pageItems[i].classList.contains('page-item-next') &&
+      !pageItems[i].classList.contains('page-item-last')
+    ) {
+      if (pageItems[i].classList.contains('active')) {
+        activePageItem = i;
+        break;
+      }
+    }
+  }
+
+  for (i = 0; i < pageItems.length; i++) {
+    if (
+      !pageItems[i]?.classList.contains('page-item-first') &&
+      !pageItems[i]?.classList.contains('page-item-previous') &&
+      !pageItems[i]?.classList.contains('page-item-next') &&
+      !pageItems[i]?.classList.contains('page-item-last') &&
+      i != activePageItem
+    ) {
+      if (i == activePageItem - 1 || i == activePageItem + 1) {
+        let pageLink = pageItems[i]?.querySelector('.page-link');
+        if (pageLink) {
+          pageLink.setAttribute('href', '#');
+          pageLink.innerHTML = '<i class="bx bx-dots-horizontal-rounded"></i>';
+        }
+      }
+      else {
+        pageItems[i]?.classList.add('d-none');
+      }
+    }
+  }
+});
 
 /////////////////// Sidebar ////////////////////
 

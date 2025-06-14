@@ -1,0 +1,23 @@
+//////////////////// Color Map ////////////////////
+
+$color-map: (
+    "primary": hsl(240, 100%, 70%),
+    "secondary": hsl(214, 14%, 52%),
+    "success": hsl(100, 65%, 60%),
+    "danger": hsl(8, 100%, 56%),
+    "warning": hsl(40, 100%, 50%),
+    "info": hsl(190, 100%, 50%),
+    "light": hsl(210, 6%, 80%),
+    "dark": hsl(240, 20%, 20%),
+);
+
+$color-hex-map: (
+    "primary": 6666ff,
+    "secondary": 738296,
+    "success": 83db57,
+    "danger": ff3d1f,
+    "warning": ffaa00,
+    "info": 00d5ff,
+    "light": c9cccf,
+    "dark": 29293d,
+);

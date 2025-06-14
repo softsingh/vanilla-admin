@@ -10,14 +10,16 @@ Live Preview: [Vanilla Admin](https://softsingh.github.io/vanilla-admin/)
 ## To Do
 - Color Palettes using CSS Color Mix
 - Dark Mode
+- 2 search closers in search from users in google chrome
+- all links to site-map.json
 - Breadcrumbs
 - Carousels
-- Toast Stacking
 - Icons
 - Progress Bars
 - Form Elements - Advance
 - Form Layouts
 - Tables
+- Dark Mode
 - Graphs & Charts
 
 ## Known Issues

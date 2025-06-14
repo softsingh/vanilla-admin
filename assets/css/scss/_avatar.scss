@@ -1,8 +1,10 @@
 /*-------------------------------------*/
 /*               Avatar                */
 /*-------------------------------------*/
+@import '_color_map.scss';
 
 .avatar {
+  --avatar-shadow-color: var(--white-color);
   position: relative;
   width: 2.375rem;
   height: 2.375rem;
@@ -20,7 +22,7 @@
   width: 8px;
   height: 8px;
   border-radius: 100%;
-  box-shadow: 0 0 0 2px #fff;
+  box-shadow: 0 0 0 2px var(--avatar-shadow-color);
 }
 
 .avatar.avatar-online::after {
@@ -49,7 +51,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: var(--white-color);
   background-color: #eeedf0;
   font-size: 0.9rem;
 }

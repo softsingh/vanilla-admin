@@ -1,0 +1,102 @@
+[
+    {
+        "label": "Dashboard",
+        "icon": "bx bx-home fs-5",
+        "url": "/dashboard.html"
+    },
+    {
+        "label": "Index Page",
+        "icon": "bx bx-layout fs-5",
+        "url": "/index.html"
+    },
+    {
+        "label": "Landing Page",
+        "icon": "bx bx-layout fs-5",
+        "url": "/index.html"
+    },
+    {
+        "label": "Blank Page",
+        "icon": "bx bx-layout fs-5",
+        "url": "/blank.html"
+    },
+    {
+        "label": "Register Page",
+        "icon": "bx bx-lock fs-5",
+        "url": "/register.html"
+    },
+    {
+        "label": "Login Page",
+        "icon": "bx bx-lock fs-5",
+        "url": "/login.html"
+    },
+    {
+        "label": "Verify Email",
+        "icon": "bx bx-lock fs-5",
+        "url": "/verify-email.html"
+    },
+    {
+        "label": "Forgot Password",
+        "icon": "bx bx-lock fs-5",
+        "url": "/forgot-password.html"
+    },
+    {
+        "label": "Reset Password",
+        "icon": "bx bx-lock fs-5",
+        "url": "/reset-password.html"
+    },
+    {
+        "label": "Add User",
+        "icon": "bx bx-user fs-5",
+        "url": "/add-user.html"
+    },
+    {
+        "label": "View User Account",
+        "icon": "bx bx-user fs-5",
+        "url": "/account-overview.html"
+    },
+    {
+        "label": "Account Overview",
+        "icon": "bx bx-user fs-5",
+        "url": "/account-overview.html"
+    },
+    {
+        "label": "Edit User Account",
+        "icon": "bx bx-user fs-5",
+        "url": "/account.html"
+    },
+    {
+        "label": "Edit User Address",
+        "icon": "bx bx-user fs-5",
+        "url": "/account-address.html"
+    },
+    {
+        "label": "Change Password",
+        "icon": "bx bx-user fs-5",
+        "url": "/account-password.html"
+    },
+    {
+        "label": "Forbidden",
+        "icon": "bx bx-layout fs-5",
+        "url": "/forbidden.html"
+    },
+    {
+        "label": "Not Authorized",
+        "icon": "bx bx-layout fs-5",
+        "url": "/not-authorized.html"
+    },
+    {
+        "label": "Not found",
+        "icon": "bx bx-layout fs-5",
+        "url": "/not-found.html"
+    },
+    {
+        "label": "Under Maintenance",
+        "icon": "bx bx-layout fs-5",
+        "url": "/under-maintenance.html"
+    },
+    {
+        "label": "Temp",
+        "icon": "bx bx-search fs-5",
+        "url": "/temp.html"
+    }
+]

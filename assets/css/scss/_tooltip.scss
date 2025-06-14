@@ -1,6 +1,7 @@
 /*-------------------------------------*/
 /*              Tooltip                */
 /*-------------------------------------*/
+@import '_color_map.scss';
 
 .tooltip {
     --tooltip-background-color: var(--black-color);
@@ -105,9 +106,7 @@
 
 //////////////////// Tooltip Colors ////////////////////
 
-@import '_color_names.scss';
-
-@each $name in $color-names {
+@each $name, $value in $color-map {
     .tooltip-#{$name} {
         --tooltip-background-color: var(--#{$name}-color) !important;
         --tooltip-color: var(--white-color) !important;

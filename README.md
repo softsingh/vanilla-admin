@@ -8,9 +8,6 @@ Admin Dashboard using HTML, JS and CSS
 Live Preview: [Vanilla Admin](https://softsingh.github.io/vanilla-admin/)
 
 ## To Do
-- Color Palettes using CSS Color Mix
-- Dark Mode
-- 2 search closers in search from users in google chrome
 - all links to site-map.json
 - Breadcrumbs
 - Carousels
@@ -24,3 +21,4 @@ Live Preview: [Vanilla Admin](https://softsingh.github.io/vanilla-admin/)
 
 ## Known Issues
 - Toast and Tooltip wraping in small screen
+- 2 search closers in search from users in google chrome

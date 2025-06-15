@@ -1,5 +1,13 @@
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async function () {
+    const scriptTag = document.currentScript || document.querySelector('script[src*="command-palette.js"]');
+    const jsonUrl = scriptTag?.dataset?.json;
+
+    if (!jsonUrl) {
+        console.error("No data-json attribute found on command-palette script tag.");
+        return;
+    }
+
     const input = document.querySelector(".navbar .command-palette-input");
     const resultBox = document.querySelector('.command-palette-result');
     const resultCount = document.querySelector('.command-palette-result-count');
@@ -13,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     async function fetchLinks() {
         try {
-            const response = await fetch("assets/data/site-map.json");
+            const response = await fetch(jsonUrl);
             if (!response.ok) throw new Error("Failed to fetch links");
             allLinks = await response.json();
         } catch (err) {

@@ -8,12 +8,12 @@ document.addEventListener("DOMContentLoaded", async function () {
         return;
     }
 
-    const input = document.querySelector(".navbar .command-palette-input");
+    const input = document.querySelector(".command-palette-input");
     const resultBox = document.querySelector('.command-palette-result');
     const resultCount = document.querySelector('.command-palette-result-count');
     const resultList = document.querySelector('.command-palette-result-list');
     const backdrop = document.querySelector('.command-palette-backdrop');
-    const inputWrapper = document.querySelector('.navbar .command-palette-input-wrapper');
+    const inputWrapper = document.querySelector('.command-palette-input-wrapper');
     const commandButton = document.querySelector('.command-palette-button');
     const commandCloser = document.querySelector('.command-palette-closer');
 
@@ -22,10 +22,11 @@ document.addEventListener("DOMContentLoaded", async function () {
     async function fetchLinks() {
         try {
             const response = await fetch(jsonUrl);
-            if (!response.ok) throw new Error("Failed to fetch links");
+            if (!response.ok) throw new Error(`Failed to fetch links from ${jsonUrl}`);
             allLinks = await response.json();
+            if (!Array.isArray(allLinks)) throw new Error("Invalid data format: expected an array of links.");
         } catch (err) {
-            console.error("Global search error:", err);
+            console.error("Command Palette: Fetch error:", err);
         }
     }
 

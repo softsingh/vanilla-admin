@@ -741,9 +741,12 @@
                      </div>
                      <div class="card-body">
                         <div class="mb-4">
-                           <label class="form-label mb-2" for="username">Username</label>
-                           <input id="username" type="text" class="form-control" placeholder="Enter your username"
-                              name="username">
+                           <label class="form-label mb-2">Default Size</label>
+                           <input type="text" class="form-control" placeholder="Enter your data">
+                        </div>
+                        <div class="mb-4">
+                           <label class="form-label mb-2">Small Size</label>
+                           <input type="text" class="form-control form-control-sm" placeholder="Enter your data">
                         </div>
                      </div>
                   </div>
@@ -755,8 +758,19 @@
                      </div>
                      <div class="card-body">
                         <div class="mb-4">
-                           <label class="form-label mb-2" for="department">Department</label>
-                           <select class="form control form-select" name="department" id="department">
+                           <label class="form-label mb-2" for="department">Default Size</label>
+                           <select class="form-select" name="department" id="department">
+                              <option value="0">Choose Department ...</option>
+                              <option value="1">Department - 1</option>
+                              <option value="2">Department - 2</option>
+                              <option value="3">Department - 3</option>
+                              <option value="4">Department - 4</option>
+                              <option value="5">Department - 5</option>
+                           </select>
+                        </div>
+                        <div class="mb-4">
+                           <label class="form-label mb-2" for="department_sm">Small Size</label>
+                           <select class="form-select form-select-sm" name="department_sm" id="department_sm">
                               <option value="0">Choose Department ...</option>
                               <option value="1">Department - 1</option>
                               <option value="2">Department - 2</option>
@@ -766,6 +780,7 @@
                            </select>
                         </div>
                      </div>
+
                   </div>
                </div>
                <div class="col-12 col-md-6">

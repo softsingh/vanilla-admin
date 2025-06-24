@@ -11,7 +11,9 @@ Live Preview: [Vanilla Admin](https://softsingh.github.io/vanilla-admin/)
 - all links to site-map.json
 - Breadcrumbs
 - Carousels
+- Range input
 - Icons
+- File Input
 - Progress Bars
 - Form Elements - Advance
 - Form Layouts

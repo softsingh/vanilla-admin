@@ -1,148 +1,18 @@
-{% set file_name = "dashboard" %}
+{% set file_name = "groups" %}
 {% extends "_dash_base.njk" %}
 {% block title %}
-Dashboard
+Groups
 {% endblock title %}
 {% block content %}
-<div class="row g-6 mb-6">
-   <div class="col-sm-6 col-xl-3">
-      <div class="card px-6 pt-4 pb-5">
-         <div class="d-flex align-items-top justify-content-between mb-7">
-            <div>
-               <h5>Total</h5>
-               <small>Users (This Month)</small>
-            </div>
-            <div class="dropdown">
-               <a href="#" class="dropdown-toggle text-body">
-                  <i class="bx bx-dots-horizontal-rounded fs-4"></i>
-               </a>
-               <div class="dropdown-menu dropdown-menu-end">
-                  <div class="px-6 pt-2 pb-3 mb-1 border-bottom">Filter</div>
-                  <div class="dropdown-item">This Week</div>
-                  <div class="dropdown-item">This Month</div>
-                  <div class="dropdown-item">This Year</div>
-               </div>
-            </div>
-         </div>
-         <div class="d-flex align-items-center">
-            <div class="avatar me-4">
-               <span class="avatar-initial rounded bg-label-danger">
-                  <i class="bx bx-user fs-5"></i>
-               </span>
-            </div>
-            <div class="d-flex align-items-center justify-content-between">
-               <h4 class="me-2">30146</h4>
-               <p class="text-success">(+30%)</p>
-            </div>
-         </div>
-      </div>
-   </div>
-   <div class="col-sm-6 col-xl-3">
-      <div class="card px-6 pt-4 pb-5">
-         <div class="d-flex align-items-top justify-content-between mb-7">
-            <div>
-               <h5>Registered</h5>
-               <small>Users (This Month)</small>
-            </div>
-            <div class="dropdown">
-               <a href="#" class="dropdown-toggle text-body">
-                  <i class="bx bx-dots-horizontal-rounded fs-4"></i>
-               </a>
-               <div class="dropdown-menu dropdown-menu-end">
-                  <div class="px-6 pt-2 pb-3 mb-1 border-bottom">Filter</div>
-                  <div class="dropdown-item">This Week</div>
-                  <div class="dropdown-item">This Month</div>
-                  <div class="dropdown-item">This Year</div>
-               </div>
-            </div>
-         </div>
-         <div class="d-flex align-items-center">
-            <div class="avatar me-4">
-               <span class="avatar-initial rounded bg-label-success">
-                  <i class="bx bx-user fs-5"></i>
-               </span>
-            </div>
-            <div class="d-flex align-items-center justify-content-between">
-               <h4 class="me-2">513</h4>
-               <p class="text-danger">(-10%)</p>
-            </div>
-         </div>
-      </div>
-   </div>
-   <div class="col-sm-6 col-xl-3">
-      <div class="card px-6 pt-4 pb-5">
-         <div class="d-flex align-items-top justify-content-between mb-7">
-            <div>
-               <h5>Active</h5>
-               <small>Users (This Month)</small>
-            </div>
-            <div class="dropdown">
-               <a href="#" class="dropdown-toggle text-body">
-                  <i class="bx bx-dots-horizontal-rounded fs-4"></i>
-               </a>
-               <div class="dropdown-menu dropdown-menu-end">
-                  <div class="px-6 pt-2 pb-3 mb-1 border-bottom">Filter</div>
-                  <div class="dropdown-item">This Week</div>
-                  <div class="dropdown-item">This Month</div>
-                  <div class="dropdown-item">This Year</div>
-               </div>
-            </div>
-         </div>
-         <div class="d-flex align-items-center">
-            <div class="avatar me-4">
-               <span class="avatar-initial rounded bg-label-primary">
-                  <i class="bx bx-user fs-5"></i>
-               </span>
-            </div>
-            <div class="d-flex align-items-center justify-content-between">
-               <h4 class="me-2">20125</h4>
-               <p class="text-success">(+20%)</p>
-            </div>
-         </div>
-      </div>
-   </div>
-   <div class="col-sm-6 col-xl-3">
-      <div class="card px-6 pt-4 pb-5">
-         <div class="d-flex align-items-top justify-content-between mb-7">
-            <div>
-               <h5>Pending</h5>
-               <small>Users (This Month)</small>
-            </div>
-            <div class="dropdown">
-               <a href="#" class="dropdown-toggle text-body">
-                  <i class="bx bx-dots-horizontal-rounded fs-4"></i>
-               </a>
-               <div class="dropdown-menu dropdown-menu-end">
-                  <div class="px-6 pt-2 pb-3 mb-1 border-bottom">Filter</div>
-                  <div class="dropdown-item">This Week</div>
-                  <div class="dropdown-item">This Month</div>
-                  <div class="dropdown-item">This Year</div>
-               </div>
-            </div>
-         </div>
-         <div class="d-flex align-items-center">
-            <div class="avatar me-4">
-               <span class="avatar-initial rounded bg-label-warning">
-                  <i class="bx bx-user fs-5"></i>
-               </span>
-            </div>
-            <div class="d-flex align-items-center justify-content-between">
-               <h4 class="me-2">123</h4>
-               <p class="text-success">(+31%)</p>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
 <div class="card">
    <div class="px-6 pt-6">
       <div class="d-flex align-items-center justify-content-between">
-         <h5>User List</h5>
+         <h5>Groups</h5>
          <div class="d-flex align-items-center justify-content-between gap-2">
-            <a href="add-user.html" class="btn btn-primary">
+            <a href="add-group.html" class="btn btn-primary">
                <div class="d-flex align-items-center justify-content-between gap-1">
                   <i class="bx bx-plus fs-4"></i>
-                  <span>Add User</span>
+                  <span>Add Group</span>
                </div>
             </a>
             <div class="dropdown">
@@ -183,20 +53,21 @@ Dashboard
       <div class="col-12 col-sm-6">
          <form method="get">
             <div class="search-close-wrapper">
-               <input type="search" placeholder="Search from Users" class="form-control search-input"
-                  id="seachFromUsers">
+               <input type="search" placeholder="Search from Groups" class="form-control search-input"
+                  id="seachFromGroups">
                <i class="bx bx-x bx-sm search-closer cursor-pointer"
-                  onclick="document.getElementById('seachFromUsers').value=''; document.getElementById('seachFromUsers').focus();"></i>
+                  onclick="document.getElementById('seachFromGroups').value=''; document.getElementById('seachFromGroups').focus();"></i>
             </div>
          </form>
       </div>
    </div>
    <div class="mb-5">
-      <table class="dash-table user">
+      <table class="dash-table group">
          <thead>
             <tr>
-               <th>User</th>
-               <th>Role</th>
+               <th>Group</th>
+               <th>Permissions</th>
+               <th>Users</th>
                <th>Actions</th>
                <th>Actions</th>
             </tr>
@@ -204,35 +75,31 @@ Dashboard
          <tbody>
             <tr>
                <td>
-                  <a href="account-overview.html" class="text-heading-link text-truncate">
-                     <div class="d-flex">
-                        <div class="me-3">
-                           <div class="avatar">
-                              <img class="rounded-circle bg-primary-light-80" src="assets/img/Avatars/Andrew Altman.png"
-                                 alt="Avatar" width="40px">
-                           </div>
-                        </div>
-                        <div class="">
-                           <p class="fs-4 mb-0">Andrew Altman</p>
-                           <small class="text-muted">altman@gmail.com</small>
-                        </div>
+                  <a href="view-group.html" class="text-heading-link text-truncate">
+                     <div>
+                        <p class="fs-4 mb-0">exam_staff</p>
+                        <small class="text-muted"></small>
                      </div>
                   </a>
                </td>
                <td>
-                  <div class="d-flex align-items-center gap-2">
-                     <i class="bx bx-user text-success fs-4"></i>
-                     <span class="h-100">User</span>
+                  <div>
+                     <span class="h-100">6</span>
+                  </div>
+               </td>
+               <td>
+                  <div>
+                     <span class="h-100">10</span>
                   </div>
                </td>
                <td>
                   <div class="d-flex align-items-center gap-1">
-                     <a href="account.html" class="text-heading-link">
+                     <a href="edit-group.html" class="text-heading-link">
                         <i class="bx bx-edit fs-5"></i>
                      </a>
-                     <a href="#" class="text-heading-link" type="tgl-user-list-del">
+                     <div class="text-heading-link" type="tgl-group-list-del">
                         <i class="bx bx-trash fs-5"></i>
-                     </a>
+                     </div>
                   </div>
                </td>
                <td>
@@ -241,14 +108,14 @@ Dashboard
                         <i class="bx bx-dots-vertical-rounded fs-4"></i>
                      </a>
                      <div class="dropdown-menu dropdown-menu-end">
-                        <a href="account.html" class="dropdown-item">
+                        <a href="edit-group.html" class="dropdown-item">
                            <div class="d-flex align-items-center gap-2">
                               <i class="bx bx-edit fs-4"></i>
                               <span>Edit</span>
                            </div>
                         </a>
                         <div class="dropdown-item">
-                           <div class="d-flex align-items-center gap-2" type="tgl-user-list-del">
+                           <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
                               <i class="bx bx-trash fs-4"></i>
                               <span>Delete</span>
                            </div>
@@ -259,35 +126,31 @@ Dashboard
             </tr>
             <tr>
                <td>
-                  <a href="account-overview.html" class="text-heading-link text-truncate">
-                     <div class="d-flex">
-                        <div class="me-3">
-                           <div class="avatar">
-                              <img class="rounded-circle bg-primary-light-80" src="assets/img/Avatars/Dollar Gill.png"
-                                 alt="Avatar" width="40px">
-                           </div>
-                        </div>
-                        <div class="">
-                           <p class="fs-4 mb-0">Dollar Gill</p>
-                           <small class="text-muted">gilldollar@gmail.com</small>
-                        </div>
+                  <a href="view-group.html" class="text-heading-link text-truncate">
+                     <div>
+                        <p class="fs-4 mb-0">exam_supervisor</p>
+                        <small class="text-muted"></small>
                      </div>
                   </a>
                </td>
                <td>
-                  <div class="d-flex align-items-center gap-2">
-                     <i class="bx bx-desktop text-primary fs-4"></i>
-                     <span class="h-100">Admin</span>
+                  <div>
+                     <span class="h-100">8</span>
+                  </div>
+               </td>
+               <td>
+                  <div>
+                     <span class="h-100">4</span>
                   </div>
                </td>
                <td>
                   <div class="d-flex align-items-center gap-1">
-                     <a href="account.html" class="text-heading-link">
+                     <a href="edit-group.html" class="text-heading-link">
                         <i class="bx bx-edit fs-5"></i>
                      </a>
-                     <a href="#" class="text-heading-link" type="tgl-user-list-del">
+                     <div class="text-heading-link" type="tgl-group-list-del">
                         <i class="bx bx-trash fs-5"></i>
-                     </a>
+                     </div>
                   </div>
                </td>
                <td>
@@ -296,14 +159,14 @@ Dashboard
                         <i class="bx bx-dots-vertical-rounded fs-4"></i>
                      </a>
                      <div class="dropdown-menu dropdown-menu-end">
-                        <a href="account.html" class="dropdown-item">
+                        <a href="edit-group.html" class="dropdown-item">
                            <div class="d-flex align-items-center gap-2">
                               <i class="bx bx-edit fs-4"></i>
                               <span>Edit</span>
                            </div>
                         </a>
                         <div class="dropdown-item">
-                           <div class="d-flex align-items-center gap-2" type="tgl-user-list-del">
+                           <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
                               <i class="bx bx-trash fs-4"></i>
                               <span>Delete</span>
                            </div>
@@ -314,35 +177,31 @@ Dashboard
             </tr>
             <tr>
                <td>
-                  <a href="account-overview.html" class="text-heading-link text-truncate">
-                     <div class="d-flex">
-                        <div class="me-3">
-                           <div class="avatar">
-                              <img class="rounded-circle bg-primary-light-80" src="assets/img/Avatars/Hargun Chahal.png"
-                                 alt="Avatar" width="40px">
-                           </div>
-                        </div>
-                        <div>
-                           <p class="fs-4 mb-0">Hargun Chahal</p>
-                           <small class="text-muted">chargun@gmail.com</small>
-                        </div>
+                  <a href="view-group.html" class="text-heading-link text-truncate">
+                     <div>
+                        <p class="fs-4 mb-0">exam_admin</p>
+                        <small class="text-muted"></small>
                      </div>
                   </a>
                </td>
                <td>
-                  <div class="d-flex align-items-center gap-2">
-                     <i class="bx bx-user text-success fs-4"></i>
-                     <span class="h-100">User</span>
+                  <div>
+                     <span class="h-100">10</span>
+                  </div>
+               </td>
+               <td>
+                  <div>
+                     <span class="h-100">2</span>
                   </div>
                </td>
                <td>
                   <div class="d-flex align-items-center gap-1">
-                     <a href="account.html" class="text-heading-link">
+                     <a href="edit-group.html" class="text-heading-link">
                         <i class="bx bx-edit fs-5"></i>
                      </a>
-                     <a href="#" class="text-heading-link" type="tgl-user-list-del">
+                     <div class="text-heading-link" type="tgl-group-list-del">
                         <i class="bx bx-trash fs-5"></i>
-                     </a>
+                     </div>
                   </div>
                </td>
                <td>
@@ -351,14 +210,14 @@ Dashboard
                         <i class="bx bx-dots-vertical-rounded fs-4"></i>
                      </a>
                      <div class="dropdown-menu dropdown-menu-end">
-                        <a href="account.html" class="dropdown-item">
+                        <a href="edit-group.html" class="dropdown-item">
                            <div class="d-flex align-items-center gap-2">
                               <i class="bx bx-edit fs-4"></i>
                               <span>Edit</span>
                            </div>
                         </a>
                         <div class="dropdown-item">
-                           <div class="d-flex align-items-center gap-2" type="tgl-user-list-del">
+                           <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
                               <i class="bx bx-trash fs-4"></i>
                               <span>Delete</span>
                            </div>
@@ -369,35 +228,31 @@ Dashboard
             </tr>
             <tr>
                <td>
-                  <a href="account-overview.html" class="text-heading-link text-truncate">
-                     <div class="d-flex">
-                        <div class="me-3">
-                           <div class="avatar">
-                              <img class="rounded-circle bg-primary-light-80"
-                                 src="assets/img/Avatars/Harinder Singh.png" alt="Avatar" width="40px">
-                           </div>
-                        </div>
-                        <div class="">
-                           <p class="fs-4 mb-0">Harinder Singh</p>
-                           <small class="text-muted">singhhar@gmail.com</small>
-                        </div>
+                  <a href="view-group.html" class="text-heading-link text-truncate">
+                     <div>
+                        <p class="fs-4 mb-0">controller</p>
+                        <small class="text-muted"></small>
                      </div>
                   </a>
                </td>
                <td>
-                  <div class="d-flex align-items-center gap-2">
-                     <i class="bx bx-edit text-info fs-4"></i>
-                     <span class="h-100">Editor</span>
+                  <div>
+                     <span class="h-100">10</span>
+                  </div>
+               </td>
+               <td>
+                  <div>
+                     <span class="h-100">2</span>
                   </div>
                </td>
                <td>
                   <div class="d-flex align-items-center gap-1">
-                     <a href="account.html" class="text-heading-link">
+                     <a href="edit-group.html" class="text-heading-link">
                         <i class="bx bx-edit fs-5"></i>
                      </a>
-                     <a href="#" class="text-heading-link" type="tgl-user-list-del">
+                     <div class="text-heading-link" type="tgl-group-list-del">
                         <i class="bx bx-trash fs-5"></i>
-                     </a>
+                     </div>
                   </div>
                </td>
                <td>
@@ -406,14 +261,14 @@ Dashboard
                         <i class="bx bx-dots-vertical-rounded fs-4"></i>
                      </a>
                      <div class="dropdown-menu dropdown-menu-end">
-                        <a href="account.html" class="dropdown-item">
+                        <a href="edit-group.html" class="dropdown-item">
                            <div class="d-flex align-items-center gap-2">
                               <i class="bx bx-edit fs-4"></i>
                               <span>Edit</span>
                            </div>
                         </a>
                         <div class="dropdown-item">
-                           <div class="d-flex align-items-center gap-2" type="tgl-user-list-del">
+                           <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
                               <i class="bx bx-trash fs-4"></i>
                               <span>Delete</span>
                            </div>
@@ -424,35 +279,31 @@ Dashboard
             </tr>
             <tr>
                <td>
-                  <a href="account-overview.html" class="text-heading-link text-truncate">
-                     <div class="d-flex">
-                        <div class="me-3">
-                           <div class="avatar">
-                              <img class="rounded-circle bg-primary-light-80" src="assets/img/Avatars/Harishta Roy.png"
-                                 alt="Avatar" width="40px">
-                           </div>
-                        </div>
-                        <div class="">
-                           <p class="fs-4 mb-0">Harishta Roy</p>
-                           <small class="text-muted">royalh@gmail.com</small>
-                        </div>
+                  <a href="view-group.html" class="text-heading-link text-truncate">
+                     <div>
+                        <p class="fs-4 mb-0">center_supdt</p>
+                        <small class="text-muted"></small>
                      </div>
                   </a>
                </td>
                <td>
-                  <div class="d-flex align-items-center gap-2">
-                     <i class="bx bx-user text-success fs-4"></i>
-                     <span class="h-100">User</span>
+                  <div>
+                     <span class="h-100">6</span>
+                  </div>
+               </td>
+               <td>
+                  <div>
+                     <span class="h-100">2</span>
                   </div>
                </td>
                <td>
                   <div class="d-flex align-items-center gap-1">
-                     <a href="account.html" class="text-heading-link">
+                     <a href="edit-group.html" class="text-heading-link">
                         <i class="bx bx-edit fs-5"></i>
                      </a>
-                     <a href="#" class="text-heading-link" type="tgl-user-list-del">
+                     <div class="text-heading-link" type="tgl-group-list-del">
                         <i class="bx bx-trash fs-5"></i>
-                     </a>
+                     </div>
                   </div>
                </td>
                <td>
@@ -461,14 +312,14 @@ Dashboard
                         <i class="bx bx-dots-vertical-rounded fs-4"></i>
                      </a>
                      <div class="dropdown-menu dropdown-menu-end">
-                        <a href="account.html" class="dropdown-item">
+                        <a href="edit-group.html" class="dropdown-item">
                            <div class="d-flex align-items-center gap-2">
                               <i class="bx bx-edit fs-4"></i>
                               <span>Edit</span>
                            </div>
                         </a>
                         <div class="dropdown-item">
-                           <div class="d-flex align-items-center gap-2" type="tgl-user-list-del">
+                           <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
                               <i class="bx bx-trash fs-4"></i>
                               <span>Delete</span>
                            </div>
@@ -479,35 +330,31 @@ Dashboard
             </tr>
             <tr>
                <td>
-                  <a href="account-overview.html" class="text-heading-link text-truncate">
-                     <div class="d-flex">
-                        <div class="me-3">
-                           <div class="avatar">
-                              <img class="rounded-circle bg-primary-light-80" src="assets/img/Avatars/Ibadat Singh.png"
-                                 alt="Avatar" width="40px">
-                           </div>
-                        </div>
-                        <div class="">
-                           <p class="fs-4 mb-0">Ibadat Singh</p>
-                           <small class="text-muted">ibbys@gmail.com</small>
-                        </div>
+                  <a href="view-group.html" class="text-heading-link text-truncate">
+                     <div>
+                        <p class="fs-4 mb-0">student</p>
+                        <small class="text-muted"></small>
                      </div>
                   </a>
                </td>
                <td>
-                  <div class="d-flex align-items-center gap-2">
-                     <i class="bx bx-desktop text-primary fs-4"></i>
-                     <span class="h-100">Admin</span>
+                  <div>
+                     <span class="h-100">4</span>
+                  </div>
+               </td>
+               <td>
+                  <div>
+                     <span class="h-100">1000</span>
                   </div>
                </td>
                <td>
                   <div class="d-flex align-items-center gap-1">
-                     <a href="account.html" class="text-heading-link">
+                     <a href="edit-group.html" class="text-heading-link">
                         <i class="bx bx-edit fs-5"></i>
                      </a>
-                     <a href="#" class="text-heading-link" type="tgl-user-list-del">
+                     <div class="text-heading-link" type="tgl-group-list-del">
                         <i class="bx bx-trash fs-5"></i>
-                     </a>
+                     </div>
                   </div>
                </td>
                <td>
@@ -516,14 +363,14 @@ Dashboard
                         <i class="bx bx-dots-vertical-rounded fs-4"></i>
                      </a>
                      <div class="dropdown-menu dropdown-menu-end">
-                        <a href="account.html" class="dropdown-item">
+                        <a href="edit-group.html" class="dropdown-item">
                            <div class="d-flex align-items-center gap-2">
                               <i class="bx bx-edit fs-4"></i>
                               <span>Edit</span>
                            </div>
                         </a>
                         <div class="dropdown-item">
-                           <div class="d-flex align-items-center gap-2" type="tgl-user-list-del">
+                           <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
                               <i class="bx bx-trash fs-4"></i>
                               <span>Delete</span>
                            </div>
@@ -534,35 +381,31 @@ Dashboard
             </tr>
             <tr>
                <td>
-                  <a href="account-overview.html" class="text-heading-link text-truncate">
-                     <div class="d-flex">
-                        <div class="me-3">
-                           <div class="avatar">
-                              <img class="rounded-circle bg-primary-light-80" src="assets/img/Avatars/Jassi Maan.png"
-                                 alt="Avatar" width="40px">
-                           </div>
-                        </div>
-                        <div class="">
-                           <p class="fs-4 mb-0">Jassi Maan</p>
-                           <small class="text-muted">jassman@gmail.com</small>
-                        </div>
+                  <a href="view-group.html" class="text-heading-link text-truncate">
+                     <div>
+                        <p class="fs-4 mb-0">teacher</p>
+                        <small class="text-muted"></small>
                      </div>
                   </a>
                </td>
                <td>
-                  <div class="d-flex align-items-center gap-2">
-                     <i class="bx bx-user text-success fs-4"></i>
-                     <span class="h-100">User</span>
+                  <div>
+                     <span class="h-100">6</span>
+                  </div>
+               </td>
+               <td>
+                  <div>
+                     <span class="h-100">10</span>
                   </div>
                </td>
                <td>
                   <div class="d-flex align-items-center gap-1">
-                     <a href="account.html" class="text-heading-link">
+                     <a href="edit-group.html" class="text-heading-link">
                         <i class="bx bx-edit fs-5"></i>
                      </a>
-                     <a href="#" class="text-heading-link" type="tgl-user-list-del">
+                     <div class="text-heading-link" type="tgl-group-list-del">
                         <i class="bx bx-trash fs-5"></i>
-                     </a>
+                     </div>
                   </div>
                </td>
                <td>
@@ -571,14 +414,14 @@ Dashboard
                         <i class="bx bx-dots-vertical-rounded fs-4"></i>
                      </a>
                      <div class="dropdown-menu dropdown-menu-end">
-                        <a href="account.html" class="dropdown-item">
+                        <a href="edit-group.html" class="dropdown-item">
                            <div class="d-flex align-items-center gap-2">
                               <i class="bx bx-edit fs-4"></i>
                               <span>Edit</span>
                            </div>
                         </a>
                         <div class="dropdown-item">
-                           <div class="d-flex align-items-center gap-2" type="tgl-user-list-del">
+                           <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
                               <i class="bx bx-trash fs-4"></i>
                               <span>Delete</span>
                            </div>
@@ -589,35 +432,31 @@ Dashboard
             </tr>
             <tr>
                <td>
-                  <a href="account-overview.html" class="text-heading-link text-truncate">
-                     <div class="d-flex">
-                        <div class="me-3">
-                           <div class="avatar">
-                              <img class="rounded-circle bg-primary-light-80"
-                                 src="assets/img/Avatars/Joginder Singh.png" alt="Avatar" width="40px">
-                           </div>
-                        </div>
-                        <div class="">
-                           <p class="fs-4 mb-0">Joginder Singh</p>
-                           <small class="text-muted">jogisingh@gmail.com</small>
-                        </div>
+                  <a href="view-group.html" class="text-heading-link text-truncate">
+                     <div>
+                        <p class="fs-4 mb-0">dept_staff</p>
+                        <small class="text-muted"></small>
                      </div>
                   </a>
                </td>
                <td>
-                  <div class="d-flex align-items-center gap-2">
-                     <i class="bx bx-user text-success fs-4"></i>
-                     <span class="h-100">User</span>
+                  <div>
+                     <span class="h-100">6</span>
+                  </div>
+               </td>
+               <td>
+                  <div>
+                     <span class="h-100">4</span>
                   </div>
                </td>
                <td>
                   <div class="d-flex align-items-center gap-1">
-                     <a href="account.html" class="text-heading-link">
+                     <a href="edit-group.html" class="text-heading-link">
                         <i class="bx bx-edit fs-5"></i>
                      </a>
-                     <a href="#" class="text-heading-link" type="tgl-user-list-del">
+                     <div class="text-heading-link" type="tgl-group-list-del">
                         <i class="bx bx-trash fs-5"></i>
-                     </a>
+                     </div>
                   </div>
                </td>
                <td>
@@ -626,14 +465,14 @@ Dashboard
                         <i class="bx bx-dots-vertical-rounded fs-4"></i>
                      </a>
                      <div class="dropdown-menu dropdown-menu-end">
-                        <a href="account.html" class="dropdown-item">
+                        <a href="edit-group.html" class="dropdown-item">
                            <div class="d-flex align-items-center gap-2">
                               <i class="bx bx-edit fs-4"></i>
                               <span>Edit</span>
                            </div>
                         </a>
                         <div class="dropdown-item">
-                           <div class="d-flex align-items-center gap-2" type="tgl-user-list-del">
+                           <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
                               <i class="bx bx-trash fs-4"></i>
                               <span>Delete</span>
                            </div>
@@ -644,35 +483,31 @@ Dashboard
             </tr>
             <tr>
                <td>
-                  <a href="account-overview.html" class="text-heading-link text-truncate">
-                     <div class="d-flex">
-                        <div class="me-3">
-                           <div class="avatar">
-                              <img class="rounded-circle bg-primary-light-80" src="assets/img/Avatars/Kenza Layli.png"
-                                 alt="Avatar" width="40px">
-                           </div>
-                        </div>
-                        <div class="">
-                           <p class="fs-4 mb-0">Kenza Layli</p>
-                           <small class="text-muted">laylikenz@gmail.com</small>
-                        </div>
+                  <a href="view-group.html" class="text-heading-link text-truncate">
+                     <div>
+                        <p class="fs-4 mb-0">dept_head</p>
+                        <small class="text-muted"></small>
                      </div>
                   </a>
                </td>
                <td>
-                  <div class="d-flex align-items-center gap-2">
-                     <i class="bx bx-edit text-info fs-4"></i>
-                     <span class="h-100">Editor</span>
+                  <div>
+                     <span class="h-100">8</span>
+                  </div>
+               </td>
+               <td>
+                  <div>
+                     <span class="h-100">1</span>
                   </div>
                </td>
                <td>
                   <div class="d-flex align-items-center gap-1">
-                     <a href="account.html" class="text-heading-link">
+                     <a href="edit-group.html" class="text-heading-link">
                         <i class="bx bx-edit fs-5"></i>
                      </a>
-                     <a href="#" class="text-heading-link" type="tgl-user-list-del">
+                     <div class="text-heading-link" type="tgl-group-list-del">
                         <i class="bx bx-trash fs-5"></i>
-                     </a>
+                     </div>
                   </div>
                </td>
                <td>
@@ -681,14 +516,14 @@ Dashboard
                         <i class="bx bx-dots-vertical-rounded fs-4"></i>
                      </a>
                      <div class="dropdown-menu dropdown-menu-end">
-                        <a href="account.html" class="dropdown-item">
+                        <a href="edit-group.html" class="dropdown-item">
                            <div class="d-flex align-items-center gap-2">
                               <i class="bx bx-edit fs-4"></i>
                               <span>Edit</span>
                            </div>
                         </a>
                         <div class="dropdown-item">
-                           <div class="d-flex align-items-center gap-2" type="tgl-user-list-del">
+                           <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
                               <i class="bx bx-trash fs-4"></i>
                               <span>Delete</span>
                            </div>
@@ -699,35 +534,31 @@ Dashboard
             </tr>
             <tr>
                <td>
-                  <a href="account-overview.html" class="text-heading-link text-truncate">
-                     <div class="d-flex">
-                        <div class="me-3">
-                           <div class="avatar">
-                              <img class="rounded-circle bg-primary-light-80" src="assets/img/Avatars/Lalina.png"
-                                 alt="Avatar" width="40px">
-                           </div>
-                        </div>
-                        <div class="">
-                           <p class="fs-4 mb-0">Lalina</p>
-                           <small class="text-muted">lalinaz@gmail.com</small>
-                        </div>
+                  <a href="view-group.html" class="text-heading-link text-truncate">
+                     <div>
+                        <p class="fs-4 mb-0">examiner</p>
+                        <small class="text-muted"></small>
                      </div>
                   </a>
                </td>
                <td>
-                  <div class="d-flex align-items-center gap-2">
-                     <i class="bx bx-user text-success fs-4"></i>
-                     <span class="h-100">User</span>
+                  <div>
+                     <span class="h-100">4</span>
+                  </div>
+               </td>
+               <td>
+                  <div>
+                     <span class="h-100">6</span>
                   </div>
                </td>
                <td>
                   <div class="d-flex align-items-center gap-1">
-                     <a href="account.html" class="text-heading-link">
+                     <a href="edit-group.html" class="text-heading-link">
                         <i class="bx bx-edit fs-5"></i>
                      </a>
-                     <a href="#" class="text-heading-link" type="tgl-user-list-del">
+                     <div class="text-heading-link" type="tgl-group-list-del">
                         <i class="bx bx-trash fs-5"></i>
-                     </a>
+                     </div>
                   </div>
                </td>
                <td>
@@ -736,14 +567,14 @@ Dashboard
                         <i class="bx bx-dots-vertical-rounded fs-4"></i>
                      </a>
                      <div class="dropdown-menu dropdown-menu-end">
-                        <a href="account.html" class="dropdown-item">
+                        <a href="edit-group.html" class="dropdown-item">
                            <div class="d-flex align-items-center gap-2">
                               <i class="bx bx-edit fs-4"></i>
                               <span>Edit</span>
                            </div>
                         </a>
                         <div class="dropdown-item">
-                           <div class="d-flex align-items-center gap-2" type="tgl-user-list-del">
+                           <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
                               <i class="bx bx-trash fs-4"></i>
                               <span>Delete</span>
                            </div>

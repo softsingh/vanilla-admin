@@ -71,7 +71,7 @@
             </div>
         </div>
         <div
-            class="menu-item {% if file_name in ['add-user', 'account-overview', 'account', 'account-address', 'account-password'] %}active open{% endif %}">
+            class="menu-item {% if file_name in ['add-user', 'groups', 'account-overview', 'account', 'account-address', 'account-password'] %}active open{% endif %}">
             <a href="#" class="menu-link menu-toggle">
                 <i class="bx bx-user fs-6"></i>
                 <span>User</span>
@@ -80,6 +80,11 @@
                 <div class="menu-item {% if file_name == 'add-user' %}active{% endif %}">
                     <a href="add-user.html" class="menu-link">
                         <span>Add User</span>
+                    </a>
+                </div>
+                <div class="menu-item {% if file_name == 'groups' %}active{% endif %}">
+                    <a href="groups.html" class="menu-link">
+                        <span>Groups</span>
                     </a>
                 </div>
                 <div

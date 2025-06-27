@@ -9,7 +9,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>
 
-      Toasts
+      Groups
 
    </title>
    <link rel="stylesheet" href="assets/css/core.css">
@@ -93,7 +93,7 @@
                   </div>
                </div>
             </div>
-            <div class="menu-item ">
+            <div class="menu-item active open">
                <a href="#" class="menu-link menu-toggle">
                   <i class="bx bx-user fs-6"></i>
                   <span>User</span>
@@ -104,7 +104,7 @@
                         <span>Add User</span>
                      </a>
                   </div>
-                  <div class="menu-item ">
+                  <div class="menu-item active">
                      <a href="groups.html" class="menu-link">
                         <span>Groups</span>
                      </a>
@@ -169,7 +169,7 @@
             <div class="menu-header">
                <small class="menu-header-text">Components</small>
             </div>
-            <div class="menu-item active open">
+            <div class="menu-item ">
                <a href="#" class="menu-link menu-toggle">
                   <i class="bx bx-rectangle fs-6"></i>
                   <span>Simple</span>
@@ -235,7 +235,7 @@
                         <span>Paginations</span>
                      </a>
                   </div>
-                  <div class="menu-item active">
+                  <div class="menu-item ">
                      <a href="toasts.html" class="menu-link">
                         <span>Toasts</span>
                      </a>
@@ -740,291 +740,676 @@
          </nav>
          <div class="dash-content">
 
-            <div class="row g-6">
-               <div class="col-12 col-md-6">
-                  <div class="card">
-                     <div class="card-header pb-0">
-                        <h5>Toast Positions</h5>
-                     </div>
-                     <div class="card-body">
-                        <div class="gap-container gap-1 mb-4">
-                           <button class="btn btn-primary" data-toggle="toast" data-target="#toastTopLeft">Top
-                              Left</button>
-                           <button class="btn btn-primary" data-toggle="toast" data-target="#toastTopCenter">Top
-                              Center</button>
-                           <button class="btn btn-primary" data-toggle="toast" data-target="#toastTopRight">Top
-                              Right</button>
+            <div class="card">
+               <div class="px-6 pt-6">
+                  <div class="d-flex align-items-center justify-content-between">
+                     <h5>Groups</h5>
+                     <div class="d-flex align-items-center justify-content-between gap-2">
+                        <a href="add-group.html" class="btn btn-primary">
+                           <div class="d-flex align-items-center justify-content-between gap-1">
+                              <i class="bx bx-plus fs-4"></i>
+                              <span>Add Group</span>
+                           </div>
+                        </a>
+                        <div class="dropdown">
+                           <div class="dropdown-toggle text-body cursor-pointer">
+                              <i class="bx bx-dots-vertical-rounded fs-4"></i>
+                           </div>
+                           <div class="dropdown-menu dropdown-menu-end">
+                              <div class="px-6 pt-2 pb-3 mb-1 border-bottom">Export</div>
+                              <div class="dropdown-item">
+                                 <div class="d-flex align-items-center gap-2">
+                                    <i class="bx bx-table fs-4"></i>
+                                    <span>xlsx</span>
+                                 </div>
+                              </div>
+                              <div class="dropdown-item">
+                                 <div class="d-flex align-items-center gap-2">
+                                    <i class="bx bx-printer fs-4"></i>
+                                    <span>print</span>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
-                        <div class="gap-container gap-1 mb-4">
-                           <button class="btn btn-primary" data-toggle="toast" data-target="#toastMiddleLeft">Middle
-                              Left</button>
-                           <button class="btn btn-primary" data-toggle="toast" data-target="#toastMiddleCenter">Middle
-                              Center</button>
-                           <button class="btn btn-primary" data-toggle="toast" data-target="#toastMiddleRight">Middle
-                              Right</button>
-                        </div>
-                        <div class="gap-container gap-1">
-                           <button class="btn btn-primary" data-toggle="toast" data-target="#toastBottomLeft">Bottom
-                              Left</button>
-                           <button class="btn btn-primary" data-toggle="toast" data-target="#toastBottomCenter">Bottom
-                              Center</button>
-                           <button class="btn btn-primary" data-toggle="toast" data-target="#toastBottomRight">Bottom
-                              Right</button>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="toast toast-dark toast-top-left" id="toastTopLeft" data-delay="3000">
-                     <div class="toast-header">
-                        <div class="d-flex align-items-center gap-2">
-                           <i class="bx bx-bell fs-5"></i>
-                           <div class="fw-bold">Toast Header</div>
-                        </div>
-                        <small>11 Min Ago</small>
-                        <button type="button" class="btn-close"></button>
-                     </div>
-                     <div class="toast-body">
-                        This is a sample toast message. This is a sample toast message. This is a sample toast message.
-                     </div>
-                  </div>
-                  <div class="toast toast-dark toast-top-center" id="toastTopCenter" data-delay="3000">
-                     <div class="toast-header">
-                        <div class="d-flex align-items-center gap-2">
-                           <i class="bx bx-bell fs-5"></i>
-                           <div class="fw-bold">Toast Header</div>
-                        </div>
-                        <small>11 Min Ago</small>
-                        <button type="button" class="btn-close"></button>
-                     </div>
-                     <div class="toast-body">
-                        This is a sample toast message. This is a sample toast message. This is a sample toast message.
-                     </div>
-                  </div>
-                  <div class="toast toast-dark toast-top-right" id="toastTopRight" data-delay="3000">
-                     <div class="toast-header">
-                        <div class="d-flex align-items-center gap-2">
-                           <i class="bx bx-bell fs-5"></i>
-                           <div class="fw-bold">Toast Header</div>
-                        </div>
-                        <small>11 Min Ago</small>
-                        <button type="button" class="btn-close"></button>
-                     </div>
-                     <div class="toast-body">
-                        This is a sample toast message. This is a sample toast message. This is a sample toast message.
-                     </div>
-                  </div>
-
-                  <div class="toast toast-dark toast-middle-left" id="toastMiddleLeft" data-delay="3000">
-                     <div class="toast-header">
-                        <div class="d-flex align-items-center gap-2">
-                           <i class="bx bx-bell fs-5"></i>
-                           <div class="fw-bold">Toast Header</div>
-                        </div>
-                        <small>11 Min Ago</small>
-                        <button type="button" class="btn-close"></button>
-                     </div>
-                     <div class="toast-body">
-                        This is a sample toast message. This is a sample toast message. This is a sample toast message.
-                     </div>
-                  </div>
-                  <div class="toast toast-dark toast-middle-center" id="toastMiddleCenter" data-delay="3000">
-                     <div class="toast-header">
-                        <div class="d-flex align-items-center gap-2">
-                           <i class="bx bx-bell fs-5"></i>
-                           <div class="fw-bold">Toast Header</div>
-                        </div>
-                        <small>11 Min Ago</small>
-                        <button type="button" class="btn-close"></button>
-                     </div>
-                     <div class="toast-body">
-                        This is a sample toast message. This is a sample toast message. This is a sample toast message.
-                     </div>
-                  </div>
-                  <div class="toast toast-dark toast-middle-right" id="toastMiddleRight" data-delay="3000">
-                     <div class="toast-header">
-                        <div class="d-flex align-items-center gap-2">
-                           <i class="bx bx-bell fs-5"></i>
-                           <div class="fw-bold">Toast Header</div>
-                        </div>
-                        <small>11 Min Ago</small>
-                        <button type="button" class="btn-close"></button>
-                     </div>
-                     <div class="toast-body">
-                        This is a sample toast message. This is a sample toast message. This is a sample toast message.
-                     </div>
-                  </div>
-
-                  <div class="toast toast-dark toast-bottom-left" id="toastBottomLeft" data-delay="3000">
-                     <div class="toast-header">
-                        <div class="d-flex align-items-center gap-2">
-                           <i class="bx bx-bell fs-5"></i>
-                           <div class="fw-bold">Toast Header</div>
-                        </div>
-                        <small>11 Min Ago</small>
-                        <button type="button" class="btn-close"></button>
-                     </div>
-                     <div class="toast-body">
-                        This is a sample toast message. This is a sample toast message. This is a sample toast message.
-                     </div>
-                  </div>
-                  <div class="toast toast-dark toast-bottom-center" id="toastBottomCenter" data-delay="3000">
-                     <div class="toast-header">
-                        <div class="d-flex align-items-center gap-2">
-                           <i class="bx bx-bell fs-5"></i>
-                           <div class="fw-bold">Toast Header</div>
-                        </div>
-                        <small>11 Min Ago</small>
-                        <button type="button" class="btn-close"></button>
-                     </div>
-                     <div class="toast-body">
-                        This is a sample toast message. This is a sample toast message. This is a sample toast message.
-                     </div>
-                  </div>
-                  <div class="toast toast-dark toast-bottom-right" id="toastBottomRight" data-delay="3000">
-                     <div class="toast-header">
-                        <div class="d-flex align-items-center gap-2">
-                           <i class="bx bx-bell fs-5"></i>
-                           <div class="fw-bold">Toast Header</div>
-                        </div>
-                        <small>11 Min Ago</small>
-                        <button type="button" class="btn-close"></button>
-                     </div>
-                     <div class="toast-body">
-                        This is a sample toast message. This is a sample toast message. This is a sample toast message.
                      </div>
                   </div>
                </div>
-               <div class="col-12 col-md-6">
-                  <div class="card">
-                     <div class="card-header pb-0">
-                        <h5>Toast Colors</h5>
-                     </div>
-                     <div class="card-body toast-colors">
-                        <div class="toast show mb-6">
-                           <div class="toast-header">
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-bell fs-5"></i>
-                                 <div class="fw-bold">Default</div>
-                              </div>
-                              <small>11 Min Ago</small>
-                              <button type="button" class="btn-close"></button>
-                           </div>
-                           <div class="toast-body">
-                              This is a sample toast message. This is a sample toast message. This is a sample toast
-                              message.
-                           </div>
+               <div class="row g-4 px-6 my-4">
+                  <div class="col-12 col-sm-6">
+                     <form method="get">
+                        <select class="form-select" name="page_size" id="pageSize">
+                           <option value="5">5</option>
+                           <option value="10" selected>10</option>
+                           <option value="20">20</option>
+                           <option value="50">50</option>
+                           <option value="100">100</option>
+                        </select>
+                     </form>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                     <form method="get">
+                        <div class="search-close-wrapper">
+                           <input type="search" placeholder="Search from Groups" class="form-control search-input"
+                              id="seachFromGroups">
+                           <i class="bx bx-x bx-sm search-closer cursor-pointer"
+                              onclick="document.getElementById('seachFromGroups').value=''; document.getElementById('seachFromGroups').focus();"></i>
                         </div>
-                        <div class="toast toast-primary show mb-6">
-                           <div class="toast-header">
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-bell fs-5"></i>
-                                 <div class="fw-bold">Primary</div>
+                     </form>
+                  </div>
+               </div>
+               <div class="mb-5">
+                  <table class="dash-table group">
+                     <thead>
+                        <tr>
+                           <th>Group</th>
+                           <th>Permissions</th>
+                           <th>Users</th>
+                           <th>Actions</th>
+                           <th>Actions</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>
+                              <a href="view-group.html" class="text-heading-link text-truncate">
+                                 <div>
+                                    <p class="fs-4 mb-0">exam_staff</p>
+                                    <small class="text-muted"></small>
+                                 </div>
+                              </a>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">6</span>
                               </div>
-                              <small>11 Min Ago</small>
-                              <button type="button" class="btn-close"></button>
-                           </div>
-                           <div class="toast-body">
-                              This is a sample toast message. This is a sample toast message. This is a sample toast
-                              message.
-                           </div>
-                        </div>
-                        <div class="toast toast-secondary show mb-6">
-                           <div class="toast-header">
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-bell fs-5"></i>
-                                 <div class="fw-bold">Secondary</div>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">10</span>
                               </div>
-                              <small>11 Min Ago</small>
-                              <button type="button" class="btn-close"></button>
-                           </div>
-                           <div class="toast-body">
-                              This is a sample toast message. This is a sample toast message. This is a sample toast
-                              message.
-                           </div>
-                        </div>
-                        <div class="toast toast-success show mb-6">
-                           <div class="toast-header">
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-bell fs-5"></i>
-                                 <div class="fw-bold">Success</div>
+                           </td>
+                           <td>
+                              <div class="d-flex align-items-center gap-1">
+                                 <a href="edit-group.html" class="text-heading-link">
+                                    <i class="bx bx-edit fs-5"></i>
+                                 </a>
+                                 <div class="text-heading-link" type="tgl-group-list-del">
+                                    <i class="bx bx-trash fs-5"></i>
+                                 </div>
                               </div>
-                              <small>11 Min Ago</small>
-                              <button type="button" class="btn-close"></button>
-                           </div>
-                           <div class="toast-body">
-                              This is a sample toast message. This is a sample toast message. This is a sample toast
-                              message.
-                           </div>
-                        </div>
-                        <div class="toast toast-danger show mb-6">
-                           <div class="toast-header">
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-bell fs-5"></i>
-                                 <div class="fw-bold">Danger</div>
+                           </td>
+                           <td>
+                              <div class="dropdown">
+                                 <a href="#" class="dropdown-toggle text-body">
+                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
+                                 </a>
+                                 <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="edit-group.html" class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2">
+                                          <i class="bx bx-edit fs-4"></i>
+                                          <span>Edit</span>
+                                       </div>
+                                    </a>
+                                    <div class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
+                                          <i class="bx bx-trash fs-4"></i>
+                                          <span>Delete</span>
+                                       </div>
+                                    </div>
+                                 </div>
                               </div>
-                              <small>11 Min Ago</small>
-                              <button type="button" class="btn-close"></button>
-                           </div>
-                           <div class="toast-body">
-                              This is a sample toast message. This is a sample toast message. This is a sample toast
-                              message.
-                           </div>
-                        </div>
-                        <div class="toast toast-warning show mb-6">
-                           <div class="toast-header">
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-bell fs-5"></i>
-                                 <div class="fw-bold">Warning</div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <a href="view-group.html" class="text-heading-link text-truncate">
+                                 <div>
+                                    <p class="fs-4 mb-0">exam_supervisor</p>
+                                    <small class="text-muted"></small>
+                                 </div>
+                              </a>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">8</span>
                               </div>
-                              <small>11 Min Ago</small>
-                              <button type="button" class="btn-close"></button>
-                           </div>
-                           <div class="toast-body">
-                              This is a sample toast message. This is a sample toast message. This is a sample toast
-                              message.
-                           </div>
-                        </div>
-                        <div class="toast toast-info show mb-6">
-                           <div class="toast-header">
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-bell fs-5"></i>
-                                 <div class="fw-bold">Info</div>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">4</span>
                               </div>
-                              <small>11 Min Ago</small>
-                              <button type="button" class="btn-close"></button>
-                           </div>
-                           <div class="toast-body">
-                              This is a sample toast message. This is a sample toast message. This is a sample toast
-                              message.
-                           </div>
-                        </div>
-                        <div class="toast toast-light show mb-6">
-                           <div class="toast-header">
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-bell fs-5"></i>
-                                 <div class="fw-bold">Light</div>
+                           </td>
+                           <td>
+                              <div class="d-flex align-items-center gap-1">
+                                 <a href="edit-group.html" class="text-heading-link">
+                                    <i class="bx bx-edit fs-5"></i>
+                                 </a>
+                                 <div class="text-heading-link" type="tgl-group-list-del">
+                                    <i class="bx bx-trash fs-5"></i>
+                                 </div>
                               </div>
-                              <small>11 Min Ago</small>
-                              <button type="button" class="btn-close"></button>
-                           </div>
-                           <div class="toast-body">
-                              This is a sample toast message. This is a sample toast message. This is a sample toast
-                              message.
-                           </div>
-                        </div>
-                        <div class="toast toast-dark show">
-                           <div class="toast-header">
-                              <div class="d-flex align-items-center gap-2">
-                                 <i class="bx bx-bell fs-5"></i>
-                                 <div class="fw-bold">Dark</div>
+                           </td>
+                           <td>
+                              <div class="dropdown">
+                                 <a href="#" class="dropdown-toggle text-body">
+                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
+                                 </a>
+                                 <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="edit-group.html" class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2">
+                                          <i class="bx bx-edit fs-4"></i>
+                                          <span>Edit</span>
+                                       </div>
+                                    </a>
+                                    <div class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
+                                          <i class="bx bx-trash fs-4"></i>
+                                          <span>Delete</span>
+                                       </div>
+                                    </div>
+                                 </div>
                               </div>
-                              <small>11 Min Ago</small>
-                              <button type="button" class="btn-close"></button>
-                           </div>
-                           <div class="toast-body">
-                              This is a sample toast message. This is a sample toast message. This is a sample toast
-                              message.
-                           </div>
-                        </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <a href="view-group.html" class="text-heading-link text-truncate">
+                                 <div>
+                                    <p class="fs-4 mb-0">exam_admin</p>
+                                    <small class="text-muted"></small>
+                                 </div>
+                              </a>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">10</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">2</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="d-flex align-items-center gap-1">
+                                 <a href="edit-group.html" class="text-heading-link">
+                                    <i class="bx bx-edit fs-5"></i>
+                                 </a>
+                                 <div class="text-heading-link" type="tgl-group-list-del">
+                                    <i class="bx bx-trash fs-5"></i>
+                                 </div>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="dropdown">
+                                 <a href="#" class="dropdown-toggle text-body">
+                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
+                                 </a>
+                                 <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="edit-group.html" class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2">
+                                          <i class="bx bx-edit fs-4"></i>
+                                          <span>Edit</span>
+                                       </div>
+                                    </a>
+                                    <div class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
+                                          <i class="bx bx-trash fs-4"></i>
+                                          <span>Delete</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <a href="view-group.html" class="text-heading-link text-truncate">
+                                 <div>
+                                    <p class="fs-4 mb-0">controller</p>
+                                    <small class="text-muted"></small>
+                                 </div>
+                              </a>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">10</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">2</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="d-flex align-items-center gap-1">
+                                 <a href="edit-group.html" class="text-heading-link">
+                                    <i class="bx bx-edit fs-5"></i>
+                                 </a>
+                                 <div class="text-heading-link" type="tgl-group-list-del">
+                                    <i class="bx bx-trash fs-5"></i>
+                                 </div>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="dropdown">
+                                 <a href="#" class="dropdown-toggle text-body">
+                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
+                                 </a>
+                                 <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="edit-group.html" class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2">
+                                          <i class="bx bx-edit fs-4"></i>
+                                          <span>Edit</span>
+                                       </div>
+                                    </a>
+                                    <div class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
+                                          <i class="bx bx-trash fs-4"></i>
+                                          <span>Delete</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <a href="view-group.html" class="text-heading-link text-truncate">
+                                 <div>
+                                    <p class="fs-4 mb-0">center_supdt</p>
+                                    <small class="text-muted"></small>
+                                 </div>
+                              </a>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">6</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">2</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="d-flex align-items-center gap-1">
+                                 <a href="edit-group.html" class="text-heading-link">
+                                    <i class="bx bx-edit fs-5"></i>
+                                 </a>
+                                 <div class="text-heading-link" type="tgl-group-list-del">
+                                    <i class="bx bx-trash fs-5"></i>
+                                 </div>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="dropdown">
+                                 <a href="#" class="dropdown-toggle text-body">
+                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
+                                 </a>
+                                 <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="edit-group.html" class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2">
+                                          <i class="bx bx-edit fs-4"></i>
+                                          <span>Edit</span>
+                                       </div>
+                                    </a>
+                                    <div class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
+                                          <i class="bx bx-trash fs-4"></i>
+                                          <span>Delete</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <a href="view-group.html" class="text-heading-link text-truncate">
+                                 <div>
+                                    <p class="fs-4 mb-0">student</p>
+                                    <small class="text-muted"></small>
+                                 </div>
+                              </a>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">4</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">1000</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="d-flex align-items-center gap-1">
+                                 <a href="edit-group.html" class="text-heading-link">
+                                    <i class="bx bx-edit fs-5"></i>
+                                 </a>
+                                 <div class="text-heading-link" type="tgl-group-list-del">
+                                    <i class="bx bx-trash fs-5"></i>
+                                 </div>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="dropdown">
+                                 <a href="#" class="dropdown-toggle text-body">
+                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
+                                 </a>
+                                 <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="edit-group.html" class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2">
+                                          <i class="bx bx-edit fs-4"></i>
+                                          <span>Edit</span>
+                                       </div>
+                                    </a>
+                                    <div class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
+                                          <i class="bx bx-trash fs-4"></i>
+                                          <span>Delete</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <a href="view-group.html" class="text-heading-link text-truncate">
+                                 <div>
+                                    <p class="fs-4 mb-0">teacher</p>
+                                    <small class="text-muted"></small>
+                                 </div>
+                              </a>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">6</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">10</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="d-flex align-items-center gap-1">
+                                 <a href="edit-group.html" class="text-heading-link">
+                                    <i class="bx bx-edit fs-5"></i>
+                                 </a>
+                                 <div class="text-heading-link" type="tgl-group-list-del">
+                                    <i class="bx bx-trash fs-5"></i>
+                                 </div>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="dropdown">
+                                 <a href="#" class="dropdown-toggle text-body">
+                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
+                                 </a>
+                                 <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="edit-group.html" class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2">
+                                          <i class="bx bx-edit fs-4"></i>
+                                          <span>Edit</span>
+                                       </div>
+                                    </a>
+                                    <div class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
+                                          <i class="bx bx-trash fs-4"></i>
+                                          <span>Delete</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <a href="view-group.html" class="text-heading-link text-truncate">
+                                 <div>
+                                    <p class="fs-4 mb-0">dept_staff</p>
+                                    <small class="text-muted"></small>
+                                 </div>
+                              </a>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">6</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">4</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="d-flex align-items-center gap-1">
+                                 <a href="edit-group.html" class="text-heading-link">
+                                    <i class="bx bx-edit fs-5"></i>
+                                 </a>
+                                 <div class="text-heading-link" type="tgl-group-list-del">
+                                    <i class="bx bx-trash fs-5"></i>
+                                 </div>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="dropdown">
+                                 <a href="#" class="dropdown-toggle text-body">
+                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
+                                 </a>
+                                 <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="edit-group.html" class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2">
+                                          <i class="bx bx-edit fs-4"></i>
+                                          <span>Edit</span>
+                                       </div>
+                                    </a>
+                                    <div class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
+                                          <i class="bx bx-trash fs-4"></i>
+                                          <span>Delete</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <a href="view-group.html" class="text-heading-link text-truncate">
+                                 <div>
+                                    <p class="fs-4 mb-0">dept_head</p>
+                                    <small class="text-muted"></small>
+                                 </div>
+                              </a>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">8</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">1</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="d-flex align-items-center gap-1">
+                                 <a href="edit-group.html" class="text-heading-link">
+                                    <i class="bx bx-edit fs-5"></i>
+                                 </a>
+                                 <div class="text-heading-link" type="tgl-group-list-del">
+                                    <i class="bx bx-trash fs-5"></i>
+                                 </div>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="dropdown">
+                                 <a href="#" class="dropdown-toggle text-body">
+                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
+                                 </a>
+                                 <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="edit-group.html" class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2">
+                                          <i class="bx bx-edit fs-4"></i>
+                                          <span>Edit</span>
+                                       </div>
+                                    </a>
+                                    <div class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
+                                          <i class="bx bx-trash fs-4"></i>
+                                          <span>Delete</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <a href="view-group.html" class="text-heading-link text-truncate">
+                                 <div>
+                                    <p class="fs-4 mb-0">examiner</p>
+                                    <small class="text-muted"></small>
+                                 </div>
+                              </a>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">4</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">6</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="d-flex align-items-center gap-1">
+                                 <a href="edit-group.html" class="text-heading-link">
+                                    <i class="bx bx-edit fs-5"></i>
+                                 </a>
+                                 <div class="text-heading-link" type="tgl-group-list-del">
+                                    <i class="bx bx-trash fs-5"></i>
+                                 </div>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="dropdown">
+                                 <a href="#" class="dropdown-toggle text-body">
+                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
+                                 </a>
+                                 <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="edit-group.html" class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2">
+                                          <i class="bx bx-edit fs-4"></i>
+                                          <span>Edit</span>
+                                       </div>
+                                    </a>
+                                    <div class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
+                                          <i class="bx bx-trash fs-4"></i>
+                                          <span>Delete</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class="row px-6 mb-5">
+                  <div class="col-sm-12 col-lg-6">
+                     <div class="dash-table-pagination-info text-muted">Showing 41 to 50 of 200</div>
+                  </div>
+                  <div class="col-sm-12 col-lg-6">
+                     <div class="dash-table-pagination-container">
+                        <ul class="pagination pagination-overflow">
+                           <li class="page-item page-item-first disabled">
+                              <a href="#" class="page-link">
+                                 <i class="bx bx-first-page bx-18px"></i>
+                              </a>
+                           </li>
+                           <li class="page-item page-item-previous disabled">
+                              <a href="#" class="page-link">
+                                 <i class="bx bx-chevron-left bx-18px"></i>
+                              </a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">1</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">2</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">3</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">4</a>
+                           </li>
+                           <li class="page-item active">
+                              <a href="#" class="page-link">5</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">6</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">7</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">8</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">9</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">10</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">11</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">12</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">13</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">14</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">15</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">16</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">17</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">18</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">19</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">20</a>
+                           </li>
+                           <li class="page-item page-item-next">
+                              <a href="#" class="page-link">
+                                 <i class="bx bx-chevron-right bx-18px"></i>
+                              </a>
+                           </li>
+                           <li class="page-item page-item-last">
+                              <a href="#" class="page-link">
+                                 <i class="bx bx-last-page bx-18px"></i>
+                              </a>
+                           </li>
+                        </ul>
                      </div>
                   </div>
                </div>

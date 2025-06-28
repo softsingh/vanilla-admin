@@ -1,87 +1,84 @@
 {% set file_name = "account-overview" %}
 {% extends "_dash_base.njk" %}
 {% block title %}
-   Account Overview
+Account Overview
 {% endblock title %}
 {% block content %}
-   <ul class="nav nav-pills scroll-x mb-sm-3">
-      <li class="nav-item active">
-         <a href="account-overview.html" class="nav-link">
-            <div class="d-flex align-items-center">
-               <i class="bx bx-list-ul fs-5 me-1"></i>
-               <span>Overview</span>
-            </div>
-         </a>
-      </li>
-      <li class="nav-item">
-         <a href="account.html" class="nav-link">
-            <div class="d-flex align-items-center">
-               <i class="bx bx-user fs-5 me-1"></i>
-               <span>Account</span>
-            </div>
-         </a>
-      </li>
-      <li class="nav-item">
-         <a href="account-address.html" class="nav-link">
-            <div class="d-flex align-items-center">
-               <i class="bx bx-home fs-5 me-1"></i>
-               <span>Address</span>
-            </div>
-         </a>
-      </li>
-      <li class="nav-item">
-         <a href="account-password.html" class="nav-link">
-            <div class="d-flex align-items-center">
-               <i class="bx bx-lock-alt fs-5 me-1"></i>
-               <span>Password</span>
-            </div>
-         </a>
-      </li>
-   </ul>
-   <div class="card mb-6">
-      <div class="card-body">
-         <div class="d-flex align-items-center gap-6 pb-5 border-bottom">
-            <img src="assets/img/Avatars/Dollar Gill.png"
-                 alt="user-avatar"
-                 class="d-block rounded bg-primary-lightest"
-                 height="100px"
-                 id="uploadedAvatar">
-            <div>
-               <h5>Dollar Gill</h5>
-               <small class="text-muted">Admin</small>
-            </div>
+<ul class="nav nav-pills scroll-x-transparent mb-sm-3">
+   <li class="nav-item active">
+      <a href="account-overview.html" class="nav-link">
+         <div class="d-flex align-items-center">
+            <i class="bx bx-list-ul fs-5 me-1"></i>
+            <span>Overview</span>
          </div>
-      </div>
-      <div class="card-body pt-0">
-         <div class="row mb-4">
-            <div class="col-sm-12 col-lg-3 text-secondary">Login ID</div>
-            <div class="col-sm-12 col-lg-9 fw-500">gilldollar</div>
+      </a>
+   </li>
+   <li class="nav-item">
+      <a href="account.html" class="nav-link">
+         <div class="d-flex align-items-center">
+            <i class="bx bx-user fs-5 me-1"></i>
+            <span>Account</span>
          </div>
-         <div class="row mb-4">
-            <div class="col-sm-12 col-lg-3 text-secondary">Email Address</div>
-            <div class="col-sm-12 col-lg-9 fw-500">gilldollar@gmail.com</div>
+      </a>
+   </li>
+   <li class="nav-item">
+      <a href="account-address.html" class="nav-link">
+         <div class="d-flex align-items-center">
+            <i class="bx bx-home fs-5 me-1"></i>
+            <span>Address</span>
          </div>
-         <div class="row mb-4">
-            <div class="col-sm-12 col-lg-3 text-secondary">Full Name</div>
-            <div class="col-sm-12 col-lg-9 fw-500">Dollar Gill</div>
+      </a>
+   </li>
+   <li class="nav-item">
+      <a href="account-password.html" class="nav-link">
+         <div class="d-flex align-items-center">
+            <i class="bx bx-lock-alt fs-5 me-1"></i>
+            <span>Password</span>
          </div>
-         <div class="row mb-4">
-            <div class="col-sm-12 col-lg-3 text-secondary">Phone Number</div>
-            <div class="col-sm-12 col-lg-9 fw-500">NA</div>
-         </div>
-         <div class="row mb-4">
-            <div class="col-sm-12 col-lg-3 text-secondary">Status</div>
-            <div class="col-sm-12 col-lg-9">
-               <span class="badge bg-label-success rounded">Active</span>
-            </div>
-         </div>
-         <div class="row mb-4">
-            <div class="col-sm-12 col-lg-3 text-secondary">Remarks</div>
-            <div class="col-sm-12 col-lg-9 fw-500">NA</div>
-         </div>
-         <div class="mt-8">
-            <a href="account.html" class="btn btn-primary">Edit Account</a>
+      </a>
+   </li>
+</ul>
+<div class="card mb-6">
+   <div class="card-body">
+      <div class="d-flex align-items-center gap-6 pb-5 border-bottom">
+         <img src="assets/img/Avatars/Dollar Gill.png" alt="user-avatar" class="d-block rounded bg-primary-lightest"
+            height="100px" id="uploadedAvatar">
+         <div>
+            <h5>Dollar Gill</h5>
+            <small class="text-muted">Admin</small>
          </div>
       </div>
    </div>
+   <div class="card-body pt-0">
+      <div class="row mb-4">
+         <div class="col-sm-12 col-lg-3 text-secondary">Login ID</div>
+         <div class="col-sm-12 col-lg-9 fw-500">gilldollar</div>
+      </div>
+      <div class="row mb-4">
+         <div class="col-sm-12 col-lg-3 text-secondary">Email Address</div>
+         <div class="col-sm-12 col-lg-9 fw-500">gilldollar@gmail.com</div>
+      </div>
+      <div class="row mb-4">
+         <div class="col-sm-12 col-lg-3 text-secondary">Full Name</div>
+         <div class="col-sm-12 col-lg-9 fw-500">Dollar Gill</div>
+      </div>
+      <div class="row mb-4">
+         <div class="col-sm-12 col-lg-3 text-secondary">Phone Number</div>
+         <div class="col-sm-12 col-lg-9 fw-500">NA</div>
+      </div>
+      <div class="row mb-4">
+         <div class="col-sm-12 col-lg-3 text-secondary">Status</div>
+         <div class="col-sm-12 col-lg-9">
+            <span class="badge bg-label-success rounded">Active</span>
+         </div>
+      </div>
+      <div class="row mb-4">
+         <div class="col-sm-12 col-lg-3 text-secondary">Remarks</div>
+         <div class="col-sm-12 col-lg-9 fw-500">NA</div>
+      </div>
+      <div class="mt-8">
+         <a href="account.html" class="btn btn-primary">Edit Account</a>
+      </div>
+   </div>
+</div>
 {% endblock content %}

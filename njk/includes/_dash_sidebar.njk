@@ -71,7 +71,7 @@
             </div>
         </div>
         <div
-            class="menu-item {% if file_name in ['add-user', 'groups', 'account-overview', 'account', 'account-address', 'account-password'] %}active open{% endif %}">
+            class="menu-item {% if file_name in ['add-user', 'account-overview', 'account', 'account-address', 'account-password'] %}active open{% endif %}">
             <a href="#" class="menu-link menu-toggle">
                 <i class="bx bx-user fs-6"></i>
                 <span>User</span>
@@ -80,11 +80,6 @@
                 <div class="menu-item {% if file_name == 'add-user' %}active{% endif %}">
                     <a href="add-user.html" class="menu-link">
                         <span>Add User</span>
-                    </a>
-                </div>
-                <div class="menu-item {% if file_name == 'groups' %}active{% endif %}">
-                    <a href="groups.html" class="menu-link">
-                        <span>Groups</span>
                     </a>
                 </div>
                 <div
@@ -114,6 +109,24 @@
                             </a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-item {% if file_name in ['group-list', 'add-group'] %}active open{% endif %}">
+            <a href="#" class="menu-link menu-toggle">
+                <i class="bx bx-grid-alt fs-6"></i>
+                <span>Groups</span>
+            </a>
+            <div class="menu-sub">
+                <div class="menu-item {% if file_name == 'group-list' %}active{% endif %}">
+                    <a href="group-list.html" class="menu-link">
+                        <span>List</span>
+                    </a>
+                </div>
+                <div class="menu-item {% if file_name == 'add-group' %}active{% endif %}">
+                    <a href="add-group.html" class="menu-link">
+                        <span>Add Group</span>
+                    </a>
                 </div>
             </div>
         </div>

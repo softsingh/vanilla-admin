@@ -492,6 +492,14 @@ body.sidebar-hidden .navbar .sidebar-toggle {
   }
 }
 
+@media (max-width: 800px) {
+
+  .dash-table.group thead th:nth-child(3),
+  .dash-table.group tbody td:nth-child(3) {
+    display: none;
+  }
+}
+
 @media (min-width: 576px) {
 
   .dash-table.user thead th:nth-child(4),

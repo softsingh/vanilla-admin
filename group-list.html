@@ -9,7 +9,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>
 
-      Badges
+      Group List
 
    </title>
    <link rel="stylesheet" href="assets/css/core.css">
@@ -133,13 +133,13 @@
                   </div>
                </div>
             </div>
-            <div class="menu-item ">
+            <div class="menu-item active open">
                <a href="#" class="menu-link menu-toggle">
                   <i class="bx bx-grid-alt fs-6"></i>
                   <span>Groups</span>
                </a>
                <div class="menu-sub">
-                  <div class="menu-item ">
+                  <div class="menu-item active">
                      <a href="group-list.html" class="menu-link">
                         <span>List</span>
                      </a>
@@ -182,7 +182,7 @@
             <div class="menu-header">
                <small class="menu-header-text">Components</small>
             </div>
-            <div class="menu-item active open">
+            <div class="menu-item ">
                <a href="#" class="menu-link menu-toggle">
                   <i class="bx bx-rectangle fs-6"></i>
                   <span>Simple</span>
@@ -198,7 +198,7 @@
                         <span>Alerts</span>
                      </a>
                   </div>
-                  <div class="menu-item active">
+                  <div class="menu-item ">
                      <a href="badges.html" class="menu-link">
                         <span>Badges</span>
                      </a>
@@ -753,142 +753,676 @@
          </nav>
          <div class="dash-content">
 
-            <div class="row g-6">
-               <div class="col-12 col-md-6">
-                  <div class="card">
-                     <div class="card-header pb-0">
-                        <h5>Basic Badges</h5>
-                     </div>
-                     <div class="card-body">
-                        <div class="gap-container gap-2">
-                           <span class="badge bg-primary">Primary</span>
-                           <span class="badge bg-secondary">Secondary</span>
-                           <span class="badge bg-success">Success</span>
-                           <span class="badge bg-danger">Danger</span>
-                           <span class="badge bg-warning">Warning</span>
-                           <span class="badge bg-info">Info</span>
-                           <span class="badge bg-light">Light</span>
-                           <span class="badge bg-dark">Dark</span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-12 col-md-6">
-                  <div class="card">
-                     <div class="card-header pb-0">
-                        <h5>Label Badges</h5>
-                     </div>
-                     <div class="card-body">
-                        <div class="gap-container gap-2">
-                           <span class="badge bg-label-primary">Primary</span>
-                           <span class="badge bg-label-secondary">Secondary</span>
-                           <span class="badge bg-label-success">Success</span>
-                           <span class="badge bg-label-danger">Danger</span>
-                           <span class="badge bg-label-warning">Warning</span>
-                           <span class="badge bg-label-info">Info</span>
-                           <span class="badge bg-label-light">Light</span>
-                           <span class="badge bg-label-dark">Dark</span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-12 col-md-6">
-                  <div class="card">
-                     <div class="card-header pb-0">
-                        <h5>Basic Pill Badges</h5>
-                     </div>
-                     <div class="card-body">
-                        <div class="gap-container gap-2">
-                           <span class="badge rounded-pill bg-primary">Primary</span>
-                           <span class="badge rounded-pill bg-secondary">Secondary</span>
-                           <span class="badge rounded-pill bg-success">Success</span>
-                           <span class="badge rounded-pill bg-danger">Danger</span>
-                           <span class="badge rounded-pill bg-warning">Warning</span>
-                           <span class="badge rounded-pill bg-info">Info</span>
-                           <span class="badge rounded-pill bg-light">Light</span>
-                           <span class="badge rounded-pill bg-dark">Dark</span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-12 col-md-6">
-                  <div class="card">
-                     <div class="card-header pb-0">
-                        <h5>Label Pill Badges</h5>
-                     </div>
-                     <div class="card-body">
-                        <div class="gap-container gap-2">
-                           <span class="badge rounded-pill bg-label-primary">Primary</span>
-                           <span class="badge rounded-pill bg-label-secondary">Secondary</span>
-                           <span class="badge rounded-pill bg-label-success">Success</span>
-                           <span class="badge rounded-pill bg-label-danger">Danger</span>
-                           <span class="badge rounded-pill bg-label-warning">Warning</span>
-                           <span class="badge rounded-pill bg-label-info">Info</span>
-                           <span class="badge rounded-pill bg-label-light">Light</span>
-                           <span class="badge rounded-pill bg-label-dark">Dark</span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-12 col-md-6">
-                  <div class="card">
-                     <div class="card-header pb-0">
-                        <h5>Badges Notifications</h5>
-                     </div>
-                     <div class="card-body">
-                        <div class="gap-container gap-4">
-                           <div class="position-relative">
-                              <i class="bx bx-bell fs-6"></i>
-                              <span class="badge badge-dot bg-danger badge-notifications-demo"></span>
+            <div class="card">
+               <div class="px-6 pt-6">
+                  <div class="d-flex align-items-center justify-content-between">
+                     <h5>Groups</h5>
+                     <div class="d-flex align-items-center justify-content-between gap-2">
+                        <a href="add-group.html" class="btn btn-primary">
+                           <div class="d-flex align-items-center justify-content-between gap-1">
+                              <i class="bx bx-plus fs-4"></i>
+                              <span>Add Group</span>
                            </div>
-                           <div class="position-relative">
-                              <i class="bx bx-bell fs-6"></i>
-                              <span class="badge bg-danger badge-notifications-demo">2</span>
+                        </a>
+                        <div class="dropdown">
+                           <div class="dropdown-toggle text-body cursor-pointer">
+                              <i class="bx bx-dots-vertical-rounded fs-4"></i>
+                           </div>
+                           <div class="dropdown-menu dropdown-menu-end">
+                              <div class="px-6 pt-2 pb-3 mb-1 border-bottom">Export</div>
+                              <div class="dropdown-item">
+                                 <div class="d-flex align-items-center gap-2">
+                                    <i class="bx bx-table fs-4"></i>
+                                    <span>xlsx</span>
+                                 </div>
+                              </div>
+                              <div class="dropdown-item">
+                                 <div class="d-flex align-items-center gap-2">
+                                    <i class="bx bx-printer fs-4"></i>
+                                    <span>print</span>
+                                 </div>
+                              </div>
                            </div>
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="col-12 col-md-6">
-                  <div class="card">
-                     <div class="card-header pb-0">
-                        <h5>Badge Dots</h5>
-                     </div>
-                     <div class="card-body">
-                        <div class="gap-container gap-3">
-                           <div class="d-flex align-items-center gap-2">
-                              <span class="badge badge-dot bg-primary me-1"></span>
-                              <span>Primary</span>
-                           </div>
-                           <div class="d-flex align-items-center gap-2">
-                              <span class="badge badge-dot bg-secondary me-1"></span>
-                              <span>Secondary</span>
-                           </div>
-                           <div class="d-flex align-items-center gap-2">
-                              <span class="badge badge-dot bg-success me-1"></span>
-                              <span>Success</span>
-                           </div>
-                           <div class="d-flex align-items-center gap-2">
-                              <span class="badge badge-dot bg-danger me-1"></span>
-                              <span>Danger</span>
-                           </div>
-                           <div class="d-flex align-items-center gap-2">
-                              <span class="badge badge-dot bg-warning me-1"></span>
-                              <span>Warning</span>
-                           </div>
-                           <div class="d-flex align-items-center gap-2">
-                              <span class="badge badge-dot bg-info me-1"></span>
-                              <span>Info</span>
-                           </div>
-                           <div class="d-flex align-items-center gap-2">
-                              <span class="badge badge-dot bg-light me-1"></span>
-                              <span>Light</span>
-                           </div>
-                           <div class="d-flex align-items-center gap-2">
-                              <span class="badge badge-dot bg-dark me-1"></span>
-                              <span>Dark</span>
-                           </div>
+               <div class="row g-4 px-6 my-4">
+                  <div class="col-12 col-sm-6">
+                     <form method="get">
+                        <select class="form-select" name="page_size" id="pageSize">
+                           <option value="5">5</option>
+                           <option value="10" selected>10</option>
+                           <option value="20">20</option>
+                           <option value="50">50</option>
+                           <option value="100">100</option>
+                        </select>
+                     </form>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                     <form method="get">
+                        <div class="search-close-wrapper">
+                           <input type="search" placeholder="Search from Groups" class="form-control search-input"
+                              id="seachFromGroups">
+                           <i class="bx bx-x bx-sm search-closer cursor-pointer"
+                              onclick="document.getElementById('seachFromGroups').value=''; document.getElementById('seachFromGroups').focus();"></i>
                         </div>
+                     </form>
+                  </div>
+               </div>
+               <div class="mb-5">
+                  <table class="dash-table group">
+                     <thead>
+                        <tr>
+                           <th>Group</th>
+                           <th>Permissions</th>
+                           <th>Users</th>
+                           <th>Actions</th>
+                           <th>Actions</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>
+                              <a href="view-group.html" class="text-heading-link text-truncate">
+                                 <div>
+                                    <p class="fs-4 mb-0">exam_staff</p>
+                                    <small class="text-muted"></small>
+                                 </div>
+                              </a>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">6</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">10</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="d-flex align-items-center gap-1">
+                                 <a href="edit-group.html" class="text-heading-link">
+                                    <i class="bx bx-edit fs-5"></i>
+                                 </a>
+                                 <div class="text-heading-link" type="tgl-group-list-del">
+                                    <i class="bx bx-trash fs-5"></i>
+                                 </div>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="dropdown">
+                                 <a href="#" class="dropdown-toggle text-body">
+                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
+                                 </a>
+                                 <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="edit-group.html" class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2">
+                                          <i class="bx bx-edit fs-4"></i>
+                                          <span>Edit</span>
+                                       </div>
+                                    </a>
+                                    <div class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
+                                          <i class="bx bx-trash fs-4"></i>
+                                          <span>Delete</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <a href="view-group.html" class="text-heading-link text-truncate">
+                                 <div>
+                                    <p class="fs-4 mb-0">exam_supervisor</p>
+                                    <small class="text-muted"></small>
+                                 </div>
+                              </a>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">8</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">4</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="d-flex align-items-center gap-1">
+                                 <a href="edit-group.html" class="text-heading-link">
+                                    <i class="bx bx-edit fs-5"></i>
+                                 </a>
+                                 <div class="text-heading-link" type="tgl-group-list-del">
+                                    <i class="bx bx-trash fs-5"></i>
+                                 </div>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="dropdown">
+                                 <a href="#" class="dropdown-toggle text-body">
+                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
+                                 </a>
+                                 <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="edit-group.html" class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2">
+                                          <i class="bx bx-edit fs-4"></i>
+                                          <span>Edit</span>
+                                       </div>
+                                    </a>
+                                    <div class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
+                                          <i class="bx bx-trash fs-4"></i>
+                                          <span>Delete</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <a href="view-group.html" class="text-heading-link text-truncate">
+                                 <div>
+                                    <p class="fs-4 mb-0">exam_admin</p>
+                                    <small class="text-muted"></small>
+                                 </div>
+                              </a>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">10</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">2</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="d-flex align-items-center gap-1">
+                                 <a href="edit-group.html" class="text-heading-link">
+                                    <i class="bx bx-edit fs-5"></i>
+                                 </a>
+                                 <div class="text-heading-link" type="tgl-group-list-del">
+                                    <i class="bx bx-trash fs-5"></i>
+                                 </div>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="dropdown">
+                                 <a href="#" class="dropdown-toggle text-body">
+                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
+                                 </a>
+                                 <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="edit-group.html" class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2">
+                                          <i class="bx bx-edit fs-4"></i>
+                                          <span>Edit</span>
+                                       </div>
+                                    </a>
+                                    <div class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
+                                          <i class="bx bx-trash fs-4"></i>
+                                          <span>Delete</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <a href="view-group.html" class="text-heading-link text-truncate">
+                                 <div>
+                                    <p class="fs-4 mb-0">controller</p>
+                                    <small class="text-muted"></small>
+                                 </div>
+                              </a>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">10</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">2</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="d-flex align-items-center gap-1">
+                                 <a href="edit-group.html" class="text-heading-link">
+                                    <i class="bx bx-edit fs-5"></i>
+                                 </a>
+                                 <div class="text-heading-link" type="tgl-group-list-del">
+                                    <i class="bx bx-trash fs-5"></i>
+                                 </div>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="dropdown">
+                                 <a href="#" class="dropdown-toggle text-body">
+                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
+                                 </a>
+                                 <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="edit-group.html" class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2">
+                                          <i class="bx bx-edit fs-4"></i>
+                                          <span>Edit</span>
+                                       </div>
+                                    </a>
+                                    <div class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
+                                          <i class="bx bx-trash fs-4"></i>
+                                          <span>Delete</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <a href="view-group.html" class="text-heading-link text-truncate">
+                                 <div>
+                                    <p class="fs-4 mb-0">center_supdt</p>
+                                    <small class="text-muted"></small>
+                                 </div>
+                              </a>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">6</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">2</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="d-flex align-items-center gap-1">
+                                 <a href="edit-group.html" class="text-heading-link">
+                                    <i class="bx bx-edit fs-5"></i>
+                                 </a>
+                                 <div class="text-heading-link" type="tgl-group-list-del">
+                                    <i class="bx bx-trash fs-5"></i>
+                                 </div>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="dropdown">
+                                 <a href="#" class="dropdown-toggle text-body">
+                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
+                                 </a>
+                                 <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="edit-group.html" class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2">
+                                          <i class="bx bx-edit fs-4"></i>
+                                          <span>Edit</span>
+                                       </div>
+                                    </a>
+                                    <div class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
+                                          <i class="bx bx-trash fs-4"></i>
+                                          <span>Delete</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <a href="view-group.html" class="text-heading-link text-truncate">
+                                 <div>
+                                    <p class="fs-4 mb-0">student</p>
+                                    <small class="text-muted"></small>
+                                 </div>
+                              </a>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">4</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">1000</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="d-flex align-items-center gap-1">
+                                 <a href="edit-group.html" class="text-heading-link">
+                                    <i class="bx bx-edit fs-5"></i>
+                                 </a>
+                                 <div class="text-heading-link" type="tgl-group-list-del">
+                                    <i class="bx bx-trash fs-5"></i>
+                                 </div>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="dropdown">
+                                 <a href="#" class="dropdown-toggle text-body">
+                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
+                                 </a>
+                                 <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="edit-group.html" class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2">
+                                          <i class="bx bx-edit fs-4"></i>
+                                          <span>Edit</span>
+                                       </div>
+                                    </a>
+                                    <div class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
+                                          <i class="bx bx-trash fs-4"></i>
+                                          <span>Delete</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <a href="view-group.html" class="text-heading-link text-truncate">
+                                 <div>
+                                    <p class="fs-4 mb-0">teacher</p>
+                                    <small class="text-muted"></small>
+                                 </div>
+                              </a>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">6</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">10</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="d-flex align-items-center gap-1">
+                                 <a href="edit-group.html" class="text-heading-link">
+                                    <i class="bx bx-edit fs-5"></i>
+                                 </a>
+                                 <div class="text-heading-link" type="tgl-group-list-del">
+                                    <i class="bx bx-trash fs-5"></i>
+                                 </div>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="dropdown">
+                                 <a href="#" class="dropdown-toggle text-body">
+                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
+                                 </a>
+                                 <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="edit-group.html" class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2">
+                                          <i class="bx bx-edit fs-4"></i>
+                                          <span>Edit</span>
+                                       </div>
+                                    </a>
+                                    <div class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
+                                          <i class="bx bx-trash fs-4"></i>
+                                          <span>Delete</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <a href="view-group.html" class="text-heading-link text-truncate">
+                                 <div>
+                                    <p class="fs-4 mb-0">dept_staff</p>
+                                    <small class="text-muted"></small>
+                                 </div>
+                              </a>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">6</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">4</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="d-flex align-items-center gap-1">
+                                 <a href="edit-group.html" class="text-heading-link">
+                                    <i class="bx bx-edit fs-5"></i>
+                                 </a>
+                                 <div class="text-heading-link" type="tgl-group-list-del">
+                                    <i class="bx bx-trash fs-5"></i>
+                                 </div>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="dropdown">
+                                 <a href="#" class="dropdown-toggle text-body">
+                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
+                                 </a>
+                                 <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="edit-group.html" class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2">
+                                          <i class="bx bx-edit fs-4"></i>
+                                          <span>Edit</span>
+                                       </div>
+                                    </a>
+                                    <div class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
+                                          <i class="bx bx-trash fs-4"></i>
+                                          <span>Delete</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <a href="view-group.html" class="text-heading-link text-truncate">
+                                 <div>
+                                    <p class="fs-4 mb-0">dept_head</p>
+                                    <small class="text-muted"></small>
+                                 </div>
+                              </a>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">8</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">1</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="d-flex align-items-center gap-1">
+                                 <a href="edit-group.html" class="text-heading-link">
+                                    <i class="bx bx-edit fs-5"></i>
+                                 </a>
+                                 <div class="text-heading-link" type="tgl-group-list-del">
+                                    <i class="bx bx-trash fs-5"></i>
+                                 </div>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="dropdown">
+                                 <a href="#" class="dropdown-toggle text-body">
+                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
+                                 </a>
+                                 <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="edit-group.html" class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2">
+                                          <i class="bx bx-edit fs-4"></i>
+                                          <span>Edit</span>
+                                       </div>
+                                    </a>
+                                    <div class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
+                                          <i class="bx bx-trash fs-4"></i>
+                                          <span>Delete</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <a href="view-group.html" class="text-heading-link text-truncate">
+                                 <div>
+                                    <p class="fs-4 mb-0">examiner</p>
+                                    <small class="text-muted"></small>
+                                 </div>
+                              </a>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">4</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div>
+                                 <span class="h-100">6</span>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="d-flex align-items-center gap-1">
+                                 <a href="edit-group.html" class="text-heading-link">
+                                    <i class="bx bx-edit fs-5"></i>
+                                 </a>
+                                 <div class="text-heading-link" type="tgl-group-list-del">
+                                    <i class="bx bx-trash fs-5"></i>
+                                 </div>
+                              </div>
+                           </td>
+                           <td>
+                              <div class="dropdown">
+                                 <a href="#" class="dropdown-toggle text-body">
+                                    <i class="bx bx-dots-vertical-rounded fs-4"></i>
+                                 </a>
+                                 <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="edit-group.html" class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2">
+                                          <i class="bx bx-edit fs-4"></i>
+                                          <span>Edit</span>
+                                       </div>
+                                    </a>
+                                    <div class="dropdown-item">
+                                       <div class="d-flex align-items-center gap-2" type="tgl-group-list-del">
+                                          <i class="bx bx-trash fs-4"></i>
+                                          <span>Delete</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class="row px-6 mb-5">
+                  <div class="col-sm-12 col-lg-6">
+                     <div class="dash-table-pagination-info text-muted">Showing 41 to 50 of 200</div>
+                  </div>
+                  <div class="col-sm-12 col-lg-6">
+                     <div class="dash-table-pagination-container">
+                        <ul class="pagination pagination-overflow">
+                           <li class="page-item page-item-first disabled">
+                              <a href="#" class="page-link">
+                                 <i class="bx bx-first-page bx-18px"></i>
+                              </a>
+                           </li>
+                           <li class="page-item page-item-previous disabled">
+                              <a href="#" class="page-link">
+                                 <i class="bx bx-chevron-left bx-18px"></i>
+                              </a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">1</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">2</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">3</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">4</a>
+                           </li>
+                           <li class="page-item active">
+                              <a href="#" class="page-link">5</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">6</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">7</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">8</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">9</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">10</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">11</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">12</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">13</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">14</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">15</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">16</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">17</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">18</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">19</a>
+                           </li>
+                           <li class="page-item">
+                              <a href="#" class="page-link">20</a>
+                           </li>
+                           <li class="page-item page-item-next">
+                              <a href="#" class="page-link">
+                                 <i class="bx bx-chevron-right bx-18px"></i>
+                              </a>
+                           </li>
+                           <li class="page-item page-item-last">
+                              <a href="#" class="page-link">
+                                 <i class="bx bx-last-page bx-18px"></i>
+                              </a>
+                           </li>
+                        </ul>
                      </div>
                   </div>
                </div>

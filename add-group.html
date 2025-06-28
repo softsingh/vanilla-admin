@@ -9,7 +9,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>
 
-      Badges
+      Add Group
 
    </title>
    <link rel="stylesheet" href="assets/css/core.css">
@@ -133,7 +133,7 @@
                   </div>
                </div>
             </div>
-            <div class="menu-item ">
+            <div class="menu-item active open">
                <a href="#" class="menu-link menu-toggle">
                   <i class="bx bx-grid-alt fs-6"></i>
                   <span>Groups</span>
@@ -144,7 +144,7 @@
                         <span>List</span>
                      </a>
                   </div>
-                  <div class="menu-item ">
+                  <div class="menu-item active">
                      <a href="add-group.html" class="menu-link">
                         <span>Add Group</span>
                      </a>
@@ -182,7 +182,7 @@
             <div class="menu-header">
                <small class="menu-header-text">Components</small>
             </div>
-            <div class="menu-item active open">
+            <div class="menu-item ">
                <a href="#" class="menu-link menu-toggle">
                   <i class="bx bx-rectangle fs-6"></i>
                   <span>Simple</span>
@@ -198,7 +198,7 @@
                         <span>Alerts</span>
                      </a>
                   </div>
-                  <div class="menu-item active">
+                  <div class="menu-item ">
                      <a href="badges.html" class="menu-link">
                         <span>Badges</span>
                      </a>
@@ -753,144 +753,117 @@
          </nav>
          <div class="dash-content">
 
-            <div class="row g-6">
-               <div class="col-12 col-md-6">
-                  <div class="card">
-                     <div class="card-header pb-0">
-                        <h5>Basic Badges</h5>
-                     </div>
-                     <div class="card-body">
-                        <div class="gap-container gap-2">
-                           <span class="badge bg-primary">Primary</span>
-                           <span class="badge bg-secondary">Secondary</span>
-                           <span class="badge bg-success">Success</span>
-                           <span class="badge bg-danger">Danger</span>
-                           <span class="badge bg-warning">Warning</span>
-                           <span class="badge bg-info">Info</span>
-                           <span class="badge bg-light">Light</span>
-                           <span class="badge bg-dark">Dark</span>
-                        </div>
-                     </div>
+            <div class="card">
+               <div class="px-6 py-4">
+                  <div class="mb-4">
+                     <h4>Group</h4>
                   </div>
-               </div>
-               <div class="col-12 col-md-6">
-                  <div class="card">
-                     <div class="card-header pb-0">
-                        <h5>Label Badges</h5>
+                  <form method="post">
+                     <div class="mb-4">
+                        <label class="form-label mb-2">Name</label>
+                        <input class="form-control" type="text" name="group" id="group" placeholder="Enter group name"
+                           required>
                      </div>
-                     <div class="card-body">
-                        <div class="gap-container gap-2">
-                           <span class="badge bg-label-primary">Primary</span>
-                           <span class="badge bg-label-secondary">Secondary</span>
-                           <span class="badge bg-label-success">Success</span>
-                           <span class="badge bg-label-danger">Danger</span>
-                           <span class="badge bg-label-warning">Warning</span>
-                           <span class="badge bg-label-info">Info</span>
-                           <span class="badge bg-label-light">Light</span>
-                           <span class="badge bg-label-dark">Dark</span>
+                     <div class="mb-4">
+                        <label class="form-label mb-2">Permissions</label>
+                        <div class="search-close-wrapper mb-1">
+                           <input type="search" placeholder="Search from Permissions" class="form-control search-input"
+                              id="seachFromPermissions">
+                           <i class="bx bx-x bx-sm search-closer cursor-pointer"
+                              onclick="document.getElementById('seachFromPermissions').value=''; document.getElementById('seachFromPermissions').focus();"></i>
                         </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-12 col-md-6">
-                  <div class="card">
-                     <div class="card-header pb-0">
-                        <h5>Basic Pill Badges</h5>
-                     </div>
-                     <div class="card-body">
-                        <div class="gap-container gap-2">
-                           <span class="badge rounded-pill bg-primary">Primary</span>
-                           <span class="badge rounded-pill bg-secondary">Secondary</span>
-                           <span class="badge rounded-pill bg-success">Success</span>
-                           <span class="badge rounded-pill bg-danger">Danger</span>
-                           <span class="badge rounded-pill bg-warning">Warning</span>
-                           <span class="badge rounded-pill bg-info">Info</span>
-                           <span class="badge rounded-pill bg-light">Light</span>
-                           <span class="badge rounded-pill bg-dark">Dark</span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-12 col-md-6">
-                  <div class="card">
-                     <div class="card-header pb-0">
-                        <h5>Label Pill Badges</h5>
-                     </div>
-                     <div class="card-body">
-                        <div class="gap-container gap-2">
-                           <span class="badge rounded-pill bg-label-primary">Primary</span>
-                           <span class="badge rounded-pill bg-label-secondary">Secondary</span>
-                           <span class="badge rounded-pill bg-label-success">Success</span>
-                           <span class="badge rounded-pill bg-label-danger">Danger</span>
-                           <span class="badge rounded-pill bg-label-warning">Warning</span>
-                           <span class="badge rounded-pill bg-label-info">Info</span>
-                           <span class="badge rounded-pill bg-label-light">Light</span>
-                           <span class="badge rounded-pill bg-label-dark">Dark</span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-12 col-md-6">
-                  <div class="card">
-                     <div class="card-header pb-0">
-                        <h5>Badges Notifications</h5>
-                     </div>
-                     <div class="card-body">
-                        <div class="gap-container gap-4">
-                           <div class="position-relative">
-                              <i class="bx bx-bell fs-6"></i>
-                              <span class="badge badge-dot bg-danger badge-notifications-demo"></span>
+                        <div class="mb-4 scroll-y border rounded px-3 py-2" style="max-height: 200px;">
+                           <div class="form-check mb-1">
+                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-1">
+                              <label for="perm-1">Can View Profile</label>
                            </div>
-                           <div class="position-relative">
-                              <i class="bx bx-bell fs-6"></i>
-                              <span class="badge bg-danger badge-notifications-demo">2</span>
+                           <div class="form-check mb-1">
+                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-2">
+                              <label for="perm-1">Can Edit Profile</label>
                            </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-12 col-md-6">
-                  <div class="card">
-                     <div class="card-header pb-0">
-                        <h5>Badge Dots</h5>
-                     </div>
-                     <div class="card-body">
-                        <div class="gap-container gap-3">
-                           <div class="d-flex align-items-center gap-2">
-                              <span class="badge badge-dot bg-primary me-1"></span>
-                              <span>Primary</span>
+                           <div class="form-check mb-1">
+                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-3">
+                              <label for="perm-1">Can Change Password</label>
                            </div>
-                           <div class="d-flex align-items-center gap-2">
-                              <span class="badge badge-dot bg-secondary me-1"></span>
-                              <span>Secondary</span>
+                           <div class="form-check mb-1">
+                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-4">
+                              <label for="perm-1">Can Add User</label>
                            </div>
-                           <div class="d-flex align-items-center gap-2">
-                              <span class="badge badge-dot bg-success me-1"></span>
-                              <span>Success</span>
+                           <div class="form-check mb-1">
+                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-5">
+                              <label for="perm-1">Can Remove User</label>
                            </div>
-                           <div class="d-flex align-items-center gap-2">
-                              <span class="badge badge-dot bg-danger me-1"></span>
-                              <span>Danger</span>
+                           <div class="form-check mb-1">
+                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-6">
+                              <label for="perm-1">Can View Log Entry</label>
                            </div>
-                           <div class="d-flex align-items-center gap-2">
-                              <span class="badge badge-dot bg-warning me-1"></span>
-                              <span>Warning</span>
+                           <div class="form-check mb-1">
+                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-7">
+                              <label for="perm-1">Can Add Log Entry</label>
                            </div>
-                           <div class="d-flex align-items-center gap-2">
-                              <span class="badge badge-dot bg-info me-1"></span>
-                              <span>Info</span>
+                           <div class="form-check mb-1">
+                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-8">
+                              <label for="perm-1">Can Change Log Entry</label>
                            </div>
-                           <div class="d-flex align-items-center gap-2">
-                              <span class="badge badge-dot bg-light me-1"></span>
-                              <span>Light</span>
+                           <div class="form-check mb-1">
+                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-9">
+                              <label for="perm-1">Can Delete Log Entry</label>
                            </div>
-                           <div class="d-flex align-items-center gap-2">
-                              <span class="badge badge-dot bg-dark me-1"></span>
-                              <span>Dark</span>
+                           <div class="form-check mb-1">
+                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-10">
+                              <label for="perm-1">Can View Permission</label>
+                           </div>
+                           <div class="form-check mb-1">
+                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-11">
+                              <label for="perm-1">Can Add Permission</label>
+                           </div>
+                           <div class="form-check mb-1">
+                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-12">
+                              <label for="perm-1">Can Change Permission</label>
+                           </div>
+                           <div class="form-check mb-1">
+                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-13">
+                              <label for="perm-1">Can Delete Permission</label>
+                           </div>
+                           <div class="form-check mb-1">
+                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-14">
+                              <label for="perm-1">Can View Group</label>
+                           </div>
+                           <div class="form-check mb-1">
+                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-15">
+                              <label for="perm-1">Can Add Group</label>
+                           </div>
+                           <div class="form-check mb-1">
+                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-16">
+                              <label for="perm-1">Can Change Group</label>
+                           </div>
+                           <div class="form-check mb-1">
+                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-17">
+                              <label for="perm-1">Can Delete Group</label>
+                           </div>
+                           <div class="form-check mb-1">
+                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-18">
+                              <label for="perm-1">Can View Session</label>
+                           </div>
+                           <div class="form-check mb-1">
+                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-19">
+                              <label for="perm-1">Can Add Session</label>
+                           </div>
+                           <div class="form-check mb-1">
+                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-20">
+                              <label for="perm-1">Can Change Session</label>
+                           </div>
+                           <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-21">
+                              <label for="perm-1">Can Delete Session</label>
                            </div>
                         </div>
                      </div>
-                  </div>
+                     <div class="d-flex gap-1">
+                        <a href="/groups.html" class="btn btn-primary">Save</a>
+                        <a href="/groups.html" class="btn btn-secondary">Cancel</a>
+                     </div>
+                  </form>
                </div>
             </div>
 

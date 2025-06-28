@@ -1131,8 +1131,20 @@ small,
   overflow: auto;
 }
 
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-visible {
+  overflow: visible !important;
 }
 
 /*-------------------------------------*/
@@ -1455,10 +1467,20 @@ small,
 .scroll-x {
   overflow-x: scroll;
   scrollbar-width: thin;
+}
+
+.scroll-x-transparent {
+  overflow-x: scroll;
+  scrollbar-width: thin;
   scrollbar-color: transparent transparent;
 }
 
 .scroll-y {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+}
+
+.scroll-y-transparent {
   overflow-y: scroll;
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
@@ -1475,14 +1497,6 @@ small,
 /*-------------------------------------*/
 /*                Text                 */
 /*-------------------------------------*/
-
-.overflow-auto {
-  overflow: hidden;
-}
-
-.overflow-visible {
-  overflow: visible !important;
-}
 
 .text-body {
   opacity: 1;

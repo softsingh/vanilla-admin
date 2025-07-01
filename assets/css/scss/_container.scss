@@ -40,6 +40,29 @@
 }
 
 /*-------------------------------------*/
+/*      Bordered/Filled Container      */
+/*-------------------------------------*/
+
+.bordered-container {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 0.5rem .75rem;
+}
+
+.bordered-container-primary {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.filled-container {
+  background-color: var(--secondary-light-95);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 0.50rem .75rem;
+}
+
+/*-------------------------------------*/
 /*            Gap Container            */
 /*-------------------------------------*/
 

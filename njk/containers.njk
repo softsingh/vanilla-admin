@@ -1,0 +1,45 @@
+{% set file_name = "containers" %}
+{% extends "_dash_base.njk" %}
+{% block title %}
+Containers
+{% endblock title %}
+{% block content %}
+<div class="row g-6">
+   <div class="col-12 col-md-6">
+      <div class="card">
+         <div class="card-body">
+            <div>
+               <label class="form-label mb-2">Bordered Container</label>
+               <div class="bordered-container">
+                  <span>Staff</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-12 col-md-6">
+      <div class="card">
+         <div class="card-body">
+            <div>
+               <label class="form-label mb-2">Filled Container</label>
+               <div class="filled-container">
+                  <span>Staff</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-12 col-md-6">
+      <div class="card">
+         <div class="card-body">
+            <div class="mb-4">
+               <label class="form-label mb-2">Bordered Container Primary</label>
+               <div class="bordered-container bordered-container-primary">
+                  <span>Staff</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock content %}

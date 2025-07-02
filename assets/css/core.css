@@ -1166,21 +1166,106 @@ button:not(:disabled),
 /*-------------------------------------*/
 .bordered-container {
   background-color: transparent;
+  color: var(--body-color);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   padding: 0.5rem 0.75rem;
 }
 
 .bordered-container-primary {
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--primary-light-50);
   color: var(--primary-color);
+}
+
+.bordered-container-secondary {
+  border: 1px solid var(--secondary-light-50);
+  color: var(--secondary-color);
+}
+
+.bordered-container-success {
+  border: 1px solid var(--success-light-50);
+  color: var(--success-color);
+}
+
+.bordered-container-danger {
+  border: 1px solid var(--danger-light-50);
+  color: var(--danger-color);
+}
+
+.bordered-container-warning {
+  border: 1px solid var(--warning-light-50);
+  color: var(--warning-color);
+}
+
+.bordered-container-info {
+  border: 1px solid var(--info-light-50);
+  color: var(--info-color);
+}
+
+.bordered-container-light {
+  border: 1px solid var(--light-light-50);
+  color: var(--light-color);
+}
+
+.bordered-container-dark {
+  border: 1px solid var(--dark-light-50);
+  color: var(--dark-color);
 }
 
 .filled-container {
   background-color: var(--secondary-light-95);
+  color: var(--body-color);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   padding: 0.5rem 0.75rem;
+}
+
+.filled-container-primary {
+  border: 1px solid var(--primary-light-80);
+  background-color: var(--primary-light-90);
+  color: var(--primary-color);
+}
+
+.filled-container-secondary {
+  border: 1px solid var(--secondary-light-80);
+  background-color: var(--secondary-light-90);
+  color: var(--secondary-color);
+}
+
+.filled-container-success {
+  border: 1px solid var(--success-light-80);
+  background-color: var(--success-light-90);
+  color: var(--success-color);
+}
+
+.filled-container-danger {
+  border: 1px solid var(--danger-light-80);
+  background-color: var(--danger-light-90);
+  color: var(--danger-color);
+}
+
+.filled-container-warning {
+  border: 1px solid var(--warning-light-80);
+  background-color: var(--warning-light-90);
+  color: var(--warning-color);
+}
+
+.filled-container-info {
+  border: 1px solid var(--info-light-80);
+  background-color: var(--info-light-90);
+  color: var(--info-color);
+}
+
+.filled-container-light {
+  border: 1px solid var(--light-light-80);
+  background-color: var(--light-light-90);
+  color: var(--light-color);
+}
+
+.filled-container-dark {
+  border: 1px solid var(--dark-light-80);
+  background-color: var(--dark-light-90);
+  color: var(--dark-color);
 }
 
 /*-------------------------------------*/

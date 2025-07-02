@@ -1,3 +1,5 @@
+@import '_color_map.scss';
+
 /*-------------------------------------*/
 /*             Container               */
 /*-------------------------------------*/
@@ -36,6 +38,41 @@
 @media (min-width: 1400px) {
   .container {
     max-width: 1320px;
+  }
+}
+
+/*-------------------------------------*/
+/*      Bordered/Filled Container      */
+/*-------------------------------------*/
+
+.bordered-container {
+  background-color: transparent;
+  color: var(--body-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 0.5rem .75rem;
+}
+
+@each $name, $value in $color-map {
+  .bordered-container-#{$name} {
+    border: 1px solid var(--#{$name}-light-50);
+    color: var(--#{$name}-color);
+  }
+}
+
+.filled-container {
+  background-color: var(--secondary-light-95);
+  color: var(--body-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 0.50rem .75rem;
+}
+
+@each $name, $value in $color-map {
+  .filled-container-#{$name} {
+    border: 1px solid var(--#{$name}-light-80);
+    background-color: var(--#{$name}-light-90);
+    color: var(--#{$name}-color);
   }
 }
 

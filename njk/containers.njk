@@ -1,0 +1,90 @@
+{% set file_name = "containers" %}
+{% extends "_dash_base.njk" %}
+{% block title %}
+Containers
+{% endblock title %}
+{% block content %}
+<div class="row g-6">
+   <div class="col-12">
+      <div class="card">
+         <div class="card-header pb-0">
+            <h5>Gap Container</h5>
+         </div>
+         <div class="card-body">
+            <div class="gap-container gap-2">
+               <button class="btn btn-primary">One</button>
+               <button class="btn btn-secondary">Two</button>
+               <button class="btn btn-success">Three</button>
+               <button class="btn btn-danger">Four</button>
+               <button class="btn btn-warning">Five</button>
+               <button class="btn btn-info">Six</button>
+               <button class="btn btn-light">Seven</button>
+               <button class="btn btn-dark">Eight</button>
+               <button class="btn btn-primary">Nine</button>
+               <button class="btn btn-secondary">Ten</button>
+               <button class="btn btn-success">Eleven</button>
+               <button class="btn btn-danger">Twelve</button>
+               <button class="btn btn-warning">Thirteen</button>
+               <button class="btn btn-info">Fourteen</button>
+               <button class="btn btn-light">Fifteen</button>
+               <button class="btn btn-dark">Sixteen</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-12 col-md-6">
+      <div class="card">
+         <div class="card-body">
+            <div>
+               <label class="form-label mb-2">Bordered Container</label>
+               <div class="bordered-container">
+                  <span>Default</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-12 col-md-6">
+      <div class="card">
+         <div class="card-body">
+            <div>
+               <label class="form-label mb-2">Filled Container</label>
+               <div class="filled-container">
+                  <span>Default</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-12 col-md-6">
+      <div class="card">
+         <div class="card-body">
+            <label class="form-label mb-2">Bordered Container Colors</label>
+            <div>
+               {% set colors = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark'] %}
+               {% for color in colors %}
+               <div class="bordered-container bordered-container-{{color}} {% if not loop.last %}mb-2{% endif %}">
+                  <span>{{color|capitalize}}</span>
+               </div>
+               {% endfor %}
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-12 col-md-6">
+      <div class="card">
+         <div class="card-body">
+            <label class="form-label mb-2">Filled Container Colors</label>
+            <div>
+               {% set colors = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark'] %}
+               {% for color in colors %}
+               <div class="filled-container filled-container-{{color}} {% if not loop.last %}mb-2{% endif %}">
+                  <span>{{color|capitalize}}</span>
+               </div>
+               {% endfor %}
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock content %}

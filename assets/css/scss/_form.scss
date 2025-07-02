@@ -1,11 +1,13 @@
+@import '_color_map.scss';
+
 /*-------------------------------------*/
 /*           Form Elements             */
 /*-------------------------------------*/
-@import '_color_map.scss';
 
 .form-check {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
   gap: 0.4rem;
 }
 

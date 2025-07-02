@@ -14,19 +14,15 @@
 }
 
 @each $name, $value in $color-map {
-  @for $i from 19 through 1 {
-    $step: 5 * $i;
-
-    .bg-#{$name}-light-#{$step} {
-      background-color: var(--#{$name}-light-#{$step}) !important;
+  @for $i from 100 through 1 {
+    .bg-#{$name}-light-#{$i} {
+      background-color: var(--#{$name}-light-#{$i}) !important;
     }
   }
 
-  @for $i from 1 through 19 {
-    $step: 5 * $i;
-
-    .bg-#{$name}-dark-#{$step} {
-      background-color: var(--#{$name}-dark-#{$step}) !important;
+  @for $i from 1 through 100 {
+    .bg-#{$name}-dark-#{$i} {
+      background-color: var(--#{$name}-dark-#{$i}) !important;
     }
   }
 }

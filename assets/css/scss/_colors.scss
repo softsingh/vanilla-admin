@@ -22,14 +22,12 @@
   }
 
   @each $name, $value in $color-map {
-    @for $i from 19 through 1 {
-      $step: 5 * $i;
-      --#{$name}-light-#{$step}: color-mix(in oklch, white #{$step}%, var(--#{$name}-color));
+    @for $i from 100 through 1 {
+      --#{$name}-light-#{$i}: color-mix(in oklch, white #{$i}%, var(--#{$name}-color));
     }
 
-    @for $i from 1 through 19 {
-      $step: 5 * $i;
-      --#{$name}-dark-#{$step}: color-mix(in oklch, black #{$step}%, var(--#{$name}-color));
+    @for $i from 1 through 100 {
+      --#{$name}-dark-#{$i}: color-mix(in oklch, black #{$i}%, var(--#{$name}-color));
     }
   }
 }
@@ -40,12 +38,13 @@
   --light-white-color: hsl(0, 0%, 97%);
   --light-gray-color: hsl(0, 0%, 90%);
 
-  --body-color: #3b4754;
+  // --body-color: #3b4754;
+  --body-color: var(--secondary-dark-25);
   --body-bg: hsl(240, 25%, 97%);
 
   --paper-bg: #fff;
 
-  --border-color: #d9dee3;
+  --border-color: var(--secondary-light-70);
 
   --form-control-focus-border-color: color-mix(in srgb, var(--primary-color), transparent 10%);
 

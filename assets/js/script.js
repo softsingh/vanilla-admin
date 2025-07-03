@@ -58,7 +58,22 @@ tglDemoModalConfirm?.addEventListener('click', () => {
 
 //////////////////// Theme Toggle ////////////////////
 
+// Apply saved preference on page load
+if (localStorage.getItem('theme') === 'dark') {
+  document.body.classList.add('dark-mode');
+}
+
 const themeToggle = document.querySelector('.theme-toggle .nav-link i');
+
+if (themeToggle) {
+  if (body.classList.contains('dark-mode')) {
+    themeToggle.classList.remove('bx-moon');
+    themeToggle.classList.add('bx-sun');
+  } else {
+    themeToggle.classList.remove('bx-sun');
+    themeToggle.classList.add('bx-moon');
+  }
+}
 
 themeToggle?.addEventListener('click', () => {
   body.classList.toggle('dark-mode');
@@ -66,9 +81,11 @@ themeToggle?.addEventListener('click', () => {
   if (body.classList.contains('dark-mode')) {
     themeToggle.classList.remove('bx-moon');
     themeToggle.classList.add('bx-sun');
+    localStorage.setItem('theme', 'dark');
   } else {
     themeToggle.classList.remove('bx-sun');
     themeToggle.classList.add('bx-moon');
+    localStorage.setItem('theme', 'light');
   }
 });
 

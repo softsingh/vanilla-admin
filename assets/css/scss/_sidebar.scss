@@ -14,6 +14,11 @@
   transition: 0.2s ease-in;
 }
 
+.dark-mode .sidebar {
+  box-shadow: none;
+  border-right: 1px solid var(--border-color);
+}
+
 .sidebar .app-brand {
   display: flex;
   align-items: center;

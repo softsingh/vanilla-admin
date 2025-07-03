@@ -35,26 +35,32 @@
 :root {
   --white-color: #ffffff;
   --black-color: #000000;
-  --light-white-color: hsl(0, 0%, 97%);
-  --light-gray-color: hsl(0, 0%, 90%);
+  // --light-white-color: hsl(0, 0%, 97%);
+  // --light-gray-color: hsl(0, 0%, 90%);
 
-  // --body-color: #3b4754;
-  --body-color: color-mix(in oklch, white 45%, var(--black-color));
-
+  --body-color: #3b4754;
+  // --body-color: #646e78;
   --body-bg: hsl(240, 25%, 97%);
-
   --paper-bg: #fff;
 
-  --border-color: var(--secondary-light-70);
+  --border-color: color-mix(in oklch, white 70%, var(--body-color));
 
   --form-control-focus-border-color: color-mix(in srgb, var(--primary-color), transparent 10%);
 
-  --heading-color: hsl(210, 18%, 28%);
-  --heading-hover-color: hsl(210, 38%, 10%);
-  --heading-hover-bg-color: hsla(210, 29%, 19%, 0.06);
+  // --heading-color: #3b4754;
+  // --heading-hover-color: hsl(210, 38%, 10%);
+  // --heading-hover-bg-color: hsla(210, 29%, 19%, 0.06);
+
+  --heading-color: var(--body-color);
+  --heading-hover-color: color-mix(in oklch, black 20%, var(--heading-color));
+  --heading-hover-bg-color: color-mix(in oklch, black 2%, var(--paper-bg));
 
   --link-color: #6666ff;
   --link-hover-color: #5252ff;
+
+  --menu-color: var(--body-color);
+  --menu-hover-color: color-mix(in oklch, black 50%, var(--heading-color));
+  --menu-hover-bg-color: color-mix(in oklch, black 1%, var(--paper-bg));
 
   --menu-sub-bg-color: hsl(215, 100%, 98%);
 
@@ -69,14 +75,19 @@
 /* Color variables for dark theme */
 
 .dark-mode {
-  --white-color: #171717;
-  --black-color: #d4d4d4;
+  // --white-color: #171717;
+  // --black-color: #d4d4d4;
 
-  --body-color: #cccccc;
+  // --body-color: #cccccc;
+  --body-color: #b2b2c4;
   --body-bg: #1f1f1f;
-  --border-color: #454545;
-
-  --heading-color: var(--body-color);
+  --body-bg: #232333;
   --paper-bg: color-mix(in oklch, white 6%, var(--body-bg));
 
+  // --border-color: hsl(238, 16%, 36%);
+  --border-color: color-mix(in oklch, white 15%, var(--paper-bg));
+
+  --heading-color: var(--body-color);
+  --heading-hover-color: color-mix(in oklch, white 50%, var(--heading-color));
+  --heading-hover-bg-color: color-mix(in oklch, white 5%, var(--paper-bg));
 }

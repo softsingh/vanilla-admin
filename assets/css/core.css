@@ -43,7 +43,7 @@
   --warning-color: hsl(40, 100%, 50%);
   --info-color: hsl(190, 100%, 50%);
   --light-color: hsl(210, 6%, 80%);
-  --dark-color: hsl(240, 20%, 20%);
+  --dark-color: hsl(240, 20%, 15%);
   --primary-hover-color: color-mix(in oklch, black 6%, var(--primary-color));
   --primary-shadow-color: color-mix(in oklch, var(--primary-color), transparent 60%);
   --secondary-hover-color: color-mix(in oklch, black 6%, var(--secondary-color));
@@ -1665,18 +1665,19 @@
 :root {
   --white-color: #ffffff;
   --black-color: #000000;
-  --light-white-color: hsl(0, 0%, 97%);
-  --light-gray-color: hsl(0, 0%, 90%);
-  --body-color: color-mix(in oklch, white 45%, var(--black-color));
+  --body-color: #3b4754;
   --body-bg: hsl(240, 25%, 97%);
   --paper-bg: #fff;
-  --border-color: var(--secondary-light-70);
+  --border-color: color-mix(in oklch, white 70%, var(--body-color));
   --form-control-focus-border-color: color-mix(in srgb, var(--primary-color), transparent 10%);
-  --heading-color: hsl(210, 18%, 28%);
-  --heading-hover-color: hsl(210, 38%, 10%);
-  --heading-hover-bg-color: hsla(210, 29%, 19%, 0.06);
+  --heading-color: var(--body-color);
+  --heading-hover-color: color-mix(in oklch, black 20%, var(--heading-color));
+  --heading-hover-bg-color: color-mix(in oklch, black 2%, var(--paper-bg));
   --link-color: #6666ff;
   --link-hover-color: #5252ff;
+  --menu-color: var(--body-color);
+  --menu-hover-color: color-mix(in oklch, black 50%, var(--heading-color));
+  --menu-hover-bg-color: color-mix(in oklch, black 1%, var(--paper-bg));
   --menu-sub-bg-color: hsl(215, 100%, 98%);
   --scrollbar-color: hsl(240, 25%, 100%);
   --scrollbar-hover-color: var(--black-color);
@@ -1686,13 +1687,14 @@
 
 /* Color variables for dark theme */
 .dark-mode {
-  --white-color: #171717;
-  --black-color: #d4d4d4;
-  --body-color: #cccccc;
+  --body-color: #b2b2c4;
   --body-bg: #1f1f1f;
-  --border-color: #454545;
-  --heading-color: var(--body-color);
+  --body-bg: #232333;
   --paper-bg: color-mix(in oklch, white 6%, var(--body-bg));
+  --border-color: color-mix(in oklch, white 15%, var(--paper-bg));
+  --heading-color: var(--body-color);
+  --heading-hover-color: color-mix(in oklch, white 50%, var(--heading-color));
+  --heading-hover-bg-color: color-mix(in oklch, white 5%, var(--paper-bg));
 }
 
 /*--------------------------------------------------------------------------*/
@@ -2414,6 +2416,11 @@ button:not(:disabled),
   border-radius: var(--border-radius);
 }
 
+.dark-mode .card {
+  --card-shadow-color: none;
+  border: 1px solid var(--border-color);
+}
+
 .card-body {
   padding: 1.5rem;
 }
@@ -2579,7 +2586,10 @@ button:not(:disabled),
 /*              Dropdown               */
 /*-------------------------------------*/
 .dropdown {
+  --dropdown-menu-color: var(--body-color);
+  --dropdown-menu-background-color: var(--paper-bg);
   --dropdown-menu-shadow-color: hsla(210, 29%, 19%, 0.14);
+  --dropdown-item-hover-color: hsla(210, 29%, 19%, 0.06);
   --dropdown-item-hover-background-color: hsla(210, 29%, 19%, 0.06);
   --dropdown-divider-color: var(--border-color);
   position: relative;
@@ -2601,8 +2611,8 @@ button:not(:disabled),
   overflow: hidden;
   transform: translateY(2px);
   padding: 0.5rem 0;
-  color: var(--body-color);
-  background-color: var(--white-color);
+  color: var(--dropdown-menu-color);
+  background-color: var(--dropdown-menu-background-color);
   box-shadow: 0 0.25rem 0.75rem 0.2rem var(--dropdown-menu-shadow-color);
   border-radius: var(--border-radius);
   z-index: var(--dropdown-z-index);
@@ -4683,10 +4693,15 @@ button:not(:disabled),
   justify-content: space-between;
   padding: 0.5rem 0.9rem;
   border-radius: var(--border-radius);
-  background-color: hsla(0, 0%, 100%, 0.88);
+  background-color: var(--paper-bg);
   backdrop-filter: saturate(200%) blur(6px);
   box-shadow: 0 0.2rem 0.5rem 0 hsla(210, 30%, 20%, 0.1);
   z-index: var(--navbar-z-index);
+}
+
+.dark-mode .navbar {
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0.2rem 0.5rem 0 hsla(210, 30%, 20%, 0.1);
 }
 
 .navbar-brand {
@@ -4818,6 +4833,11 @@ button:not(:disabled),
   background: var(--paper-bg);
   box-shadow: 0.2rem 0 0.5rem 0 hsla(210, 30%, 20%, 0.1);
   transition: 0.2s ease-in;
+}
+
+.dark-mode .sidebar {
+  box-shadow: none;
+  border-right: 1px solid var(--border-color);
 }
 
 .sidebar .app-brand {

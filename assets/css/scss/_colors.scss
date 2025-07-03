@@ -39,7 +39,8 @@
   --light-gray-color: hsl(0, 0%, 90%);
 
   // --body-color: #3b4754;
-  --body-color: var(--secondary-dark-25);
+  --body-color: color-mix(in oklch, white 45%, var(--black-color));
+
   --body-bg: hsl(240, 25%, 97%);
 
   --paper-bg: #fff;
@@ -71,9 +72,11 @@
   --white-color: #171717;
   --black-color: #d4d4d4;
 
-  --body-color: #b2b2c4;
-  --body-bg: #232333;
+  --body-color: #cccccc;
+  --body-bg: #1f1f1f;
+  --border-color: #454545;
 
-  --paper-bg: #2b2c40;
+  --heading-color: var(--body-color);
+  --paper-bg: color-mix(in oklch, white 6%, var(--body-bg));
 
 }

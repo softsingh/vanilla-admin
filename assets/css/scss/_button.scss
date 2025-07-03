@@ -41,7 +41,8 @@ button:not(:disabled),
 
 @each $name, $value in $color-map {
   .btn-#{$name} {
-    color: var(--white-color);
+    // color: var(--white-color);
+    color: #ffffff;
     background-color: var(--#{$name}-color);
     border-color: var(--#{$name}-color);
     box-shadow: 0 0.125rem 0.25rem 0 var(--#{$name}-shadow-color);
@@ -49,7 +50,8 @@ button:not(:disabled),
     &:hover,
     &:focus {
       outline: none;
-      color: var(--white-color);
+      // color: var(--white-color);
+      color: #ffffff;
       background-color: var(--#{$name}-hover-color);
       border-color: var(--#{$name}-hover-color);
     }

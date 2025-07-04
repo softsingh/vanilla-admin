@@ -1668,19 +1668,18 @@
   --body-color: #3b4754;
   --body-bg: hsl(240, 25%, 97%);
   --paper-bg: #fff;
-  --border-color: color-mix(in oklch, white 70%, var(--body-color));
+  --border-color: color-mix(in oklch, white 75%, var(--body-color));
   --form-control-focus-border-color: color-mix(in srgb, var(--primary-color), transparent 10%);
   --heading-color: var(--body-color);
-  --heading-hover-color: color-mix(in oklch, black 20%, var(--heading-color));
-  --heading-hover-bg-color: color-mix(in oklch, black 2%, var(--paper-bg));
   --link-color: #6666ff;
   --link-hover-color: #5252ff;
   --menu-color: var(--body-color);
-  --menu-hover-color: color-mix(in oklch, black 50%, var(--heading-color));
-  --menu-hover-bg-color: color-mix(in oklch, black 1%, var(--paper-bg));
+  --menu-hover-color: color-mix(in oklch, black 20%, var(--body-color));
+  --menu-hover-bg-color: color-mix(in oklch, var(--body-color), transparent 93%);
+  --menu-divider-color: color-mix(in oklch, white 85%, var(--body-color));
   --menu-sub-bg-color: hsl(215, 100%, 98%);
-  --scrollbar-color: hsl(240, 25%, 100%);
-  --scrollbar-hover-color: var(--black-color);
+  --scrollbar-color: color-mix(in oklch, var(--body-color), transparent 70%);
+  --scrollbar-hover-color: color-mix(in oklch, var(--body-color), transparent 50%);
   --text-muted-color: hsl(212, 8%, 68%);
   --backdrop-dark-color: rgba(27, 27, 27, 0.7);
 }
@@ -1688,13 +1687,16 @@
 /* Color variables for dark theme */
 .dark-mode {
   --body-color: #b2b2c4;
-  --body-bg: #1f1f1f;
   --body-bg: #232333;
   --paper-bg: color-mix(in oklch, white 6%, var(--body-bg));
   --border-color: color-mix(in oklch, white 15%, var(--paper-bg));
   --heading-color: var(--body-color);
-  --heading-hover-color: color-mix(in oklch, white 50%, var(--heading-color));
-  --heading-hover-bg-color: color-mix(in oklch, white 5%, var(--paper-bg));
+  --menu-color: var(--body-color);
+  --menu-hover-color: color-mix(in oklch, white 50%, var(--body-color));
+  --menu-hover-bg-color: color-mix(in oklch, white 7%, var(--paper-bg));
+  --menu-divider-color: color-mix(in oklch, white 20%, var(--paper-bg));
+  --scrollbar-color: color-mix(in oklch, var(--body-color), transparent 70%);
+  --scrollbar-hover-color: color-mix(in oklch, var(--body-color), transparent 50%);
 }
 
 /*--------------------------------------------------------------------------*/
@@ -2398,7 +2400,9 @@ button:not(:disabled),
 .btn-close:disabled,
 .btn-close.disabled {
   pointer-events: none;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   opacity: 0.25;
 }
 
@@ -2586,18 +2590,14 @@ button:not(:disabled),
 /*              Dropdown               */
 /*-------------------------------------*/
 .dropdown {
-  --dropdown-menu-color: var(--body-color);
-  --dropdown-menu-background-color: var(--paper-bg);
+  --dropdown-divider-color: color-mix(in oklch, white 85%, var(--body-color));
   --dropdown-menu-shadow-color: hsla(210, 29%, 19%, 0.14);
-  --dropdown-item-hover-color: hsla(210, 29%, 19%, 0.06);
-  --dropdown-item-hover-background-color: hsla(210, 29%, 19%, 0.06);
-  --dropdown-divider-color: var(--border-color);
   position: relative;
 }
 
 .dark-mode .dropdown {
+  --dropdown-divider-color: var(--border-color);
   --dropdown-menu-shadow-color: rgba(218, 207, 192, 0.14);
-  --dropdown-item-hover-background-color: var(--paper-bg);
 }
 
 .dropdown-toggle {
@@ -2611,8 +2611,8 @@ button:not(:disabled),
   overflow: hidden;
   transform: translateY(2px);
   padding: 0.5rem 0;
-  color: var(--dropdown-menu-color);
-  background-color: var(--dropdown-menu-background-color);
+  color: var(--menu-color);
+  background-color: var(--paper-bg);
   box-shadow: 0 0.25rem 0.75rem 0.2rem var(--dropdown-menu-shadow-color);
   border-radius: var(--border-radius);
   z-index: var(--dropdown-z-index);
@@ -2649,8 +2649,8 @@ button:not(:disabled),
 }
 
 .dropdown-item:hover {
-  color: var(--heading-color);
-  background-color: var(--dropdown-item-hover-background-color);
+  color: var(--menu-hover-color);
+  background-color: var(--menu-hover-bg-color);
 }
 
 .dropdown-divider {
@@ -2699,7 +2699,9 @@ button:not(:disabled),
   cursor: pointer;
   width: 1.2rem;
   height: 1.2rem;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background-repeat: no-repeat;
   background-position: center;
   border: 2px solid var(--border-color);
@@ -2711,7 +2713,9 @@ button:not(:disabled),
 .form-check-label:disabled,
 .form-check-label.disabled {
   opacity: 0.45;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   pointer-events: none;
 }
 
@@ -2857,10 +2861,23 @@ button:not(:disabled),
   border-color: var(--danger-color);
 }
 
+.form-control::-moz-placeholder {
+  color: #b4bdc6;
+  font-weight: 450;
+  opacity: 1;
+}
+
 .form-control::placeholder {
   color: #b4bdc6;
   font-weight: 450;
   opacity: 1;
+}
+
+.form-control::-moz-placeholder, .form-control:focus::-moz-placeholder {
+  transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
 }
 
 .form-control::placeholder,
@@ -2869,6 +2886,13 @@ button:not(:disabled),
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
+}
+
+.form-control:focus:not([readonly])::-moz-placeholder {
+  transform: translateX(5px);
+  -moz-transform: translateX(5px);
+  -o-transform: translateX(5px);
+  -webkit-transform: translateX(5px);
 }
 
 .form-control:focus:not([readonly])::placeholder {
@@ -2910,7 +2934,9 @@ button:not(:disabled),
   padding: 0.35rem 0.75rem;
   color: var(--body-color);
   background-color: var(--form-select-background-color);
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background-image: url("data:image/svg+xml,<svg viewBox='0 0 12 7.333127' fill='none' version='1.1' id='svg1' width='12' height='7.333127' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'><defs id='defs1' /><path d='M 5.9999688,4.6669152 10.666843,0 12,1.3331162 5.9999688,7.3331268 0,1.3331162 1.3331264,0 Z' fill='%2322303e' fill-opacity='0.9' id='path1' style='fill:%23738296;fill-opacity:0.8;stroke-width:1.02851' /></svg>");
   background-repeat: no-repeat;
   background-position: right 0.5rem center;
@@ -2949,6 +2975,10 @@ button:not(:disabled),
   display: none;
   color: var(--secondary-light-20);
   right: 0.25rem;
+}
+
+.search-input:not(:-moz-placeholder-shown) + .search-closer {
+  display: block;
 }
 
 .search-close-wrapper:hover .search-closer,
@@ -4358,7 +4388,7 @@ button:not(:disabled),
 }
 
 .menu:hover {
-  scrollbar-color: var(--scrollbar-color);
+  scrollbar-color: var(--scrollbar-color) transparent;
 }
 
 .menu-header {
@@ -4382,13 +4412,13 @@ button:not(:disabled),
   font-size: 0.9rem;
   padding: 0.5rem 0.5rem;
   margin: 0 0.5rem 0 1rem;
-  color: var(--heading-color);
+  color: var(--menu-color);
   border-radius: var(--border-radius);
 }
 
 .menu-link:hover {
-  color: var(--heading-color);
-  background-color: hsla(210, 29%, 19%, 0.06);
+  color: var(--menu-hover-color);
+  background-color: var(--menu-hover-bg-color);
 }
 
 .menu > .menu-item.active > .menu-link {
@@ -4694,7 +4724,6 @@ button:not(:disabled),
   padding: 0.5rem 0.9rem;
   border-radius: var(--border-radius);
   background-color: var(--paper-bg);
-  backdrop-filter: saturate(200%) blur(6px);
   box-shadow: 0 0.2rem 0.5rem 0 hsla(210, 30%, 20%, 0.1);
   z-index: var(--navbar-z-index);
 }
@@ -11826,11 +11855,15 @@ textarea {
 }
 
 .user-select-all {
-  user-select: all;
+  -webkit-user-select: all;
+     -moz-user-select: all;
+          user-select: all;
 }
 
 .user-select-none {
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 /*-------------------------------------*/

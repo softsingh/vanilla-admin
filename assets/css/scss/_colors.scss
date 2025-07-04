@@ -43,29 +43,22 @@
   --body-bg: hsl(240, 25%, 97%);
   --paper-bg: #fff;
 
-  --border-color: color-mix(in oklch, white 70%, var(--body-color));
+  --border-color: color-mix(in oklch, white 75%, var(--body-color));
 
   --form-control-focus-border-color: color-mix(in srgb, var(--primary-color), transparent 10%);
-
-  // --heading-color: #3b4754;
-  // --heading-hover-color: hsl(210, 38%, 10%);
-  // --heading-hover-bg-color: hsla(210, 29%, 19%, 0.06);
-
   --heading-color: var(--body-color);
-  --heading-hover-color: color-mix(in oklch, black 20%, var(--heading-color));
-  --heading-hover-bg-color: color-mix(in oklch, black 2%, var(--paper-bg));
-
   --link-color: #6666ff;
   --link-hover-color: #5252ff;
 
   --menu-color: var(--body-color);
-  --menu-hover-color: color-mix(in oklch, black 50%, var(--heading-color));
-  --menu-hover-bg-color: color-mix(in oklch, black 1%, var(--paper-bg));
+  --menu-hover-color: color-mix(in oklch, black 20%, var(--body-color));
+  --menu-hover-bg-color: color-mix(in oklch, var(--body-color), transparent 93%);
+  --menu-divider-color: color-mix(in oklch, white 85%, var(--body-color));
 
   --menu-sub-bg-color: hsl(215, 100%, 98%);
 
-  --scrollbar-color: hsl(240, 25%, 100%);
-  --scrollbar-hover-color: var(--black-color);
+  --scrollbar-color: color-mix(in oklch, var(--body-color), transparent 70%);
+  --scrollbar-hover-color: color-mix(in oklch, var(--body-color), transparent 50%);
 
   --text-muted-color: hsl(212, 8%, 68%);
 
@@ -80,7 +73,7 @@
 
   // --body-color: #cccccc;
   --body-color: #b2b2c4;
-  --body-bg: #1f1f1f;
+  // --body-bg: #1f1f1f;
   --body-bg: #232333;
   --paper-bg: color-mix(in oklch, white 6%, var(--body-bg));
 
@@ -88,6 +81,12 @@
   --border-color: color-mix(in oklch, white 15%, var(--paper-bg));
 
   --heading-color: var(--body-color);
-  --heading-hover-color: color-mix(in oklch, white 50%, var(--heading-color));
-  --heading-hover-bg-color: color-mix(in oklch, white 5%, var(--paper-bg));
+
+  --menu-color: var(--body-color);
+  --menu-hover-color: color-mix(in oklch, white 50%, var(--body-color));
+  --menu-hover-bg-color: color-mix(in oklch, white 7%, var(--paper-bg));
+  --menu-divider-color: color-mix(in oklch, white 20%, var(--paper-bg));
+
+  --scrollbar-color: color-mix(in oklch, var(--body-color), transparent 70%);
+  --scrollbar-hover-color: color-mix(in oklch, var(--body-color), transparent 50%);
 }

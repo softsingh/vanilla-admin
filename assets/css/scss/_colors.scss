@@ -41,6 +41,7 @@
   --body-color: #3b4754;
   // --body-color: #646e78;
   --body-bg: hsl(240, 25%, 97%);
+  --backdrop-color: rgba(27, 27, 27, 0.7);
   --paper-bg: #fff;
 
   --border-color: color-mix(in oklch, white 75%, var(--body-color));
@@ -53,7 +54,7 @@
   --menu-color: var(--body-color);
   --menu-hover-color: color-mix(in oklch, black 20%, var(--body-color));
   --menu-hover-bg-color: color-mix(in oklch, var(--body-color), transparent 93%);
-  --menu-divider-color: color-mix(in oklch, white 85%, var(--body-color));
+  --menu-divider-color: color-mix(in oklch, white 80%, var(--body-color));
 
   --menu-sub-bg-color: hsl(215, 100%, 98%);
 
@@ -62,7 +63,7 @@
 
   --text-muted-color: hsl(212, 8%, 68%);
 
-  --backdrop-dark-color: rgba(27, 27, 27, 0.7);
+
 }
 
 /* Color variables for dark theme */

@@ -3,14 +3,22 @@
 /*-------------------------------------*/
 
 .dropdown {
-  --dropdown-divider-color: color-mix(in oklch, white 85%, var(--body-color));
   --dropdown-menu-shadow-color: hsla(210, 29%, 19%, 0.14);
-
   position: relative;
 }
 
+.dropdown-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--dropdown-backdrop-z-index);
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--backdrop-color);
+  backdrop-filter: saturate(100%) blur(1px);
+}
+
 .dark-mode .dropdown {
-  --dropdown-divider-color: var(--border-color);
   --dropdown-menu-shadow-color: rgba(218, 207, 192, 0.14);
 }
 
@@ -71,7 +79,7 @@
   height: 0;
   margin: 0.25rem 0;
   overflow: hidden;
-  border-top: 1px solid var(--dropdown-divider-color);
+  border-top: 1px solid var(--menu-divider-color);
   opacity: 1;
 }
 

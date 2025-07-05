@@ -14,8 +14,9 @@
 :root {
   --btn-close-z-index: 2;
   --navbar-z-index: 3;
-  --sidebar-backdrop-z-index: 996;
-  --sidebar-z-index: 997;
+  --sidebar-backdrop-z-index: 995;
+  --sidebar-z-index: 996;
+  --dropdown-backdrop-z-index: 997;
   --dropdown-z-index: 998;
   --modal-backdrop-z-index: 999;
   --modal-z-index: 1000;
@@ -1667,6 +1668,7 @@
   --black-color: #000000;
   --body-color: #3b4754;
   --body-bg: hsl(240, 25%, 97%);
+  --backdrop-color: rgba(27, 27, 27, 0.7);
   --paper-bg: #fff;
   --border-color: color-mix(in oklch, white 75%, var(--body-color));
   --form-control-focus-border-color: color-mix(in srgb, var(--primary-color), transparent 10%);
@@ -1676,12 +1678,11 @@
   --menu-color: var(--body-color);
   --menu-hover-color: color-mix(in oklch, black 20%, var(--body-color));
   --menu-hover-bg-color: color-mix(in oklch, var(--body-color), transparent 93%);
-  --menu-divider-color: color-mix(in oklch, white 85%, var(--body-color));
+  --menu-divider-color: color-mix(in oklch, white 80%, var(--body-color));
   --menu-sub-bg-color: hsl(215, 100%, 98%);
   --scrollbar-color: color-mix(in oklch, var(--body-color), transparent 70%);
   --scrollbar-hover-color: color-mix(in oklch, var(--body-color), transparent 50%);
   --text-muted-color: hsl(212, 8%, 68%);
-  --backdrop-dark-color: rgba(27, 27, 27, 0.7);
 }
 
 /* Color variables for dark theme */
@@ -2590,13 +2591,23 @@ button:not(:disabled),
 /*              Dropdown               */
 /*-------------------------------------*/
 .dropdown {
-  --dropdown-divider-color: color-mix(in oklch, white 85%, var(--body-color));
   --dropdown-menu-shadow-color: hsla(210, 29%, 19%, 0.14);
   position: relative;
 }
 
+.dropdown-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--dropdown-backdrop-z-index);
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--backdrop-color);
+  -webkit-backdrop-filter: saturate(100%) blur(1px);
+          backdrop-filter: saturate(100%) blur(1px);
+}
+
 .dark-mode .dropdown {
-  --dropdown-divider-color: var(--border-color);
   --dropdown-menu-shadow-color: rgba(218, 207, 192, 0.14);
 }
 
@@ -2657,7 +2668,7 @@ button:not(:disabled),
   height: 0;
   margin: 0.25rem 0;
   overflow: hidden;
-  border-top: 1px solid var(--dropdown-divider-color);
+  border-top: 1px solid var(--menu-divider-color);
   opacity: 1;
 }
 
@@ -4509,7 +4520,9 @@ button:not(:disabled),
   z-index: var(--modal-backdrop-z-index);
   width: 100vw;
   height: 100vh;
-  background-color: var(--backdrop-dark-color);
+  background-color: var(--backdrop-color);
+  -webkit-backdrop-filter: saturate(100%) blur(1px);
+          backdrop-filter: saturate(100%) blur(1px);
 }
 
 .modal-dialog {
@@ -4942,7 +4955,7 @@ body.sidebar-hidden .sidebar {
     width: 100%;
     height: 100%;
     z-index: var(--sidebar-backdrop-z-index);
-    background: var(--backdrop-dark-color);
+    background: var(--backdrop-color);
     transition: 0.2s ease;
   }
   body.sidebar-hidden .sidebar-backdrop {

@@ -70,7 +70,7 @@ dropdownToggles.forEach((dropdownToggle) =>
     const dropdown = dropdownToggle.closest('.dropdown');
     const dropdownMenu = dropdown.querySelector('.dropdown-menu');
     hideAllDropdowns(event);
-    dropdownMenu.classList.toggle('show');
+    dropdownMenu.classList.add('show');
     event.stopPropagation();
   })
 );

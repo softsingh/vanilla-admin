@@ -38,10 +38,10 @@
   // --light-white-color: hsl(0, 0%, 97%);
   // --light-gray-color: hsl(0, 0%, 90%);
 
-  --body-color: #3b4754;
-  // --body-color: #646e78;
+  // --body-color: hsl(211, 17%, 28%);
+  --body-color: hsl(240, 17%, 28%);
   --body-bg: hsl(240, 25%, 97%);
-  --backdrop-color: rgba(27, 27, 27, 0.7);
+  --backdrop-color: hsla(0, 0%, 11%, 0.7);
   --paper-bg: #fff;
 
   --border-color: color-mix(in oklch, white 75%, var(--body-color));
@@ -62,23 +62,18 @@
   --scrollbar-hover-color: color-mix(in oklch, var(--body-color), transparent 50%);
 
   --text-muted-color: hsl(212, 8%, 68%);
-
-
 }
 
 /* Color variables for dark theme */
 
 .dark-mode {
-  // --white-color: #171717;
-  // --black-color: #d4d4d4;
+  --backdrop-color: hsla(240, 19%, 17%, 0.8);
+  // --body-color: hsl(240, 13%, 73%);
+  --body-color: hsl(240, 15%, 73%);
+  --body-bg: hsl(240, 19%, 17%);
 
-  // --body-color: #cccccc;
-  --body-color: #b2b2c4;
-  // --body-bg: #1f1f1f;
-  --body-bg: #232333;
   --paper-bg: color-mix(in oklch, white 6%, var(--body-bg));
 
-  // --border-color: hsl(238, 16%, 36%);
   --border-color: color-mix(in oklch, white 15%, var(--paper-bg));
 
   --heading-color: var(--body-color);

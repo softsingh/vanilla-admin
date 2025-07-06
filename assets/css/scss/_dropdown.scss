@@ -7,17 +7,6 @@
   position: relative;
 }
 
-.dropdown-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: var(--dropdown-backdrop-z-index);
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--backdrop-color);
-  backdrop-filter: saturate(100%) blur(1px);
-}
-
 .dark-mode .dropdown {
   --dropdown-menu-shadow-color: rgba(218, 207, 192, 0.14);
 }
@@ -35,13 +24,14 @@
   padding: 0.5rem 0;
   color: var(--menu-color);
   background-color: var(--paper-bg);
-  box-shadow: 0 0.25rem 0.75rem 0.2rem var(--dropdown-menu-shadow-color);
+  box-shadow: 0 0.25rem 0.75rem 0.25rem var(--dropdown-menu-shadow-color);
   border-radius: var(--border-radius);
   z-index: var(--dropdown-z-index);
 }
 
 .dark-mode .dropdown-menu {
   border: 1px solid var(--border-color);
+  box-shadow: 0 0.25rem .75rem 0.35rem var(--dropdown-menu-shadow-color);
 }
 
 .dropdown-menu.show {

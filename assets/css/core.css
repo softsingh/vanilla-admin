@@ -1666,9 +1666,9 @@
 :root {
   --white-color: #ffffff;
   --black-color: #000000;
-  --body-color: #3b4754;
+  --body-color: hsl(240, 17%, 28%);
   --body-bg: hsl(240, 25%, 97%);
-  --backdrop-color: rgba(27, 27, 27, 0.7);
+  --backdrop-color: hsla(0, 0%, 11%, 0.7);
   --paper-bg: #fff;
   --border-color: color-mix(in oklch, white 75%, var(--body-color));
   --form-control-focus-border-color: color-mix(in srgb, var(--primary-color), transparent 10%);
@@ -1687,8 +1687,9 @@
 
 /* Color variables for dark theme */
 .dark-mode {
-  --body-color: #b2b2c4;
-  --body-bg: #232333;
+  --backdrop-color: hsla(240, 19%, 17%, 0.8);
+  --body-color: hsl(240, 15%, 73%);
+  --body-bg: hsl(240, 19%, 17%);
   --paper-bg: color-mix(in oklch, white 6%, var(--body-bg));
   --border-color: color-mix(in oklch, white 15%, var(--paper-bg));
   --heading-color: var(--body-color);
@@ -2401,9 +2402,7 @@ button:not(:disabled),
 .btn-close:disabled,
 .btn-close.disabled {
   pointer-events: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   opacity: 0.25;
 }
 
@@ -2595,18 +2594,6 @@ button:not(:disabled),
   position: relative;
 }
 
-.dropdown-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: var(--dropdown-backdrop-z-index);
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--backdrop-color);
-  -webkit-backdrop-filter: saturate(100%) blur(1px);
-          backdrop-filter: saturate(100%) blur(1px);
-}
-
 .dark-mode .dropdown {
   --dropdown-menu-shadow-color: rgba(218, 207, 192, 0.14);
 }
@@ -2624,13 +2611,14 @@ button:not(:disabled),
   padding: 0.5rem 0;
   color: var(--menu-color);
   background-color: var(--paper-bg);
-  box-shadow: 0 0.25rem 0.75rem 0.2rem var(--dropdown-menu-shadow-color);
+  box-shadow: 0 0.25rem 0.75rem 0.25rem var(--dropdown-menu-shadow-color);
   border-radius: var(--border-radius);
   z-index: var(--dropdown-z-index);
 }
 
 .dark-mode .dropdown-menu {
   border: 1px solid var(--border-color);
+  box-shadow: 0 0.25rem 0.75rem 0.35rem var(--dropdown-menu-shadow-color);
 }
 
 .dropdown-menu.show {
@@ -2710,9 +2698,7 @@ button:not(:disabled),
   cursor: pointer;
   width: 1.2rem;
   height: 1.2rem;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   background-repeat: no-repeat;
   background-position: center;
   border: 2px solid var(--border-color);
@@ -2724,9 +2710,7 @@ button:not(:disabled),
 .form-check-label:disabled,
 .form-check-label.disabled {
   opacity: 0.45;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   pointer-events: none;
 }
 
@@ -2872,23 +2856,10 @@ button:not(:disabled),
   border-color: var(--danger-color);
 }
 
-.form-control::-moz-placeholder {
-  color: #b4bdc6;
-  font-weight: 450;
-  opacity: 1;
-}
-
 .form-control::placeholder {
   color: #b4bdc6;
   font-weight: 450;
   opacity: 1;
-}
-
-.form-control::-moz-placeholder, .form-control:focus::-moz-placeholder {
-  transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease;
 }
 
 .form-control::placeholder,
@@ -2897,13 +2868,6 @@ button:not(:disabled),
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
-}
-
-.form-control:focus:not([readonly])::-moz-placeholder {
-  transform: translateX(5px);
-  -moz-transform: translateX(5px);
-  -o-transform: translateX(5px);
-  -webkit-transform: translateX(5px);
 }
 
 .form-control:focus:not([readonly])::placeholder {
@@ -2945,9 +2909,7 @@ button:not(:disabled),
   padding: 0.35rem 0.75rem;
   color: var(--body-color);
   background-color: var(--form-select-background-color);
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   background-image: url("data:image/svg+xml,<svg viewBox='0 0 12 7.333127' fill='none' version='1.1' id='svg1' width='12' height='7.333127' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'><defs id='defs1' /><path d='M 5.9999688,4.6669152 10.666843,0 12,1.3331162 5.9999688,7.3331268 0,1.3331162 1.3331264,0 Z' fill='%2322303e' fill-opacity='0.9' id='path1' style='fill:%23738296;fill-opacity:0.8;stroke-width:1.02851' /></svg>");
   background-repeat: no-repeat;
   background-position: right 0.5rem center;
@@ -2986,10 +2948,6 @@ button:not(:disabled),
   display: none;
   color: var(--secondary-light-20);
   right: 0.25rem;
-}
-
-.search-input:not(:-moz-placeholder-shown) + .search-closer {
-  display: block;
 }
 
 .search-close-wrapper:hover .search-closer,
@@ -4521,8 +4479,7 @@ button:not(:disabled),
   width: 100vw;
   height: 100vh;
   background-color: var(--backdrop-color);
-  -webkit-backdrop-filter: saturate(100%) blur(1px);
-          backdrop-filter: saturate(100%) blur(1px);
+  backdrop-filter: saturate(100%) blur(1px);
 }
 
 .modal-dialog {
@@ -11868,15 +11825,11 @@ textarea {
 }
 
 .user-select-all {
-  -webkit-user-select: all;
-     -moz-user-select: all;
-          user-select: all;
+  user-select: all;
 }
 
 .user-select-none {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 
 /*-------------------------------------*/

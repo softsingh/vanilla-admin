@@ -2402,7 +2402,9 @@ button:not(:disabled),
 .btn-close:disabled,
 .btn-close.disabled {
   pointer-events: none;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   opacity: 0.25;
 }
 
@@ -2698,7 +2700,9 @@ button:not(:disabled),
   cursor: pointer;
   width: 1.2rem;
   height: 1.2rem;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background-repeat: no-repeat;
   background-position: center;
   border: 2px solid var(--border-color);
@@ -2710,7 +2714,9 @@ button:not(:disabled),
 .form-check-label:disabled,
 .form-check-label.disabled {
   opacity: 0.45;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   pointer-events: none;
 }
 
@@ -2846,7 +2852,7 @@ button:not(:disabled),
 .form-control:focus:not([readonly]) {
   outline: 0;
   color: var(--body-color);
-  background: var(--white-color);
+  background-color: transparent;
   border: 2px solid var(--form-control-focus-border-color);
   box-shadow: 0 0 0.25rem 0.05rem hsla(239, 100%, 70%, 0.1);
 }
@@ -2856,10 +2862,31 @@ button:not(:disabled),
   border-color: var(--danger-color);
 }
 
-.form-control::placeholder {
-  color: #b4bdc6;
+.form-control::-moz-placeholder {
+  color: var(--border-color);
   font-weight: 450;
   opacity: 1;
+}
+
+.form-control::placeholder {
+  color: var(--border-color);
+  font-weight: 450;
+  opacity: 1;
+}
+
+.dark-mode .form-control::-moz-placeholder {
+  color: color-mix(in oklch, white 30%, var(--border-color));
+}
+
+.dark-mode .form-control::placeholder {
+  color: color-mix(in oklch, white 30%, var(--border-color));
+}
+
+.form-control::-moz-placeholder, .form-control:focus::-moz-placeholder {
+  transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
 }
 
 .form-control::placeholder,
@@ -2868,6 +2895,13 @@ button:not(:disabled),
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
+}
+
+.form-control:focus:not([readonly])::-moz-placeholder {
+  transform: translateX(5px);
+  -moz-transform: translateX(5px);
+  -o-transform: translateX(5px);
+  -webkit-transform: translateX(5px);
 }
 
 .form-control:focus:not([readonly])::placeholder {
@@ -2900,25 +2934,26 @@ button:not(:disabled),
 }
 
 .form-select {
-  --form-select-background-color: transparent;
-  --form-select-border-color: var(--border-color);
   display: block;
   width: 100%;
   outline: 0;
+  font-size: 0.9rem;
   font-weight: 500;
   padding: 0.35rem 0.75rem;
   color: var(--body-color);
-  background-color: var(--form-select-background-color);
-  appearance: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background-image: url("data:image/svg+xml,<svg viewBox='0 0 12 7.333127' fill='none' version='1.1' id='svg1' width='12' height='7.333127' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'><defs id='defs1' /><path d='M 5.9999688,4.6669152 10.666843,0 12,1.3331162 5.9999688,7.3331268 0,1.3331162 1.3331264,0 Z' fill='%2322303e' fill-opacity='0.9' id='path1' style='fill:%23738296;fill-opacity:0.8;stroke-width:1.02851' /></svg>");
   background-repeat: no-repeat;
   background-position: right 0.5rem center;
-  border: 2px solid var(--form-select-border-color);
+  border: 2px solid var(--border-color);
   border-radius: var(--border-radius);
 }
 
 .dark-mode .form-select {
-  --form-select-background-color: var(--border-color);
+  background-color: var(--border-color);
 }
 
 .form-select-sm {
@@ -2948,6 +2983,10 @@ button:not(:disabled),
   display: none;
   color: var(--secondary-light-20);
   right: 0.25rem;
+}
+
+.search-input:not(:-moz-placeholder-shown) + .search-closer {
+  display: block;
 }
 
 .search-close-wrapper:hover .search-closer,
@@ -4479,7 +4518,8 @@ button:not(:disabled),
   width: 100vw;
   height: 100vh;
   background-color: var(--backdrop-color);
-  backdrop-filter: saturate(100%) blur(1px);
+  -webkit-backdrop-filter: saturate(100%) blur(1px);
+          backdrop-filter: saturate(100%) blur(1px);
 }
 
 .modal-dialog {
@@ -11825,11 +11865,15 @@ textarea {
 }
 
 .user-select-all {
-  user-select: all;
+  -webkit-user-select: all;
+     -moz-user-select: all;
+          user-select: all;
 }
 
 .user-select-none {
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 /*-------------------------------------*/

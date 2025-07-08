@@ -237,10 +237,13 @@
 .search-close-wrapper .search-closer {
   position: absolute;
   display: none;
-  color: var(--secondary-light-20);
+  color: color-mix(in oklch, black 10%, var(--border-color));
   right: 0.25rem;
-  // font-size: 0.1rem;
-  // z-index: 1;
+  z-index: 1;
+}
+
+.dark-mode .search-close-wrapper .search-closer {
+  color: color-mix(in oklch, white 30%, var(--border-color));
 }
 
 .search-close-wrapper:hover .search-closer,
@@ -250,5 +253,9 @@
 }
 
 .search-close-wrapper .search-closer:hover {
-  color: var(--secondary-dark-20);
+  color: color-mix(in oklch, black 30%, var(--border-color));
+}
+
+.dark-mode .search-close-wrapper .search-closer:hover {
+  color: color-mix(in oklch, white 50%, var(--border-color));
 }

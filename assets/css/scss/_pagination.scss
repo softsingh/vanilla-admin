@@ -4,13 +4,17 @@
 
 .pagination {
   --page-link-color: var(--body-color);
-  --page-link-bg-color: hsl(220, 9%, 94%);
-  --page-link-hover-bg-color: hsl(220, 9%, 84%);
+  // --page-link-bg-color: hsl(220, 9%, 94%);
+  --page-link-bg-color: color-mix(in oklch, var(--body-color), transparent 90%);
+  // --page-link-hover-bg-color: hsl(220, 9%, 84%);
+  --page-link-hover-bg-color: color-mix(in oklch, var(--body-color), transparent 85%);
 
-  --page-link-disabled-color: hsl(210, 18%, 80%);
-  --page-link-disabled-bg-color: hsl(220, 8%, 96%);
+  // --page-link-disabled-color: hsl(210, 18%, 80%);
+  // --page-link-disabled-bg-color: hsl(220, 8%, 96%);
+  --page-link-disabled-color: color-mix(in oklch, var(--body-color), transparent 70%);
+  --page-link-disabled-bg-color: color-mix(in oklch, var(--page-link-bg-color), transparent 70%);
 
-  --page-link-active-color: var(--white-color);
+  --page-link-active-color: #ffffff;
   --page-link-active-bg-color: var(--primary-color);
   --page-link-active-hover-bg-color: var(--primary-hover-color);
 
@@ -18,6 +22,19 @@
   gap: 0.25rem;
   padding-left: 0;
   list-style: none;
+}
+
+.dark-mode .pagination {
+  --page-link-color: var(--body-color);
+  --page-link-bg-color: var(--border-color);
+  --page-link-hover-bg-color: color-mix(in oklch, white 10%, var(--border-color));
+
+  --page-link-disabled-color: color-mix(in oklch, var(--body-color), transparent 70%);
+  --page-link-disabled-bg-color: color-mix(in oklch, var(--border-color), transparent 70%);
+
+  --page-link-active-color: #ffffff;
+  --page-link-active-bg-color: var(--primary-color);
+  --page-link-active-hover-bg-color: var(--primary-hover-color);
 }
 
 .page-link {

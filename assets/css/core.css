@@ -1676,19 +1676,19 @@
   --link-color: #6666ff;
   --link-hover-color: #5252ff;
   --menu-color: var(--body-color);
-  --menu-hover-color: color-mix(in oklch, black 20%, var(--body-color));
+  --menu-hover-color: color-mix(in oklch, black 15%, var(--body-color));
   --menu-hover-bg-color: color-mix(in oklch, var(--body-color), transparent 93%);
   --menu-divider-color: color-mix(in oklch, white 80%, var(--body-color));
   --menu-sub-bg-color: hsl(215, 100%, 98%);
   --scrollbar-color: color-mix(in oklch, var(--body-color), transparent 70%);
   --scrollbar-hover-color: color-mix(in oklch, var(--body-color), transparent 50%);
-  --text-muted-color: hsl(212, 8%, 68%);
+  --text-muted-color: color-mix(in oklch, white 55%, var(--body-color));
 }
 
 /* Color variables for dark theme */
 .dark-mode {
   --backdrop-color: hsla(240, 19%, 17%, 0.8);
-  --body-color: hsl(240, 15%, 73%);
+  --body-color: hsl(240, 13%, 80%);
   --body-bg: hsl(240, 19%, 17%);
   --paper-bg: color-mix(in oklch, white 6%, var(--body-bg));
   --border-color: color-mix(in oklch, white 15%, var(--paper-bg));
@@ -1699,6 +1699,7 @@
   --menu-divider-color: color-mix(in oklch, white 20%, var(--paper-bg));
   --scrollbar-color: color-mix(in oklch, var(--body-color), transparent 70%);
   --scrollbar-hover-color: color-mix(in oklch, var(--body-color), transparent 50%);
+  --text-muted-color: color-mix(in oklch, black 25%, var(--body-color));
 }
 
 /*--------------------------------------------------------------------------*/
@@ -2981,8 +2982,13 @@ button:not(:disabled),
 .search-close-wrapper .search-closer {
   position: absolute;
   display: none;
-  color: var(--secondary-light-20);
+  color: color-mix(in oklch, black 10%, var(--border-color));
   right: 0.25rem;
+  z-index: 1;
+}
+
+.dark-mode .search-close-wrapper .search-closer {
+  color: color-mix(in oklch, white 30%, var(--border-color));
 }
 
 .search-input:not(:-moz-placeholder-shown) + .search-closer {
@@ -2996,7 +3002,11 @@ button:not(:disabled),
 }
 
 .search-close-wrapper .search-closer:hover {
-  color: var(--secondary-dark-20);
+  color: color-mix(in oklch, black 30%, var(--border-color));
+}
+
+.dark-mode .search-close-wrapper .search-closer:hover {
+  color: color-mix(in oklch, white 50%, var(--border-color));
 }
 
 .input-group {
@@ -4364,7 +4374,7 @@ button:not(:disabled),
   left: 0;
   display: block;
   height: 0;
-  border-top: 1px solid #e4e6e8;
+  border-top: 1px solid var(--border-color);
 }
 
 .row-bordered > .col::after,
@@ -4381,7 +4391,7 @@ button:not(:disabled),
   left: -1px;
   display: block;
   width: 0;
-  border-left: 1px solid #e4e6e8;
+  border-left: 1px solid var(--border-color);
 }
 
 /*-------------------------------------*/
@@ -4418,6 +4428,7 @@ button:not(:disabled),
   white-space: nowrap;
   gap: 0.5rem;
   font-size: 0.9rem;
+  font-weight: 500;
   padding: 0.5rem 0.5rem;
   margin: 0 0.5rem 0 1rem;
   color: var(--menu-color);
@@ -4431,7 +4442,12 @@ button:not(:disabled),
 
 .menu > .menu-item.active > .menu-link {
   color: var(--primary-color);
-  background-color: var(--primary-lightest-color);
+  background-color: var(--primary-light-85);
+}
+
+.dark-mode .menu > .menu-item.active > .menu-link {
+  color: #ffffff;
+  background-color: var(--primary-light-1);
 }
 
 .menu-toggle::after {
@@ -4808,17 +4824,28 @@ button:not(:disabled),
 /*-------------------------------------*/
 .pagination {
   --page-link-color: var(--body-color);
-  --page-link-bg-color: hsl(220, 9%, 94%);
-  --page-link-hover-bg-color: hsl(220, 9%, 84%);
-  --page-link-disabled-color: hsl(210, 18%, 80%);
-  --page-link-disabled-bg-color: hsl(220, 8%, 96%);
-  --page-link-active-color: var(--white-color);
+  --page-link-bg-color: color-mix(in oklch, var(--body-color), transparent 90%);
+  --page-link-hover-bg-color: color-mix(in oklch, var(--body-color), transparent 85%);
+  --page-link-disabled-color: color-mix(in oklch, var(--body-color), transparent 70%);
+  --page-link-disabled-bg-color: color-mix(in oklch, var(--page-link-bg-color), transparent 70%);
+  --page-link-active-color: #ffffff;
   --page-link-active-bg-color: var(--primary-color);
   --page-link-active-hover-bg-color: var(--primary-hover-color);
   display: flex;
   gap: 0.25rem;
   padding-left: 0;
   list-style: none;
+}
+
+.dark-mode .pagination {
+  --page-link-color: var(--body-color);
+  --page-link-bg-color: var(--border-color);
+  --page-link-hover-bg-color: color-mix(in oklch, white 10%, var(--border-color));
+  --page-link-disabled-color: color-mix(in oklch, var(--body-color), transparent 70%);
+  --page-link-disabled-bg-color: color-mix(in oklch, var(--border-color), transparent 70%);
+  --page-link-active-color: #ffffff;
+  --page-link-active-bg-color: var(--primary-color);
+  --page-link-active-hover-bg-color: var(--primary-hover-color);
 }
 
 .page-link {

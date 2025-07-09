@@ -106,10 +106,6 @@
   background-color: var(--primary-color) !important;
 }
 
-// menu-item.active>.menu-sub>.menu-item.active::has(.menu-sub>.menu-item.active) {
-//   background-color: red;
-// }
-
 .menu-item.open>.menu-sub {
   display: block;
 }

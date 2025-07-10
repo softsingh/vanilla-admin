@@ -45,8 +45,8 @@
   --paper-bg: #fff;
 
   --border-color: color-mix(in oklch, white 75%, var(--body-color));
+  --form-control-focus-border-color: color-mix(in oklch, white 0%, var(--primary-color));
 
-  --form-control-focus-border-color: color-mix(in srgb, var(--primary-color), transparent 10%);
   --heading-color: var(--body-color);
   --link-color: #6666ff;
   --link-hover-color: #5252ff;

@@ -6,6 +6,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  color: var(--body-color);
   cursor: pointer;
 }
 
@@ -19,6 +20,7 @@
   font-size: 0.9rem;
   font-weight: inherit;
   border: none;
+  color: var(--body-color);
   background: transparent;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
@@ -34,6 +36,10 @@
   background-size: 1rem;
   margin-left: 1.25rem;
   transition: all 0.2s ease-in-out;
+}
+
+.dark-mode .accordion-button::after {
+  background-image: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs1" /><path d="M 11.76117,4.2282428 8,7.9894141 4.2388294,4.2282428 3,5.4670728 8,10.467087 13,5.4670728 Z" id="path1" style="fill:%23c5c5d3" /></svg>');
 }
 
 .accordion-item.no-arrow .accordion-button::after {

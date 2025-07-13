@@ -57,21 +57,40 @@ button:not(:disabled),
   }
 
   .dark-mode .btn-#{$name} {
+    border-color: var(--#{$name}-light-10);
     box-shadow: none;
+
+    &:hover,
+    &:focus {
+      border-color: var(--#{$name}-light-5);
+    }
   }
 }
 
 // Label Button
 @each $name, $value in $color-map {
   .btn-label-#{$name} {
-    border-color: none;
-    color: var(--#{$name}-dark-10);
-    background-color: var(--#{$name}-light-80);
+    // border-color: none;
+    color: var(--#{$name}-dark-20);
+    background-color: var(--#{$name}-light-70);
 
     &:hover,
     &:focus {
       color: #ffffff;
-      border-color: none;
+      // border-color: none;
+      background-color: var(--#{$name}-color);
+    }
+  }
+
+  .dark-mode .btn-label-#{$name} {
+    color: var(--#{$name}-dark-20);
+    background-color: var(--#{$name}-light-60);
+    border-color: var(--#{$name}-light-50);
+
+    &:hover,
+    &:focus {
+      color: #ffffff;
+      border-color: var(--#{$name}-light-10);
       background-color: var(--#{$name}-color);
     }
   }

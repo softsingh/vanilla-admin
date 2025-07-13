@@ -30,6 +30,10 @@
       --#{$name}-dark-#{$i}: color-mix(in oklch, black #{$i}%, var(--#{$name}-color));
     }
   }
+
+  @for $i from 1 through 100 {
+    --black-light-#{$i}: color-mix(in oklch, white #{$i}%, #000000);
+  }
 }
 
 :root {
@@ -67,6 +71,7 @@
   // --body-color: hsl(240, 13%, 73%);
   --body-color: #c5c5d3;
   --body-bg: hsl(240, 19%, 17%);
+  --backdrop-color: hsla(0, 0%, 83%, 0.7);
 
   --paper-bg: color-mix(in oklch, white 6%, var(--body-bg));
 

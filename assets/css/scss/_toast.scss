@@ -8,12 +8,18 @@
     min-width: 250px;
     max-width: 400px;
     padding: 1rem;
+    border: 1px solid transparent;
     border-radius: var(--border-radius);
     box-shadow: 0 0.2rem 1.5rem 1rem rgba(36, 51, 66, 0.1);
-    background-color: var(--white-color);
+    background-color: #ffffff;
     color: var(--body-color);
     z-index: var(--toast-z-index);
     display: none;
+}
+
+.dark-mode .toast {
+    color: var(--body-bg);
+    border-color: color-mix(in oklch, #ffffff, black 20%);
 }
 
 .toast-container {
@@ -160,8 +166,20 @@
 @each $name, $value in $color-map {
     .toast-#{$name} {
         background-color: var(--#{$name}-color) !important;
-        color: var(--white-color) !important;
-        box-shadow: 0 0.25rem 1rem color-mix(in srgb, var(--#{$name}-color), transparent 20%);
+        color: #ffffff !important;
+        box-shadow: 0 0.15rem 1rem color-mix(in srgb, var(--#{$name}-color), transparent 20%);
+    }
+
+    .dark-mode .toast-#{$name} {
+        @if $name =='dark' {
+            border-color: color-mix(in oklch, white 20%, var(--#{$name}-color));
+            box-shadow: none
+        }
+
+        @else {
+            border-color: color-mix(in oklch, white 10%, var(--#{$name}-color));
+            box-shadow: none
+        }
     }
 }
 

@@ -57,12 +57,25 @@ button:not(:disabled),
   }
 
   .dark-mode .btn-#{$name} {
-    border-color: var(--#{$name}-light-10);
     box-shadow: none;
 
-    &:hover,
-    &:focus {
-      border-color: var(--#{$name}-light-5);
+    @if $name =='dark' {
+      border-color: var(--#{$name}-light-10);
+
+      &:hover,
+      &:focus {
+        background-color: color-mix(in oklab, var(--dark-color), white 3%);
+        border-color: color-mix(in oklab, var(--dark-color), white 3%);
+      }
+    }
+
+    @else {
+      border-color: var(--#{$name}-light-10);
+
+      &:hover,
+      &:focus {
+        border-color: var(--#{$name}-light-5);
+      }
     }
   }
 }

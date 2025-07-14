@@ -50,7 +50,7 @@
   color: var(--body-color);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
-  padding: 0.5rem .75rem;
+  padding: 0.35rem .75rem;
 }
 
 @each $name, $value in $color-map {
@@ -70,7 +70,7 @@
   background-color: color-mix(in oklab, var(--border-color), transparent 90%);
   color: var(--body-color);
   border-radius: var(--border-radius);
-  padding: 0.50rem .75rem;
+  padding: 0.35rem .75rem;
 }
 
 .dark-mode .filled-container {

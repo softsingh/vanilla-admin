@@ -22,8 +22,8 @@
 }
 
 .dark-mode .tooltip {
-    --tooltip-background-color: var(--body-color);
-    --tooltip-color: var(--body-bg);
+    --tooltip-background-color: #ffffff;
+    --tooltip-color: #000000;
     --tooltip-opacity: 0.9;
 }
 
@@ -34,7 +34,12 @@
     text-align: center;
     background-color: var(--tooltip-background-color);
     backdrop-filter: saturate(200%) blur(6px);
+    border: 1px solid transparent;
     border-radius: 0.25rem;
+}
+
+.dark-mode .tooltip-inner {
+    border-color: color-mix(in oklch, var(--tooltip-background-color), white 10%);
 }
 
 .tooltip-arrow {

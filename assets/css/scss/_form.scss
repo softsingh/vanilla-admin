@@ -110,9 +110,7 @@
 
 .dark-mode .form-control {
   --form-control-hover-shadow-color: color-mix(in oklab, var(--border-color), transparent 90%);
-  // border: 2px solid color-mix(in oklab, var(--border-color), transparent 40%);
-  // background-color: color-mix(in oklab, var(--border-color), transparent 40%);
-  border: 2px solid var(--border-color);
+  border-color: color-mix(in oklab, var(--border-color), white 6%);
   background-color: var(--border-color);
 }
 
@@ -206,7 +204,7 @@
   color: var(--body-color);
   background-color: transparent;
   appearance: none; //hide default icon shown by browser
-  background-image: url("data:image/svg+xml,<svg viewBox='0 0 12 7.333127' fill='none' version='1.1' id='svg1' width='12' height='7.333127' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'><defs id='defs1' /><path d='M 5.9999688,4.6669152 10.666843,0 12,1.3331162 5.9999688,7.3331268 0,1.3331162 1.3331264,0 Z' fill='%2322303e' fill-opacity='0.9' id='path1' style='fill:%23738296;fill-opacity:0.8;stroke-width:1.02851' /></svg>");
+  background-image: url("data:image/svg+xml,<svg viewBox='0 0 12 7.333127' fill='none' version='1.1' id='svg1' width='12' height='7.333127' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'><defs id='defs1' /><path d='M 5.9999688,4.6669152 10.666843,0 12,1.3331162 5.9999688,7.3331268 0,1.3331162 1.3331264,0 Z' fill='%2322303e' fill-opacity='0.9' id='path1' style='fill:%233b3b54;fill-opacity:0.45;stroke-width:1.02851' /></svg>");
   background-repeat: no-repeat;
   background-position: right .5rem center;
   border: 2px solid var(--border-color);
@@ -214,11 +212,9 @@
 }
 
 .dark-mode .form-select {
-  // border: 2px solid color-mix(in oklab, var(--border-color), transparent 0%);
-  // background-color: color-mix(in oklab, var(--border-color), transparent 0%);
-
-  border: 2px solid var(--border-color);
+  border-color: color-mix(in oklab, var(--border-color), white 6%);
   background-color: var(--border-color);
+  background-image: url("data:image/svg+xml,<svg viewBox='0 0 12 7.333127' fill='none' version='1.1' id='svg1' width='12' height='7.333127' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'><defs id='defs1' /><path d='M 5.9999688,4.6669152 10.666843,0 12,1.3331162 5.9999688,7.3331268 0,1.3331162 1.3331264,0 Z' fill='%2322303e' fill-opacity='0.9' id='path1' style='fill:%23c5c5d3;fill-opacity:0.45;stroke-width:1.02851' /></svg>");
 }
 
 .form-select-sm {

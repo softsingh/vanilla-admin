@@ -49,19 +49,7 @@
   opacity: .45
 }
 
-.form-check-input[type=checkbox] {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='17' viewBox='0 0 15 14' fill='none'%3E%3Cpath d='M3.41667 7L6.33333 9.91667L12.1667 4.08333' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-}
-
-.form-check-input[type=radio] {
-  background-image: url('data:image/svg+xml,<svg viewBox="-4 -4 8 8" version="1.1" id="svg1" width="8" height="8" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs1" /><circle r="4" fill="%23ffffff" id="circle1" cx="2.220446e-16" cy="2.220446e-16" style="fill:%23ffffff;stroke-width:2.5" /></svg>');
-}
-
-.form-check-input[type=radio] {
-  border-radius: 50%;
-}
-
-.form-check-input:focus {
+.form-check-input:focus:not([readonly]) {
   outline: 0;
   border-color: var(--form-control-focus-border-color);
   box-shadow: 0 0.25rem 0.25rem 0.05rem color-mix(in oklch, var(--form-check-input-shadow-color), transparent 80%);
@@ -70,6 +58,27 @@
 .form-check-input:checked {
   background-color: var(--form-check-input-checked-bg-color);
   border-color: var(--form-check-input-checked-border-color);
+}
+
+.form-check-input[type=checkbox]:checked {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='17' viewBox='0 0 15 14' fill='none'%3E%3Cpath d='M3.41667 7L6.33333 9.91667L12.1667 4.08333' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.form-check-input[type=radio]:checked {
+  border-radius: 50%;
+  background-image: url('data:image/svg+xml,<svg viewBox="-4 -4 8 8" version="1.1" id="svg1" width="8" height="8" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs1" /><circle r="4" fill="%23ffffff" id="circle1" cx="2.220446e-16" cy="2.220446e-16" style="fill:%23ffffff;stroke-width:2.5" /></svg>');
+}
+
+.form-check-input[type=radio] {
+  border-radius: 50%;
+}
+
+.form-check-label {
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: color-mix(in oklab, var(--body-color), transparent 20%);
+  display: inline-block;
 }
 
 //////////////////// Form Check Colors ////////////////////
@@ -83,16 +92,10 @@
   }
 }
 
-.form-check-label {
-  cursor: pointer;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--secondary-color);
-  display: inline-block;
-}
+///////////////////////////////////////////////////////////
 
 .form-control {
-  --form-control-hover-shadow-color: hsla(239, 100%, 70%, 0.1);
+  --form-control-hover-shadow-color: var(--border-color);
   display: block;
   width: 100%;
   outline: 0;
@@ -100,9 +103,15 @@
   font-weight: 500;
   padding: 0.35rem 0.75rem;
   color: var(--body-color);
-  background: var(--white-color);
+  background-color: transparent;
   border: 2px solid var(--border-color);
   border-radius: var(--border-radius);
+}
+
+.dark-mode .form-control {
+  --form-control-hover-shadow-color: color-mix(in oklab, var(--border-color), transparent 90%);
+  border-color: color-mix(in oklab, var(--border-color), white 6%);
+  background-color: var(--border-color);
 }
 
 .form-control-sm {
@@ -117,15 +126,19 @@
 }
 
 .form-control:hover:not([disabled]):not([focus]) {
-  box-shadow: 0 0 0.25rem 0.05rem var(--form-control-hover-shadow-color);
+  box-shadow: 0 0 0.175rem var(--form-control-hover-shadow-color);
 }
 
 .form-control:focus:not([readonly]) {
   outline: 0;
   color: var(--body-color);
-  background: var(--white-color);
+  background-color: transparent;
   border: 2px solid var(--form-control-focus-border-color);
-  box-shadow: 0 0 0.25rem 0.05rem hsla(239, 100%, 70%, 0.1);
+  box-shadow: 0 0 0.175rem 0.05rem var(--form-control-hover-shadow-color);
+}
+
+.dark-mode .form-control:focus:not([readonly]) {
+  background-color: var(--border-color);
 }
 
 .form-control:focus.invalid {
@@ -134,9 +147,12 @@
 }
 
 .form-control::placeholder {
-  color: #b4bdc6;
+  color: color-mix(in oklch, black 10%, var(--border-color));
   font-weight: 450;
-  opacity: 1;
+}
+
+.dark-mode .form-control::placeholder {
+  color: color-mix(in oklch, white 40%, var(--border-color));
 }
 
 .form-control::placeholder,
@@ -154,8 +170,6 @@
   -webkit-transform: translateX(5px);
 }
 
-///////////////// Container class for invalid form text message /////////////////
-
 .form-invalid-message {
   width: 100%;
   font-size: 0.8rem;
@@ -167,25 +181,40 @@
 .form-label {
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--secondary-color);
+  color: color-mix(in oklab, var(--body-color), transparent 20%);
   display: inline-block;
+}
+
+.form-control:disabled,
+.form-control.disabled,
+.form-label:disabled,
+.form-label.disabled {
+  opacity: 0.45;
+  user-select: none;
+  pointer-events: none;
 }
 
 .form-select {
   display: block;
   width: 100%;
   outline: 0;
-  // font-size: 0.9rem;
+  font-size: 0.9rem;
   font-weight: 500;
   padding: 0.35rem 0.75rem;
   color: var(--body-color);
-  background: var(--white-color);
+  background-color: transparent;
   appearance: none; //hide default icon shown by browser
-  background-image: url("data:image/svg+xml,<svg viewBox='0 0 12 7.333127' fill='none' version='1.1' id='svg1' width='12' height='7.333127' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'><defs id='defs1' /><path d='M 5.9999688,4.6669152 10.666843,0 12,1.3331162 5.9999688,7.3331268 0,1.3331162 1.3331264,0 Z' fill='%2322303e' fill-opacity='0.9' id='path1' style='fill:%23738296;fill-opacity:0.8;stroke-width:1.02851' /></svg>");
+  background-image: url("data:image/svg+xml,<svg viewBox='0 0 12 7.333127' fill='none' version='1.1' id='svg1' width='12' height='7.333127' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'><defs id='defs1' /><path d='M 5.9999688,4.6669152 10.666843,0 12,1.3331162 5.9999688,7.3331268 0,1.3331162 1.3331264,0 Z' fill='%2322303e' fill-opacity='0.9' id='path1' style='fill:%233b3b54;fill-opacity:0.45;stroke-width:1.02851' /></svg>");
   background-repeat: no-repeat;
   background-position: right .5rem center;
   border: 2px solid var(--border-color);
   border-radius: var(--border-radius);
+}
+
+.dark-mode .form-select {
+  border-color: color-mix(in oklab, var(--border-color), white 6%);
+  background-color: var(--border-color);
+  background-image: url("data:image/svg+xml,<svg viewBox='0 0 12 7.333127' fill='none' version='1.1' id='svg1' width='12' height='7.333127' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'><defs id='defs1' /><path d='M 5.9999688,4.6669152 10.666843,0 12,1.3331162 5.9999688,7.3331268 0,1.3331162 1.3331264,0 Z' fill='%2322303e' fill-opacity='0.9' id='path1' style='fill:%23c5c5d3;fill-opacity:0.45;stroke-width:1.02851' /></svg>");
 }
 
 .form-select-sm {
@@ -214,10 +243,13 @@
 .search-close-wrapper .search-closer {
   position: absolute;
   display: none;
-  color: var(--secondary-light-20);
+  color: color-mix(in oklch, black 10%, var(--border-color));
   right: 0.25rem;
-  // font-size: 0.1rem;
-  // z-index: 1;
+  z-index: 1;
+}
+
+.dark-mode .search-close-wrapper .search-closer {
+  color: color-mix(in oklch, white 30%, var(--border-color));
 }
 
 .search-close-wrapper:hover .search-closer,
@@ -227,5 +259,9 @@
 }
 
 .search-close-wrapper .search-closer:hover {
-  color: var(--secondary-dark-20);
+  color: color-mix(in oklch, black 30%, var(--border-color));
+}
+
+.dark-mode .search-close-wrapper .search-closer:hover {
+  color: color-mix(in oklch, white 50%, var(--border-color));
 }

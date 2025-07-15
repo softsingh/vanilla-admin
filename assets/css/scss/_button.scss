@@ -39,9 +39,10 @@ button:not(:disabled),
   transform: translateY(-1px);
 }
 
+// Button
 @each $name, $value in $color-map {
   .btn-#{$name} {
-    color: var(--white-color);
+    color: #ffffff;
     background-color: var(--#{$name}-color);
     border-color: var(--#{$name}-color);
     box-shadow: 0 0.125rem 0.25rem 0 var(--#{$name}-shadow-color);
@@ -49,24 +50,60 @@ button:not(:disabled),
     &:hover,
     &:focus {
       outline: none;
-      color: var(--white-color);
+      color: #ffffff;
       background-color: var(--#{$name}-hover-color);
       border-color: var(--#{$name}-hover-color);
     }
   }
+
+  .dark-mode .btn-#{$name} {
+    box-shadow: none;
+
+    @if $name =='dark' {
+      border-color: var(--#{$name}-light-10);
+
+      &:hover,
+      &:focus {
+        background-color: color-mix(in oklab, var(--dark-color), white 3%);
+        border-color: color-mix(in oklab, var(--dark-color), white 3%);
+      }
+    }
+
+    @else {
+      border-color: var(--#{$name}-light-10);
+
+      &:hover,
+      &:focus {
+        border-color: var(--#{$name}-light-5);
+      }
+    }
+  }
 }
 
-// Button Label
+// Label Button
 @each $name, $value in $color-map {
   .btn-label-#{$name} {
-    border-color: none;
-    color: var(--#{$name}-dark-10);
-    background-color: var(--#{$name}-light-80);
+    // border-color: none;
+    color: var(--#{$name}-dark-20);
+    background-color: var(--#{$name}-light-70);
 
     &:hover,
     &:focus {
-      color: var(--white-color);
-      border-color: none;
+      color: #ffffff;
+      // border-color: none;
+      background-color: var(--#{$name}-color);
+    }
+  }
+
+  .dark-mode .btn-label-#{$name} {
+    color: var(--#{$name}-dark-20);
+    background-color: var(--#{$name}-light-60);
+    border-color: var(--#{$name}-light-50);
+
+    &:hover,
+    &:focus {
+      color: #ffffff;
+      border-color: var(--#{$name}-light-10);
       background-color: var(--#{$name}-color);
     }
   }
@@ -81,7 +118,7 @@ button:not(:disabled),
 
     &:hover,
     &:focus {
-      color: var(--white-color);
+      color: #ffffff;
       border-color: none;
       background-color: var(--#{$name}-color);
     }
@@ -94,7 +131,7 @@ button:not(:disabled),
   width: 1em;
   height: 1em;
   padding: 0.25em 0.25em;
-  color: var(--black-color);
+  color: #000000;
   background: transparent var(--btn-close-bg) center/1em auto no-repeat;
   border: 0;
   border-radius: 0.375rem;
@@ -102,7 +139,7 @@ button:not(:disabled),
 }
 
 .btn-close:hover {
-  color: var(--black-color);
+  color: #000000;
   text-decoration: none;
 }
 

@@ -11,7 +11,7 @@ Color Palettes
       <div class="card">
          <h5 class="px-5 pt-5">{{color|capitalize}} Color Palette</h5>
          <div class="card-body">
-            {% for i in range(95, 0, -5) %}
+            {% for i in range(100, 0, -1) %}
             <div class="row">
                <div class="col">
                   <p class="w-100">{{color}}-light-{{i}}</p>
@@ -29,7 +29,7 @@ Color Palettes
                   <div class="color-pelette-box bg-{{color}}"></div>
                </div>
             </div>
-            {% for i in range(5, 100, 5) %}
+            {% for i in range(1, 101, 1) %}
             <div class="row">
                <div class="col">
                   <p class="w-100">{{color}}-dark-{{i}}</p>
@@ -43,5 +43,22 @@ Color Palettes
       </div>
    </div>
    {% endfor %}
+   <div class="col-sm-12 col-md-6">
+      <div class="card">
+         <h5 class="px-5 pt-5">Black Color Palette</h5>
+         <div class="card-body">
+            {% for i in range(1, 101, 1) %}
+            <div class="row">
+               <div class="col">
+                  <p class="w-100">black-light-{{i}}</p>
+               </div>
+               <div class="col-3 col-md-5 col-lg-6">
+                  <div class="color-pelette-box bg-black-light-{{i}}"></div>
+               </div>
+            </div>
+            {% endfor %}
+         </div>
+      </div>
+   </div>
 </div>
 {% endblock content %}

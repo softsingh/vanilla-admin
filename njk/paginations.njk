@@ -1,153 +1,145 @@
 {% set file_name = "paginations" %}
 {% extends "_dash_base.njk" %}
 {% block title %}
-   Paginations
+Paginations
 {% endblock title %}
 {% block content %}
-   <div class="row g-6">
-      <div class="col-12 col-md-6">
-         <div class="card">
-            <div class="card-header pb-0">
-               <h5>Default</h5>
-            </div>
-            <div class="card-body">
-               <ul class="pagination">
-                  <li class="page-item disabled">
-                     <a href="#" class="page-link">
-                        <i class="bx bx-chevron-left bx-18px"></i>
-                     </a>
-                  </li>
-                  <li class="page-item active">
-                     <a href="#" class="page-link">1</a>
-                  </li>
-                  <li class="page-item">
-                     <a href="#" class="page-link">2</a>
-                  </li>
-                  <li class="page-item">
-                     <a href="#" class="page-link">3</a>
-                  </li>
-                  <li class="page-item">
-                     <a href="#" class="page-link">4</a>
-                  </li>
-                  <li class="page-item">
-                     <a href="#" class="page-link">5</a>
-                  </li>
-                  <li class="page-item">
-                     <a href="#" class="page-link">
-                        <i class="bx bx-chevron-right bx-18px"></i>
-                     </a>
-                  </li>
-               </ul>
-            </div>
-         </div>
-      </div>
-      <div class="col-12 col-md-6">
-         <div class="card">
-            <div class="card-header pb-0">
-               <h5>Center</h5>
-            </div>
-            <div class="card-body">
-               <ul class="pagination justify-content-center">
-                  <li class="page-item disabled">
-                     <a href="#" class="page-link">
-                        <i class="bx bx-chevron-left bx-18px"></i>
-                     </a>
-                  </li>
-                  <li class="page-item active">
-                     <a href="#" class="page-link">1</a>
-                  </li>
-                  <li class="page-item">
-                     <a href="#" class="page-link">2</a>
-                  </li>
-                  <li class="page-item">
-                     <a href="#" class="page-link">3</a>
-                  </li>
-                  <li class="page-item">
-                     <a href="#" class="page-link">4</a>
-                  </li>
-                  <li class="page-item">
-                     <a href="#" class="page-link">5</a>
-                  </li>
-                  <li class="page-item">
-                     <a href="#" class="page-link">
-                        <i class="bx bx-chevron-right bx-18px"></i>
-                     </a>
-                  </li>
-               </ul>
-            </div>
-         </div>
-      </div>
-      <div class="col-12 col-md-6">
-         <div class="card">
-            <div class="card-header pb-0">
-               <h5>End</h5>
-            </div>
-            <div class="card-body">
-               <ul class="pagination justify-content-end">
-                  <li class="page-item disabled">
-                     <a href="#" class="page-link">
-                        <i class="bx bx-chevron-left bx-18px"></i>
-                     </a>
-                  </li>
-                  <li class="page-item active">
-                     <a href="#" class="page-link">1</a>
-                  </li>
-                  <li class="page-item">
-                     <a href="#" class="page-link">2</a>
-                  </li>
-                  <li class="page-item">
-                     <a href="#" class="page-link">3</a>
-                  </li>
-                  <li class="page-item">
-                     <a href="#" class="page-link">4</a>
-                  </li>
-                  <li class="page-item">
-                     <a href="#" class="page-link">5</a>
-                  </li>
-                  <li class="page-item">
-                     <a href="#" class="page-link">
-                        <i class="bx bx-chevron-right bx-18px"></i>
-                     </a>
-                  </li>
-               </ul>
-            </div>
-         </div>
-      </div>
-      <div class="col-12 col-md-6">
-         <div class="card">
-            <div class="card-header pb-0">
-               <h5>Rounded Circle</h5>
-            </div>
-            <div class="card-body">
-               <ul class="pagination pagination-rounded-circle">
-                  <li class="page-item disabled">
-                     <a href="#" class="page-link">
-                        <i class="bx bx-chevron-left bx-18px"></i>
-                     </a>
-                  </li>
-                  <li class="page-item active">
-                     <a href="#" class="page-link">1</a>
-                  </li>
-                  <li class="page-item">
-                     <a href="#" class="page-link">2</a>
-                  </li>
-                  <li class="page-item">
-                     <a href="#" class="page-link">3</a>
-                  </li>
-                  <li class="page-item">
-                     <a href="#" class="page-link">4</a>
-                  </li>
-                  <li class="page-item">
-                     <a href="#" class="page-link">5</a>
-                  </li>
-                  <li class="page-item">
-                     <a href="#" class="page-link">
-                        <i class="bx bx-chevron-right bx-18px"></i>
-                     </a>
-                  </li>
-               </ul>
-            </div>
+<div class="row g-6">
+   <div class="col-12 col-md-6">
+      <div class="card">
+         <div class="card-body">
+            <h5 class="card-title mb-6">Default</h5>
+            <ul class="pagination">
+               <li class="page-item disabled">
+                  <a href="#" class="page-link">
+                     <i class="bx bx-chevron-left bx-18px"></i>
+                  </a>
+               </li>
+               <li class="page-item active">
+                  <a href="#" class="page-link">1</a>
+               </li>
+               <li class="page-item">
+                  <a href="#" class="page-link">2</a>
+               </li>
+               <li class="page-item">
+                  <a href="#" class="page-link">3</a>
+               </li>
+               <li class="page-item">
+                  <a href="#" class="page-link">4</a>
+               </li>
+               <li class="page-item">
+                  <a href="#" class="page-link">5</a>
+               </li>
+               <li class="page-item">
+                  <a href="#" class="page-link">
+                     <i class="bx bx-chevron-right bx-18px"></i>
+                  </a>
+               </li>
+            </ul>
          </div>
       </div>
    </div>
+   <div class="col-12 col-md-6">
+      <div class="card">
+         <div class="card-body">
+            <h5 class="card-title mb-6">Center</h5>
+            <ul class="pagination justify-content-center">
+               <li class="page-item disabled">
+                  <a href="#" class="page-link">
+                     <i class="bx bx-chevron-left bx-18px"></i>
+                  </a>
+               </li>
+               <li class="page-item active">
+                  <a href="#" class="page-link">1</a>
+               </li>
+               <li class="page-item">
+                  <a href="#" class="page-link">2</a>
+               </li>
+               <li class="page-item">
+                  <a href="#" class="page-link">3</a>
+               </li>
+               <li class="page-item">
+                  <a href="#" class="page-link">4</a>
+               </li>
+               <li class="page-item">
+                  <a href="#" class="page-link">5</a>
+               </li>
+               <li class="page-item">
+                  <a href="#" class="page-link">
+                     <i class="bx bx-chevron-right bx-18px"></i>
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   <div class="col-12 col-md-6">
+      <div class="card">
+         <div class="card-body">
+            <h5 class="card-title mb-6">End</h5>
+            <ul class="pagination justify-content-end">
+               <li class="page-item disabled">
+                  <a href="#" class="page-link">
+                     <i class="bx bx-chevron-left bx-18px"></i>
+                  </a>
+               </li>
+               <li class="page-item active">
+                  <a href="#" class="page-link">1</a>
+               </li>
+               <li class="page-item">
+                  <a href="#" class="page-link">2</a>
+               </li>
+               <li class="page-item">
+                  <a href="#" class="page-link">3</a>
+               </li>
+               <li class="page-item">
+                  <a href="#" class="page-link">4</a>
+               </li>
+               <li class="page-item">
+                  <a href="#" class="page-link">5</a>
+               </li>
+               <li class="page-item">
+                  <a href="#" class="page-link">
+                     <i class="bx bx-chevron-right bx-18px"></i>
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   <div class="col-12 col-md-6">
+      <div class="card">
+         <div class="card-body">
+            <h5 class="card-title mb-6">Rounded Circle</h5>
+            <ul class="pagination pagination-rounded-circle">
+               <li class="page-item disabled">
+                  <a href="#" class="page-link">
+                     <i class="bx bx-chevron-left bx-18px"></i>
+                  </a>
+               </li>
+               <li class="page-item active">
+                  <a href="#" class="page-link">1</a>
+               </li>
+               <li class="page-item">
+                  <a href="#" class="page-link">2</a>
+               </li>
+               <li class="page-item">
+                  <a href="#" class="page-link">3</a>
+               </li>
+               <li class="page-item">
+                  <a href="#" class="page-link">4</a>
+               </li>
+               <li class="page-item">
+                  <a href="#" class="page-link">5</a>
+               </li>
+               <li class="page-item">
+                  <a href="#" class="page-link">
+                     <i class="bx bx-chevron-right bx-18px"></i>
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</div>
 {% endblock content %}

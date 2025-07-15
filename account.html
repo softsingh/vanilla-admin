@@ -799,7 +799,7 @@
                      <img src="assets/img/Avatars/Dollar Gill.png" alt="user-avatar"
                         class="d-block rounded bg-primary-light-80" height="100px" id="uploadedAvatar">
                      <div>
-                        <label for="id_picture" class="btn btn-primary me-1 mb-4">
+                        <label for="id_picture" type="button" class="btn btn-primary me-1 mb-4">
                            <span class="d-none d-sm-block">Upload Photo</span>
                            <i class="bx bx-upload d-block d-sm-none"></i>
                            <input type="file" id="id_picture" class="" hidden accept="image/png, image/jpeg">
@@ -813,12 +813,12 @@
                   </div>
                </div>
                <div class="card-body pt-0">
-                  <form id="formAccountSettings" method="GET" onsubmit="return false">
-                     <div class="row g-6">
+                  <form onsubmit="return false">
+                     <div class="row g-5">
                         <div class="col-md-6">
                            <label for="fullName" class="form-label mb-2">Full Name</label>
-                           <input class="form-control" type="text" id="fullName" name="fullName" value="Dollar Gill"
-                              autofocus>
+                           <input class="form-control" type="text" placeholder="Enter Full Name" id="fullName"
+                              name="fullName" value="Dollar Gill" autofocus>
                         </div>
                         <div class="col-md-6">
                            <label for="emailAddress" class="form-label mb-2">Email Address</label>
@@ -895,7 +895,7 @@
                            deletion
                         </label>
                      </div>
-                     <button type="submit" class="btn btn-danger" disabled>Delete Account</button>
+                     <button type="submit" class="btn btn-danger">Delete Account</button>
                   </form>
                </div>
             </div>
@@ -911,7 +911,7 @@
                   top:50%;
                   left:50%;
                   transform:translate(-50%,-50%);
-                  background:white;
+                  background: var(--paper-bg);
                   padding:1rem;
                   max-width:95vw;
                   max-height:90vh;

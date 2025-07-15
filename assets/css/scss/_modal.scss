@@ -27,7 +27,8 @@
   z-index: var(--modal-backdrop-z-index);
   width: 100vw;
   height: 100vh;
-  background-color: var(--backdrop-dark-color);
+  background-color: var(--backdrop-color);
+  backdrop-filter: saturate(100%) blur(1px);
 }
 
 .modal-dialog {
@@ -51,8 +52,9 @@
   flex-direction: column;
   margin: 1.5rem auto 1.5rem auto;
   max-width: 600px;
-  background: var(--white-color);
+  background: var(--paper-bg);
   box-shadow: 0 0.2rem 1.5rem 1rem hsla(210, 30%, 20%, 0.1);
+  border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
 }
 

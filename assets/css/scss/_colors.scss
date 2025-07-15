@@ -22,59 +22,70 @@
   }
 
   @each $name, $value in $color-map {
-    @for $i from 19 through 1 {
-      $step: 5 * $i;
-      --#{$name}-light-#{$step}: color-mix(in oklch, white #{$step}%, var(--#{$name}-color));
+    @for $i from 100 through 1 {
+      --#{$name}-light-#{$i}: color-mix(in oklch, white #{$i}%, var(--#{$name}-color));
     }
 
-    @for $i from 1 through 19 {
-      $step: 5 * $i;
-      --#{$name}-dark-#{$step}: color-mix(in oklch, black #{$step}%, var(--#{$name}-color));
+    @for $i from 1 through 100 {
+      --#{$name}-dark-#{$i}: color-mix(in oklch, black #{$i}%, var(--#{$name}-color));
     }
+  }
+
+  @for $i from 1 through 100 {
+    --black-light-#{$i}: color-mix(in oklch, white #{$i}%, #000000);
   }
 }
 
 :root {
-  --white-color: #ffffff;
-  --black-color: #000000;
-  --light-white-color: hsl(0, 0%, 97%);
-  --light-gray-color: hsl(0, 0%, 90%);
-
-  --body-color: #3b4754;
+  --body-color: #3b3b54;
   --body-bg: hsl(240, 25%, 97%);
+  --backdrop-color: hsla(0, 0%, 11%, 0.7);
+  --paper-bg: #ffffff;
 
-  --paper-bg: #fff;
+  --border-color: color-mix(in oklch, white 75%, var(--body-color));
+  --form-control-focus-border-color: color-mix(in oklch, white 0%, var(--primary-color));
 
-  --border-color: #d9dee3;
-
-  --form-control-focus-border-color: color-mix(in srgb, var(--primary-color), transparent 10%);
-
-  --heading-color: hsl(210, 18%, 28%);
-  --heading-hover-color: hsl(210, 38%, 10%);
-  --heading-hover-bg-color: hsla(210, 29%, 19%, 0.06);
-
+  --heading-color: var(--body-color);
   --link-color: #6666ff;
   --link-hover-color: #5252ff;
 
+  --menu-color: var(--body-color);
+  --menu-hover-color: color-mix(in oklch, black 15%, var(--body-color));
+  --menu-hover-bg-color: color-mix(in oklch, var(--body-color), transparent 93%);
+  --menu-divider-color: color-mix(in oklch, white 80%, var(--body-color));
+
   --menu-sub-bg-color: hsl(215, 100%, 98%);
 
-  --scrollbar-color: hsl(240, 25%, 100%);
-  --scrollbar-hover-color: var(--black-color);
+  --scrollbar-color: color-mix(in oklch, var(--body-color), transparent 70%);
+  --scrollbar-hover-color: color-mix(in oklch, var(--body-color), transparent 50%);
 
-  --text-muted-color: hsl(212, 8%, 68%);
-
-  --backdrop-dark-color: rgba(27, 27, 27, 0.7);
+  // --text-muted-color: hsl(212, 8%, 68%);
+  // --text-muted-color: color-mix(in oklch, white 55%, var(--body-color));
+  --text-muted-color: color-mix(in hsl, var(--body-color) 60%, transparent);
 }
 
 /* Color variables for dark theme */
 
 .dark-mode {
-  --white-color: #171717;
-  --black-color: #d4d4d4;
+  --backdrop-color: hsla(240, 19%, 17%, 0.8);
+  // --body-color: hsl(240, 13%, 73%);
+  --body-color: #c5c5d3;
+  --body-bg: hsl(240, 19%, 17%);
+  --backdrop-color: hsla(0, 0%, 83%, 0.7);
 
-  --body-color: #b2b2c4;
-  --body-bg: #232333;
+  --paper-bg: color-mix(in oklch, white 6%, var(--body-bg));
 
-  --paper-bg: #2b2c40;
+  --border-color: color-mix(in oklch, white 15%, var(--paper-bg));
 
+  --heading-color: var(--body-color);
+
+  --menu-color: var(--body-color);
+  --menu-hover-color: color-mix(in oklch, white 50%, var(--body-color));
+  --menu-hover-bg-color: color-mix(in oklch, white 7%, var(--paper-bg));
+  --menu-divider-color: color-mix(in oklch, white 20%, var(--paper-bg));
+
+  --scrollbar-color: color-mix(in oklch, var(--body-color), transparent 70%);
+  --scrollbar-hover-color: color-mix(in oklch, var(--body-color), transparent 50%);
+
+  --text-muted-color: color-mix(in hsl, var(--body-color) 55%, transparent);
 }

@@ -2,17 +2,30 @@
 /*               Badge                 */
 /*-------------------------------------*/
 
+@import '_color_map.scss';
+
 .badge {
   display: inline-block;
   padding: 0.5em 0.75em;
   font-size: 0.8em;
   font-weight: 500;
   line-height: 1;
-  color: var(--white-color);
+  color: #ffffff;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
+  border: 1px solid transparent;
   border-radius: var(--border-radius);
+}
+
+@each $name, $value in $color-map {
+  .dark-mode .badge.bg-#{$name} {
+    border-color: var(--#{$name}-light-10);
+  }
+
+  .dark-mode .badge.bg-label-#{$name} {
+    border-color: var(--#{$name}-light-50);
+  }
 }
 
 .badge.badge-dot {
@@ -21,6 +34,13 @@
   padding: 0;
   width: 0.5rem;
   height: 0.5rem;
+  border: 1px solid transparent;
   border-radius: 50%;
   vertical-align: middle;
+}
+
+@each $name, $value in $color-map {
+  .dark-mode .badge.badge-dot.bg-#{$name} {
+    border-color: var(--#{$name}-light-10);
+  }
 }

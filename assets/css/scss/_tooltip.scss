@@ -4,9 +4,9 @@
 @import '_color_map.scss';
 
 .tooltip {
-    --tooltip-background-color: var(--black-color);
-    --tooltip-color: var(--white-color);
-    --tooltip-opacity: 0.8;
+    --tooltip-background-color: #000000;
+    --tooltip-color: #ffffff;
+    --tooltip-opacity: 0.85;
 
     position: absolute;
     z-index: 1070;
@@ -21,13 +21,25 @@
     }
 }
 
+.dark-mode .tooltip {
+    --tooltip-background-color: #ffffff;
+    --tooltip-color: #000000;
+    --tooltip-opacity: 0.9;
+}
+
 .tooltip-inner {
     max-width: 200px;
     padding: 0.25rem 0.5rem;
     color: var(--tooltip-color);
     text-align: center;
     background-color: var(--tooltip-background-color);
+    backdrop-filter: saturate(200%) blur(6px);
+    border: 1px solid transparent;
     border-radius: 0.25rem;
+}
+
+.dark-mode .tooltip-inner {
+    border-color: color-mix(in oklch, var(--tooltip-background-color), white 10%);
 }
 
 .tooltip-arrow {
@@ -109,7 +121,7 @@
 @each $name, $value in $color-map {
     .tooltip-#{$name} {
         --tooltip-background-color: var(--#{$name}-color) !important;
-        --tooltip-color: var(--white-color) !important;
+        --tooltip-color: #ffffff !important;
         --tooltip-opacity: 0.95;
     }
 }

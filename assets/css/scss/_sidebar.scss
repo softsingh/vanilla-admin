@@ -12,6 +12,12 @@
   background: var(--paper-bg);
   box-shadow: 0.2rem 0 0.5rem 0 hsla(210, 30%, 20%, 0.1);
   transition: 0.2s ease-in;
+  flex-shrink: 0.75;
+}
+
+.dark-mode .sidebar {
+  box-shadow: none;
+  border-right: 1px solid var(--border-color);
 }
 
 .sidebar .app-brand {
@@ -45,7 +51,7 @@ body.sidebar-hidden .sidebar .app-brand {
 }
 
 .sidebar .sidebar-toggle {
-  color: var(--white-color);
+  color: #ffffff;
   background-color: var(--primary-color);
   border-radius: 50%;
 }
@@ -88,7 +94,7 @@ body.sidebar-hidden .sidebar {
     width: 100%;
     height: 100%;
     z-index: var(--sidebar-backdrop-z-index);
-    background: var(--backdrop-dark-color);
+    background: var(--backdrop-color);
     transition: 0.2s ease;
   }
 

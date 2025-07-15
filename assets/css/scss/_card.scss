@@ -1,6 +1,7 @@
 /*-------------------------------------*/
 /*                Card                 */
 /*-------------------------------------*/
+@import '_color_map.scss';
 
 .card {
   --card-shadow-color: hsla(210, 30%, 20%, 0.1);
@@ -13,10 +14,25 @@
   border-radius: var(--border-radius);
 }
 
+.dark-mode .card {
+  --card-shadow-color: none;
+  border: 1px solid var(--border-color);
+}
+
+@each $name, $value in $color-map {
+  .dark-mode .card.bg-#{$name} {
+    border-color: var(--#{$name}-light-10);
+  }
+
+  .dark-mode .card.bg-label-#{$name} {
+    border-color: var(--#{$name}-light-50);
+  }
+}
+
 .card-body {
   padding: 1.5rem;
 }
 
-.card-header {
-  padding: 1.5rem;
+.card-title {
+  margin-bottom: 0.5rem;
 }

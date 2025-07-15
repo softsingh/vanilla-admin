@@ -4,7 +4,7 @@
 @import '_color_map.scss';
 
 .avatar {
-  --avatar-shadow-color: var(--white-color);
+  --avatar-shadow-color: #ffffff;
   position: relative;
   width: 2.375rem;
   height: 2.375rem;
@@ -51,7 +51,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--white-color);
+  color: #ffffff;
   background-color: #eeedf0;
   font-size: 0.9rem;
+  border: 1px solid transparent;
+}
+
+@each $name, $value in $color-map {
+  .dark-mode .avatar-initial.bg-#{$name} {
+    border-color: var(--#{$name}-light-10);
+  }
+
+  .dark-mode .avatar-initial.bg-label-#{$name} {
+    border-color: var(--#{$name}-light-50);
+  }
 }

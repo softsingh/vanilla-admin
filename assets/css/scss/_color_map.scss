@@ -8,7 +8,7 @@ $color-map: (
     "warning": hsl(40, 100%, 50%),
     "info": hsl(190, 100%, 50%),
     "light": hsl(210, 6%, 80%),
-    "dark": hsl(240, 20%, 20%),
+    "dark": hsl(240, 20%, 15%),
 );
 
 $color-hex-map: (
@@ -17,7 +17,7 @@ $color-hex-map: (
     "success": 83db57,
     "danger": ff3d1f,
     "warning": ffaa00,
-    "info": 00d5ff,
+    "info": "00d5ff",
     "light": c9cccf,
     "dark": 29293d,
 );

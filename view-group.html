@@ -9,7 +9,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>
 
-      Add Group
+      View Group
 
    </title>
    <link rel="stylesheet" href="assets/css/core.css">
@@ -760,113 +760,56 @@
 
             <div class="card">
                <div class="px-6 py-4">
-                  <h4 class="card-title mb-4">Add Group</h4>
-                  <form method="post">
-                     <div class="mb-4">
-                        <label class="form-label mb-2">Name</label>
-                        <input class="form-control" type="text" name="group" id="group" placeholder="Enter group name"
-                           required>
-                     </div>
-                     <div class="mb-4">
-                        <label class="form-label mb-2">Permissions</label>
-                        <div class="search-close-wrapper mb-1">
-                           <input type="search" placeholder="Search from Permissions" class="form-control search-input"
-                              id="seachFromPermissions">
-                           <i class="bx bx-x bx-sm search-closer cursor-pointer"
-                              onclick="document.getElementById('seachFromPermissions').value=''; document.getElementById('seachFromPermissions').focus();"></i>
+                  <h4 class="card-title mb-4">View Group</h4>
+                  <div class="mb-3">
+                     <label class="form-label mb-2">Name</label>
+                     <div class="filled-container">exam_staff</div>
+                  </div>
+                  <div class="mb-4">
+                     <label class="form-label mb-2">Permissions</label>
+                     <div class="filled-container scroll-y" style="max-height: 200px">
+                        <div class="mb-3">
+                           <strong class="d-block mb-1">Admin | Log Entry</strong>
+                           <ul class="mb-2 list-unstyled">
+                              <li>Can add log entry</li>
+                              <li>Can change log entry</li>
+                              <li>Can delete log entry</li>
+                              <li>Can view log entry</li>
+                           </ul>
                         </div>
-                        <div class="mb-4 scroll-y border rounded px-3 py-2" style="max-height: 200px;">
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-1">
-                              <label for="perm-1">Can View Profile</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-2">
-                              <label for="perm-1">Can Edit Profile</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-3">
-                              <label for="perm-1">Can Change Password</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-4">
-                              <label for="perm-1">Can Add User</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-5">
-                              <label for="perm-1">Can Remove User</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-6">
-                              <label for="perm-1">Can View Log Entry</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-7">
-                              <label for="perm-1">Can Add Log Entry</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-8">
-                              <label for="perm-1">Can Change Log Entry</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-9">
-                              <label for="perm-1">Can Delete Log Entry</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-10">
-                              <label for="perm-1">Can View Permission</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-11">
-                              <label for="perm-1">Can Add Permission</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-12">
-                              <label for="perm-1">Can Change Permission</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-13">
-                              <label for="perm-1">Can Delete Permission</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-14">
-                              <label for="perm-1">Can View Group</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-15">
-                              <label for="perm-1">Can Add Group</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-16">
-                              <label for="perm-1">Can Change Group</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-17">
-                              <label for="perm-1">Can Delete Group</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-18">
-                              <label for="perm-1">Can View Session</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-19">
-                              <label for="perm-1">Can Add Session</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-20">
-                              <label for="perm-1">Can Change Session</label>
-                           </div>
-                           <div class="form-check">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-21">
-                              <label for="perm-1">Can Delete Session</label>
-                           </div>
+                        <div class="mb-3">
+                           <strong class="d-block mb-1">Auth | Group</strong>
+                           <ul class="mb-2 list-unstyled">
+                              <li>Can add group</li>
+                              <li>Can change group</li>
+                              <li>Can delete group</li>
+                              <li>Can view group</li>
+                           </ul>
+                        </div>
+                        <div class="mb-3">
+                           <strong class="d-block mb-1">Auth | Permission</strong>
+                           <ul class="mb-2 list-unstyled">
+                              <li>Can add permission</li>
+                              <li>Can change permission</li>
+                              <li>Can delete permission</li>
+                              <li>Can view permission</li>
+                           </ul>
+                        </div>
+                        <div class="mb-3">
+                           <strong class="d-block mb-1">Common | Project Settings</strong>
+                           <ul class="mb-2 list-unstyled">
+                              <li>Can add project settings</li>
+                              <li>Can change project settings</li>
+                              <li>Can delete project settings</li>
+                           </ul>
                         </div>
                      </div>
-                     <div class="d-flex gap-1">
-                        <a href="/groups.html" class="btn btn-primary">Save</a>
-                        <a href="/groups.html" class="btn btn-secondary">Cancel</a>
-                     </div>
-                  </form>
+                  </div>
+                  <div class="d-flex justify-content-start gap-1">
+                     <a href="/edit-group.html" class="btn btn-primary">Edit Group</a>
+                     <a href="/group-list.html" class="btn btn-secondary">Cancel</a>
+                  </div>
+
                </div>
             </div>
 

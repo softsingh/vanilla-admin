@@ -18,7 +18,6 @@ Live Preview: [Vanilla Admin](https://softsingh.github.io/vanilla-admin/)
 - Form Elements - Advance
 - Form Layouts
 - Tables
-- Dark Mode
 - Graphs & Charts
 
 ## Known Issues

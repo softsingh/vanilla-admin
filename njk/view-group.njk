@@ -1,0 +1,61 @@
+{% set file_name = "view-group" %}
+{% extends "_dash_base.njk" %}
+{% block title %}
+View Group
+{% endblock title %}
+{% block content %}
+<div class="card">
+   <div class="px-6 py-4">
+      <h4 class="card-title mb-4">View Group</h4>
+      <div class="mb-3">
+         <label class="form-label mb-2">Name</label>
+         <div class="filled-container">exam_staff</div>
+      </div>
+      <div class="mb-4">
+         <label class="form-label mb-2">Permissions</label>
+         <div class="filled-container scroll-y" style="max-height: 200px">
+            <div class="mb-3">
+               <strong class="d-block mb-1">User</strong>
+               <ul class="mb-2 list-unstyled">
+                  <li>Can View Profile</li>
+                  <li>Can Edit Profile</li>
+                  <li>Can Change Passsword</li>
+               </ul>
+            </div>
+            <div class="mb-3">
+               <strong class="d-block mb-1">Auth | Group</strong>
+               <ul class="mb-2 list-unstyled">
+                  <li>Can View Group</li>
+                  <li>Can Change Group</li>
+               </ul>
+            </div>
+            <div class="mb-3">
+               <strong class="d-block mb-1">Auth | Permission</strong>
+               <ul class="mb-2 list-unstyled">
+                  <li>Can View Permission</li>
+                  <li>Can Change Permission</li>
+               </ul>
+            </div>
+            <div class="mb-3">
+               <strong class="d-block mb-1">Session</strong>
+               <ul class="mb-2 list-unstyled">
+                  <li>Can View Session</li>
+               </ul>
+            </div>
+            <div class="mb-3">
+               <strong class="d-block mb-1">Admin | Log Entry</strong>
+               <ul class="mb-2 list-unstyled">
+                  <li>Can view log entry</li>
+                  <li>Can add log entry</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="d-flex justify-content-start gap-1">
+         <a href="/edit-group.html" class="btn btn-primary">Edit Group</a>
+         <a href="/group-list.html" class="btn btn-secondary">Cancel</a>
+      </div>
+
+   </div>
+</div>
+{% endblock content %}

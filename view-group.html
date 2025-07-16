@@ -9,7 +9,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>
 
-      Dropdowns
+      View Group
 
    </title>
    <link rel="stylesheet" href="assets/css/core.css">
@@ -133,7 +133,7 @@
                   </div>
                </div>
             </div>
-            <div class="menu-item ">
+            <div class="menu-item active open">
                <a href="#" class="menu-link menu-toggle">
                   <i class="bx bx-grid-alt fs-6"></i>
                   <span>Groups</span>
@@ -149,7 +149,7 @@
                         <span>Add Group</span>
                      </a>
                   </div>
-                  <div class="menu-item ">
+                  <div class="menu-item active">
                      <a href="view-group.html" class="menu-link">
                         <span>View Group</span>
                      </a>
@@ -192,7 +192,7 @@
             <div class="menu-header">
                <small class="menu-header-text">Components</small>
             </div>
-            <div class="menu-item active open">
+            <div class="menu-item ">
                <a href="#" class="menu-link menu-toggle">
                   <i class="bx bx-rectangle fs-6"></i>
                   <span>Simple</span>
@@ -238,7 +238,7 @@
                         <span>Containers</span>
                      </a>
                   </div>
-                  <div class="menu-item active">
+                  <div class="menu-item ">
                      <a href="dropdowns.html" class="menu-link">
                         <span>Dropdowns</span>
                      </a>
@@ -768,210 +768,58 @@
          </nav>
          <div class="dash-content">
 
-            <div class="row g-6">
-               <div class="col-12 col-md-6">
-                  <div class="card">
-                     <div class="card-body">
-                        <h5 class="card-title mb-6">Dropdowns</h5>
-                        <div class="d-flex gap-2">
-                           <div class="dropdown">
-                              <button class="btn btn-primary dropdown-toggle">Simple</button>
-                              <div class="dropdown-menu">
-                                 <div class="px-6 pt-2 pb-3 mb-1">Header</div>
-                                 <div class="dropdown-divider"></div>
-                                 <div class="dropdown-item">First Item</div>
-                                 <div class="dropdown-item">Second Item</div>
-                                 <div class="dropdown-item">Third Item</div>
-                              </div>
-                           </div>
-                           <div class="dropdown">
-                              <button class="btn btn-primary dropdown-toggle">With Icons</button>
-                              <div class="dropdown-menu dropdown-menu-end">
-                                 <a href="#" class="dropdown-item">
-                                    <div class="d-flex align-items-center gap-3">
-                                       <i class="bx bx-list-ul fs-5"></i>
-                                       <span>Overview</span>
-                                    </div>
-                                 </a>
-                                 <div class="dropdown-divider"></div>
-                                 <a href="#" class="dropdown-item">
-                                    <div class="d-flex align-items-center gap-3">
-                                       <i class="bx bx-user fs-5"></i>
-                                       <span>Profile</span>
-                                    </div>
-                                 </a>
-                                 <a href="#" class="dropdown-item">
-                                    <div class="d-flex align-items-center gap-3">
-                                       <i class="bx bx-cog fs-5"></i>
-                                       <span>Settings</span>
-                                    </div>
-                                 </a>
-                                 <div class="dropdown-divider"></div>
-                                 <a href="#" class="dropdown-item">
-                                    <div class="d-flex align-items-center gap-3">
-                                       <i class="bx bx-power-off fs-5"></i>
-                                       <span>Logout</span>
-                                    </div>
-                                 </a>
-                              </div>
-                           </div>
-                           <div class="dropdown">
-                              <button class="btn btn-primary dropdown-toggle">Scrollable</button>
-                              <div class="dropdown-menu dropdown-menu-end" id="dropdown-menu-scroll-demo">
-                                 <div class="dropdown-header">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                       <h6 class="fs-4">Notifications</h6>
-                                       <span class="badge bg-label-primary">10 New</span>
-                                    </div>
-                                 </div>
-                                 <div class="dropdown-divider"></div>
-                                 <div class="dropdown-scroll-container">
-                                    <div class="dropdown-item border-bottom">
-                                       <div class="d-flex">
-                                          <div class="flex-shrink-0 me-4">
-                                             <div class="avatar">
-                                                <img class="rounded-circle bg-primary-light-80"
-                                                   src="assets/img/Avatars/Lalina.png" alt="Avatar" width="40px">
-                                             </div>
-                                          </div>
-                                          <div class="overflow-hidden flex-grow-1">
-                                             <small class="fw-semibold mb-0">New Message</small>
-                                             <small class="d-block mb-1">This is to bring to your attention that
-                                                something very bad
-                                                is
-                                                going to happen to me in the night
-                                             </small>
-                                             <small class="text-muted">2 Min ago</small>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="dropdown-item border-bottom">
-                                       <div class="d-flex">
-                                          <div class="flex-shrink-0 me-4">
-                                             <div class="avatar">
-                                                <img class="rounded-circle bg-primary-light-80"
-                                                   src="assets/img/Avatars/Andrew Altman.png" alt="Avatar" width="40px">
-                                             </div>
-                                          </div>
-                                          <div class="overflow-hidden flex-grow-1">
-                                             <small class="fw-semibold mb-0">Hello</small>
-                                             <small class="d-block mb-1">Hello there, whats up dear</small>
-                                             <small class="text-muted">10 min ago</small>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="dropdown-item border-bottom">
-                                       <div class="d-flex">
-                                          <div class="flex-shrink-0 me-4">
-                                             <div class="avatar">
-                                                <span class="avatar-initial rounded-circle bg-label-danger">NR</span>
-                                             </div>
-                                          </div>
-                                          <div class="overflow-hidden flex-grow-1">
-                                             <small class="fw-semibold mb-0">Nathu Ram</small>
-                                             <small class="d-block mb-1">Nathu Ram has sent a follow request</small>
-                                             <small class="text-muted">30 min ago</small>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="dropdown-item border-bottom">
-                                       <div class="d-flex">
-                                          <div class="flex-shrink-0 me-4">
-                                             <div class="avatar">
-                                                <img class="rounded-circle bg-primary-light-80"
-                                                   src="assets/img/Avatars/Dollar Gill.png" alt="Avatar" width="40px">
-                                             </div>
-                                          </div>
-                                          <div class="overflow-hidden flex-grow-1">
-                                             <small class="fw-semibold mb-0">Dollar Gill</small>
-                                             <small class="d-block mb-1">You have a new message from Dollar Gill</small>
-                                             <small class="text-muted">45 min ago</small>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="dropdown-item border-bottom">
-                                       <div class="d-flex">
-                                          <div class="flex-shrink-0 me-4">
-                                             <div class="avatar">
-                                                <span class="avatar-initial rounded-circle bg-label-warning"><i
-                                                      class="bx bx-bell fs-5"></i></span>
-                                             </div>
-                                          </div>
-                                          <div class="overflow-hidden flex-grow-1">
-                                             <small class="fw-semibold mb-0">Reminders</small>
-                                             <small class="d-block mb-1">There are some urgent reminders which need your
-                                                immediate
-                                                attention</small>
-                                             <small class="text-muted">1 hr ago</small>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="dropdown-item border-bottom">
-                                       <div class="d-flex">
-                                          <div class="flex-shrink-0 me-4">
-                                             <div class="avatar">
-                                                <img class="rounded-circle bg-primary-light-80"
-                                                   src="assets/img/Avatars/Hargun Chahal.png" alt="Avatar" width="40px">
-                                             </div>
-                                          </div>
-                                          <div class="overflow-hidden flex-grow-1">
-                                             <small class="fw-semibold mb-0">Request approved</small>
-                                             <small class="d-block mb-1">Your request to add new resourced has been
-                                                approved by
-                                                Hargun Chahal</small>
-                                             <small class="text-muted">2 hr ago</small>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="dropdown-item border-bottom">
-                                       <div class="d-flex">
-                                          <div class="flex-shrink-0 me-4">
-                                             <div class="avatar">
-                                                <img class="rounded-circle bg-primary-light-80"
-                                                   src="assets/img/Avatars/Harinder Singh.png" alt="Avatar"
-                                                   width="40px">
-                                             </div>
-                                          </div>
-                                          <div class="overflow-hidden flex-grow-1">
-                                             <small class="fw-semibold mb-0">Harinder Singh</small>
-                                             <small class="d-block mb-1">Invitation to participate in this year's annual
-                                                day
-                                                celebration</small>
-                                             <small class="text-muted">3 hr ago</small>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="dropdown-item border-bottom">
-                                       <div class="d-flex">
-                                          <div class="flex-shrink-0 me-4">
-                                             <div class="avatar">
-                                                <img class="rounded-circle bg-primary-light-80"
-                                                   src="assets/img/Avatars/Ruby Bajwa.png" alt="Avatar" width="40px">
-                                             </div>
-                                          </div>
-                                          <div class="overflow-hidden flex-grow-1">
-                                             <small class="fw-semibold mb-0">Ruby Bajwa</small>
-                                             <small class="d-block mb-1">You have a new message from Ruby Bajwa</small>
-                                             <small class="text-muted">2 days ago</small>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="dropdown-footer">
-                                    <div class="row g-2">
-                                       <div class="col-12">
-                                          <button class="btn btn-secondary w-100">Mark All as Read</button>
-                                       </div>
-                                       <div class="col-12">
-                                          <button class="btn btn-primary w-100">View All</button>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
+            <div class="card">
+               <div class="px-6 py-4">
+                  <h4 class="card-title mb-4">View Group</h4>
+                  <div class="mb-3">
+                     <label class="form-label mb-2">Name</label>
+                     <div class="filled-container">exam_staff</div>
+                  </div>
+                  <div class="mb-4">
+                     <label class="form-label mb-2">Permissions</label>
+                     <div class="filled-container scroll-y" style="max-height: 200px">
+                        <div class="mb-3">
+                           <strong class="d-block mb-1">User</strong>
+                           <ul class="mb-2 list-unstyled">
+                              <li>Can View Profile</li>
+                              <li>Can Edit Profile</li>
+                              <li>Can Change Passsword</li>
+                           </ul>
+                        </div>
+                        <div class="mb-3">
+                           <strong class="d-block mb-1">Auth | Group</strong>
+                           <ul class="mb-2 list-unstyled">
+                              <li>Can View Group</li>
+                              <li>Can Change Group</li>
+                           </ul>
+                        </div>
+                        <div class="mb-3">
+                           <strong class="d-block mb-1">Auth | Permission</strong>
+                           <ul class="mb-2 list-unstyled">
+                              <li>Can View Permission</li>
+                              <li>Can Change Permission</li>
+                           </ul>
+                        </div>
+                        <div class="mb-3">
+                           <strong class="d-block mb-1">Session</strong>
+                           <ul class="mb-2 list-unstyled">
+                              <li>Can View Session</li>
+                           </ul>
+                        </div>
+                        <div class="mb-3">
+                           <strong class="d-block mb-1">Admin | Log Entry</strong>
+                           <ul class="mb-2 list-unstyled">
+                              <li>Can view log entry</li>
+                              <li>Can add log entry</li>
+                           </ul>
                         </div>
                      </div>
                   </div>
+                  <div class="d-flex justify-content-start gap-1">
+                     <a href="/edit-group.html" class="btn btn-primary">Edit Group</a>
+                     <a href="/group-list.html" class="btn btn-secondary">Cancel</a>
+                  </div>
+
                </div>
             </div>
 

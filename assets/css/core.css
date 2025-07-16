@@ -14191,23 +14191,23 @@ small,
 /*               Scroll                */
 /*-------------------------------------*/
 .scroll-x {
-  overflow-x: scroll;
+  overflow-x: auto;
   scrollbar-width: thin;
 }
 
 .scroll-x-transparent {
-  overflow-x: scroll;
+  overflow-x: auto;
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
 }
 
 .scroll-y {
-  overflow-y: scroll;
+  overflow-y: auto;
   scrollbar-width: thin;
 }
 
 .scroll-y-transparent {
-  overflow-y: scroll;
+  overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
 }

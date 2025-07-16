@@ -112,7 +112,8 @@
                 </div>
             </div>
         </div>
-        <div class="menu-item {% if file_name in ['group-list', 'add-group'] %}active open{% endif %}">
+        <div
+            class="menu-item {% if file_name in ['group-list', 'add-group', 'view-group', 'edit-group'] %}active open{% endif %}">
             <a href="#" class="menu-link menu-toggle">
                 <i class="bx bx-grid-alt fs-6"></i>
                 <span>Groups</span>
@@ -126,6 +127,16 @@
                 <div class="menu-item {% if file_name == 'add-group' %}active{% endif %}">
                     <a href="add-group.html" class="menu-link">
                         <span>Add Group</span>
+                    </a>
+                </div>
+                <div class="menu-item {% if file_name == 'view-group' %}active{% endif %}">
+                    <a href="view-group.html" class="menu-link">
+                        <span>View Group</span>
+                    </a>
+                </div>
+                <div class="menu-item {% if file_name == 'edit-group' %}active{% endif %}">
+                    <a href="edit-group.html" class="menu-link">
+                        <span>Edit Group</span>
                     </a>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-{% set file_name = "add-group" %}
+{% set file_name = "view-group" %}
 {% extends "_dash_base.njk" %}
 {% block title %}
 View Group
@@ -15,38 +15,38 @@ View Group
          <label class="form-label mb-2">Permissions</label>
          <div class="filled-container scroll-y" style="max-height: 200px">
             <div class="mb-3">
-               <strong class="d-block mb-1">Admin | Log Entry</strong>
+               <strong class="d-block mb-1">User</strong>
                <ul class="mb-2 list-unstyled">
-                  <li>Can add log entry</li>
-                  <li>Can change log entry</li>
-                  <li>Can delete log entry</li>
-                  <li>Can view log entry</li>
+                  <li>Can View Profile</li>
+                  <li>Can Edit Profile</li>
+                  <li>Can Change Passsword</li>
                </ul>
             </div>
             <div class="mb-3">
                <strong class="d-block mb-1">Auth | Group</strong>
                <ul class="mb-2 list-unstyled">
-                  <li>Can add group</li>
-                  <li>Can change group</li>
-                  <li>Can delete group</li>
-                  <li>Can view group</li>
+                  <li>Can View Group</li>
+                  <li>Can Change Group</li>
                </ul>
             </div>
             <div class="mb-3">
                <strong class="d-block mb-1">Auth | Permission</strong>
                <ul class="mb-2 list-unstyled">
-                  <li>Can add permission</li>
-                  <li>Can change permission</li>
-                  <li>Can delete permission</li>
-                  <li>Can view permission</li>
+                  <li>Can View Permission</li>
+                  <li>Can Change Permission</li>
                </ul>
             </div>
             <div class="mb-3">
-               <strong class="d-block mb-1">Common | Project Settings</strong>
+               <strong class="d-block mb-1">Session</strong>
                <ul class="mb-2 list-unstyled">
-                  <li>Can add project settings</li>
-                  <li>Can change project settings</li>
-                  <li>Can delete project settings</li>
+                  <li>Can View Session</li>
+               </ul>
+            </div>
+            <div class="mb-3">
+               <strong class="d-block mb-1">Admin | Log Entry</strong>
+               <ul class="mb-2 list-unstyled">
+                  <li>Can view log entry</li>
+                  <li>Can add log entry</li>
                </ul>
             </div>
          </div>

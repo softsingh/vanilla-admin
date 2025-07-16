@@ -115,4 +115,28 @@ userListDelToggles.forEach((delToggle) =>
   })
 );
 
+//////////////////// Group List (Dashboard) ////////////////////
 
+// Delete Group List Item
+const groupListDelToggles = document.querySelectorAll(
+  '[type="tgl-group-list-del"]'
+);
+
+groupListDelToggles.forEach((delToggle) =>
+  delToggle.addEventListener('click', (event) => {
+    modalConfirm('Are you sure to delete the group?', {
+      iconType: bxIconEnum.DANGER,
+      headingText: 'Delete',
+      button1Text: 'Yes',
+      button2Text: 'No',
+    }).then((ret) => {
+      if (ret === 1) {
+        const tableRow = delToggle.closest('tr');
+        tableRow.parentNode.removeChild(tableRow);
+      }
+      else {
+        return;
+      }
+    });
+  })
+);

@@ -144,14 +144,14 @@
                         <span>List</span>
                      </a>
                   </div>
-                  <div class="menu-item active">
-                     <a href="add-group.html" class="menu-link">
-                        <span>Add Group</span>
-                     </a>
-                  </div>
                   <div class="menu-item ">
                      <a href="view-group.html" class="menu-link">
                         <span>View Group</span>
+                     </a>
+                  </div>
+                  <div class="menu-item active">
+                     <a href="add-group.html" class="menu-link">
+                        <span>Add Group</span>
                      </a>
                   </div>
                   <div class="menu-item ">
@@ -782,99 +782,113 @@
                         <div class="search-close-wrapper mb-1">
                            <input type="search" placeholder="Search from Permissions" class="form-control search-input"
                               id="seachFromPermissions">
-                           <i class="bx bx-x bx-sm search-closer cursor-pointer"
-                              onclick="document.getElementById('seachFromPermissions').value=''; document.getElementById('seachFromPermissions').focus();"></i>
+                           <i class="bx bx-x bx-sm search-closer cursor-pointer" onclick=onSearchClose()></i>
                         </div>
-                        <div class="mb-4 scroll-y border rounded px-3 py-2" style="max-height: 200px;">
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-1">
-                              <label for="perm-1">Can View Profile</label>
+                        <div class="bordered-container scroll-y mb-4" style="max-height: 200px; min-height: 70px;">
+                           <div class="permission-group">
+                              <h6 class="fw-bold mb-1">User | Profile</h6>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions" id="perm-1">
+                                 <label class="form-check-label" for="perm-1">Can View Profile</label>
+                              </div>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions" id="perm-2">
+                                 <label class="form-check-label" for="perm-1">Can Edit Profile</label>
+                              </div>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions" id="perm-3">
+                                 <label class="form-check-label" for="perm-1">Can Change Password</label>
+                              </div>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions" id="perm-4">
+                                 <label class="form-check-label" for="perm-1">Can Add User</label>
+                              </div>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions" id="perm-5">
+                                 <label class="form-check-label" for="perm-1">Can Remove User</label>
+                              </div>
                            </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-2">
-                              <label for="perm-1">Can Edit Profile</label>
+                           <div class="permission-group">
+                              <h6 class="fw-bold mb-1 mt-3">Auth | Group</h6>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions" id="perm-14">
+                                 <label class="form-check-label" for="perm-1">Can View Group</label>
+                              </div>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions" id="perm-15">
+                                 <label class="form-check-label" for="perm-1">Can Add Group</label>
+                              </div>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions" id="perm-16">
+                                 <label class="form-check-label" for="perm-1">Can Change Group</label>
+                              </div>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions" id="perm-17">
+                                 <label class="form-check-label" for="perm-1">Can Delete Group</label>
+                              </div>
                            </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-3">
-                              <label for="perm-1">Can Change Password</label>
+                           <div class="permission-group">
+                              <h6 class="fw-bold mb-1 mt-3">Auth | Permission</h6>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions" id="perm-10">
+                                 <label class="form-check-label" for="perm-1">Can View Permission</label>
+                              </div>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions" id="perm-11">
+                                 <label class="form-check-label" for="perm-1">Can Add Permission</label>
+                              </div>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions" id="perm-12">
+                                 <label class="form-check-label" for="perm-1">Can Change Permission</label>
+                              </div>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions" id="perm-13">
+                                 <label class="form-check-label" for="perm-1">Can Delete Permission</label>
+                              </div>
                            </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-4">
-                              <label for="perm-1">Can Add User</label>
+                           <div class="permission-group">
+                              <h6 class="fw-bold mb-1 mt-3">Sessions | Session</h6>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions" id="perm-18">
+                                 <label class="form-check-label" for="perm-1">Can View Session</label>
+                              </div>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions" id="perm-19">
+                                 <label class="form-check-label" for="perm-1">Can Add Session</label>
+                              </div>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions" id="perm-20">
+                                 <label class="form-check-label" for="perm-1">Can Change Session</label>
+                              </div>
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" name="permissions" id="perm-21">
+                                 <label class="form-check-label" for="perm-1">Can Delete Session</label>
+                              </div>
                            </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-5">
-                              <label for="perm-1">Can Remove User</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-6">
-                              <label for="perm-1">Can View Log Entry</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-7">
-                              <label for="perm-1">Can Add Log Entry</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-8">
-                              <label for="perm-1">Can Change Log Entry</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-9">
-                              <label for="perm-1">Can Delete Log Entry</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-10">
-                              <label for="perm-1">Can View Permission</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-11">
-                              <label for="perm-1">Can Add Permission</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-12">
-                              <label for="perm-1">Can Change Permission</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-13">
-                              <label for="perm-1">Can Delete Permission</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-14">
-                              <label for="perm-1">Can View Group</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-15">
-                              <label for="perm-1">Can Add Group</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-16">
-                              <label for="perm-1">Can Change Group</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-17">
-                              <label for="perm-1">Can Delete Group</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-18">
-                              <label for="perm-1">Can View Session</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-19">
-                              <label for="perm-1">Can Add Session</label>
-                           </div>
-                           <div class="form-check mb-1">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-20">
-                              <label for="perm-1">Can Change Session</label>
-                           </div>
-                           <div class="form-check">
-                              <input class="form-check-input" type="checkbox" name="permissions" id="perm-21">
-                              <label for="perm-1">Can Delete Session</label>
+                           <div class="permission-group">
+                              <h6 class="fw-bold mb-1 mt-3">Admin | Log Entry</h6>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions" id="perm-6">
+                                 <label class="form-check-label" for="perm-1">Can View Log Entry</label>
+                              </div>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions" id="perm-7">
+                                 <label class="form-check-label" for="perm-1">Can Add Log Entry</label>
+                              </div>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions" id="perm-8">
+                                 <label class="form-check-label" for="perm-1">Can Change Log Entry</label>
+                              </div>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions" id="perm-9">
+                                 <label class="form-check-label" for="perm-1">Can Delete Log Entry</label>
+                              </div>
                            </div>
                         </div>
                      </div>
                      <div class="d-flex gap-1">
-                        <a href="/groups.html" class="btn btn-primary">Save</a>
-                        <a href="/groups.html" class="btn btn-secondary">Cancel</a>
+                        <a href="group-list.html" class="btn btn-primary">Save</a>
+                        <a href="group-list.html" class="btn btn-secondary">Cancel</a>
                      </div>
                   </form>
                </div>
@@ -887,6 +901,51 @@
    <script src="assets/js/script.js"></script>
    <script src="assets/js/command-palette.js" data-json="assets/data/site-map.json"></script>
 
+   <script>
+      const seachFromPermissions = document.getElementById('seachFromPermissions');
+
+      seachFromPermissions.addEventListener('keydown', function(event) {
+         if (event.key === 'Escape') {
+            onSearchClose();
+         }
+      });
+
+      seachFromPermissions.addEventListener('input', function() {
+         const searchTerm = this.value.toLowerCase();
+         const permissionGroups = document.querySelectorAll('.permission-group');
+
+         permissionGroups.forEach(group => {
+            const permissions = group.querySelectorAll('.form-check');
+            let hasVisiblePermissions = false;
+
+            permissions.forEach(permission => {
+               const label = permission.querySelector('.form-check-label').textContent.toLowerCase();
+               if (label.includes(searchTerm)) {
+                  permission.style.display = '';
+                  hasVisiblePermissions = true;
+               } else {
+                  permission.style.display = 'none';
+               }
+            });
+
+            group.style.display = hasVisiblePermissions ? '' : 'none';
+         });
+      });
+
+      function onSearchClose() {
+         document.getElementById('seachFromPermissions').value = '';
+         document.getElementById('seachFromPermissions').focus();
+         const permissionGroups = document.querySelectorAll('.permission-group');
+
+         permissionGroups.forEach(group => {
+            const permissions = group.querySelectorAll('.form-check');
+            permissions.forEach(permission => {
+               permission.style.display = '';
+            });
+            group.style.display = '';
+         });
+      }
+   </script>
 
 </body>
 

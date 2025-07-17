@@ -1764,9 +1764,9 @@
 }
 
 :root {
-  --body-color: #3b3b54;
-  --body-bg: hsl(240, 25%, 97%);
   --backdrop-color: hsla(0, 0%, 11%, 0.7);
+  --body-color: hsl(240, 17%, 28%);
+  --body-bg: hsl(240, 25%, 97%);
   --paper-bg: #ffffff;
   --border-color: color-mix(in oklch, white 75%, var(--body-color));
   --form-control-focus-border-color: color-mix(in oklch, white 0%, var(--primary-color));
@@ -1785,10 +1785,9 @@
 
 /* Color variables for dark theme */
 .dark-mode {
-  --backdrop-color: hsla(240, 19%, 17%, 0.8);
-  --body-color: #c5c5d3;
-  --body-bg: hsl(240, 19%, 17%);
   --backdrop-color: hsla(0, 0%, 83%, 0.7);
+  --body-color: hsl(240, 14%, 80%);
+  --body-bg: hsl(240, 20%, 18%);
   --paper-bg: color-mix(in oklch, white 6%, var(--body-bg));
   --border-color: color-mix(in oklch, white 15%, var(--paper-bg));
   --heading-color: var(--body-color);

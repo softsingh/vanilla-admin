@@ -48,19 +48,19 @@
 .bordered-container {
   background-color: transparent;
   color: var(--body-color);
-  border: 1px solid var(--border-color);
+  border: 2px solid var(--border-color);
   border-radius: var(--border-radius);
   padding: 0.35rem .75rem;
 }
 
 @each $name, $value in $color-map {
   .bordered-container-#{$name} {
-    border: 1px solid var(--#{$name}-light-10);
+    border-color: var(--#{$name}-light-10);
     color: var(--body-color);
   }
 
   .dark-mode .bordered-container-#{$name} {
-    border: 1px solid var(--#{$name}-dark-10);
+    border-color: var(--#{$name}-dark-10);
     color: var(--body-color);
   }
 }
@@ -76,22 +76,18 @@
 .dark-mode .filled-container {
   background-color: color-mix(in oklab, var(--border-color), transparent 85%);
   color: var(--body-color);
-  border: 1px solid var(--border-color);
+  border-color: var(--border-color);
 }
 
 @each $name, $value in $color-map {
   .filled-container-#{$name} {
-    border: 1px solid var(--#{$name}-light-50);
-    // background-color: var(--#{$name}-light-90);
-    // color: var(--#{$name}-color);
+    border-color: var(--#{$name}-light-50);
     color: var(--#{$name}-dark-20);
     background-color: var(--#{$name}-light-70);
   }
 
   .dark-mode .filled-container-#{$name} {
-    border: 1px solid var(--#{$name}-light-30);
-    // background-color: var(--#{$name}-dark-20);
-    // color: #ffffff;
+    border-color: var(--#{$name}-light-30);
     color: var(--#{$name}-dark-20);
     background-color: var(--#{$name}-light-60);
   }

@@ -3002,88 +3002,88 @@ button:not(:disabled),
 .bordered-container {
   background-color: transparent;
   color: var(--body-color);
-  border: 1px solid var(--border-color);
+  border: 2px solid var(--border-color);
   border-radius: var(--border-radius);
   padding: 0.35rem 0.75rem;
 }
 
 .bordered-container-primary {
-  border: 1px solid var(--primary-light-10);
+  border-color: var(--primary-light-10);
   color: var(--body-color);
 }
 
 .dark-mode .bordered-container-primary {
-  border: 1px solid var(--primary-dark-10);
+  border-color: var(--primary-dark-10);
   color: var(--body-color);
 }
 
 .bordered-container-secondary {
-  border: 1px solid var(--secondary-light-10);
+  border-color: var(--secondary-light-10);
   color: var(--body-color);
 }
 
 .dark-mode .bordered-container-secondary {
-  border: 1px solid var(--secondary-dark-10);
+  border-color: var(--secondary-dark-10);
   color: var(--body-color);
 }
 
 .bordered-container-success {
-  border: 1px solid var(--success-light-10);
+  border-color: var(--success-light-10);
   color: var(--body-color);
 }
 
 .dark-mode .bordered-container-success {
-  border: 1px solid var(--success-dark-10);
+  border-color: var(--success-dark-10);
   color: var(--body-color);
 }
 
 .bordered-container-danger {
-  border: 1px solid var(--danger-light-10);
+  border-color: var(--danger-light-10);
   color: var(--body-color);
 }
 
 .dark-mode .bordered-container-danger {
-  border: 1px solid var(--danger-dark-10);
+  border-color: var(--danger-dark-10);
   color: var(--body-color);
 }
 
 .bordered-container-warning {
-  border: 1px solid var(--warning-light-10);
+  border-color: var(--warning-light-10);
   color: var(--body-color);
 }
 
 .dark-mode .bordered-container-warning {
-  border: 1px solid var(--warning-dark-10);
+  border-color: var(--warning-dark-10);
   color: var(--body-color);
 }
 
 .bordered-container-info {
-  border: 1px solid var(--info-light-10);
+  border-color: var(--info-light-10);
   color: var(--body-color);
 }
 
 .dark-mode .bordered-container-info {
-  border: 1px solid var(--info-dark-10);
+  border-color: var(--info-dark-10);
   color: var(--body-color);
 }
 
 .bordered-container-light {
-  border: 1px solid var(--light-light-10);
+  border-color: var(--light-light-10);
   color: var(--body-color);
 }
 
 .dark-mode .bordered-container-light {
-  border: 1px solid var(--light-dark-10);
+  border-color: var(--light-dark-10);
   color: var(--body-color);
 }
 
 .bordered-container-dark {
-  border: 1px solid var(--dark-light-10);
+  border-color: var(--dark-light-10);
   color: var(--body-color);
 }
 
 .dark-mode .bordered-container-dark {
-  border: 1px solid var(--dark-dark-10);
+  border-color: var(--dark-dark-10);
   color: var(--body-color);
 }
 
@@ -3098,101 +3098,101 @@ button:not(:disabled),
 .dark-mode .filled-container {
   background-color: color-mix(in oklab, var(--border-color), transparent 85%);
   color: var(--body-color);
-  border: 1px solid var(--border-color);
+  border-color: var(--border-color);
 }
 
 .filled-container-primary {
-  border: 1px solid var(--primary-light-50);
+  border-color: var(--primary-light-50);
   color: var(--primary-dark-20);
   background-color: var(--primary-light-70);
 }
 
 .dark-mode .filled-container-primary {
-  border: 1px solid var(--primary-light-30);
+  border-color: var(--primary-light-30);
   color: var(--primary-dark-20);
   background-color: var(--primary-light-60);
 }
 
 .filled-container-secondary {
-  border: 1px solid var(--secondary-light-50);
+  border-color: var(--secondary-light-50);
   color: var(--secondary-dark-20);
   background-color: var(--secondary-light-70);
 }
 
 .dark-mode .filled-container-secondary {
-  border: 1px solid var(--secondary-light-30);
+  border-color: var(--secondary-light-30);
   color: var(--secondary-dark-20);
   background-color: var(--secondary-light-60);
 }
 
 .filled-container-success {
-  border: 1px solid var(--success-light-50);
+  border-color: var(--success-light-50);
   color: var(--success-dark-20);
   background-color: var(--success-light-70);
 }
 
 .dark-mode .filled-container-success {
-  border: 1px solid var(--success-light-30);
+  border-color: var(--success-light-30);
   color: var(--success-dark-20);
   background-color: var(--success-light-60);
 }
 
 .filled-container-danger {
-  border: 1px solid var(--danger-light-50);
+  border-color: var(--danger-light-50);
   color: var(--danger-dark-20);
   background-color: var(--danger-light-70);
 }
 
 .dark-mode .filled-container-danger {
-  border: 1px solid var(--danger-light-30);
+  border-color: var(--danger-light-30);
   color: var(--danger-dark-20);
   background-color: var(--danger-light-60);
 }
 
 .filled-container-warning {
-  border: 1px solid var(--warning-light-50);
+  border-color: var(--warning-light-50);
   color: var(--warning-dark-20);
   background-color: var(--warning-light-70);
 }
 
 .dark-mode .filled-container-warning {
-  border: 1px solid var(--warning-light-30);
+  border-color: var(--warning-light-30);
   color: var(--warning-dark-20);
   background-color: var(--warning-light-60);
 }
 
 .filled-container-info {
-  border: 1px solid var(--info-light-50);
+  border-color: var(--info-light-50);
   color: var(--info-dark-20);
   background-color: var(--info-light-70);
 }
 
 .dark-mode .filled-container-info {
-  border: 1px solid var(--info-light-30);
+  border-color: var(--info-light-30);
   color: var(--info-dark-20);
   background-color: var(--info-light-60);
 }
 
 .filled-container-light {
-  border: 1px solid var(--light-light-50);
+  border-color: var(--light-light-50);
   color: var(--light-dark-20);
   background-color: var(--light-light-70);
 }
 
 .dark-mode .filled-container-light {
-  border: 1px solid var(--light-light-30);
+  border-color: var(--light-light-30);
   color: var(--light-dark-20);
   background-color: var(--light-light-60);
 }
 
 .filled-container-dark {
-  border: 1px solid var(--dark-light-50);
+  border-color: var(--dark-light-50);
   color: var(--dark-dark-20);
   background-color: var(--dark-light-70);
 }
 
 .dark-mode .filled-container-dark {
-  border: 1px solid var(--dark-light-30);
+  border-color: var(--dark-light-30);
   color: var(--dark-dark-20);
   background-color: var(--dark-light-60);
 }

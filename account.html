@@ -824,7 +824,7 @@
                </div>
                <div class="card-body pt-0">
                   <form onsubmit="return false">
-                     <div class="row g-5">
+                     <div class="row g-4">
                         <div class="col-md-6">
                            <label for="fullName" class="form-label mb-2">Full Name</label>
                            <input class="form-control" type="text" placeholder="Enter Full Name" id="fullName"
@@ -880,10 +880,184 @@
                               checked="">
                            <label class="form-check-label" for="id_is_active">Active</label>
                         </div>
+                        <div class="col-lg-6">
+                           <label class="form-label mb-2">Groups</label>
+                           <div class="search-close-wrapper mb-1">
+                              <input type="search" placeholder="Search from Groups" class="form-control search-input"
+                                 id="seachFromGroups">
+                              <i class="bx bx-x bx-sm search-closer cursor-pointer"
+                                 onclick="onSearchFromGroupsClose()"></i>
+                           </div>
+                           <div class="bordered-container scroll-y" id="groups_checkbox_container"
+                              style="height: 200px;">
+                              <div class="form-check mb-1 mt-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions" checked>
+                                 <label class="form-check-label">exam_staff</label>
+                              </div>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions" checked>
+                                 <label class="form-check-label">exam_supervisor</label>
+                              </div>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions">
+                                 <label class="form-check-label">exam_admin</label>
+                              </div>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions">
+                                 <label class="form-check-label">controller</label>
+                              </div>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions">
+                                 <label class="form-check-label">center_supdt</label>
+                              </div>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions">
+                                 <label class="form-check-label">student</label>
+                              </div>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions">
+                                 <label class="form-check-label">teacher</label>
+                              </div>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions">
+                                 <label class="form-check-label">dept_staff</label>
+                              </div>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions">
+                                 <label class="form-check-label">dept_head</label>
+                              </div>
+                              <div class="form-check mb-1">
+                                 <input class="form-check-input" type="checkbox" name="permissions">
+                                 <label class="form-check-label">examiner</label>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-6">
+                           <label class="form-label mb-2">Permissions</label>
+                           <div class="search-close-wrapper mb-1">
+                              <input type="search" placeholder="Search from User Permissions"
+                                 class="form-control search-input" id="seachFromUserPermissions">
+                              <i class="bx bx-x bx-sm search-closer cursor-pointer"
+                                 onclick="onSearchFromUserPermissionsClose()"></i>
+                           </div>
+                           <div class="bordered-container scroll-y" id="user_permissions_checkbox_container"
+                              style="max-height: 200px;">
+                              <div class="permission-group">
+                                 <h6 class="fw-bold mb-1">User | Profile</h6>
+                                 <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="permissions" id="perm-1"
+                                       checked="">
+                                    <label class="form-check-label" for="perm-1">Can View Profile</label>
+                                 </div>
+                                 <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="permissions" id="perm-2"
+                                       checked="">
+                                    <label class="form-check-label" for="perm-2">Can Edit Profile</label>
+                                 </div>
+                                 <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="permissions" id="perm-3"
+                                       checked="">
+                                    <label class="form-check-label" for="perm-3">Can Change Password</label>
+                                 </div>
+                                 <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="permissions" id="perm-4">
+                                    <label class="form-check-label" for="perm-4">Can Add User</label>
+                                 </div>
+                                 <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="permissions" id="perm-5">
+                                    <label class="form-check-label" for="perm-5">Can Remove User</label>
+                                 </div>
+                              </div>
+                              <div class="permission-group">
+                                 <h6 class="fw-bold mb-1 mt-3">Auth | Group</h6>
+                                 <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="permissions" id="perm-6"
+                                       checked="">
+                                    <label class="form-check-label" for="perm-6">Can View Group</label>
+                                 </div>
+                                 <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="permissions" id="perm-7">
+                                    <label class="form-check-label" for="perm-7">Can Add Group</label>
+                                 </div>
+                                 <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="permissions" id="perm-8"
+                                       checked="">
+                                    <label class="form-check-label" for="perm-8">Can Change Group</label>
+                                 </div>
+                                 <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="permissions" id="perm-9">
+                                    <label class="form-check-label" for="perm-9">Can Delete Group</label>
+                                 </div>
+                              </div>
+                              <div class="permission-group">
+                                 <h6 class="fw-bold mb-1 mt-3">Auth | Permission</h6>
+                                 <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="permissions" id="perm-10"
+                                       checked="">
+                                    <label class="form-check-label" for="perm-10">Can View Permission</label>
+                                 </div>
+                                 <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="permissions" id="perm-11">
+                                    <label class="form-check-label" for="perm-11">Can Add Permission</label>
+                                 </div>
+                                 <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="permissions" id="perm-12"
+                                       checked="">
+                                    <label class="form-check-label" for="perm-12">Can Change Permission</label>
+                                 </div>
+                                 <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="permissions" id="perm-13">
+                                    <label class="form-check-label" for="perm-13">Can Delete Permission</label>
+                                 </div>
+                              </div>
+                              <div class="permission-group">
+                                 <h6 class="fw-bold mb-1 mt-3">Sessions | Session</h6>
+                                 <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="permissions" id="perm-14"
+                                       checked="">
+                                    <label class="form-check-label" for="perm-14">Can View Session</label>
+                                 </div>
+                                 <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="permissions" id="perm-15">
+                                    <label class="form-check-label" for="perm-15">Can Add Session</label>
+                                 </div>
+                                 <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="permissions" id="perm-16">
+                                    <label class="form-check-label" for="perm-16">Can Change Session</label>
+                                 </div>
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="permissions" id="perm-17">
+                                    <label class="form-check-label" for="perm-17">Can Delete Session</label>
+                                 </div>
+                              </div>
+                              <div class="permission-group">
+                                 <h6 class="fw-bold mb-1 mt-3">Admin | Log Entry</h6>
+                                 <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="permissions" id="perm-18"
+                                       checked="">
+                                    <label class="form-check-label" for="perm-18">Can View Log Entry</label>
+                                 </div>
+                                 <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="permissions" id="perm-19"
+                                       checked="">
+                                    <label class="form-check-label" for="perm-19">Can Add Log Entry</label>
+                                 </div>
+                                 <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="permissions" id="perm-20">
+                                    <label class="form-check-label" for="perm-20">Can Change Log Entry</label>
+                                 </div>
+                                 <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="permissions" id="perm-21">
+                                    <label class="form-check-label" for="perm-21">Can Delete Log Entry</label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
                      </div>
+
                      <div class="mt-6">
-                        <button type="submit" class="btn btn-primary me-1">Save changes</button>
-                        <button type="reset" class="btn btn-secondary">Cancel</button>
+                        <a href="account-overview.html" type="submit" class="btn btn-primary me-1">Save changes</a>
+                        <a href="account-overview.html" type="reset" class="btn btn-secondary">Cancel</a>
                      </div>
                   </form>
                </div>
@@ -954,160 +1128,6 @@
                   </div>
                </div>
             </div>
-            <script>
-               // Clear image script
-               document.getElementById('clearImageBtn').addEventListener('click', function() {
-                  const img = document.querySelector('#uploadedAvatar');
-                  if (img) {
-                     img.src = "assets/img/blank_image.png"; // fallback blank image
-                  }
-                  document.getElementById('id_picture').value = ''; // clear file input
-               });
-            </script>
-            <script>
-               let cropper;
-               const fileInput = document.getElementById('id_picture');
-               const cropperModal = document.getElementById('cropperModal');
-               const cropperPreview = document.getElementById('cropperPreview');
-               const uploadedAvatar = document.getElementById('uploadedAvatar');
-               const rotationAngleInput = document.getElementById('rotationAngle');
-               const outputWidth = document.getElementById('outputWidth');
-               const outputQuality = document.getElementById('outputQuality');
-               const outputSizeDisplay = document.getElementById('outputSize');
-               const originalInfoDisplay = document.getElementById('originalInfo');
-               const cropBoxInfoDisplay = document.getElementById('cropBoxInfo');
-
-               let originalFileType = 'image/jpeg';
-
-               fileInput.addEventListener('change', function(event) {
-                  const file = event.target.files[0];
-                  if (!file) return;
-
-                  originalFileType = file.type;
-
-                  const reader = new FileReader();
-                  reader.onload = function(e) {
-                     cropperPreview.src = e.target.result;
-                     cropperModal.style.display = 'block';
-
-                     if (cropper) cropper.destroy();
-                     cropper = new Cropper(cropperPreview, {
-                        aspectRatio: 1,
-                        viewMode: 1,
-                        responsive: true,
-                        autoCropArea: 1,
-                        minCropBoxWidth: 50,
-                        minCropBoxHeight: 50,
-                        ready() {
-                           const img = cropper.image;
-                           originalInfoDisplay.textContent =
-                              `Original: ${img.naturalWidth} x ${img.naturalHeight}px | ${Math.round(file.size / 1024)} KB`;
-                           if (img.naturalWidth < 200 || img.naturalHeight < 200) {
-                              outputWidth.value = Math.min(img.naturalWidth, img.naturalHeight);
-                           }
-                           outputWidth.max = Math.min(img.naturalWidth, img.naturalHeight);
-                           updateOutputSize();
-                        },
-                        crop(event) {
-                           const data = event.detail;
-                           cropBoxInfoDisplay.textContent =
-                              `Crop: ${Math.round(data.width)} x ${Math.round(data.height)}px`;
-                           updateOutputSize();
-                        }
-                     });
-                  };
-                  reader.readAsDataURL(file);
-               });
-
-               function rotateImage(deg) {
-                  if (cropper) cropper.rotate(deg);
-               }
-
-               rotationAngleInput.addEventListener('input', function() {
-                  const angle = parseFloat(rotationAngleInput.value);
-                  if (cropper) cropper.rotateTo(angle);
-                  updateOutputSize();
-               });
-
-               function resetCrop() {
-                  if (cropper) cropper.reset();
-                  rotationAngleInput.value = 0;
-                  //updateOutputSize();
-               }
-
-               function updateOutputSize() {
-                  if (!cropper) return;
-
-                  const width = parseInt(outputWidth.value);
-                  const qualityInput = document.getElementById('outputQuality');
-                  const quality = parseFloat(qualityInput.value);
-
-                  const canvas = cropper.getCroppedCanvas({
-                     width
-                  });
-                  if (!canvas) {
-                     outputSizeDisplay.textContent = 'Estimated size: N/A';
-                     return;
-                  }
-
-                  const format = originalFileType.toLowerCase();
-                  const supportsQuality = format === 'image/jpeg' || format === 'image/webp';
-
-                  // Hide or show quality slider depending on format
-                  qualityInput.parentElement.style.display = supportsQuality ? 'inline-block' : 'none';
-
-                  canvas.toBlob(blob => {
-                     if (blob) {
-                        const sizeKB = blob.size / 1024;
-                        outputSizeDisplay.textContent = `Estimated size: ${sizeKB.toFixed(1)} KB` +
-                           (supportsQuality ? ` (Quality: ${quality})` : ` (Lossless format)`);
-                     } else {
-                        outputSizeDisplay.textContent = 'Estimated size: N/A';
-                     }
-                  }, format, supportsQuality ? quality : undefined);
-               }
-
-
-               outputWidth.addEventListener('input', updateOutputSize);
-               outputQuality.addEventListener('input', updateOutputSize);
-
-               document.getElementById('cancelCrop').addEventListener('click', function() {
-                  cropper.destroy();
-                  cropperModal.style.display = 'none';
-                  fileInput.value = '';
-               });
-
-               document.getElementById('confirmCrop').addEventListener('click', function() {
-                  let quality = parseFloat(outputQuality.value);
-                  const width = parseInt(outputWidth.value);
-                  const tryCompress = () => {
-                     const canvas = cropper.getCroppedCanvas({
-                        width
-                     });
-                     canvas.toBlob(function(blob) {
-                        const sizeKB = blob.size / 1024;
-                        if (sizeKB <= 100 || quality <= 0.3) {
-                           const extension = originalFileType.split('/')[1];
-                           const croppedFile = new File([blob], `cropped.${extension}`, {
-                              type: originalFileType
-                           });
-                           const dataTransfer = new DataTransfer();
-                           dataTransfer.items.add(croppedFile);
-                           fileInput.files = dataTransfer.files;
-                           uploadedAvatar.src = URL.createObjectURL(blob);
-                           cropper.destroy();
-                           cropperModal.style.display = 'none';
-                        } else {
-                           quality -= 0.05;
-                           outputQuality.value = quality.toFixed(2);
-                           updateOutputSize();
-                           tryCompress();
-                        }
-                     }, originalFileType, quality);
-                  };
-                  tryCompress();
-               });
-            </script>
 
          </div>
       </main>
@@ -1117,6 +1137,240 @@
    <script src="assets/js/command-palette.js" data-json="assets/data/site-map.json"></script>
 
    <script src="assets/vendor/cropperjs-1.6.2/js/cropper.min.js"></script>
+   <script>
+      // Clear image script
+      document.getElementById('clearImageBtn').addEventListener('click', function() {
+         const img = document.querySelector('#uploadedAvatar');
+         if (img) {
+            img.src = "assets/img/blank_image.png"; // fallback blank image
+         }
+         document.getElementById('id_picture').value = ''; // clear file input
+      });
+   </script>
+   <script>
+      let cropper;
+      const fileInput = document.getElementById('id_picture');
+      const cropperModal = document.getElementById('cropperModal');
+      const cropperPreview = document.getElementById('cropperPreview');
+      const uploadedAvatar = document.getElementById('uploadedAvatar');
+      const rotationAngleInput = document.getElementById('rotationAngle');
+      const outputWidth = document.getElementById('outputWidth');
+      const outputQuality = document.getElementById('outputQuality');
+      const outputSizeDisplay = document.getElementById('outputSize');
+      const originalInfoDisplay = document.getElementById('originalInfo');
+      const cropBoxInfoDisplay = document.getElementById('cropBoxInfo');
+
+      let originalFileType = 'image/jpeg';
+
+      fileInput.addEventListener('change', function(event) {
+         const file = event.target.files[0];
+         if (!file) return;
+
+         originalFileType = file.type;
+
+         const reader = new FileReader();
+         reader.onload = function(e) {
+            cropperPreview.src = e.target.result;
+            cropperModal.style.display = 'block';
+
+            if (cropper) cropper.destroy();
+            cropper = new Cropper(cropperPreview, {
+               aspectRatio: 1,
+               viewMode: 1,
+               responsive: true,
+               autoCropArea: 1,
+               minCropBoxWidth: 50,
+               minCropBoxHeight: 50,
+               ready() {
+                  const img = cropper.image;
+                  originalInfoDisplay.textContent =
+                     `Original: ${img.naturalWidth} x ${img.naturalHeight}px | ${Math.round(file.size / 1024)} KB`;
+                  if (img.naturalWidth < 200 || img.naturalHeight < 200) {
+                     outputWidth.value = Math.min(img.naturalWidth, img.naturalHeight);
+                  }
+                  outputWidth.max = Math.min(img.naturalWidth, img.naturalHeight);
+                  updateOutputSize();
+               },
+               crop(event) {
+                  const data = event.detail;
+                  cropBoxInfoDisplay.textContent =
+                     `Crop: ${Math.round(data.width)} x ${Math.round(data.height)}px`;
+                  updateOutputSize();
+               }
+            });
+         };
+         reader.readAsDataURL(file);
+      });
+
+      function rotateImage(deg) {
+         if (cropper) cropper.rotate(deg);
+      }
+
+      rotationAngleInput.addEventListener('input', function() {
+         const angle = parseFloat(rotationAngleInput.value);
+         if (cropper) cropper.rotateTo(angle);
+         updateOutputSize();
+      });
+
+      function resetCrop() {
+         if (cropper) cropper.reset();
+         rotationAngleInput.value = 0;
+         //updateOutputSize();
+      }
+
+      function updateOutputSize() {
+         if (!cropper) return;
+
+         const width = parseInt(outputWidth.value);
+         const qualityInput = document.getElementById('outputQuality');
+         const quality = parseFloat(qualityInput.value);
+
+         const canvas = cropper.getCroppedCanvas({
+            width
+         });
+         if (!canvas) {
+            outputSizeDisplay.textContent = 'Estimated size: N/A';
+            return;
+         }
+
+         const format = originalFileType.toLowerCase();
+         const supportsQuality = format === 'image/jpeg' || format === 'image/webp';
+
+         // Hide or show quality slider depending on format
+         qualityInput.parentElement.style.display = supportsQuality ? 'inline-block' : 'none';
+
+         canvas.toBlob(blob => {
+            if (blob) {
+               const sizeKB = blob.size / 1024;
+               outputSizeDisplay.textContent = `Estimated size: ${sizeKB.toFixed(1)} KB` +
+                  (supportsQuality ? ` (Quality: ${quality})` : ` (Lossless format)`);
+            } else {
+               outputSizeDisplay.textContent = 'Estimated size: N/A';
+            }
+         }, format, supportsQuality ? quality : undefined);
+      }
+
+
+      outputWidth.addEventListener('input', updateOutputSize);
+      outputQuality.addEventListener('input', updateOutputSize);
+
+      document.getElementById('cancelCrop').addEventListener('click', function() {
+         cropper.destroy();
+         cropperModal.style.display = 'none';
+         fileInput.value = '';
+      });
+
+      document.getElementById('confirmCrop').addEventListener('click', function() {
+         let quality = parseFloat(outputQuality.value);
+         const width = parseInt(outputWidth.value);
+         const tryCompress = () => {
+            const canvas = cropper.getCroppedCanvas({
+               width
+            });
+            canvas.toBlob(function(blob) {
+               const sizeKB = blob.size / 1024;
+               if (sizeKB <= 100 || quality <= 0.3) {
+                  const extension = originalFileType.split('/')[1];
+                  const croppedFile = new File([blob], `cropped.${extension}`, {
+                     type: originalFileType
+                  });
+                  const dataTransfer = new DataTransfer();
+                  dataTransfer.items.add(croppedFile);
+                  fileInput.files = dataTransfer.files;
+                  uploadedAvatar.src = URL.createObjectURL(blob);
+                  cropper.destroy();
+                  cropperModal.style.display = 'none';
+               } else {
+                  quality -= 0.05;
+                  outputQuality.value = quality.toFixed(2);
+                  updateOutputSize();
+                  tryCompress();
+               }
+            }, originalFileType, quality);
+         };
+         tryCompress();
+      });
+   </script>
+   <script>
+      const seachFromGroups = document.getElementById('seachFromGroups');
+      const groupsCheckboxContainer = document.getElementById('groups_checkbox_container');
+
+      seachFromGroups.addEventListener('keydown', function(event) {
+         if (event.key === 'Escape') {
+            onSearchFromGroupsClose();
+         }
+      });
+
+      seachFromGroups.addEventListener('input', function() {
+         const searchTerm = seachFromGroups.value.toLowerCase();
+         const groups = groupsCheckboxContainer.querySelectorAll('.form-check');
+
+         groups.forEach(group => {
+            const label = group.querySelector('.form-check-label').textContent.toLowerCase();
+            if (label.includes(searchTerm)) {
+               group.style.display = '';
+            } else {
+               group.style.display = 'none';
+            }
+         });
+      });
+
+      function onSearchFromGroupsClose() {
+         seachFromGroups.value = '';
+         seachFromGroups.focus();
+         const groups = groupsCheckboxContainer.querySelectorAll('.form-check');
+
+         groups.forEach(group => {
+            group.style.display = '';
+         });
+      }
+   </script>
+   <script>
+      const seachFromUserPermissions = document.getElementById('seachFromUserPermissions');
+      const userPermissionsCheckboxContainer = document.getElementById('user_permissions_checkbox_container');
+
+      seachFromUserPermissions.addEventListener('keydown', function(event) {
+         if (event.key === 'Escape') {
+            onSearchFromUserPermissionsClose();
+         }
+      });
+
+      seachFromUserPermissions.addEventListener('input', function() {
+         const searchTerm = seachFromUserPermissions.value.toLowerCase();
+         const permissionGroups = userPermissionsCheckboxContainer.querySelectorAll('.permission-group');
+
+         permissionGroups.forEach(group => {
+            const permissions = group.querySelectorAll('.form-check');
+            let hasVisiblePermissions = false;
+
+            permissions.forEach(permission => {
+               const label = permission.querySelector('.form-check-label').textContent.toLowerCase();
+               if (label.includes(searchTerm)) {
+                  permission.style.display = '';
+                  hasVisiblePermissions = true;
+               } else {
+                  permission.style.display = 'none';
+               }
+            });
+
+            group.style.display = hasVisiblePermissions ? '' : 'none';
+         });
+      });
+
+      function onSearchFromUserPermissionsClose() {
+         seachFromUserPermissions.value = '';
+         seachFromUserPermissions.focus();
+         const permissionGroups = userPermissionsCheckboxContainer.querySelectorAll('.permission-group');
+
+         permissionGroups.forEach(group => {
+            const permissions = group.querySelectorAll('.form-check');
+            permissions.forEach(permission => {
+               permission.style.display = '';
+            });
+            group.style.display = '';
+         });
+      }
+   </script>
 
 </body>
 

@@ -56,7 +56,7 @@ Account
                <i class="bx bx-reset d-block d-sm-none"></i>
                <span class="d-none d-sm-block">Reset</span>
             </button>
-            <div>Allowed JPG, GIF or PNG. Max size of 100K</div>
+            <div>Allowed JPG, GIF or PNG. Max size of 100KB</div>
          </div>
       </div>
    </div>
@@ -306,54 +306,11 @@ Account
       </form>
    </div>
 </div>
-<div id="cropperModal" style="display:none;
-               position:fixed;
-               top:0;
-               left:0;
-               width:100vw;
-               height:100vh;
-               background:#000000cc;
-               z-index:2000">
-   <div style="position:absolute;
-                  top:50%;
-                  left:50%;
-                  transform:translate(-50%,-50%);
-                  background: var(--paper-bg);
-                  padding:1rem;
-                  max-width:95vw;
-                  max-height:90vh;
-                  overflow:auto;
-                  scrollbar-width:thin">
-      <img id="cropperPreview" style="max-width:100%; max-height:65vh;" />
-      <div class="gap-container gap-2 my-4">
-         <label class="form-label mb-0">
-            Rotation:
-            <input type="number" id="rotationAngle" value="0" min="-180" max="180" step="0.1"
-               class="form-control form-control-sm d-inline-block" style="width: 90px">
-         </label>
-         <button class="btn btn-sm btn-outline-danger" onclick="resetCrop()">Reset</button>
-         <label class="form-label mb-0">
-            Output (WxH):
-            <input type="number" id="outputWidth" min="10" max="1000" step="10" value="200"
-               class="form-control form-control-sm d-inline-block" style="width: 80px">
-         </label>
-         <label>
-            Quality:
-            <input type="range" id="outputQuality" min="0.3" max="1" step="0.05" value="1">
-         </label>
-         <div id="originalInfo" class="text-muted small"></div>
-         <div id="cropBoxInfo" class="text-muted small"></div>
-         <div id="outputSize" class="text-muted small"></div>
-      </div>
-      <div class="text-end mt-3">
-         <button id="confirmCrop" class="btn btn-primary">OK</button>
-         <button id="cancelCrop" class="btn btn-secondary">Cancel</button>
-      </div>
-   </div>
-</div>
+{% include "includes/_cropper_modal.njk" %}
 {% endblock content %}
 {% block bottom_link %}
 <script src="assets/vendor/cropperjs-1.6.2/js/cropper.min.js"></script>
+<script src="assets/js/cropper_modal.js"></script>
 <script>
    // Clear image script
    document.getElementById('clearImageBtn').addEventListener('click', function () {
@@ -362,142 +319,6 @@ Account
          img.src = "assets/img/blank_image.png";  // fallback blank image
       }
       document.getElementById('id_picture').value = '';  // clear file input
-   });
-</script>
-<script>
-   let cropper;
-   const fileInput = document.getElementById('id_picture');
-   const cropperModal = document.getElementById('cropperModal');
-   const cropperPreview = document.getElementById('cropperPreview');
-   const uploadedAvatar = document.getElementById('uploadedAvatar');
-   const rotationAngleInput = document.getElementById('rotationAngle');
-   const outputWidth = document.getElementById('outputWidth');
-   const outputQuality = document.getElementById('outputQuality');
-   const outputSizeDisplay = document.getElementById('outputSize');
-   const originalInfoDisplay = document.getElementById('originalInfo');
-   const cropBoxInfoDisplay = document.getElementById('cropBoxInfo');
-
-   let originalFileType = 'image/jpeg';
-
-   fileInput.addEventListener('change', function (event) {
-      const file = event.target.files[0];
-      if (!file) return;
-
-      originalFileType = file.type;
-
-      const reader = new FileReader();
-      reader.onload = function (e) {
-         cropperPreview.src = e.target.result;
-         cropperModal.style.display = 'block';
-
-         if (cropper) cropper.destroy();
-         cropper = new Cropper(cropperPreview, {
-            aspectRatio: 1,
-            viewMode: 1,
-            responsive: true,
-            autoCropArea: 1,
-            minCropBoxWidth: 50,
-            minCropBoxHeight: 50,
-            ready() {
-               const img = cropper.image;
-               originalInfoDisplay.textContent = `Original: ${img.naturalWidth} x ${img.naturalHeight}px | ${Math.round(file.size / 1024)} KB`;
-               if (img.naturalWidth < 200 || img.naturalHeight < 200) {
-                  outputWidth.value = Math.min(img.naturalWidth, img.naturalHeight);
-               }
-               outputWidth.max = Math.min(img.naturalWidth, img.naturalHeight);
-               updateOutputSize();
-            },
-            crop(event) {
-               const data = event.detail;
-               cropBoxInfoDisplay.textContent = `Crop: ${Math.round(data.width)} x ${Math.round(data.height)}px`;
-               updateOutputSize();
-            }
-         });
-      };
-      reader.readAsDataURL(file);
-   });
-
-   function rotateImage(deg) {
-      if (cropper) cropper.rotate(deg);
-   }
-
-   rotationAngleInput.addEventListener('input', function () {
-      const angle = parseFloat(rotationAngleInput.value);
-      if (cropper) cropper.rotateTo(angle);
-      updateOutputSize();
-   });
-
-   function resetCrop() {
-      if (cropper) cropper.reset();
-      rotationAngleInput.value = 0;
-      //updateOutputSize();
-   }
-
-   function updateOutputSize() {
-      if (!cropper) return;
-
-      const width = parseInt(outputWidth.value);
-      const qualityInput = document.getElementById('outputQuality');
-      const quality = parseFloat(qualityInput.value);
-
-      const canvas = cropper.getCroppedCanvas({ width });
-      if (!canvas) {
-         outputSizeDisplay.textContent = 'Estimated size: N/A';
-         return;
-      }
-
-      const format = originalFileType.toLowerCase();
-      const supportsQuality = format === 'image/jpeg' || format === 'image/webp';
-
-      // Hide or show quality slider depending on format
-      qualityInput.parentElement.style.display = supportsQuality ? 'inline-block' : 'none';
-
-      canvas.toBlob(blob => {
-         if (blob) {
-            const sizeKB = blob.size / 1024;
-            outputSizeDisplay.textContent = `Estimated size: ${sizeKB.toFixed(1)} KB` +
-               (supportsQuality ? ` (Quality: ${quality})` : ` (Lossless format)`);
-         } else {
-            outputSizeDisplay.textContent = 'Estimated size: N/A';
-         }
-      }, format, supportsQuality ? quality : undefined);
-   }
-
-
-   outputWidth.addEventListener('input', updateOutputSize);
-   outputQuality.addEventListener('input', updateOutputSize);
-
-   document.getElementById('cancelCrop').addEventListener('click', function () {
-      cropper.destroy();
-      cropperModal.style.display = 'none';
-      fileInput.value = '';
-   });
-
-   document.getElementById('confirmCrop').addEventListener('click', function () {
-      let quality = parseFloat(outputQuality.value);
-      const width = parseInt(outputWidth.value);
-      const tryCompress = () => {
-         const canvas = cropper.getCroppedCanvas({ width });
-         canvas.toBlob(function (blob) {
-            const sizeKB = blob.size / 1024;
-            if (sizeKB <= 100 || quality <= 0.3) {
-               const extension = originalFileType.split('/')[1];
-               const croppedFile = new File([blob], `cropped.${extension}`, { type: originalFileType });
-               const dataTransfer = new DataTransfer();
-               dataTransfer.items.add(croppedFile);
-               fileInput.files = dataTransfer.files;
-               uploadedAvatar.src = URL.createObjectURL(blob);
-               cropper.destroy();
-               cropperModal.style.display = 'none';
-            } else {
-               quality -= 0.05;
-               outputQuality.value = quality.toFixed(2);
-               updateOutputSize();
-               tryCompress();
-            }
-         }, originalFileType, quality);
-      };
-      tryCompress();
    });
 </script>
 <script>

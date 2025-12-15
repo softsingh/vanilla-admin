@@ -1,0 +1,48 @@
+<!-- Cropper Modal -->
+<!-- Include cropperjs-1.6.2 and cropper_modal.js in base template -->
+
+<div id="cropperModal" style="display:none;
+               position:fixed;
+               top:0;
+               left:0;
+               width:100vw;
+               height:100vh;
+               background:#000000cc;
+               z-index:2000">
+    <div style="position:absolute;
+                  top:50%;
+                  left:50%;
+                  transform:translate(-50%,-50%);
+                  background: var(--paper-bg);
+                  padding:1rem;
+                  max-width:95vw;
+                  max-height:90vh;
+                  overflow:auto;
+                  scrollbar-width:thin">
+        <img id="cropperPreview" style="max-width:100%; max-height:30vh;" />
+        <div class="gap-container gap-2 my-4">
+            <label class="form-label mb-0">
+                Rotation:
+                <input type="number" id="rotationAngle" value="0" min="-180" max="180" step="0.1"
+                    class="form-control form-control-sm d-inline-block" style="width: 90px">
+            </label>
+            <button class="btn btn-sm btn-outline-danger" onclick="resetCrop()">Reset</button>
+            <label class="form-label mb-0">
+                Output (WxH):
+                <input type="number" id="outputWidth" min="10" max="1000" step="10" value="300"
+                    class="form-control form-control-sm d-inline-block" style="width: 80px">
+            </label>
+            <label>
+                Quality:
+                <input type="range" id="outputQuality" min="0.3" max="1" step="0.05" value="1">
+            </label>
+            <div id="originalInfo" class="text-muted small"></div>
+            <div id="cropBoxInfo" class="text-muted small"></div>
+            <div id="outputSize" class="text-muted small"></div>
+        </div>
+        <div class="text-end mt-3">
+            <button id="confirmCrop" class="btn btn-primary">OK</button>
+            <button id="cancelCrop" class="btn btn-secondary">Cancel</button>
+        </div>
+    </div>
+</div>

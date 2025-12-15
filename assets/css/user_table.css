@@ -1,0 +1,71 @@
+/*-------------------------------------*/
+/*           User List Table           */
+/*-------------------------------------*/
+
+/* When sidebar is shown */
+
+@media (max-width: 576px) {
+
+    body:not(.sidebar-hidden) .dash-table.user thead th:nth-child(4),
+    body:not(.sidebar-hidden) .dash-table.user tbody td:nth-child(4) {
+        display: none;
+    }
+}
+
+@media (min-width: 576px) {
+
+    body:not(.sidebar-hidden) .dash-table.user thead th:nth-child(5),
+    body:not(.sidebar-hidden) .dash-table.user tbody td:nth-child(5) {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+
+    body:not(.sidebar-hidden) .dash-table.user thead th:nth-child(2),
+    body:not(.sidebar-hidden) .dash-table.user tbody td:nth-child(2) {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+
+    body:not(.sidebar-hidden) .dash-table.user thead th:nth-child(3),
+    body:not(.sidebar-hidden) .dash-table.user tbody td:nth-child(3) {
+        display: none;
+    }
+}
+
+/* When sidebar is hidden */
+
+@media (max-width: 460px) {
+
+    body.sidebar-hidden .dash-table.user thead th:nth-child(4),
+    body.sidebar-hidden .dash-table.user tbody td:nth-child(4) {
+        display: none;
+    }
+}
+
+@media (min-width: 460px) {
+
+    body.sidebar-hidden .dash-table.user thead th:nth-child(5),
+    body.sidebar-hidden .dash-table.user tbody td:nth-child(5) {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+
+    body.sidebar-hidden .dash-table.user thead th:nth-child(2),
+    body.sidebar-hidden .dash-table.user tbody td:nth-child(2) {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+
+    body.sidebar-hidden .dash-table.user thead th:nth-child(3),
+    body.sidebar-hidden .dash-table.user tbody td:nth-child(3) {
+        display: none;
+    }
+}

@@ -3,6 +3,9 @@
 {% block title %}
 Dashboard
 {% endblock title %}
+{% block head_link %}
+<link rel="stylesheet" href="assets/css/user_table.css">
+{% endblock head_link %}
 {% block content %}
 <div class="row g-6 mb-6">
    <div class="col-sm-6 col-xl-3">
@@ -183,6 +186,24 @@ Dashboard
    <div class="row g-4 px-6 my-4">
       <div class="col-12 col-sm-6">
          <form method="get">
+            <select class="form-select" name="status" id="status">
+               <option value="">&lt; Status &gt;</option>
+               <option value="active">Active</option>
+               <option value="disabled">Disabled</option>
+            </select>
+         </form>
+      </div>
+      <div class="col-12 col-sm-6">
+         <form method="get">
+            <select class="form-select" name="role" id="role">
+               <option value="">&lt; Role &gt;</option>
+               <option value="admin">Admin</option>
+               <option value="user">User</option>
+            </select>
+         </form>
+      </div>
+      <div class="col-12 col-sm-6">
+         <form method="get">
             <select class="form-select" name="page_size" id="pageSize">
                <option value="5">5</option>
                <option value="10" selected>10</option>
@@ -209,6 +230,7 @@ Dashboard
             <tr>
                <th>User</th>
                <th>Role</th>
+               <th>Status</th>
                <th>Actions</th>
                <th>Actions</th>
             </tr>
@@ -236,6 +258,9 @@ Dashboard
                      <i class="bx bx-user text-success fs-4"></i>
                      <span class="h-100">User</span>
                   </div>
+               </td>
+               <td>
+                  <span class="badge bg-label-success rounded fw-500">Active</span>
                </td>
                <td>
                   <div class="d-flex align-items-center gap-1">
@@ -293,6 +318,9 @@ Dashboard
                   </div>
                </td>
                <td>
+                  <span class="badge bg-label-success rounded fw-500">Active</span>
+               </td>
+               <td>
                   <div class="d-flex align-items-center gap-1">
                      <a href="account.html" class="text-heading-link">
                         <i class="bx bx-edit fs-5"></i>
@@ -346,6 +374,9 @@ Dashboard
                      <i class="bx bx-user text-success fs-4"></i>
                      <span class="h-100">User</span>
                   </div>
+               </td>
+               <td>
+                  <span class="badge bg-label-danger rounded fw-500">Disabled</span>
                </td>
                <td>
                   <div class="d-flex align-items-center gap-1">
@@ -403,6 +434,9 @@ Dashboard
                   </div>
                </td>
                <td>
+                  <span class="badge bg-label-success rounded fw-500">Active</span>
+               </td>
+               <td>
                   <div class="d-flex align-items-center gap-1">
                      <a href="account.html" class="text-heading-link">
                         <i class="bx bx-edit fs-5"></i>
@@ -456,6 +490,9 @@ Dashboard
                      <i class="bx bx-user text-success fs-4"></i>
                      <span class="h-100">User</span>
                   </div>
+               </td>
+               <td>
+                  <span class="badge bg-label-success rounded fw-500">Active</span>
                </td>
                <td>
                   <div class="d-flex align-items-center gap-1">
@@ -513,6 +550,9 @@ Dashboard
                   </div>
                </td>
                <td>
+                  <span class="badge bg-label-success rounded fw-500">Active</span>
+               </td>
+               <td>
                   <div class="d-flex align-items-center gap-1">
                      <a href="account.html" class="text-heading-link">
                         <i class="bx bx-edit fs-5"></i>
@@ -566,6 +606,9 @@ Dashboard
                      <i class="bx bx-user text-success fs-4"></i>
                      <span class="h-100">User</span>
                   </div>
+               </td>
+               <td>
+                  <span class="badge bg-label-success rounded fw-500">Active</span>
                </td>
                <td>
                   <div class="d-flex align-items-center gap-1">
@@ -623,6 +666,9 @@ Dashboard
                   </div>
                </td>
                <td>
+                  <span class="badge bg-label-success rounded fw-500">Active</span>
+               </td>
+               <td>
                   <div class="d-flex align-items-center gap-1">
                      <a href="account.html" class="text-heading-link">
                         <i class="bx bx-edit fs-5"></i>
@@ -678,6 +724,9 @@ Dashboard
                   </div>
                </td>
                <td>
+                  <span class="badge bg-label-success rounded fw-500">Active</span>
+               </td>
+               <td>
                   <div class="d-flex align-items-center gap-1">
                      <a href="account.html" class="text-heading-link">
                         <i class="bx bx-edit fs-5"></i>
@@ -731,6 +780,9 @@ Dashboard
                      <i class="bx bx-user text-success fs-4"></i>
                      <span class="h-100">User</span>
                   </div>
+               </td>
+               <td>
+                  <span class="badge bg-label-success rounded fw-500">Active</span>
                </td>
                <td>
                   <div class="d-flex align-items-center gap-1">

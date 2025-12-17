@@ -9,7 +9,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>
 
-      Account Password
+      Dual Selectors
 
    </title>
    <link rel="shortcut icon" href="assets/img/favicon.ico">
@@ -17,6 +17,7 @@
    <link rel="stylesheet" href="assets/css/style.css">
    <link rel="stylesheet" href="assets/vendor/boxicons-2.1.4/css/boxicons.min.css">
 
+   <link rel="stylesheet" href="assets/css/dual_selector_sortable.css">
 
 </head>
 
@@ -94,7 +95,7 @@
                   </div>
                </div>
             </div>
-            <div class="menu-item active open">
+            <div class="menu-item ">
                <a href="#" class="menu-link menu-toggle">
                   <i class="bx bx-user fs-6"></i>
                   <span>User</span>
@@ -105,7 +106,7 @@
                         <span>Add User</span>
                      </a>
                   </div>
-                  <div class="menu-item open">
+                  <div class="menu-item ">
                      <a href="#" class="menu-link menu-toggle">
                         <span>Account Settings</span>
                      </a>
@@ -125,7 +126,7 @@
                               <span>Address</span>
                            </a>
                         </div>
-                        <div class="menu-item active">
+                        <div class="menu-item ">
                            <a href="account-password.html" class="menu-link">
                               <span>Passsword</span>
                            </a>
@@ -276,7 +277,7 @@
                   </div>
                </div>
             </div>
-            <div class="menu-item ">
+            <div class="menu-item active open">
                <a href="#" class="menu-link menu-toggle">
                   <i class="bx bx-copy fs-6"></i>
                   <span>Advance</span>
@@ -287,7 +288,7 @@
                         <span>Avatars</span>
                      </a>
                   </div>
-                  <div class="menu-item ">
+                  <div class="menu-item active">
                      <a href="dual-selectors.html" class="menu-link">
                         <span>Dual Selectors</span>
                      </a>
@@ -774,64 +775,215 @@
          </nav>
          <div class="dash-content">
 
-            <ul class="nav nav-pills scroll-x-transparent mb-sm-3">
-               <li class="nav-item">
-                  <a href="account-overview.html" class="nav-link">
-                     <div class="d-flex align-items-center">
-                        <i class="bx bx-list-ul fs-5 me-1"></i>
-                        <span>Overview</span>
-                     </div>
-                  </a>
-               </li>
-               <li class="nav-item">
-                  <a href="account.html" class="nav-link">
-                     <div class="d-flex align-items-center">
-                        <i class="bx bx-user fs-5 me-1"></i>
-                        <span>Account</span>
-                     </div>
-                  </a>
-               </li>
-               <li class="nav-item">
-                  <a href="account-address.html" class="nav-link">
-                     <div class="d-flex align-items-center">
-                        <i class="bx bx-home fs-5 me-1"></i>
-                        <span>Address</span>
-                     </div>
-                  </a>
-               </li>
-               <li class="nav-item active">
-                  <a href="account-password.html" class="nav-link">
-                     <div class="d-flex align-items-center">
-                        <i class="bx bx-lock-alt fs-5 me-1"></i>
-                        <span>Password</span>
-                     </div>
-                  </a>
-               </li>
-            </ul>
             <div class="card mb-6">
                <div class="card-body">
-                  <h5 class="mb-8">Change Password</h5>
-                  <form id="formAccountPasword" method="GET" onsubmit="return false">
-                     <div class="mb-4">
-                        <label class="form-label mb-2" for="old-password">Old Password</label>
-                        <input id="old-password" type="password" class="form-control"
-                           placeholder="························" name="old-password" autofocus>
+                  <div class="mb-4">
+                     <h4>Dual Selector</h4>
+                  </div>
+                  <div class="row g-4">
+                     <div class="col-md-12">
+                        <label class="form-label mb-3" for="departments-selector">Departments</label>
+                        <div id="dual-selector-departments-selector" class="dual-selector"
+                           data-widget-id="departments-selector" data-field-name="departments">
+                           <!-- CHOSEN LIST (LEFT SIDE) -->
+                           <div class="dual-selector-box">
+                              <div class="d-flex flex-column gap-1 mb-1">
+                                 <label class="form-label">
+                                    Chosen <strong>(<span id="chosen-count-departments-selector">3</span>)</strong>
+                                 </label>
+                                 <input id="search-chosen-departments-selector" class="form-control"
+                                    placeholder="Search...">
+                              </div>
+                              <ul id="chosen-departments-selector"
+                                 class="dual-list list-group border rounded p-2 scrollable-box">
+                                 <li class="list-group-item d-flex justify-content-between align-items-center"
+                                    data-value="61">
+                                    <span>Pharmaceutical Sciences</span>
+                                 </li>
+                                 <li class="list-group-item d-flex justify-content-between align-items-center"
+                                    data-value="63">
+                                    <span>Chemistry</span>
+                                 </li>
+                                 <li class="list-group-item d-flex justify-content-between align-items-center"
+                                    data-value="35">
+                                    <span>Biotechnology</span>
+                                 </li>
+                              </ul>
+                              <!-- Hidden field storing order -->
+                              <input type="hidden" id="departments-selector_order" name="departments_order"
+                                 value="61,63,35">
+                              <div id="departments-selector_values_container" class="d-none"></div>
+                           </div>
+                           <!-- BUTTONS -->
+                           <div class="dual-selector-buttons">
+                              <!-- Move Available → Chosen -->
+                              <button id="btn-left-departments-selector" type="button"
+                                 class="btn btn-sm btn-primary dual-btn"><i class="bx bx-chevron-up fs-4"></i></button>
+                              <!-- Move Chosen → Available -->
+                              <button id="btn-right-departments-selector" type="button"
+                                 class="btn btn-sm btn-primary dual-btn"><i
+                                    class="bx bx-chevron-down fs-4"></i></button>
+                              <!-- Move All Available → Chosen -->
+                              <button id="btn-all-left-departments-selector" type="button"
+                                 class="btn btn-sm btn-secondary dual-btn"><i
+                                    class="bx bx-chevrons-up fs-4"></i></button>
+                              <!-- Move All Chosen → Available -->
+                              <button id="btn-all-right-departments-selector" type="button"
+                                 class="btn btn-sm btn-secondary dual-btn"><i
+                                    class="bx bx-chevrons-down fs-4"></i></button>
+                              <!-- SORTING (UP / DOWN) for chosen list -->
+                              <button id="btn-up-departments-selector" type="button"
+                                 class="btn btn-sm btn-dark dual-btn">
+                                 <i class="bx bx-sort-up fs-4"></i>
+                              </button>
+                              <button id="btn-down-departments-selector" type="button"
+                                 class="btn btn-sm btn-dark dual-btn">
+                                 <i class="bx bx-sort-down fs-4"></i>
+                              </button>
+                           </div>
+                           <!-- AVAILABLE LIST (RIGHT SIDE) -->
+                           <div class="dual-selector-box">
+                              <div class="d-flex flex-column gap-1 mb-1">
+                                 <label class="form-label">
+                                    Available <strong>(<span
+                                          id="available-count-departments-selector">44</span>)</strong>
+                                 </label>
+                                 <input id="search-available-departments-selector" class="form-control"
+                                    placeholder="Search...">
+                              </div>
+                              <ul id="available-departments-selector"
+                                 class="dual-list list-group border rounded p-2 scrollable-box">
+                                 <li class="list-group-item" data-value="25">
+                                    <span>Ancient Indian History, Culture &amp; Archaeology</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="34">
+                                    <span>Biochemistry</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="15">
+                                    <span>Biotechnology Engineering</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="36">
+                                    <span>Botany</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="6">
+                                    <span>Commerce</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="64">
+                                    <span>Computer Science &amp; Applications</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="18">
+                                    <span>Computer Science &amp; Engineering</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="74">
+                                    <span>Economics</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="12">
+                                    <span>Education</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="65">
+                                    <span>Electronic Science</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="21">
+                                    <span>Electronics &amp; Communication Engineering</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="1">
+                                    <span>English</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="51">
+                                    <span>Environmental Studies</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="26">
+                                    <span>Fine Arts</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="66">
+                                    <span>Geography</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="67">
+                                    <span>Geology</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="68">
+                                    <span>Geophysics</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="2">
+                                    <span>Hindi</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="75">
+                                    <span>History</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="54">
+                                    <span>Home Science</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="69">
+                                    <span>Instrumentation</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="30">
+                                    <span>Law</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="3">
+                                    <span>Library &amp; Information Science</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="8">
+                                    <span>Management</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="10">
+                                    <span>Mass Communication &amp; Media Technology</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="70">
+                                    <span>Mathematics</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="23">
+                                    <span>Mechanical Engineering</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="56">
+                                    <span>Microbiology</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="27">
+                                    <span>Music &amp; Dance</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="5">
+                                    <span>Panjabi</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="28">
+                                    <span>Philosophy</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="13">
+                                    <span>Physical Education</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="71">
+                                    <span>Physics</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="76">
+                                    <span>Political Science</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="77">
+                                    <span>Psychology</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="78">
+                                    <span>Public Administration</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="29">
+                                    <span>Sanskrit</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="79">
+                                    <span>Social Work</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="80">
+                                    <span>Sociology</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="72">
+                                    <span>Statistics &amp; Operational Research</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="11">
+                                    <span>Tourism &amp; Hotel Management</span>
+                                 </li>
+                                 <li class="list-group-item" data-value="60">
+                                    <span>Zoology</span>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
                      </div>
-                     <div class="mb-4">
-                        <label class="form-label mb-2" for="new-password">New Password</label>
-                        <input id="new-password" type="password" class="form-control"
-                           placeholder="························" name="new-password">
-                     </div>
-                     <div class="mb-4">
-                        <label class="form-label mb-2" for="confirm-password">Confirm Password</label>
-                        <input id="confirm-password" type="password" class="form-control"
-                           placeholder="························" name="confirm-password">
-                     </div>
-                     <div class="mt-6">
-                        <button type="submit" class="btn btn-primary me-1">Save changes</button>
-                        <button type="reset" class="btn btn-secondary">Reset</button>
-                     </div>
-                  </form>
+                  </div>
                </div>
             </div>
 
@@ -842,6 +994,8 @@
    <script src="assets/js/script.js"></script>
    <script src="assets/js/command-palette.js" data-json="assets/data/site-map.json"></script>
 
+   <script src="assets/vendor/sortablejs@1.15.6/js/Sortable.min.js"></script>
+   <script src="assets/js/dual_selector_sortable.js"></script>
 
 </body>
 

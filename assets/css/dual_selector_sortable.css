@@ -1,0 +1,68 @@
+.dual-list li {
+  padding: 4px;
+  margin-bottom: 2px;
+  border-radius: 0.4rem;
+}
+
+.dual-list li.selected {
+  background-color: hsla(215, 100%, 94%, 1.00);
+}
+
+.sortable-handle {
+  cursor: move;
+  margin-left: 8px;
+}
+
+.sortable-ghost {
+  opacity: 0.4;
+}
+
+.scrollable-box {
+  max-height: 260px;
+  min-height: 260px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.dual-selector {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.dual-selector-box {
+  flex: 1 1 45%;
+  min-width: 260px;
+}
+
+.dual-selector-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 0.5rem;
+}
+
+.dual-btn {
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 944px) {
+  .dual-selector {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dual-selector-buttons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.3rem;
+  }
+
+  .dual-selector-box {
+    width: 100%;
+  }
+}

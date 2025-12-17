@@ -256,7 +256,8 @@
                 </div>
             </div>
         </div>
-        <div class="menu-item {% if file_name in ['avatars', 'color-palettes'] %}active open{% endif %}">
+        <div
+            class="menu-item {% if file_name in ['avatars', 'dual_selectors', 'color-palettes'] %}active open{% endif %}">
             <a href="#" class="menu-link menu-toggle">
                 <i class="bx bx-copy fs-6"></i>
                 <span>Advance</span>
@@ -265,6 +266,11 @@
                 <div class="menu-item {% if file_name == 'avatars' %}active{% endif %}">
                     <a href="avatars.html" class="menu-link">
                         <span>Avatars</span>
+                    </a>
+                </div>
+                <div class="menu-item {% if file_name == 'dual_selectors' %}active{% endif %}">
+                    <a href="dual-selectors.html" class="menu-link">
+                        <span>Dual Selectors</span>
                     </a>
                 </div>
                 <div class="menu-item {% if file_name == 'color-palettes' %}active{% endif %}">

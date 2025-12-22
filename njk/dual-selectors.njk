@@ -1,0 +1,35 @@
+{% set file_name = "dual_selectors" %}
+{% extends "_dash_base.njk" %}
+{% block title %}
+Dual Selectors
+{% endblock title %}
+{% block head_link %}
+<link rel="stylesheet" href="assets/css/dual_selector.css">
+{% endblock head_link %}
+{% block content %}
+<div class="card mb-6">
+   <div class="card-body">
+      <div class="mb-4">
+         <h4>Dual Selectors</h4>
+      </div>
+      <div class="row g-4">
+         <div class="col-md-12">
+            <label class="form-label mb-3">Non-Sortable</label>
+            {% set widget_id = "non-sortable" %}
+            {% set sortable = "false" %}
+            {% include "includes/_dual_selector.njk" %}
+         </div>
+         <div class="col-md-12">
+            <label class="form-label mb-3">Sortable</label>
+            {% set widget_id = "sortable" %}
+            {% set sortable = "true" %}
+            {% include "includes/_dual_selector.njk" %}
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock content %}
+{% block bottom_link %}
+<script src="assets/vendor/sortablejs@1.15.6/js/Sortable.min.js"></script>
+<script src="assets/js/dual_selector.js"></script>
+{% endblock bottom_link %}

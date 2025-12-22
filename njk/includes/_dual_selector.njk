@@ -1,0 +1,204 @@
+<div id="dual-selector-{{ widget_id }}" class="dual-selector" data-widget-id="{{ widget_id }}"
+    data-field-name="dual-selector-{{ widget_id }}" data-sortable={{ sortable }}>
+    <!-- CHOSEN LIST -->
+    <div class="dual-selector-box">
+        <div class="d-flex flex-column gap-1 mb-1">
+            <label class="form-label">
+                Chosen
+                <strong>
+                    <span id="chosen-count-{{ widget_id }}">3</span>
+                </strong>
+            </label>
+            <input id="search-chosen-{{ widget_id }}" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <ul id="chosen-{{ widget_id }}" class="dual-list list-group border rounded p-2 scrollable-box">
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="61">
+                <span>Pharmaceutical Sciences</span>
+                {% if sortable == "true" %}
+                <i class="bx bx-move sortable-handle text-muted"></i>
+                {% endif %}
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="36">
+                <span>Botany</span>
+                {% if sortable == "true" %}
+                <i class="bx bx-move sortable-handle text-muted"></i>
+                {% endif %}
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center selected" data-value="63">
+                <span>Chemistry</span>
+                {% if sortable == "true" %}
+                <i class="bx bx-move sortable-handle text-muted"></i>
+                {% endif %}
+            </li>
+        </ul>
+        <!-- Hidden field storing order -->
+        <input type="hidden" id="{{ widget_id }}_order" name="{{ widget_id }}_order" value="61,36,63">
+        <div id="{{ widget_id }}_values_container" class="d-none"></div>
+    </div>
+    <!-- MOVE / SORT BUTTONS -->
+    <div class="dual-selector-buttons">
+        <!-- Move Available → Chosen -->
+        <button id="btn-left-{{ widget_id }}" type="button" class="btn btn-sm btn-primary dual-btn"><i
+                class="bx bx-chevron-up fs-4"></i></button>
+        <!-- Move Chosen → Available -->
+        <button id="btn-right-{{ widget_id }}" type="button" class="btn btn-sm btn-primary dual-btn"><i
+                class="bx bx-chevron-down fs-4"></i></button>
+        <!-- Move All Available → Chosen -->
+        <button id="btn-all-left-{{ widget_id }}" type="button" class="btn btn-sm btn-secondary dual-btn"><i
+                class="bx bx-chevrons-up fs-4"></i></button>
+        <!-- Move All Chosen → Available -->
+        <button id="btn-all-right-{{ widget_id }}" type="button" class="btn btn-sm btn-secondary dual-btn"><i
+                class="bx bx-chevrons-down fs-4"></i></button>
+        {% if sortable == "false" %}
+        <!-- Move Up -->
+        <button id="btn-up-{{ widget_id }}" type="button" class="btn btn-sm btn-dark dual-btn">
+            <i class="bx bx-sort-up fs-4"></i>
+        </button>
+        <!-- Move Down -->
+        <button id="btn-down-{{ widget_id }}" type="button" class="btn btn-sm btn-dark dual-btn">
+            <i class="bx bx-sort-down fs-4"></i>
+        </button>
+        {% endif %}
+
+    </div>
+    <!-- AVAILABLE LIST -->
+    <div class="dual-selector-box">
+        <div class="d-flex flex-column gap-1 mb-1">
+            <label class="form-label">
+                Available
+                <strong>
+                    <span id="available-count-{{ widget_id }}">44</span>
+                </strong>
+            </label>
+            <input id="search-available-{{ widget_id }}" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <ul id="available-{{ widget_id }}" class="dual-list list-group border rounded p-2 scrollable-box">
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="25">
+                <span>Ancient History, Culture &amp; Archaeology</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="34">
+                <span>Biochemistry</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="35">
+                <span>Biotechnology</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="15">
+                <span>Biotechnology Engineering</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="6">
+                <span>Commerce</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="64">
+                <span>Computer Science &amp; Applications</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="18">
+                <span>Computer Science &amp; Engineering</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="74">
+                <span>Economics</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="12">
+                <span>Education</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="65">
+                <span>Electronic Science</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="21">
+                <span>Electronics &amp; Communication Engineering</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="1">
+                <span>English</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="51">
+                <span>Environmental Studies</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="26">
+                <span>Fine Arts</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="66">
+                <span>Geography</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="67">
+                <span>Geology</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="68">
+                <span>Geophysics</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="2">
+                <span>Hindi</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="75">
+                <span>History</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="54">
+                <span>Home Science</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="69">
+                <span>Instrumentation</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="30">
+                <span>Law</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="3">
+                <span>Library &amp; Information Science</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="8">
+                <span>Management</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="10">
+                <span>Mass Communication &amp; Media Technology</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="70">
+                <span>Mathematics</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="23">
+                <span>Mechanical Engineering</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="56">
+                <span>Microbiology</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="27">
+                <span>Music &amp; Dance</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="5">
+                <span>Panjabi</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="28">
+                <span>Philosophy</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="13">
+                <span>Physical Education</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="71">
+                <span>Physics</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="76">
+                <span>Political Science</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="77">
+                <span>Psychology</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="78">
+                <span>Public Administration</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="29">
+                <span>Sanskrit</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="79">
+                <span>Social Work</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="80">
+                <span>Sociology</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="72">
+                <span>Statistics &amp; Operational Research</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="11">
+                <span>Tourism &amp; Hotel Management</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" data-value="60">
+                <span>Zoology</span>
+            </li>
+        </ul>
+    </div>
+</div>

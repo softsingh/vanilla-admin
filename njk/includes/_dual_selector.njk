@@ -1,5 +1,5 @@
 <div id="dual-selector-{{ widget_id }}" class="dual-selector" data-widget-id="{{ widget_id }}"
-    data-field-name="departments" data-sortable="false">
+    data-field-name="dual-selector-{{ widget_id }}" data-sortable={{ sortable }}>
     <!-- CHOSEN LIST -->
     <div class="dual-selector-box">
         <div class="d-flex flex-column gap-1 mb-1">
@@ -14,16 +14,25 @@
         <ul id="chosen-{{ widget_id }}" class="dual-list list-group border rounded p-2 scrollable-box">
             <li class="list-group-item d-flex justify-content-between align-items-center" data-value="61">
                 <span>Pharmaceutical Sciences</span>
+                {% if sortable == "true" %}
+                <i class="bx bx-move sortable-handle text-muted"></i>
+                {% endif %}
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center" data-value="36">
                 <span>Botany</span>
+                {% if sortable == "true" %}
+                <i class="bx bx-move sortable-handle text-muted"></i>
+                {% endif %}
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center selected" data-value="63">
                 <span>Chemistry</span>
+                {% if sortable == "true" %}
+                <i class="bx bx-move sortable-handle text-muted"></i>
+                {% endif %}
             </li>
         </ul>
         <!-- Hidden field storing order -->
-        <input type="hidden" id="{{ widget_id }}_order" name="departments_order" value="61,36,63">
+        <input type="hidden" id="{{ widget_id }}_order" name="{{ widget_id }}_order" value="61,36,63">
         <div id="{{ widget_id }}_values_container" class="d-none"></div>
     </div>
     <!-- MOVE / SORT BUTTONS -->

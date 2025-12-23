@@ -13,10 +13,10 @@ Collapsible List
          <div class="col-12">
             <h6 class="mb-3">Emails</h6>
             <div class="d-flex gap-3">
-               <div id="email-formset-container" class="flex-grow-1 border-2 rounded scroll-y px-4 py-4"
+               <div id="email-list-container" class="flex-grow-1 border-2 rounded scroll-y px-4 py-4"
                   style="max-height: 300px">
                   <div class="accordion" id="accordion-email">
-                     <div class="email-formset-item accordion-item border-2 rounded mb-3   " parent="accordion-email">
+                     <div class="email-list-item accordion-item border-2 rounded mb-3" parent="accordion-email">
                         <div class="accordion-header fw-semibold px-6 py-4">
                            <button type="button" class="accordion-button">
                               <span class="collpase-hide-text">
@@ -65,7 +65,7 @@ Collapsible List
                            </div>
                         </div>
                      </div>
-                     <div class="email-formset-item accordion-item border-2 rounded mb-3  success-highlight "
+                     <div class="email-list-item accordion-item border-2 rounded mb-3 success-highlight"
                         parent="accordion-email">
                         <div class="accordion-header fw-semibold px-6 py-4">
                            <button type="button" class="accordion-button">
@@ -115,7 +115,7 @@ Collapsible List
                            </div>
                         </div>
                      </div>
-                     <div class="email-formset-item accordion-item border-2 rounded mb-3   " parent="accordion-email">
+                     <div class="email-list-item accordion-item border-2 rounded mb-3" parent="accordion-email">
                         <div class="accordion-header fw-semibold px-6 py-4">
                            <button type="button" class="accordion-button">
                               <span class="collpase-hide-text">
@@ -164,7 +164,7 @@ Collapsible List
                            </div>
                         </div>
                      </div>
-                     <div class="email-formset-item accordion-item border-2 rounded  open  " parent="accordion-email">
+                     <div class="email-list-item accordion-item border-2 rounded open" parent="accordion-email">
                         <div class="accordion-header fw-semibold px-6 py-4">
                            <button type="button" class="accordion-button">
                               <span class="collpase-hide-text">
@@ -225,3 +225,9 @@ Collapsible List
    </div>
 </div>
 {% endblock content %}
+{% block bottom_link %}
+<script src="assets/js/collapsible_list.js"></script>
+<script>
+   initContactlist('email');
+</script>
+{% endblock bottom_link %}

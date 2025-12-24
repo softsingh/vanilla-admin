@@ -787,16 +787,16 @@
                   <div class="row g-4">
                      <div class="col-12">
                         <h6 class="mb-3">Emails</h6>
-                        <div class="d-flex gap-3">
-                           <div id="email-list-container" class="flex-grow-1 border-2 rounded scroll-y px-4 py-4"
+                        <div id="email-clist-outer" class="d-flex gap-3">
+                           <div id="email-clist-container" class="flex-grow-1 border-2 rounded scroll-y px-4 py-4"
                               style="max-height: 300px">
                               <div class="accordion" id="accordion-email">
-                                 <div class="email-list-item accordion-item border-2 rounded mb-3"
+                                 <div class="email-clist-item accordion-item border-2 rounded mb-3 warning-highlight"
                                     parent="accordion-email">
                                     <div class="accordion-header fw-semibold px-6 py-4">
                                        <button type="button" class="accordion-button">
                                           <span class="collpase-hide-text">
-                                             abc@rediff.com - Rediff
+                                             abc@rediff.com - Other
                                           </span>
                                        </button>
                                     </div>
@@ -810,16 +810,16 @@
                                           </div>
                                           <div class="col-lg-3">
                                              <label class="form-label mb-2">Search Tag</label>
-                                             <input type="text" name="emails-0-search_tag" value="Rediff"
+                                             <input type="text" name="emails-0-search_tag" value="Other"
                                                 class="form-control" placeholder="Tag (e.g., Official, Personal)"
                                                 maxlength="50" id="id_emails-0-search_tag">
                                           </div>
                                           <div class="col-lg-3">
                                              <label class="form-label mb-2">Status</label>
                                              <select name="emails-0-status" class="form-select" id="id_emails-0-status">
-                                                <option value="not_verified" selected="">Not Verified</option>
+                                                <option value="not_verified">Not Verified</option>
                                                 <option value="verified">Verified</option>
-                                                <option value="obsolete">Obsolete</option>
+                                                <option value="obsolete" selected>Obsolete</option>
                                              </select>
                                           </div>
                                           <div class="col-lg-6">
@@ -843,7 +843,7 @@
                                        </div>
                                     </div>
                                  </div>
-                                 <div class="email-list-item accordion-item border-2 rounded mb-3 success-highlight"
+                                 <div class="email-clist-item accordion-item border-2 rounded mb-3 success-highlight"
                                     parent="accordion-email">
                                     <div class="accordion-header fw-semibold px-6 py-4">
                                        <button type="button" class="accordion-button">
@@ -895,7 +895,7 @@
                                        </div>
                                     </div>
                                  </div>
-                                 <div class="email-list-item accordion-item border-2 rounded mb-3"
+                                 <div class="email-clist-item accordion-item border-2 rounded mb-3"
                                     parent="accordion-email">
                                     <div class="accordion-header fw-semibold px-6 py-4">
                                        <button type="button" class="accordion-button">
@@ -947,7 +947,7 @@
                                        </div>
                                     </div>
                                  </div>
-                                 <div class="email-list-item accordion-item border-2 rounded open"
+                                 <div class="email-clist-item accordion-item border-2 rounded open"
                                     parent="accordion-email">
                                     <div class="accordion-header fw-semibold px-6 py-4">
                                        <button type="button" class="accordion-button">

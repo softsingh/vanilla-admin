@@ -1,13 +1,18 @@
 function initContactlist(prefix) {
-    const container = document.getElementById(prefix + '-list-container');
+    const outer = document.getElementById(prefix + '-clist-outer');
+    if (!outer) return;
+
+    const container = outer.querySelector(`#${prefix}-clist-container`);
     if (!container) return;
 
-    const btnUp = document.getElementById('btn_' + prefix + '_move_up');
-    const btnDown = document.getElementById('btn_' + prefix + '_move_down');
-    const orderInput = document.getElementById(prefix + '_order');
+    const btnUp = outer.querySelector(`#btn_${prefix}_move_up`);
+    const btnDown = outer.querySelector(`#btn_${prefix}_move_down`);
+    const orderInput = outer.querySelector(`#${prefix}_order`);
+
+    const aa = outer.querySelector(`#${prefix}_order`);
 
     function getSortableItems() {
-        return Array.from(container.querySelectorAll('.' + prefix + '-list-item')).filter(item => {
+        return Array.from(container.querySelectorAll('.' + prefix + '-clist-item')).filter(item => {
             if (item.classList.contains('d-none')) return false;
             const mainInput = item.querySelector(
                 'input[name$="-main_field"], input[name$="-email"], input[name$="-phone_number"], textarea[name$="-address"]'
@@ -21,7 +26,7 @@ function initContactlist(prefix) {
     }
 
     function getOpenItem() {
-        return container.querySelector('.' + prefix + '-list-item.open');
+        return container.querySelector('.' + prefix + '-clist-item.open');
     }
 
     function getCurrentIndex() {
@@ -49,7 +54,7 @@ function initContactlist(prefix) {
     }
 
     function updateSortIndices() {
-        const allItems = Array.from(container.querySelectorAll('.' + prefix + '-list-item'));
+        const allItems = Array.from(container.querySelectorAll('.' + prefix + '-clist-item'));
         const sortable = getSortableItems();
         const orderIds = [];
 
@@ -62,6 +67,30 @@ function initContactlist(prefix) {
 
         if (orderInput) orderInput.value = orderIds.join(',');
     }
+
+    const statusSelects = document.querySelectorAll(
+        'select[id^="id_emails-"][id$="-status"]'
+    );
+
+    statusSelects.forEach(select => {
+        // set initial state
+        updateStatusClass(select);
+
+        // update when user changes selection
+        select.addEventListener('change', () => {
+            updateStatusClass(select);
+        });
+    });
+
+    function updateStatusClass(select) {
+        // remove old status classes
+        select.classList.remove('status-not_verified', 'status-verified', 'status-obsolete');
+
+        // add new class based on value
+        select.classList.add(`status-${select.value}`);
+    }
+
+
 
     if (btnUp) {
         btnUp.addEventListener('click', function (e) {
@@ -93,7 +122,7 @@ function initContactlist(prefix) {
 
 function markContactFormDeleted(button, prefix) {
     // Find the contact form container (accordion item)
-    const item = button.closest('.' + prefix + '-list-item');
+    const item = button.closest('.' + prefix + '-clist-item');
     if (!item) return;
 
     // Confirm and mark for deletion

@@ -9,8 +9,6 @@ function initContactlist(prefix) {
     const btnDown = outer.querySelector(`#btn_${prefix}_move_down`);
     const orderInput = outer.querySelector(`#${prefix}_order`);
 
-    const aa = outer.querySelector(`#${prefix}_order`);
-
     function getSortableItems() {
         return Array.from(container.querySelectorAll('.' + prefix + '-clist-item')).filter(item => {
             if (item.classList.contains('d-none')) return false;
@@ -68,8 +66,24 @@ function initContactlist(prefix) {
         if (orderInput) orderInput.value = orderIds.join(',');
     }
 
-    const statusSelects = document.querySelectorAll(
-        'select[id^="id_emails-"][id$="-status"]'
+    let plural = ""
+
+    switch (prefix) {
+        case "address":
+            plural = "addresses"
+            break;
+
+        case "email":
+            plural = "emails"
+            break;
+
+        case "phone":
+            plural = "phones"
+            break;
+    }
+
+    const statusSelects = container.querySelectorAll(
+        `select[id^="id_${plural}-"][id$="-status"]`
     );
 
     statusSelects.forEach(select => {
@@ -83,14 +97,13 @@ function initContactlist(prefix) {
     });
 
     function updateStatusClass(select) {
-        // remove old status classes
-        select.classList.remove('status-not_verified', 'status-verified', 'status-obsolete');
+        const clistItem = select.closest(`.${prefix}-clist-item`);
+        if (!clistItem) return;
 
-        // add new class based on value
-        select.classList.add(`status-${select.value}`);
+        clistItem.classList.remove('success-highlight', 'warning-highlight', 'danger-highlight');
+        if (select.value == "verified") clistItem.classList.add('success-highlight');
+        if (select.value == "obsolete") clistItem.classList.add('warning-highlight');
     }
-
-
 
     if (btnUp) {
         btnUp.addEventListener('click', function (e) {

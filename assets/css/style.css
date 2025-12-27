@@ -298,6 +298,47 @@
 }
 
 /*-------------------------------------*/
+/*             Highlight               */
+/*-------------------------------------*/
+
+.danger-highlight {
+  background-color: var(--danger-light-90);
+  color: var(--danger-color);
+  border-color: var(--danger-light-10);
+}
+
+.dark-mode .danger-highlight {
+  background-color: var(--danger-dark-30);
+  color: var(--danger-color);
+  border-color: var(--danger-dark-20);
+}
+
+.warning-highlight {
+  background-color: var(--warning-light-90);
+  color: var(--warning-color);
+  border-color: var(--warning-light-10);
+}
+
+.dark-mode .warning-highlight {
+  background-color: var(--warning-dark-30);
+  color: var(--warning-color);
+  border-color: var(--warning-dark-20);
+}
+
+.success-highlight {
+  background-color: var(--success-light-90);
+  color: var(--success-color);
+  border-color: var(--success-light-10);
+}
+
+
+.dark-mode .success-highlight {
+  background-color: var(--success-dark-30);
+  color: var(--white-color);
+  border-color: var(--success-dark-20);
+}
+
+/*-------------------------------------*/
 /*            Main Layout              */
 /*-------------------------------------*/
 

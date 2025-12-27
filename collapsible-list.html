@@ -9,7 +9,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>
 
-      Modals
+      Collapsible List
 
    </title>
    <link rel="shortcut icon" href="assets/img/favicon.ico">
@@ -193,7 +193,7 @@
             <div class="menu-header">
                <small class="menu-header-text">Components</small>
             </div>
-            <div class="menu-item active open">
+            <div class="menu-item ">
                <a href="#" class="menu-link menu-toggle">
                   <i class="bx bx-rectangle fs-6"></i>
                   <span>Simple</span>
@@ -244,7 +244,7 @@
                         <span>Dropdowns</span>
                      </a>
                   </div>
-                  <div class="menu-item active">
+                  <div class="menu-item ">
                      <a href="modals.html" class="menu-link">
                         <span>Modals</span>
                      </a>
@@ -276,7 +276,7 @@
                   </div>
                </div>
             </div>
-            <div class="menu-item ">
+            <div class="menu-item active open">
                <a href="#" class="menu-link menu-toggle">
                   <i class="bx bx-copy fs-6"></i>
                   <span>Advance</span>
@@ -287,7 +287,7 @@
                         <span>Avatars</span>
                      </a>
                   </div>
-                  <div class="menu-item ">
+                  <div class="menu-item active">
                      <a href="collapsible-list.html" class="menu-link">
                         <span>Collapsible List</span>
                      </a>
@@ -779,189 +779,230 @@
          </nav>
          <div class="dash-content">
 
-            <div class="row g-6">
-               <div class="col-12 col-md-6">
-                  <div class="card">
-                     <div class="card-body">
-                        <h5 class="card-title mb-6">Basic Modals</h5>
-                        <div class="d-flex flex-wrap gap-2">
-                           <button class="btn btn-primary" data-toggle="modal"
-                              data-target="modalDefault">Default</button>
-                           <button class="btn btn-primary" data-toggle="modal"
-                              data-target="modalCentered">Centered</button>
-                           <button class="btn btn-primary" data-toggle="modal" data-target="modalScrollAll">
-                              Scroll
-                              All
-                           </button>
-                           <button class="btn btn-primary" data-toggle="modal" data-target="modalScrollBody">
-                              Scroll
-                              Body
-                           </button>
-                        </div>
-                        <div>
-                           <div class="modal" id="modalDefault">
-                              <div class="modal-dialog">
-                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                       <div class="d-flex">
-                                          <h6>Header</h6>
-                                          <button class="btn-close" data-dismiss="modal"></button>
-                                       </div>
-                                    </div>
-                                    <div class="modal-body">
-                                       <p class="mb-2">
-                                          Below is a modal example (meaning its position and display have been
-                                          overridden). Included are the modal header, modal body (required for padding),
-                                          and modal footer (optional). We ask that you include modal headers with
-                                          dismiss actions whenever possible, or provide another explicit dismiss action.
-                                       </p>
-                                    </div>
-                                    <div class="modal-footer">
-                                       <div class="d-flex align-items-center gap-2">
-                                          <button class="btn btn-primary">Save Changes</button>
-                                          <button class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="modal" id="modalCentered">
-                              <div class="modal-dialog modal-dialog-centered">
-                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                       <div class="d-flex">
-                                          <h6>Header</h6>
-                                          <button class="btn-close" data-dismiss="modal"></button>
-                                       </div>
-                                    </div>
-                                    <div class="modal-body">
-                                       <p class="mb-2">
-                                          Below is a modal example (meaning its position and display have been
-                                          overridden). Included are the modal header, modal body (required for padding),
-                                          and modal footer (optional). We ask that you include modal headers with
-                                          dismiss actions whenever possible, or provide another explicit dismiss action.
-                                       </p>
-                                    </div>
-                                    <div class="modal-footer">
-                                       <div class="d-flex align-items-center gap-2">
-                                          <button class="btn btn-primary">Save Changes</button>
-                                          <button class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="modal" id="modalScrollAll">
-                              <div class="modal-dialog">
-                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                       <div class="d-flex">
-                                          <h6>Header</h6>
-                                          <button class="btn-close" data-dismiss="modal"></button>
-                                       </div>
-                                    </div>
-                                    <div class="modal-body">
-                                       <p class="mb-2">
-                                          Below is a modal example (meaning its position and display have been
-                                          overridden). Included are the modal header, modal body (required for padding),
-                                          and modal footer (optional). We ask that you include modal headers with
-                                          dismiss actions whenever possible, or provide another explicit dismiss action.
-                                       </p>
-                                       <p class="mb-2">
-                                          Below is a modal example (meaning its position and display have been
-                                          overridden). Included are the modal header, modal body (required for padding),
-                                          and modal footer (optional). We ask that you include modal headers with
-                                          dismiss actions whenever possible, or provide another explicit dismiss action.
-                                       </p>
-                                       <p class="mb-2">
-                                          Below is a modal example (meaning its position and display have been
-                                          overridden). Included are the modal header, modal body (required for padding),
-                                          and modal footer (optional). We ask that you include modal headers with
-                                          dismiss actions whenever possible, or provide another explicit dismiss action.
-                                       </p>
-                                       <p class="mb-2">
-                                          Below is a modal example (meaning its position and display have been
-                                          overridden). Included are the modal header, modal body (required for padding),
-                                          and modal footer (optional). We ask that you include modal headers with
-                                          dismiss actions whenever possible, or provide another explicit dismiss action.
-                                       </p>
-                                       <p>
-                                          Below is a modal example (meaning its position and display have been
-                                          overridden). Included are the modal header, modal body (required for padding),
-                                          and modal footer (optional). We ask that you include modal headers with
-                                          dismiss actions whenever possible, or provide another explicit dismiss action.
-                                       </p>
-                                    </div>
-                                    <div class="modal-footer">
-                                       <div class="d-flex align-items-center gap-2">
-                                          <button class="btn btn-primary">Save Changes</button>
-                                          <button class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="modal" id="modalScrollBody">
-                              <div class="modal-dialog modal-dialog-scrollable">
-                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                       <div class="d-flex">
-                                          <h6>Header</h6>
-                                          <button class="btn-close" data-dismiss="modal"></button>
-                                       </div>
-                                    </div>
-                                    <div class="modal-body">
-                                       <p class="mb-2">
-                                          Below is a modal example (meaning its position and display have been
-                                          overridden). Included are the modal header, modal body (required for padding),
-                                          and modal footer (optional). We ask that you include modal headers with
-                                          dismiss actions whenever possible, or provide another explicit dismiss action.
-                                       </p>
-                                       <p class="mb-2">
-                                          Below is a modal example (meaning its position and display have been
-                                          overridden). Included are the modal header, modal body (required for padding),
-                                          and modal footer (optional). We ask that you include modal headers with
-                                          dismiss actions whenever possible, or provide another explicit dismiss action.
-                                       </p>
-                                       <p class="mb-2">
-                                          Below is a modal example (meaning its position and display have been
-                                          overridden). Included are the modal header, modal body (required for padding),
-                                          and modal footer (optional). We ask that you include modal headers with
-                                          dismiss actions whenever possible, or provide another explicit dismiss action.
-                                       </p>
-                                       <p class="mb-2">
-                                          Below is a modal example (meaning its position and display have been
-                                          overridden). Included are the modal header, modal body (required for padding),
-                                          and modal footer (optional). We ask that you include modal headers with
-                                          dismiss actions whenever possible, or provide another explicit dismiss action.
-                                       </p>
-                                       <p>
-                                          Below is a modal example (meaning its position and display have been
-                                          overridden). Included are the modal header, modal body (required for padding),
-                                          and modal footer (optional). We ask that you include modal headers with
-                                          dismiss actions whenever possible, or provide another explicit dismiss action.
-                                       </p>
-                                    </div>
-                                    <div class="modal-footer">
-                                       <div class="d-flex align-items-center gap-2">
-                                          <button class="btn btn-primary">Save Changes</button>
-                                          <button class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+            <div class="card mb-6">
+               <div class="card-body">
+                  <div class="mb-4">
+                     <h4>Collapsible List</h4>
                   </div>
-               </div>
-               <div class="col-12 col-md-6">
-                  <div class="card">
-                     <div class="card-body">
-                        <h5 class="card-title mb-6">Modal Confirm</h5>
-                        <div class="d-flex flex-wrap align-items-center gap-3">
-                           <button class="btn btn-primary" type="tgl-demo-modal-confirm">Confirm</button>
-                           <label id="lblDemoModalConfirm"></label>
+                  <div class="row g-4">
+                     <div class="col-12">
+                        <h6 class="mb-3">Emails</h6>
+                        <div id="email-clist-outer" class="d-flex gap-3">
+                           <div id="email-clist-container" class="flex-grow-1 border-2 rounded scroll-y px-4 py-4"
+                              style="max-height: 300px">
+                              <div class="accordion" id="accordion-email">
+                                 <div class="email-clist-item accordion-item border-2 rounded mb-3 warning-highlight"
+                                    parent="accordion-email">
+                                    <div class="accordion-header fw-semibold px-6 py-4">
+                                       <button type="button" class="accordion-button">
+                                          <span class="collpase-hide-text">
+                                             abc@rediff.com - Other
+                                          </span>
+                                       </button>
+                                    </div>
+                                    <div class="accordion-body px-6 pb-6">
+                                       <div class="row g-4">
+                                          <div class="col-lg-6">
+                                             <label class="form-label mb-2">Email</label>
+                                             <input type="email" name="emails-0-email" value="abc@rediff.com"
+                                                class="form-control" placeholder="Enter Email" maxlength="254"
+                                                id="id_emails-0-email">
+                                          </div>
+                                          <div class="col-lg-3">
+                                             <label class="form-label mb-2">Search Tag</label>
+                                             <input type="text" name="emails-0-search_tag" value="Other"
+                                                class="form-control" placeholder="Tag (e.g., Official, Personal)"
+                                                maxlength="50" id="id_emails-0-search_tag">
+                                          </div>
+                                          <div class="col-lg-3">
+                                             <label class="form-label mb-2">Status</label>
+                                             <select name="emails-0-status" class="form-select" id="id_emails-0-status">
+                                                <option value="not_verified">Not Verified</option>
+                                                <option value="verified">Verified</option>
+                                                <option value="obsolete" selected>Obsolete</option>
+                                             </select>
+                                          </div>
+                                          <div class="col-lg-6">
+                                             <label class="form-label mb-2">Remarks</label>
+                                             <textarea name="emails-0-remarks" cols="40" rows="2" class="form-control"
+                                                placeholder="Remarks" id="id_emails-0-remarks"></textarea>
+                                          </div>
+                                          <div class="col-lg-3 d-none">
+                                             <label class="form-label mb-2">Sort Order</label>
+                                             <input type="number" name="emails-0-sort_index" value="0"
+                                                class="form-control" placeholder="Order" min="0"
+                                                id="id_emails-0-sort_index">
+                                          </div>
+                                          <div class="col d-flex align-items-end justify-content-end">
+                                             <button type="button" class="btn btn-sm btn-danger"
+                                                onclick="markContactFormDeleted(this, 'email')">
+                                                <i class="bx bx-trash fs-5"></i>
+                                             </button>
+                                          </div>
+                                          <input type="hidden" name="emails-0-id" value="524" id="id_emails-0-id">
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="email-clist-item accordion-item border-2 rounded mb-3 success-highlight"
+                                    parent="accordion-email">
+                                    <div class="accordion-header fw-semibold px-6 py-4">
+                                       <button type="button" class="accordion-button">
+                                          <span class="collpase-hide-text">
+                                             abc@gmail.com - Personal
+                                          </span>
+                                       </button>
+                                    </div>
+                                    <div class="accordion-body px-6 pb-6">
+                                       <div class="row g-4">
+                                          <div class="col-lg-6">
+                                             <label class="form-label mb-2">Email</label>
+                                             <input type="email" name="emails-1-email" value="abc@gmail.com"
+                                                class="form-control" placeholder="Enter Email" maxlength="254"
+                                                id="id_emails-1-email">
+                                          </div>
+                                          <div class="col-lg-3">
+                                             <label class="form-label mb-2">Search Tag</label>
+                                             <input type="text" name="emails-1-search_tag" value="Personal"
+                                                class="form-control" placeholder="Tag (e.g., Official, Personal)"
+                                                maxlength="50" id="id_emails-1-search_tag">
+                                          </div>
+                                          <div class="col-lg-3">
+                                             <label class="form-label mb-2">Status</label>
+                                             <select name="emails-1-status" class="form-select" id="id_emails-1-status">
+                                                <option value="not_verified">Not Verified</option>
+                                                <option value="verified" selected="">Verified</option>
+                                                <option value="obsolete">Obsolete</option>
+                                             </select>
+                                          </div>
+                                          <div class="col-lg-6">
+                                             <label class="form-label mb-2">Remarks</label>
+                                             <textarea name="emails-1-remarks" cols="40" rows="2" class="form-control"
+                                                placeholder="Remarks" id="id_emails-1-remarks"></textarea>
+                                          </div>
+                                          <div class="col-lg-3 d-none">
+                                             <label class="form-label mb-2">Sort Order</label>
+                                             <input type="number" name="emails-1-sort_index" value="1"
+                                                class="form-control" placeholder="Order" min="0"
+                                                id="id_emails-1-sort_index">
+                                          </div>
+                                          <div class="col d-flex align-items-end justify-content-end">
+                                             <button type="button" class="btn btn-sm btn-danger"
+                                                onclick="markContactFormDeleted(this, 'email')">
+                                                <i class="bx bx-trash fs-5"></i>
+                                             </button>
+                                          </div>
+                                          <input type="hidden" name="emails-1-id" value="400" id="id_emails-1-id">
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="email-clist-item accordion-item border-2 rounded mb-3"
+                                    parent="accordion-email">
+                                    <div class="accordion-header fw-semibold px-6 py-4">
+                                       <button type="button" class="accordion-button">
+                                          <span class="collpase-hide-text">
+                                             abc@xyz.com - Official
+                                          </span>
+                                       </button>
+                                    </div>
+                                    <div class="accordion-body px-6 pb-6">
+                                       <div class="row g-4">
+                                          <div class="col-lg-6">
+                                             <label class="form-label mb-2">Email</label>
+                                             <input type="email" name="emails-2-email" value="abc@xyz.com"
+                                                class="form-control" placeholder="Enter Email" maxlength="254"
+                                                id="id_emails-2-email">
+                                          </div>
+                                          <div class="col-lg-3">
+                                             <label class="form-label mb-2">Search Tag</label>
+                                             <input type="text" name="emails-2-search_tag" value="Official"
+                                                class="form-control" placeholder="Tag (e.g., Official, Personal)"
+                                                maxlength="50" id="id_emails-2-search_tag">
+                                          </div>
+                                          <div class="col-lg-3">
+                                             <label class="form-label mb-2">Status</label>
+                                             <select name="emails-2-status" class="form-select" id="id_emails-2-status">
+                                                <option value="not_verified" selected="">Not Verified</option>
+                                                <option value="verified">Verified</option>
+                                                <option value="obsolete">Obsolete</option>
+                                             </select>
+                                          </div>
+                                          <div class="col-lg-6">
+                                             <label class="form-label mb-2">Remarks</label>
+                                             <textarea name="emails-2-remarks" cols="40" rows="2" class="form-control"
+                                                placeholder="Remarks" id="id_emails-2-remarks"></textarea>
+                                          </div>
+                                          <div class="col-lg-3 d-none">
+                                             <label class="form-label mb-2">Sort Order</label>
+                                             <input type="number" name="emails-2-sort_index" value="2"
+                                                class="form-control" placeholder="Order" min="0"
+                                                id="id_emails-2-sort_index">
+                                          </div>
+                                          <div class="col d-flex align-items-end justify-content-end">
+                                             <button type="button" class="btn btn-sm btn-danger"
+                                                onclick="markContactFormDeleted(this, 'email')">
+                                                <i class="bx bx-trash fs-5"></i>
+                                             </button>
+                                          </div>
+                                          <input type="hidden" name="emails-2-id" value="519" id="id_emails-2-id">
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="email-clist-item accordion-item border-2 rounded open"
+                                    parent="accordion-email">
+                                    <div class="accordion-header fw-semibold px-6 py-4">
+                                       <button type="button" class="accordion-button">
+                                          <span class="collpase-hide-text">
+                                             Add New Email
+                                          </span>
+                                       </button>
+                                    </div>
+                                    <div class="accordion-body px-6 pb-6">
+                                       <div class="row g-4">
+                                          <div class="col-lg-6">
+                                             <label class="form-label mb-2">Email</label>
+                                             <input type="email" name="emails-3-email" class="form-control"
+                                                placeholder="Enter Email" maxlength="254" id="id_emails-3-email">
+                                          </div>
+                                          <div class="col-lg-3">
+                                             <label class="form-label mb-2">Search Tag</label>
+                                             <input type="text" name="emails-3-search_tag" class="form-control"
+                                                placeholder="Tag (e.g., Official, Personal)" maxlength="50"
+                                                id="id_emails-3-search_tag">
+                                          </div>
+                                          <div class="col-lg-3">
+                                             <label class="form-label mb-2">Status</label>
+                                             <select name="emails-3-status" class="form-select" id="id_emails-3-status">
+                                                <option value="not_verified" selected="">Not Verified</option>
+                                                <option value="verified">Verified</option>
+                                                <option value="obsolete">Obsolete</option>
+                                             </select>
+                                          </div>
+                                          <div class="col-lg-6">
+                                             <label class="form-label mb-2">Remarks</label>
+                                             <textarea name="emails-3-remarks" cols="40" rows="2" class="form-control"
+                                                placeholder="Remarks" id="id_emails-3-remarks"></textarea>
+                                          </div>
+                                          <div class="col-lg-3 d-none">
+                                             <label class="form-label mb-2">Sort Order</label>
+                                             <input type="number" name="emails-3-sort_index" class="form-control"
+                                                placeholder="Order" min="0" id="id_emails-3-sort_index">
+                                          </div>
+                                          <div class="col d-flex align-items-end justify-content-end">
+                                          </div>
+                                          <input type="hidden" name="emails-3-id" id="id_emails-3-id">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="d-flex flex-column justify-content-center gap-2">
+                              <button type="button" class="btn btn-sm btn-secondary" id="btn_email_move_up">
+                                 <i class="bx bx-sort-up fs-4"></i>
+                              </button>
+                              <button type="button" class="btn btn-sm btn-secondary" id="btn_email_move_down">
+                                 <i class="bx bx-sort-down fs-4"></i>
+                              </button>
+                           </div>
                         </div>
                      </div>
                   </div>
@@ -975,6 +1016,10 @@
    <script src="assets/js/script.js"></script>
    <script src="assets/js/command-palette.js" data-json="assets/data/site-map.json"></script>
 
+   <script src="assets/js/collapsible_list.js"></script>
+   <script>
+      initContactlist('email');
+   </script>
 
 </body>
 

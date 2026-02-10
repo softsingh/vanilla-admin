@@ -2280,6 +2280,12 @@ thead {
   border-radius: var(--border-radius);
 }
 
+.badge-wrap {
+  text-align: left;
+  line-height: 1.25;
+  white-space: wrap;
+}
+
 .dark-mode .badge.bg-primary {
   border-color: var(--primary-light-10);
 }
@@ -5664,6 +5670,59 @@ body.sidebar-hidden .sidebar {
 /*-------------------------------------*/
 /*                 Text                */
 /*-------------------------------------*/
+.text-start {
+  text-align: start !important;
+}
+
+.text-end {
+  text-align: end !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-decoration-none {
+  text-decoration: none !important;
+}
+
+.text-decoration-underline {
+  text-decoration: underline !important;
+}
+
+.text-decoration-line-through {
+  text-decoration: line-through !important;
+}
+
+.text-none {
+  text-transform: none !important;
+}
+
+.text-lowercase {
+  text-transform: lowercase !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
+.text-wrap {
+  white-space: normal !important;
+}
+
+.text-nowrap {
+  white-space: nowrap !important;
+}
+
+.text-break {
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+}
+
 textarea {
   resize: vertical;
 }

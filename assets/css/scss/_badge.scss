@@ -18,6 +18,13 @@
   border-radius: var(--border-radius);
 }
 
+// Multiline Badge
+.badge-wrap {
+  text-align: left;
+  line-height: 1.25;
+  white-space: wrap;
+}
+
 @each $name, $value in $color-map {
   .dark-mode .badge.bg-#{$name} {
     border-color: var(--#{$name}-light-10);

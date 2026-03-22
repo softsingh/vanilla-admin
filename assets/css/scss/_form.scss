@@ -194,6 +194,11 @@
   pointer-events: none;
 }
 
+.form-control[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.6);
+  cursor: pointer;
+}
+
 .form-select {
   display: block;
   width: 100%;

@@ -3,6 +3,7 @@
 /*-------------------------------------*/
 
 .modal {
+  --modal-width: 37.5rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -35,6 +36,7 @@
   position: relative;
   display: flex;
   justify-content: center;
+  max-width: var(--modal-width);
 }
 
 .modal-dialog-centered {
@@ -51,7 +53,6 @@
   display: flex;
   flex-direction: column;
   margin: 1.5rem auto 1.5rem auto;
-  max-width: 600px;
   background: var(--paper-bg);
   box-shadow: 0 0.2rem 1.5rem 1rem hsla(210, 30%, 20%, 0.1);
   border: 1px solid var(--border-color);
@@ -121,6 +122,31 @@
   flex-wrap: wrap;
   align-items: center;
   padding: 1rem 1.5rem;
+}
+
+@media(min-width: 576px) {
+  .modal-dialog {
+    margin-right: auto;
+    margin-left: auto
+  }
+
+  .modal-sm {
+    --modal-width: 22.5rem
+  }
+}
+
+@media(min-width: 992px) {
+
+  .modal-lg,
+  .modal-xl {
+    --modal-width: 50rem
+  }
+}
+
+@media(min-width: 1200px) {
+  .modal-xl {
+    --modal-width: 1140px
+  }
 }
 
 .modal .btn-close {

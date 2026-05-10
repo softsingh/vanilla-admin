@@ -149,7 +149,9 @@ modalDialogs.forEach((modalDialog) =>
   modalDialog.addEventListener('click', (event) => {
     if (event.target === modalDialog) {
       const modal = modalDialog.closest('.modal');
-      hideModal(modal);
+      if (!staticModal(modal)) {
+        hideModal(modal);
+      }
       event.stopPropagation();
     }
   })
@@ -159,11 +161,18 @@ modalDialogs.forEach((modalDialog) =>
 modals.forEach((modal) =>
   modal.addEventListener('click', (event) => {
     if (event.target === modal) {
-      hideModal(modal);
+      if (!staticModal(modal)) {
+        hideModal(modal);
+      }
       event.stopPropagation();
     }
   })
 );
+
+// Returns if modal is static
+function staticModal(modal) {
+  return modal.getAttribute('data-backdrop') === 'static';
+}
 
 function showModal(modal) {
   const backdrop = document.createElement('div');

@@ -441,6 +441,21 @@ paginationOverflows?.forEach((paginationOverflow) => {
   }
 });
 
+/////////////////// Search ////////////////////
+document.querySelectorAll('.search-field').forEach(field => {
+  const input = field.querySelector('.search-field-input');
+  const clear = field.querySelector('.search-field-clear');
+
+  clear.addEventListener('click', () => {
+    input.value = '';
+    input.focus();
+
+    // optional: trigger input event for live search
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+  });
+});
+
+
 /////////////////// Sidebar ////////////////////
 
 // Sidebar Menu

@@ -30,6 +30,25 @@
   transition: 0.3s ease;
 }
 
+/* Prevent mobile sidebar flash before JS initializes */
+@media (max-width: 768px) {
+
+  html.sidebar-hidden-init .sidebar .app-brand {
+    display: none;
+  }
+
+  html.sidebar-hidden-init .sidebar {
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  html.sidebar-hidden-init .sidebar-backdrop {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
 body.sidebar-hidden .sidebar .app-brand {
   display: none;
 }

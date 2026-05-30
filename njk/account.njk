@@ -117,10 +117,10 @@ Account
             </div>
             <div class="col-lg-6">
                <label class="form-label mb-2">Groups</label>
-               <div class="search-close-wrapper mb-1">
-                  <input type="search" placeholder="Search from Groups" class="form-control search-input"
+               <div class="search-field mb-1">
+                  <input type="search" placeholder="Search from Groups" class="form-control search-field-input"
                      id="seachFromGroups">
-                  <i class="bx bx-x bx-sm search-closer cursor-pointer" onclick="onSearchFromGroupsClose()"></i>
+                  <i class="bx bx-x bx-sm search-field-clear"></i>
                </div>
                <div class="bordered-container scroll-y" id="groups_checkbox_container" style="height: 200px;">
                   <div class="form-check mb-1 mt-1">
@@ -167,14 +167,12 @@ Account
             </div>
             <div class="col-lg-6">
                <label class="form-label mb-2">Permissions</label>
-               <div class="search-close-wrapper mb-1">
-                  <input type="search" placeholder="Search from User Permissions" class="form-control search-input"
-                     id="seachFromUserPermissions">
-                  <i class="bx bx-x bx-sm search-closer cursor-pointer"
-                     onclick="onSearchFromUserPermissionsClose()"></i>
+               <div class="search-field mb-1">
+                  <input type="search" placeholder="Search from User Permissions"
+                     class="form-control search-field-input" id="seachFromUserPermissions">
+                  <i class="bx bx-x bx-sm search-field-clear cursor-pointer"></i>
                </div>
-               <div class="bordered-container scroll-y" id="user_permissions_checkbox_container"
-                  style="max-height: 200px;">
+               <div class="bordered-container scroll-y" id="user_permissions_checkbox_container" style="height: 200px;">
                   <div class="permission-group">
                      <h6 class="fw-bold mb-1">User | Profile</h6>
                      <div class="form-check mb-1">
